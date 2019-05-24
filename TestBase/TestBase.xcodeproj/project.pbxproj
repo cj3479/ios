@@ -15,6 +15,9 @@
 		09477BBF229824FA009A47AF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 09477BBE229824FA009A47AF /* main.m */; };
 		09477BC9229824FA009A47AF /* TestBaseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 09477BC8229824FA009A47AF /* TestBaseTests.m */; };
 		09477BD4229824FA009A47AF /* TestBaseUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 09477BD3229824FA009A47AF /* TestBaseUITests.m */; };
+		0995780B229832AB00A68CE9 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 09957806229832AB00A68CE9 /* Person.m */; };
+		0995780C229832AB00A68CE9 /* Person+NewFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = 09957809229832AB00A68CE9 /* Person+NewFunction.m */; };
+		0995780D229832AB00A68CE9 /* SampleProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 0995780A229832AB00A68CE9 /* SampleProtocol.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,12 @@
 		09477BCF229824FA009A47AF /* TestBaseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestBaseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		09477BD3229824FA009A47AF /* TestBaseUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestBaseUITests.m; sourceTree = "<group>"; };
 		09477BD5229824FA009A47AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		099578052298327D00A68CE9 /* SampleProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SampleProtocol.h; sourceTree = "<group>"; };
+		09957806229832AB00A68CE9 /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		09957807229832AB00A68CE9 /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		09957808229832AB00A68CE9 /* Person+NewFunction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Person+NewFunction.h"; sourceTree = "<group>"; };
+		09957809229832AB00A68CE9 /* Person+NewFunction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Person+NewFunction.m"; sourceTree = "<group>"; };
+		0995780A229832AB00A68CE9 /* SampleProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SampleProtocol.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +110,12 @@
 		09477BAE229824F9009A47AF /* TestBase */ = {
 			isa = PBXGroup;
 			children = (
+				09957807229832AB00A68CE9 /* Person.h */,
+				09957806229832AB00A68CE9 /* Person.m */,
+				09957808229832AB00A68CE9 /* Person+NewFunction.h */,
+				09957809229832AB00A68CE9 /* Person+NewFunction.m */,
+				0995780A229832AB00A68CE9 /* SampleProtocol.m */,
+				099578052298327D00A68CE9 /* SampleProtocol.h */,
 				09477BAF229824F9009A47AF /* AppDelegate.h */,
 				09477BB0229824F9009A47AF /* AppDelegate.m */,
 				09477BB2229824F9009A47AF /* ViewController.h */,
@@ -263,7 +278,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				09477BB4229824F9009A47AF /* ViewController.m in Sources */,
+				0995780D229832AB00A68CE9 /* SampleProtocol.m in Sources */,
 				09477BBF229824FA009A47AF /* main.m in Sources */,
+				0995780C229832AB00A68CE9 /* Person+NewFunction.m in Sources */,
+				0995780B229832AB00A68CE9 /* Person.m in Sources */,
 				09477BB1229824F9009A47AF /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
