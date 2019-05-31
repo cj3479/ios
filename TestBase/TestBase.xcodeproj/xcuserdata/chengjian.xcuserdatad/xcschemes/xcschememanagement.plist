@@ -4,10 +4,58 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>TestBase.xcscheme_^#shared#^_</key>
+		<key>Happy.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>1</integer>
+		</dict>
+		<key>TestBase copy 2.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>4</integer>
+		</dict>
+		<key>TestBase copy.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+		<key>TestBase.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>0</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>09477BAB229824F9009A47AF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>09477BC3229824FA009A47AF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>09477BCE229824FA009A47AF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>09A814BB22A11224000D9C17</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>09A814D222A11226000D9C17</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>09A814DD22A11226000D9C17</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>

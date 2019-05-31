@@ -7,7 +7,9 @@
 //
 
 #import "ViewController.h"
+#import "Person.h"
 @interface ViewController ()
+
 
 @end
 
@@ -104,6 +106,8 @@
     [label setText:@"Proc..."];
     [sampleProtocol startSampleProcess];
     // Do any additional setup after loading the view, typically from a nib.
+    Person *person =     [[Person     alloc]init];
+    [person run];
 }
 
 - (void)didReceiveMemoryWarning

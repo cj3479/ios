@@ -2,9 +2,15 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:TestBase/TestBase.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:TestBase1/TestBase1.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:TestBase/TestBase.xcodeproj">
+      location = "group:mystaticfmli/mystaticfmli.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:teststaticlib/teststaticlib.xcodeproj">
    </FileRef>
 </Workspace>

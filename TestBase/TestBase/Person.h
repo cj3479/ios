@@ -8,10 +8,14 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Person : NSObject
+
+@interface Person : NSObject{
+    int a;
+}
 -(void)exercis;
 -(void)run;
+-(void)testlib:(NSString *)nm andage :(NSString *)age;
 @property (nonatomic,copy)NSString * name;
-@property (nonatomic,assign)int age;
+@property (nonatomic, readonly, unsafe_unretained)int age;
 @end
 

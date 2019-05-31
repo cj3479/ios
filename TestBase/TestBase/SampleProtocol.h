@@ -17,8 +17,8 @@
 @interface SampleProtocol : NSObject
 
 {
-    // Delegate to respond back
-    id <SampleProtocolDelegate> _delegate;
+//    // Delegate to respond back
+//    id <SampleProtocolDelegate> _delegate;
     
 }
 @property (nonatomic,strong) id delegate;
