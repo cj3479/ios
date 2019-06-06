@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		094D7CD822A127D300AF2345 /* Teststaticlib.m in Sources */ = {isa = PBXBuildFile; fileRef = 094D7CD722A127D300AF2345 /* Teststaticlib.m */; };
-		094D7CD922A127D300AF2345 /* Teststaticlib.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 094D7CD622A127D300AF2345 /* Teststaticlib.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -18,7 +17,6 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
-				094D7CD922A127D300AF2345 /* Teststaticlib.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

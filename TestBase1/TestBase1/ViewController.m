@@ -13,6 +13,8 @@
 @end
 
 @implementation ViewController
+- (IBAction)clickon:(id)sender {
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];

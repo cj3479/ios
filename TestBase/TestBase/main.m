@@ -11,15 +11,120 @@
 #import "Person.h"
 #import "Person+NewFunction.h"
 #import "MyObject.h"
-#import "teststaticlib.h"
-
+#import "SelectorSub.h"
+#import "testFWStatic/teststaticlib.h"
+#import "testFWStatic/testFWStatic.h"
+#import "testDMlib/LibPerson.h"
+typedef unsigned long long        QUINT64;
 int main(int argc, char * argv[]) {
+    NSLog(@"currentThread---%@",[NSThread currentThread]);
+    // 串行队列的创建方法
+    dispatch_queue_t queue = dispatch_queue_create("net.bujige.testQueue", DISPATCH_QUEUE_SERIAL);
+    dispatch_sync(queue, ^{
+        // 追加任务1
+        for (int i = 0; i < 2; ++i) {
+            [NSThread sleepForTimeInterval:2];              // 模拟耗时操作
+            NSLog(@"1---%@",[NSThread currentThread]);      // 打印当前线程
+        }
+    });
+    NSLog(@"111111111111111");
+    dispatch_sync(queue, ^{
+        // 追加任务2
+        for (int i = 0; i < 2; ++i) {
+            [NSThread sleepForTimeInterval:2];              // 模拟耗时操作
+            NSLog(@"2---%@",[NSThread currentThread]);      // 打印当前线程
+        }
+    });
+    NSLog(@"222222222");
+    dispatch_sync(queue, ^{
+        // 追加任务3
+        for (int i = 0; i < 2; ++i) {
+            [NSThread sleepForTimeInterval:2];              // 模拟耗时操作
+            NSLog(@"3---%@",[NSThread currentThread]);      // 打印当前线程
+        }
+    });
+    NSLog(@"3333333");
+    NSLog(@"syncConcurrent---end");
+//    // 并发队列的创建方法
+//    dispatch_queue_t queue = dispatch_queue_create("net.bujige.testQueue", DISPATCH_QUEUE_CONCURRENT);
+    // 主队列的获取方法
+//    dispatch_queue_t queue = dispatch_get_main_queue();
+    int (^helloWorld)(int)=^(int i){
+        NSLog(@"Hello World!");
+        return i;
+    };
+//    void (^helloWorld)(void);
+//    helloWorld=^(void){
+//        NSLog(@"Hello World!");
+//    };
+    helloWorld(10);
+    NSArray * arraya=[NSArray arrayWithObjects:@"4",@"1",@"2",@"3",@"5", nil];
+    arraya= [arraya sortedArrayUsingComparator:^NSComparisonResult(id obj1, id obj2) {
+        int a1=[obj1 intValue];
+        int a2=[obj2 intValue];
+        return a1>=a2?-1:1;
+    }];
+    NSLog(@"%@",arraya);
+    QUINT64 channelID =10;
+    NSNumber *longlongNumber = [NSNumber numberWithLongLong:channelID];
+    NSDictionary *userInfo = @{@"isRefreshChannel":@(YES),@"channel_id":@(channelID),@"channel_id_qq":@(0)};
+    if(userInfo[@"channel_id"]){
+        NSLog(@"dfdsfdsdddfddf");
+    }
+    if(userInfo[@"channel_idsss"]){
+        NSLog(@"aaaaaaaa");
+    }
+    if(userInfo[@"channel_id_qq"]){
+        NSLog(@"bbbbbbbb");
+    }
+    //    NSDictionary *userInfo;
+    QUINT64 channelID3 =[userInfo[@"channel_id"] unsignedLongLongValue];
+    NSLog(@"userInfo=%@",userInfo[@"channel_id"]);
+    NSLog(@"userInfo=%lld",channelID3);
+    bool add =YES;
+    NSLog(@"%lld",YES);
+    //    NSDictionary *pop_sheet = [NSJSONSerialization JSONObjectWithData:NULL
+    //                                                    options:NSJSONReadingMutableContainers
+    //                                                                error:nil];
+    SelectorSub *ss = [[SelectorSub alloc]init];
+    NSDictionary * dic1=[NSDictionary dictionaryWithObject:@(channelID) forKey:@"key1"];
+    SelectorSub * str111=[dic1 objectForKey:@"key1"];
+    NSNumber *longlongNumber2 =[dic1 objectForKey:@"key1"];
+    NSLog(@"%@",longlongNumber2);
+    QUINT64 channelID2 =longlongNumber2.longLongValue;
+    NSLog(@"%@",dic1[@"key1"]);
+    NSDictionary * dic2=[NSDictionary dictionaryWithObjects:[NSArray arrayWithObjects:ss,@"object2",@"object3", nil] forKeys:[NSArray arrayWithObjects:@"key1",@"key2",@"key3", nil]];
+    NSLog(@"dic2 has :%@",dic2);
+    ss.methodTest = @selector(parentMethod);
+    [ss TestParentMethod];
+    ss.methodTest = @selector(SubMethod);
+    [ss TestParentMethod];
+    //    ss.methodTest = @selector(parentMethod); 这句在运行期时，会寻找到父类中的方法进行调用。
+    //
+    //    ss.methodTest = @selector(SubMethod);//这句就在运行期时，会先寻找父类，如果父类没有，则寻找子类。
+    //
+    //
+    //
+    //    如果这里将ss.methodTest = @selector(test); 其中test即不是ss父类，也不是ss本身，也非SS子类，哪么这个时候在使用
+    //
+    //    [self performSelector:_methodTest withObject:nil];就会出现地址寻找出错 。
+    
+    //    [ss release];
+    NSLog(@"main 当前栈信息：%@", [NSThread callStackSymbols]);
+    NSLog(@"%s", (char *)(@selector(doSomething)));
+    Person * person33=[[Person alloc] init];
+    LibPerson *person11 = [[LibPerson alloc]init];
+    person11.watch;
     Teststaticlib *lib = [[Teststaticlib alloc]init];
     [lib testslib:@"ddddddd"];
+    [person11 performSelectorOnMainThread:@selector(eat) withObject:nil waitUntilDone:NO];
+    testFWStatic *fwstatic = [[testFWStatic alloc]init];
+    [fwstatic testFWStaticA];
     Class LSApplicationWorkspace_class = NSClassFromString(@"LSApplicationWorkspace");
-    NSObject *workspace = [LSApplicationWorkspace_class performSelector:@selector(defaultWorkspace)];
-    NSArray *arrAPP = [workspace performSelector:@selector(allApplications)];
-    NSLog(@"arrAPP: %@",arrAPP);
+    //打印设备中的所有的bundid
+    //    NSObject *workspace = [LSApplicationWorkspace_class performSelector:@selector(defaultWorkspace)];
+    //    NSArray *arrAPP = [workspace performSelector:@selector(allApplications)];
+    //    NSLog(@"arrAPP: %@",arrAPP);
     NSArray * array1=[NSArray arrayWithObjects:@"0",@"1",@"2",@"3", nil];
     NSLog(@"array1 are :%@",array1);
     NSArray * array2=[[NSArray alloc] initWithObjects:@"00",@"11",@"22",@"33", nil];
@@ -30,7 +135,7 @@ int main(int argc, char * argv[]) {
     NSArray * addArray=[NSArray arrayWithObjects:@"4",@"5",@"6", nil];
     [array addObjectsFromArray:addArray];
     NSLog(@"obj1 class is11111 = %@",nil);
-     NSLog(@"%@",array);
+    NSLog(@"%@",array);
     id obj1 = [NSMutableArray alloc];
     id obj2 = [[NSMutableArray alloc] init];
     
@@ -45,25 +150,28 @@ int main(int argc, char * argv[]) {
     
     id obj5 = [MyObject alloc];
     id obj6 = [[MyObject alloc] init];
-//    id obj7 = [[MyObject alloc] init];
+    //    id obj7 = [[MyObject alloc] init];
     NSLog(@"obj5 class is %@",NSStringFromClass([obj5 class]));
     NSLog(@"obj6 class is %@",NSStringFromClass([obj6 class]));
-//    NSLog(@"obj7 class is %@",NSStringFromClass([obj6 class]));
+    //    NSLog(@"obj7 class is %@",NSStringFromClass([obj6 class]));
     
     NSLog(@"main 1111");
     Person * person=[[Person alloc] init];
     Person * person2=[Person alloc];
-    [person2 testlib:@"cj" andage :@"88"];
+    [person2 testlib:@"cj" andage:@"88"];
     NSLog(@"person2。1=%p,obj7 class is %@",person2,NSStringFromClass([person2 class]));
     person2=[person2 init];
-    [person2 testlib:@"cj11" andage :@"88"];
+    //    [person2 testlib:@"cj11" :@"88"];
     NSLog(@"person2。2=%p,obj8 class is %@",person2,NSStringFromClass([person2 class]));
     id person1=[[NSObject alloc] init];
     //    id person1=[[Person alloc] init];
-//        [person1 exercis];
-    
+    //        [person1 exercis];
     [person exercis];
     [person run];
+    [person exercise:^(NSString *name, int age) {
+        NSLog(@"%@,%d",name,age);
+    }];
+    NSLog(@"%s", (char *)(@selector(doSomething)));
     //调用类别中增加的eat方法
     [person eat];
     @autoreleasepool {

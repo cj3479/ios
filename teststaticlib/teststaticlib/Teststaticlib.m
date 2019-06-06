@@ -6,10 +6,10 @@
 //  Copyright © 2019 chengjian. All rights reserved.
 //
 
-#import "teststaticlib.h"
+#import "Teststaticlib.h"
 
 @implementation Teststaticlib
 -(void)testslib:(NSString *)name{
-    NSLog(@"test static name=%@",name);
+    NSLog(@"test static 呵呵呵呵qqqddd name=%@",name);
 }
 @end

@@ -14,9 +14,10 @@
 
 @implementation AppDelegate
 
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    [[NSBundle bundleWithPath:@"/Applications/InjectionIII.app/Contents/Resources/iOSInjection.bundle"] load];
     // Override point for customization after application launch.
+    NSLog(@"application 当前栈信息：%@", [NSThread callStackSymbols]);
     return YES;
 }
 

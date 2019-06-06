@@ -9,6 +9,11 @@
 #import "Person.h"
 
 @implementation Person
+-(void)exercise:(myBlock)aa{
+    NSString * theName=@"ZhangSan";
+    int age=10;
+    aa(theName,age);
+}
 //@synthesize age = shuaiI;
 - (void)exercis{
     NSLog(@"I am cj");
@@ -24,10 +29,15 @@
     NSLog(@" 类 I am run");
 }
 -(void)displayObject{
+    _age = 30;
     NSLog(@"类扩展中声明的对象方法=%d",a);
      NSLog(@"类扩展中声明的对象方法=%d",self.age);
     NSLog(@"类扩展中声明的对象方法=%d",_age);
 //     NSLog(@"类扩展中声明的对象方法=%d",shuaiI);
+}
+
+-(void)testPerson:(NSString *)nm :(NSString *)age{
+    
 }
 +(void)displayClass{
     NSLog(@"类扩展中声明的类方法");

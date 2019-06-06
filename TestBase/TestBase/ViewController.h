@@ -11,6 +11,10 @@
 @interface ViewController : UIViewController<SampleProtocolDelegate>
 {
     IBOutlet UILabel *label;
+    //1.创建库房，用来存储产品
+    NSMutableArray *array ;
+    //2.创建一个条件
+    NSCondition *condition;
 }
 
 

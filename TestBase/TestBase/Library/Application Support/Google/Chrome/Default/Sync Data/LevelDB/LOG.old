@@ -1,0 +1,36 @@
+2019/05/31-12:21:56.396 9903 Reusing MANIFEST /Users/chengjian/Library/Application Support/Google/Chrome/Default/Sync Data/LevelDB/MANIFEST-000001
+2019/05/31-12:21:56.398 9903 Recovering log #117
+2019/05/31-12:21:56.399 9903 Reusing old log /Users/chengjian/Library/Application Support/Google/Chrome/Default/Sync Data/LevelDB/000117.log 
+2019/05/31-12:31:28.431 f77b Level-0 table #121: started
+2019/05/31-12:31:28.436 f77b Level-0 table #121: 136005 bytes OK
+2019/05/31-12:31:28.452 f77b Delete type=0 #117
+2019/05/31-12:31:28.457 f77b Compacting 4@0 + 1@1 files
+2019/05/31-12:31:28.465 f77b Generated table #122@0: 2612 keys, 365120 bytes
+2019/05/31-12:31:28.465 f77b Compacted 4@0 + 1@1 files => 365120 bytes
+2019/05/31-12:31:28.479 f77b compacted to: files[ 0 1 1 0 0 0 0 ]
+2019/05/31-12:31:28.479 f77b Delete type=2 #116
+2019/05/31-12:31:28.482 f77b Delete type=2 #111
+2019/05/31-12:31:28.482 f77b Delete type=2 #113
+2019/05/31-12:31:28.482 f77b Delete type=2 #121
+2019/05/31-12:31:28.483 f77b Delete type=2 #118
+2019/05/31-14:30:32.191 f77b Level-0 table #124: started
+2019/05/31-14:30:32.204 f77b Level-0 table #124: 108021 bytes OK
+2019/05/31-14:30:32.228 f77b Delete type=0 #120
+2019/05/31-15:08:36.438 f77b Level-0 table #126: started
+2019/05/31-15:08:36.452 f77b Level-0 table #126: 105952 bytes OK
+2019/05/31-15:08:36.465 f77b Delete type=0 #123
+2019/05/31-17:29:41.892 f77b Level-0 table #128: started
+2019/05/31-17:29:41.911 f77b Level-0 table #128: 103169 bytes OK
+2019/05/31-17:29:42.039 f77b Delete type=0 #125
+2019/05/31-19:02:03.353 f77b Level-0 table #130: started
+2019/05/31-19:02:03.370 f77b Level-0 table #130: 141670 bytes OK
+2019/05/31-19:02:03.387 f77b Delete type=0 #127
+2019/05/31-19:02:03.395 f77b Compacting 4@0 + 1@1 files
+2019/05/31-19:02:03.409 f77b Generated table #131@0: 2648 keys, 374094 bytes
+2019/05/31-19:02:03.409 f77b Compacted 4@0 + 1@1 files => 374094 bytes
+2019/05/31-19:02:03.503 f77b compacted to: files[ 0 1 1 0 0 0 0 ]
+2019/05/31-19:02:03.503 f77b Delete type=2 #128
+2019/05/31-19:02:03.521 f77b Delete type=2 #122
+2019/05/31-19:02:03.522 f77b Delete type=2 #124
+2019/05/31-19:02:03.523 f77b Delete type=2 #130
+2019/05/31-19:02:03.523 f77b Delete type=2 #126

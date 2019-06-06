@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		090C706922A60C0600BE63ED /* SelectDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 090C706822A60C0600BE63ED /* SelectDemo.m */; };
 		09477BB1229824F9009A47AF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 09477BB0229824F9009A47AF /* AppDelegate.m */; };
 		09477BB4229824F9009A47AF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09477BB3229824F9009A47AF /* ViewController.m */; };
 		09477BB7229824F9009A47AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09477BB5229824F9009A47AF /* Main.storyboard */; };
@@ -16,6 +17,7 @@
 		09477BC9229824FA009A47AF /* TestBaseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 09477BC8229824FA009A47AF /* TestBaseTests.m */; };
 		09477BD4229824FA009A47AF /* TestBaseUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 09477BD3229824FA009A47AF /* TestBaseUITests.m */; };
 		094AD2A6229EBA2A006855A9 /* MyObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 094AD2A5229EBA2A006855A9 /* MyObject.m */; };
+		09635EBE22A619C900E773F4 /* SelectorSub.m in Sources */ = {isa = PBXBuildFile; fileRef = 09635EBD22A619C900E773F4 /* SelectorSub.m */; };
 		0995780B229832AB00A68CE9 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 09957806229832AB00A68CE9 /* Person.m */; };
 		0995780C229832AB00A68CE9 /* Person+NewFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = 09957809229832AB00A68CE9 /* Person+NewFunction.m */; };
 		0995780D229832AB00A68CE9 /* SampleProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 0995780A229832AB00A68CE9 /* SampleProtocol.m */; };
@@ -27,7 +29,12 @@
 		09A814CE22A11226000D9C17 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 09A814CD22A11226000D9C17 /* main.m */; };
 		09A814D822A11226000D9C17 /* HappyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 09A814D722A11226000D9C17 /* HappyTests.m */; };
 		09A814E322A11226000D9C17 /* HappyUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 09A814E222A11226000D9C17 /* HappyUITests.m */; };
-		09BFD0A022A14F98000E3D10 /* libteststaticlib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 09BFD09F22A14F98000E3D10 /* libteststaticlib.a */; };
+		09E0C5C522A4D67500519955 /* libteststaticlib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 09E0C5C422A4D67500519955 /* libteststaticlib.a */; };
+		09F8246522A4F567008D48DF /* testfwstatic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09F8246422A4F567008D48DF /* testfwstatic.framework */; };
+		09F824CA22A4FFFC008D48DF /* testDMlib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09F824C922A4FFFC008D48DF /* testDMlib.framework */; };
+		09F824CB22A4FFFC008D48DF /* testDMlib.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 09F824C922A4FFFC008D48DF /* testDMlib.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		09F824F522A502C6008D48DF /* NextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09F824F322A502C6008D48DF /* NextViewController.m */; };
+		09F824F622A502C6008D48DF /* NextViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09F824F422A502C6008D48DF /* NextViewController.xib */; };
 		09FABCF722A1197D00AD1E79 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09477BB3229824F9009A47AF /* ViewController.m */; };
 		09FABCF822A1197D00AD1E79 /* SampleProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 0995780A229832AB00A68CE9 /* SampleProtocol.m */; };
 		09FABCF922A1197D00AD1E79 /* MyObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 094AD2A5229EBA2A006855A9 /* MyObject.m */; };
@@ -71,7 +78,23 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		09F824CC22A4FFFC008D48DF /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				09F824CB22A4FFFC008D48DF /* testDMlib.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		090C706722A60C0600BE63ED /* SelectDemo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SelectDemo.h; sourceTree = "<group>"; };
+		090C706822A60C0600BE63ED /* SelectDemo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SelectDemo.m; sourceTree = "<group>"; };
 		09477BAC229824F9009A47AF /* TestBase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestBase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09477BAF229824F9009A47AF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		09477BB0229824F9009A47AF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -91,6 +114,10 @@
 		094AD2A4229EBA2A006855A9 /* MyObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyObject.h; sourceTree = "<group>"; };
 		094AD2A5229EBA2A006855A9 /* MyObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyObject.m; sourceTree = "<group>"; };
 		094D7CC822A126F500AF2345 /* mystaticfmli.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = mystaticfmli.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0961F8B822A4C6B000F804C7 /* testfwstatic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = testfwstatic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0961F8BF22A4CDAE00F804C7 /* libteststaticlib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libteststaticlib.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		09635EBC22A619C900E773F4 /* SelectorSub.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SelectorSub.h; sourceTree = "<group>"; };
+		09635EBD22A619C900E773F4 /* SelectorSub.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SelectorSub.m; sourceTree = "<group>"; };
 		099578052298327D00A68CE9 /* SampleProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SampleProtocol.h; sourceTree = "<group>"; };
 		09957806229832AB00A68CE9 /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
 		09957807229832AB00A68CE9 /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
@@ -113,8 +140,13 @@
 		09A814DE22A11226000D9C17 /* HappyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HappyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		09A814E222A11226000D9C17 /* HappyUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HappyUITests.m; sourceTree = "<group>"; };
 		09A814E422A11226000D9C17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		09BFD09C22A14D46000E3D10 /* Teststaticlib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Teststaticlib.h; path = ../../teststaticlib/teststaticlib/Teststaticlib.h; sourceTree = "<group>"; };
-		09BFD09F22A14F98000E3D10 /* libteststaticlib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libteststaticlib.a; path = "../../../../Library/Developer/Xcode/DerivedData/Build/Products/Debug-iphonesimulator/libteststaticlib.a"; sourceTree = "<group>"; };
+		09E0C5C422A4D67500519955 /* libteststaticlib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libteststaticlib.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		09F8246422A4F567008D48DF /* testfwstatic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = testfwstatic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		09F824C722A4FE8C008D48DF /* testDMlib.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = testDMlib.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		09F824C922A4FFFC008D48DF /* testDMlib.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = testDMlib.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		09F824F222A502C6008D48DF /* NextViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NextViewController.h; sourceTree = "<group>"; };
+		09F824F322A502C6008D48DF /* NextViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NextViewController.m; sourceTree = "<group>"; };
+		09F824F422A502C6008D48DF /* NextViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NextViewController.xib; sourceTree = "<group>"; };
 		09FABCF422A1192B00AD1E79 /* TestBase copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "TestBase copy-Info.plist"; path = "/Users/chengjian/work/ios_git_git/TestBase/TestBase copy-Info.plist"; sourceTree = "<absolute>"; };
 		09FABD0622A1197D00AD1E79 /* TestBase copy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TestBase copy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		09FABD0722A1197E00AD1E79 /* TestBase copy2-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "TestBase copy2-Info.plist"; path = "/Users/chengjian/work/ios_git_git/TestBase/TestBase copy2-Info.plist"; sourceTree = "<absolute>"; };
@@ -125,7 +157,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				09BFD0A022A14F98000E3D10 /* libteststaticlib.a in Frameworks */,
+				09F824CA22A4FFFC008D48DF /* testDMlib.framework in Frameworks */,
+				09F8246522A4F567008D48DF /* testfwstatic.framework in Frameworks */,
+				09E0C5C522A4D67500519955 /* libteststaticlib.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -177,6 +211,7 @@
 		09477BA3229824F9009A47AF = {
 			isa = PBXGroup;
 			children = (
+				09F824C922A4FFFC008D48DF /* testDMlib.framework */,
 				09FABCF322A1192B00AD1E79 /* Resources-iPad */,
 				09477BAE229824F9009A47AF /* TestBase */,
 				09477BC7229824FA009A47AF /* TestBaseTests */,
@@ -208,8 +243,6 @@
 		09477BAE229824F9009A47AF /* TestBase */ = {
 			isa = PBXGroup;
 			children = (
-				09BFD09F22A14F98000E3D10 /* libteststaticlib.a */,
-				09BFD09C22A14D46000E3D10 /* Teststaticlib.h */,
 				09957807229832AB00A68CE9 /* Person.h */,
 				09957806229832AB00A68CE9 /* Person.m */,
 				09957808229832AB00A68CE9 /* Person+NewFunction.h */,
@@ -227,6 +260,13 @@
 				09477BBE229824FA009A47AF /* main.m */,
 				094AD2A4229EBA2A006855A9 /* MyObject.h */,
 				094AD2A5229EBA2A006855A9 /* MyObject.m */,
+				09F824F222A502C6008D48DF /* NextViewController.h */,
+				09F824F322A502C6008D48DF /* NextViewController.m */,
+				09F824F422A502C6008D48DF /* NextViewController.xib */,
+				090C706722A60C0600BE63ED /* SelectDemo.h */,
+				090C706822A60C0600BE63ED /* SelectDemo.m */,
+				09635EBC22A619C900E773F4 /* SelectorSub.h */,
+				09635EBD22A619C900E773F4 /* SelectorSub.m */,
 			);
 			path = TestBase;
 			sourceTree = "<group>";
@@ -252,6 +292,11 @@
 		094D7CC722A126F500AF2345 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				09F824C722A4FE8C008D48DF /* testDMlib.framework */,
+				09F8246422A4F567008D48DF /* testfwstatic.framework */,
+				09E0C5C422A4D67500519955 /* libteststaticlib.a */,
+				0961F8BF22A4CDAE00F804C7 /* libteststaticlib.a */,
+				0961F8B822A4C6B000F804C7 /* testfwstatic.framework */,
 				094D7CC822A126F500AF2345 /* mystaticfmli.framework */,
 			);
 			name = Frameworks;
@@ -308,6 +353,7 @@
 				09477BA8229824F9009A47AF /* Sources */,
 				09477BA9229824F9009A47AF /* Frameworks */,
 				09477BAA229824F9009A47AF /* Resources */,
+				09F824CC22A4FFFC008D48DF /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -488,6 +534,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				09477BBC229824FA009A47AF /* LaunchScreen.storyboard in Resources */,
+				09F824F622A502C6008D48DF /* NextViewController.xib in Resources */,
 				09477BB9229824FA009A47AF /* Assets.xcassets in Resources */,
 				09477BB7229824F9009A47AF /* Main.storyboard in Resources */,
 			);
@@ -549,10 +596,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				09477BB4229824F9009A47AF /* ViewController.m in Sources */,
+				09635EBE22A619C900E773F4 /* SelectorSub.m in Sources */,
 				0995780D229832AB00A68CE9 /* SampleProtocol.m in Sources */,
 				094AD2A6229EBA2A006855A9 /* MyObject.m in Sources */,
 				09477BBF229824FA009A47AF /* main.m in Sources */,
 				0995780C229832AB00A68CE9 /* Person+NewFunction.m in Sources */,
+				09F824F522A502C6008D48DF /* NextViewController.m in Sources */,
+				090C706922A60C0600BE63ED /* SelectDemo.m in Sources */,
 				0995780B229832AB00A68CE9 /* Person.m in Sources */,
 				09477BB1229824F9009A47AF /* AppDelegate.m in Sources */,
 			);
@@ -792,17 +842,23 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 65T72LT3SH;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = TestBase/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/TestBase",
+				);
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = cj.test.oi.TestBase;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				"USER_HEADER_SEARCH_PATHS[arch=*]" = "";
 			};
@@ -812,17 +868,23 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 65T72LT3SH;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = TestBase/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/TestBase",
+				);
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = cj.test.oi.TestBase;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

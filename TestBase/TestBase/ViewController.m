@@ -8,14 +8,14 @@
 
 #import "ViewController.h"
 #import "Person.h"
-@interface ViewController ()
-
-
-@end
+#import "NextViewController.h"
 
 @implementation ViewController
-
+- (IBAction)clickon:(id)sender {
+    NSLog(@"clickon......");
+}
 - (void)viewDidLoad {
+    NSLog(@"viewDidLoad: %@", self);
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     //    label = [[UILabel alloc]init];
@@ -24,7 +24,7 @@
     
     
     
-    label.text=@"hello world";
+    label.text=@"hello world ddd";
     //"@"的作用是把一个c风格的字符串"hello world"包装成一个NSString对象
     [label sizeToFit];
     label.center =self.view.center;
@@ -90,7 +90,7 @@
     //    [button setBackgroundImage:[UIImage imageNamed:@"power_bg_img_pressed.png"] forState:UIControlStateHighlighted];
     //    添加到ViewController中去
     [self.view addSubview:button];
-    
+    //
     [self.view addSubview:label];
     
     //    //    Button监听事件，非常重要
@@ -103,11 +103,35 @@
     
     SampleProtocol *sampleProtocol = [[SampleProtocol alloc]init];
     sampleProtocol.delegate = self;
-    [label setText:@"Proc..."];
+    [label setText:@"Proc..nnsss."];
     [sampleProtocol startSampleProcess];
     // Do any additional setup after loading the view, typically from a nib.
     Person *person =     [[Person     alloc]init];
     [person run];
+    NextViewController *next =[[NextViewController alloc]init];
+    [self addChildViewController:next];
+    next.view.frame = CGRectMake(0, 250, 120, 100);
+    [self.view addSubview:next.view];
+    self.view.clipsToBounds = NO;
+    
+    //分配内存
+    array = [[NSMutableArray alloc] init];
+    condition = [[NSCondition alloc] init];
+//    //创建生产者
+//    [NSThread detachNewThreadSelector:@selector(produceAction) toTarget:self withObject:nil];
+//    //创建消费者
+//    [NSThread detachNewThreadSelector:@selector(consumerAction) toTarget:self withObject:nil];
+//    [NSThread detachNewThreadSelector:@selector(consumerAction) toTarget:self withObject:nil];
+    label =UILabel.alloc.init;
+}
+
+-(void)injected{
+    NSLog(@"I've been aaaa injected: %@", self);
+    [self.view.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
+    [self viewDidLoad];
+    //    [self viewWillAppear:YES];
+    //    [self viewWillDisappear:YES];
+    self.view.backgroundColor = [UIColor blueColor];
 }
 
 - (void)didReceiveMemoryWarning
@@ -121,12 +145,86 @@
     //    [label setText:@"Process Completed"];
 }
 
--(void)demo:(UIButton *) button{
-    NSLog(@"%@",button);
+-(void)demo:(UIButton *) buttona{
+    NSLog(@"%@",buttona);
 }
 -(IBAction)clickButton:(UIButton *)button{
     NSLog(@"%@",button);
     button.enabled = NO;
 }
 
+
+- (void)produceAction{
+    
+    //异常捕捉
+    while (true) {
+        @try {
+            //不管怎么样先上个锁。
+            [condition lock];
+            while (array.count == 10) {
+                NSLog(@"满了，不能再生产了");
+                //停止生产，阻塞线程
+                [condition wait];
+            }
+            
+            //模拟生产，没0.2~2秒生产一个
+            [NSThread sleepForTimeInterval:(arc4random()%10+1)/5.0];
+            [array addObject:@"牛奶"];
+            //同时打印
+            NSLog(@"生产了一个产品,当前个数是：%ld",array.count);
+            //唤醒消费者(all)所有的
+            [condition broadcast];
+            
+        }
+        //可以打印出异常是什么原因！
+        @catch (NSException *exception) {
+            
+            
+        }
+        @finally {
+            //解锁
+            [condition unlock];
+        }
+    }
+}
+
+- (void)consumerAction{
+    
+    //异常捕捉
+    while (true) {
+        @try {
+            //不管怎么样先上个锁。
+            [condition lock];
+            while (array.count == 0) {
+                NSLog(@"没有库存了");
+                //停止消费，阻塞线程
+                [condition wait];
+            }
+            
+            //模拟消费，没0.2~2秒消费一个
+            [NSThread sleepForTimeInterval:(arc4random()%10+1)/5.0];
+            [array removeLastObject];
+            //同时打印
+            NSLog(@"消费了一个产品,当前个数是：%ld",array.count);
+            //唤醒生产者(all)所有的
+            [condition broadcast];
+            
+        }
+        @catch (NSException *exception) {
+        }
+        @finally {
+            //解锁
+            [condition unlock];
+            
+        }
+        
+    }
+}
+
+
+
+//- (void)didReceiveMemoryWarning {
+//    [super didReceiveMemoryWarning];
+//    // Dispose of any resources that can be recreated.
+//}
 @end
