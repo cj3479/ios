@@ -1,0 +1,9 @@
+2019/05/22-19:34:44.016 3693b Reusing MANIFEST /Users/chengjian/Library/Application Support/Google/Chrome/Default/IndexedDB/http_www.sf-express.com_0.indexeddb.leveldb/MANIFEST-000001
+2019/05/22-19:34:44.016 3693b Recovering log #3
+2019/05/22-19:34:44.016 3693b Reusing old log /Users/chengjian/Library/Application Support/Google/Chrome/Default/IndexedDB/http_www.sf-express.com_0.indexeddb.leveldb/000003.log 
+2019/05/22-19:34:44.682 2c86b Level-0 table #5: started
+2019/05/22-19:34:44.711 2c86b Level-0 table #5: 1794294 bytes OK
+2019/05/22-19:34:44.722 2c86b Delete type=0 #3
+2019/05/22-19:34:44.741 2c86b Level-0 table #7: started
+2019/05/22-19:34:44.771 2c86b Level-0 table #7: 1271155 bytes OK
+2019/05/22-19:34:44.782 2c86b Delete type=0 #4

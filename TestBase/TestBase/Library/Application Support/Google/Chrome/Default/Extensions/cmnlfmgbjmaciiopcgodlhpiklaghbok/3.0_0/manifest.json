@@ -1,0 +1,22 @@
+{
+   "background": {
+      "scripts": [ "background.js" ]
+   },
+   "browser_action": {
+      "default_icon": "icon.png",
+      "default_popup": "popup.html"
+   },
+   "content_scripts": [ {
+      "all_frames": true,
+      "js": [ "response.js" ],
+      "matches": [ "http://*/*", "https://*/*" ]
+   } ],
+   "description": "YApi 跨域请求",
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAn+iCLId2Ruw9y4xVTBSw5f74y92NhXR1EymYd773R0fikmDPP4VcF4G+KnLVbtkPfh+o0AFhz5gQvC6dsf3I9z0fFAY12aWfuDFzXlt992sdJkarapQASTaJVAsUndeimkNaDRvGArUhIkwkf3Bg3nhFP7xLhwSY19EEC7QgCZlWxb+xTo+eWEMxefKaYDzRGxt6J53G8RUaK1Tc0gtQa6X4b7ZRLRC1y83KIzfHnLQH4hxOjdCFo2RKZspVfwlhZ5iT6tRpwSNv503LO66TAHwOZxs3cHrg/1UIURuqBmx+vbHSkI8pszI2o8hKNG9zu10ORt+TAGkhk6rVEUbq/QIDAQAB",
+   "manifest_version": 2,
+   "name": "cross-request",
+   "permissions": [ "tabs", "storage", "webRequest", "*://*/*", "webRequestBlocking" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "3.0",
+   "web_accessible_resources": [ "index.js" ]
+}

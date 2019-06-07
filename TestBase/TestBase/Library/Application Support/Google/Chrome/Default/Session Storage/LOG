@@ -1,0 +1,6 @@
+2019/06/03-09:48:15.077 e103 Reusing MANIFEST Session Storage/MANIFEST-000001
+2019/06/03-09:48:15.079 e103 Recovering log #443
+2019/06/03-09:48:15.080 e103 Reusing old log Session Storage/000443.log 
+2019/06/03-09:48:21.050 12e03 Level-0 table #448: started
+2019/06/03-09:48:21.065 12e03 Level-0 table #448: 18996 bytes OK
+2019/06/03-09:48:21.073 12e03 Delete type=0 #443

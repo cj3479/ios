@@ -1,0 +1,6 @@
+2019/06/03-09:47:41.224 7c03 Reusing MANIFEST /Users/chengjian/Library/Application Support/Google/Chrome/Default/Sync Data/LevelDB/MANIFEST-000001
+2019/06/03-09:47:41.225 7c03 Recovering log #129
+2019/06/03-09:47:41.227 7c03 Reusing old log /Users/chengjian/Library/Application Support/Google/Chrome/Default/Sync Data/LevelDB/000129.log 
+2019/06/03-09:48:21.313 e057 Level-0 table #134: started
+2019/06/03-09:48:21.320 e057 Level-0 table #134: 162439 bytes OK
+2019/06/03-09:48:21.346 e057 Delete type=0 #129
