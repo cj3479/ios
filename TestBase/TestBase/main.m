@@ -17,6 +17,8 @@
 #import "testDMlib/LibPerson.h"
 typedef unsigned long long        QUINT64;
 int main(int argc, char * argv[]) {
+    NSString *testStr = nil;
+     NSLog(@"oneNodeIndexPath: %d", testStr.length);
     NSIndexPath *oneNodeIndexPath = [NSIndexPath indexPathWithIndex:6];
     NSLog(@"oneNodeIndexPath: %@", oneNodeIndexPath);
     NSLog(@"currentThread---%@",[NSThread currentThread]);
@@ -193,6 +195,13 @@ int main(int argc, char * argv[]) {
     NSLog(@"ssssssss=%s", (char *)(@selector(doSomething)));
     //调用类别中增加的eat方法
     [person eat];
+//    NSArray * array=[NSArray arrayWithObjects:@"4",@"1",@"2",@"3",@"5", nil];
+//    array= [array sortedArrayUsingComparator:^NSComparisonResult(id obj1, id obj2) {
+//        int a1=[obj1 intValue];
+//        int a2=[obj2 intValue];
+//        return a1>=a2?-1:1;
+//    }];
+//    NSLog(@"%@",array);
     @autoreleasepool {
         return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
     }

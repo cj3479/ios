@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		090C706922A60C0600BE63ED /* SelectDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 090C706822A60C0600BE63ED /* SelectDemo.m */; };
 		090F4F4E22AA81E0007FCDB7 /* UITableviewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 090F4F4D22AA81E0007FCDB7 /* UITableviewVC.m */; };
+		090F4F5122AB5962007FCDB7 /* Person+TestCategpryPerson_CF.m in Sources */ = {isa = PBXBuildFile; fileRef = 090F4F5022AB5962007FCDB7 /* Person+TestCategpryPerson_CF.m */; };
 		09477BB1229824F9009A47AF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 09477BB0229824F9009A47AF /* AppDelegate.m */; };
 		09477BB4229824F9009A47AF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09477BB3229824F9009A47AF /* ViewController.m */; };
 		09477BB7229824F9009A47AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09477BB5229824F9009A47AF /* Main.storyboard */; };
@@ -98,6 +99,8 @@
 		090C706822A60C0600BE63ED /* SelectDemo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SelectDemo.m; sourceTree = "<group>"; };
 		090F4F4C22AA81E0007FCDB7 /* UITableviewVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UITableviewVC.h; sourceTree = "<group>"; };
 		090F4F4D22AA81E0007FCDB7 /* UITableviewVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UITableviewVC.m; sourceTree = "<group>"; };
+		090F4F4F22AB5962007FCDB7 /* Person+TestCategpryPerson_CF.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Person+TestCategpryPerson_CF.h"; sourceTree = "<group>"; };
+		090F4F5022AB5962007FCDB7 /* Person+TestCategpryPerson_CF.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Person+TestCategpryPerson_CF.m"; sourceTree = "<group>"; };
 		09477BAC229824F9009A47AF /* TestBase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestBase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09477BAF229824F9009A47AF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		09477BB0229824F9009A47AF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -272,6 +275,8 @@
 				09635EBD22A619C900E773F4 /* SelectorSub.m */,
 				090F4F4C22AA81E0007FCDB7 /* UITableviewVC.h */,
 				090F4F4D22AA81E0007FCDB7 /* UITableviewVC.m */,
+				090F4F4F22AB5962007FCDB7 /* Person+TestCategpryPerson_CF.h */,
+				090F4F5022AB5962007FCDB7 /* Person+TestCategpryPerson_CF.m */,
 			);
 			path = TestBase;
 			sourceTree = "<group>";
@@ -605,6 +610,7 @@
 				0995780D229832AB00A68CE9 /* SampleProtocol.m in Sources */,
 				094AD2A6229EBA2A006855A9 /* MyObject.m in Sources */,
 				09477BBF229824FA009A47AF /* main.m in Sources */,
+				090F4F5122AB5962007FCDB7 /* Person+TestCategpryPerson_CF.m in Sources */,
 				090F4F4E22AA81E0007FCDB7 /* UITableviewVC.m in Sources */,
 				0995780C229832AB00A68CE9 /* Person+NewFunction.m in Sources */,
 				09F824F522A502C6008D48DF /* NextViewController.m in Sources */,

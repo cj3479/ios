@@ -14,6 +14,15 @@
 - (IBAction)clickon:(id)sender {
     NSLog(@"clickon......");
 }
+- (void)viewWillLayoutSubviews{
+    
+}
+- (void)viewDidLayoutSubviews{
+    
+}
+////从下往上计算布局
+//- (void)layoutSubviews {
+//}
 - (void)viewDidLoad {
     NSLog(@"viewDidLoad: %@", self);
     [super viewDidLoad];
@@ -23,8 +32,9 @@
     //这一句创建了一个静态文本控件，未指定内容、大小和位置
     
     
-    
-    label.text=@"hello world ddd";
+    NSString *text =@"hello world ddd";
+    NSLog(@"dddddd");
+    label.text=text;
     //"@"的作用是把一个c风格的字符串"hello world"包装成一个NSString对象
     [label sizeToFit];
     label.center =self.view.center;
@@ -103,7 +113,7 @@
     
     SampleProtocol *sampleProtocol = [[SampleProtocol alloc]init];
     sampleProtocol.delegate = self;
-    [label setText:@"Proc..nnsss."];
+//    [label setText:@"Proc..nnsss."];
     [sampleProtocol startSampleProcess];
     // Do any additional setup after loading the view, typically from a nib.
     Person *person =     [[Person     alloc]init];
@@ -112,11 +122,11 @@
     NSLog(@"aaaaaaaaa：%@",next.labels);
     next.labels.text=@"startinghhhh";
     next.view.frame = CGRectMake(0, 250, 120, 400);
-    [self addChildViewController:next];
+//    [self addChildViewController:next];
     NSLog(@"aaaaaaaaa11：%@",next.labels);
-//    next.view.hidden = YES;
+    //    next.view.hidden = YES;
     next.view.backgroundColor = [UIColor colorWithRed:255 green:0 blue:0 alpha:0];
-//    [self.view addSubview:next.view];
+    //    [self.view addSubview:next.view];
     NSLog(@"aaaaaaaaa22：%@",next.labels);
     self.view.clipsToBounds = NO;
     UITableviewVC *table =[[UITableviewVC alloc]init];
@@ -125,7 +135,7 @@
     NSLog(@" UITableviewVC addChildViewController 2");
     table.view.frame = CGRectMake(0, 0, 220, 400);
     table.view.backgroundColor = [UIColor colorWithRed:255 green:0 blue:0 alpha:255];
-    [self.view addSubview:table.view];
+    //    [self.view addSubview:table.view];
     NSLog(@" UITableviewVC addChildViewController 3");
     self.view.clipsToBounds = NO;
     //分配内存
@@ -182,7 +192,7 @@
             }
             
             //模拟生产，没0.2~2秒生产一个
-//            [NSThread sleepForTimeInterval:(arc4random()%10+1)/5.0];
+            //            [NSThread sleepForTimeInterval:(arc4random()%10+1)/5.0];
             [array addObject:@"牛奶"];
             //同时打印
             NSLog(@"生产了一个产品,当前个数是：%ld",array.count);
@@ -216,7 +226,7 @@
             }
             
             //模拟消费，没0.2~2秒消费一个
-//            [NSThread sleepForTimeInterval:(arc4random()%10+1)/5.0];
+            //            [NSThread sleepForTimeInterval:(arc4random()%10+1)/5.0];
             [array removeLastObject];
             //同时打印
             NSLog(@"消费了一个产品,当前个数是：%ld",array.count);

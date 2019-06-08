@@ -9,7 +9,7 @@
 #import "Person+NewFunction.h"
 
 @implementation Person(dd)
--(void)eat{
-    NSLog(@"the person is eating!");
-}
+//-(void)eat{
+//    NSLog(@"the person is eating!");
+//}
 @end

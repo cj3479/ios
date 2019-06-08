@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TestBase/TestBase/ViewController.m"
-            timestampString = "581607722.678761"
+            timestampString = "581680675.8843729"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "29"
-            endingLineNumber = "29"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
             landmarkName = "-viewDidLoad"
             landmarkType = "7">
          </BreakpointContent>
@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TestBase/TestBase/ViewController.m"
-            timestampString = "581607722.6795141"
+            timestampString = "581680675.8848571"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "40"
-            endingLineNumber = "40"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
             landmarkName = "-viewDidLoad"
             landmarkType = "7">
          </BreakpointContent>
@@ -1036,11 +1036,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TestBase/TestBase/main.m"
-            timestampString = "581607722.680021"
+            timestampString = "581680675.885133"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "109"
-            endingLineNumber = "109"
+            startingLineNumber = "111"
+            endingLineNumber = "111"
             landmarkName = "main()"
             landmarkType = "9">
          </BreakpointContent>
@@ -1052,11 +1052,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TestBase/TestBase/main.m"
-            timestampString = "581607722.680127"
+            timestampString = "581680675.885445"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "112"
-            endingLineNumber = "112"
+            startingLineNumber = "114"
+            endingLineNumber = "114"
             landmarkName = "main()"
             landmarkType = "9">
          </BreakpointContent>
@@ -1068,11 +1068,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TestBase/TestBase/main.m"
-            timestampString = "581607722.680203"
+            timestampString = "581680675.885756"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "115"
-            endingLineNumber = "115"
+            startingLineNumber = "117"
+            endingLineNumber = "117"
             landmarkName = "main()"
             landmarkType = "9">
          </BreakpointContent>
@@ -1100,7 +1100,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TestBase/TestBase/SampleProtocol.m"
-            timestampString = "581607722.680329"
+            timestampString = "581655007.1042"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "6"
@@ -1112,15 +1112,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TestBase/TestBase/main.m"
-            timestampString = "581607722.680388"
+            timestampString = "581680675.88608"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "195"
-            endingLineNumber = "195"
+            startingLineNumber = "197"
+            endingLineNumber = "197"
             landmarkName = "main()"
             landmarkType = "9">
          </BreakpointContent>
@@ -1132,105 +1132,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TestBase/TestBase/NextViewController.m"
-            timestampString = "581607722.680524"
+            timestampString = "581676855.139577"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "29"
             endingLineNumber = "29"
             landmarkName = "-viewDidLoad"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[NextViewController viewDidLoad]"
-                  moduleName = "TestBase"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/chengjian/work/ios_git_git/TestBase/TestBase/NextViewController.m"
-                  timestampString = "581606565.97923"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "29"
-                  endingLineNumber = "29"
-                  offsetFromSymbolStart = "509">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[NextViewController viewDidLoad]"
-                  moduleName = "eval102.dylib"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/chengjian/work/ios_git_git/TestBase/TestBase/NextViewController.m"
-                  timestampString = "581606565.9814"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "29"
-                  endingLineNumber = "29"
-                  offsetFromSymbolStart = "509">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[NextViewController viewDidLoad]"
-                  moduleName = "eval103.dylib"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/chengjian/work/ios_git_git/TestBase/TestBase/NextViewController.m"
-                  timestampString = "581606565.983586"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "29"
-                  endingLineNumber = "29"
-                  offsetFromSymbolStart = "509">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[NextViewController viewDidLoad]"
-                  moduleName = "eval104.dylib"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/chengjian/work/ios_git_git/TestBase/TestBase/NextViewController.m"
-                  timestampString = "581606567.0775011"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "29"
-                  endingLineNumber = "29"
-                  offsetFromSymbolStart = "509">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[NextViewController viewDidLoad]"
-                  moduleName = "eval106.dylib"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/chengjian/work/ios_git_git/TestBase/TestBase/NextViewController.m"
-                  timestampString = "581606631.24859"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "29"
-                  endingLineNumber = "29"
-                  offsetFromSymbolStart = "509">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[NextViewController viewDidLoad]"
-                  moduleName = "eval107.dylib"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/chengjian/work/ios_git_git/TestBase/TestBase/NextViewController.m"
-                  timestampString = "581606633.596543"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "29"
-                  endingLineNumber = "29"
-                  offsetFromSymbolStart = "509">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1240,11 +1148,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TestBase/TestBase/ViewController.m"
-            timestampString = "581607722.680593"
+            timestampString = "581680675.8863291"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "120"
-            endingLineNumber = "120"
+            startingLineNumber = "121"
+            endingLineNumber = "121"
             landmarkName = "-viewDidLoad"
             landmarkType = "7">
          </BreakpointContent>
@@ -1256,225 +1164,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TestBase/TestBase/ViewController.m"
-            timestampString = "581607722.680972"
+            timestampString = "581680675.886606"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "118"
-            endingLineNumber = "118"
+            startingLineNumber = "119"
+            endingLineNumber = "119"
             landmarkName = "-viewDidLoad"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[ViewController viewDidLoad]"
-                  moduleName = "TestBase"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/chengjian/work/ios_git_git/TestBase/TestBase/ViewController.m"
-                  timestampString = "581606565.987862"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "118"
-                  endingLineNumber = "118"
-                  offsetFromSymbolStart = "4454">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[ViewController viewDidLoad]"
-                  moduleName = "eval101.dylib"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/chengjian/work/ios_git_git/TestBase/TestBase/ViewController.m"
-                  timestampString = "581606565.9893889"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "118"
-                  endingLineNumber = "118"
-                  offsetFromSymbolStart = "4454">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[ViewController viewDidLoad]"
-                  moduleName = "eval105.dylib"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/chengjian/work/ios_git_git/TestBase/TestBase/ViewController.m"
-                  timestampString = "581606582.778193"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "118"
-                  endingLineNumber = "118"
-                  offsetFromSymbolStart = "4454">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[ViewController viewDidLoad]"
-                  moduleName = "eval108.dylib"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/chengjian/work/ios_git_git/TestBase/TestBase/ViewController.m"
-                  timestampString = "581606640.2988631"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "118"
-                  endingLineNumber = "118"
-                  offsetFromSymbolStart = "4454">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[ViewController viewDidLoad]"
-                  moduleName = "eval109.dylib"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/chengjian/work/ios_git_git/TestBase/TestBase/ViewController.m"
-                  timestampString = "581606655.236413"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "118"
-                  endingLineNumber = "118"
-                  offsetFromSymbolStart = "4446">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[ViewController viewDidLoad]"
-                  moduleName = "eval110.dylib"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/chengjian/work/ios_git_git/TestBase/TestBase/ViewController.m"
-                  timestampString = "581606663.33599"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "118"
-                  endingLineNumber = "118"
-                  offsetFromSymbolStart = "4462">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[ViewController viewDidLoad]"
-                  moduleName = "eval111.dylib"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/chengjian/work/ios_git_git/TestBase/TestBase/ViewController.m"
-                  timestampString = "581606668.899228"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "118"
-                  endingLineNumber = "118"
-                  offsetFromSymbolStart = "4454">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[ViewController viewDidLoad]"
-                  moduleName = "eval112.dylib"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/chengjian/work/ios_git_git/TestBase/TestBase/ViewController.m"
-                  timestampString = "581606670.628687"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "118"
-                  endingLineNumber = "118"
-                  offsetFromSymbolStart = "4454">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[ViewController viewDidLoad]"
-                  moduleName = "eval113.dylib"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/chengjian/work/ios_git_git/TestBase/TestBase/ViewController.m"
-                  timestampString = "581606674.759477"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "118"
-                  endingLineNumber = "118"
-                  offsetFromSymbolStart = "4454">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[ViewController viewDidLoad]"
-                  moduleName = "eval114.dylib"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/chengjian/work/ios_git_git/TestBase/TestBase/ViewController.m"
-                  timestampString = "581606708.960621"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "118"
-                  endingLineNumber = "118"
-                  offsetFromSymbolStart = "4454">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[ViewController viewDidLoad]"
-                  moduleName = "eval115.dylib"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/chengjian/work/ios_git_git/TestBase/TestBase/ViewController.m"
-                  timestampString = "581606717.043771"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "118"
-                  endingLineNumber = "118"
-                  offsetFromSymbolStart = "4454">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[ViewController viewDidLoad]"
-                  moduleName = "eval117.dylib"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/chengjian/work/ios_git_git/TestBase/TestBase/ViewController.m"
-                  timestampString = "581606754.5447021"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "118"
-                  endingLineNumber = "118"
-                  offsetFromSymbolStart = "4454">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[ViewController viewDidLoad]"
-                  moduleName = "eval118.dylib"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/chengjian/work/ios_git_git/TestBase/TestBase/ViewController.m"
-                  timestampString = "581606836.196112"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "118"
-                  endingLineNumber = "118"
-                  offsetFromSymbolStart = "4454">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[ViewController viewDidLoad]"
-                  moduleName = "eval120.dylib"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/chengjian/work/ios_git_git/TestBase/TestBase/ViewController.m"
-                  timestampString = "581606859.765856"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "118"
-                  endingLineNumber = "118"
-                  offsetFromSymbolStart = "4454">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1484,105 +1180,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TestBase/TestBase/NextViewController.m"
-            timestampString = "581607722.681311"
+            timestampString = "581676855.140614"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "11"
             endingLineNumber = "11"
             landmarkName = "-viewDidLoad"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[NextViewController viewDidLoad]"
-                  moduleName = "TestBase"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/chengjian/work/ios_git_git/TestBase/TestBase/NextViewController.m"
-                  timestampString = "581606565.9933209"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "12"
-                  endingLineNumber = "12"
-                  offsetFromSymbolStart = "19">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[NextViewController viewDidLoad]"
-                  moduleName = "eval102.dylib"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/chengjian/work/ios_git_git/TestBase/TestBase/NextViewController.m"
-                  timestampString = "581606565.995307"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "12"
-                  endingLineNumber = "12"
-                  offsetFromSymbolStart = "19">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[NextViewController viewDidLoad]"
-                  moduleName = "eval103.dylib"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/chengjian/work/ios_git_git/TestBase/TestBase/NextViewController.m"
-                  timestampString = "581606565.996574"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "12"
-                  endingLineNumber = "12"
-                  offsetFromSymbolStart = "19">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[NextViewController viewDidLoad]"
-                  moduleName = "eval104.dylib"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/chengjian/work/ios_git_git/TestBase/TestBase/NextViewController.m"
-                  timestampString = "581606567.082733"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "12"
-                  endingLineNumber = "12"
-                  offsetFromSymbolStart = "19">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[NextViewController viewDidLoad]"
-                  moduleName = "eval106.dylib"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/chengjian/work/ios_git_git/TestBase/TestBase/NextViewController.m"
-                  timestampString = "581606631.2513061"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "12"
-                  endingLineNumber = "12"
-                  offsetFromSymbolStart = "19">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[NextViewController viewDidLoad]"
-                  moduleName = "eval107.dylib"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/chengjian/work/ios_git_git/TestBase/TestBase/NextViewController.m"
-                  timestampString = "581606633.70103"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "12"
-                  endingLineNumber = "12"
-                  offsetFromSymbolStart = "19">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1592,105 +1196,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TestBase/TestBase/NextViewController.m"
-            timestampString = "581607722.6814131"
+            timestampString = "581676855.140651"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "12"
             endingLineNumber = "12"
             landmarkName = "-viewDidLoad"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[NextViewController viewDidLoad]"
-                  moduleName = "TestBase"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/chengjian/work/ios_git_git/TestBase/TestBase/NextViewController.m"
-                  timestampString = "581606566.00425"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "12"
-                  endingLineNumber = "12"
-                  offsetFromSymbolStart = "19">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[NextViewController viewDidLoad]"
-                  moduleName = "eval102.dylib"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/chengjian/work/ios_git_git/TestBase/TestBase/NextViewController.m"
-                  timestampString = "581606566.006344"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "12"
-                  endingLineNumber = "12"
-                  offsetFromSymbolStart = "19">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[NextViewController viewDidLoad]"
-                  moduleName = "eval103.dylib"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/chengjian/work/ios_git_git/TestBase/TestBase/NextViewController.m"
-                  timestampString = "581606566.008517"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "12"
-                  endingLineNumber = "12"
-                  offsetFromSymbolStart = "19">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[NextViewController viewDidLoad]"
-                  moduleName = "eval104.dylib"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/chengjian/work/ios_git_git/TestBase/TestBase/NextViewController.m"
-                  timestampString = "581606567.08828"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "12"
-                  endingLineNumber = "12"
-                  offsetFromSymbolStart = "19">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[NextViewController viewDidLoad]"
-                  moduleName = "eval106.dylib"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/chengjian/work/ios_git_git/TestBase/TestBase/NextViewController.m"
-                  timestampString = "581606631.254298"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "12"
-                  endingLineNumber = "12"
-                  offsetFromSymbolStart = "19">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[NextViewController viewDidLoad]"
-                  moduleName = "eval107.dylib"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/chengjian/work/ios_git_git/TestBase/TestBase/NextViewController.m"
-                  timestampString = "581606633.703823"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "12"
-                  endingLineNumber = "12"
-                  offsetFromSymbolStart = "19">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1700,225 +1212,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TestBase/TestBase/ViewController.m"
-            timestampString = "581607722.681542"
+            timestampString = "581680675.886968"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "111"
-            endingLineNumber = "111"
+            startingLineNumber = "112"
+            endingLineNumber = "112"
             landmarkName = "-viewDidLoad"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[ViewController viewDidLoad]"
-                  moduleName = "TestBase"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/chengjian/work/ios_git_git/TestBase/TestBase/ViewController.m"
-                  timestampString = "581606566.016359"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "111"
-                  endingLineNumber = "111"
-                  offsetFromSymbolStart = "3930">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[ViewController viewDidLoad]"
-                  moduleName = "eval101.dylib"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/chengjian/work/ios_git_git/TestBase/TestBase/ViewController.m"
-                  timestampString = "581606566.0182509"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "111"
-                  endingLineNumber = "111"
-                  offsetFromSymbolStart = "3930">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[ViewController viewDidLoad]"
-                  moduleName = "eval105.dylib"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/chengjian/work/ios_git_git/TestBase/TestBase/ViewController.m"
-                  timestampString = "581606582.7817971"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "111"
-                  endingLineNumber = "111"
-                  offsetFromSymbolStart = "3930">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[ViewController viewDidLoad]"
-                  moduleName = "eval108.dylib"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/chengjian/work/ios_git_git/TestBase/TestBase/ViewController.m"
-                  timestampString = "581606640.301417"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "111"
-                  endingLineNumber = "111"
-                  offsetFromSymbolStart = "3930">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[ViewController viewDidLoad]"
-                  moduleName = "eval109.dylib"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/chengjian/work/ios_git_git/TestBase/TestBase/ViewController.m"
-                  timestampString = "581606655.340974"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "111"
-                  endingLineNumber = "111"
-                  offsetFromSymbolStart = "3930">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[ViewController viewDidLoad]"
-                  moduleName = "eval110.dylib"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/chengjian/work/ios_git_git/TestBase/TestBase/ViewController.m"
-                  timestampString = "581606663.441286"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "111"
-                  endingLineNumber = "111"
-                  offsetFromSymbolStart = "3930">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[ViewController viewDidLoad]"
-                  moduleName = "eval111.dylib"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/chengjian/work/ios_git_git/TestBase/TestBase/ViewController.m"
-                  timestampString = "581606668.902048"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "111"
-                  endingLineNumber = "111"
-                  offsetFromSymbolStart = "3930">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[ViewController viewDidLoad]"
-                  moduleName = "eval112.dylib"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/chengjian/work/ios_git_git/TestBase/TestBase/ViewController.m"
-                  timestampString = "581606670.631698"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "111"
-                  endingLineNumber = "111"
-                  offsetFromSymbolStart = "3930">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[ViewController viewDidLoad]"
-                  moduleName = "eval113.dylib"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/chengjian/work/ios_git_git/TestBase/TestBase/ViewController.m"
-                  timestampString = "581606674.762205"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "111"
-                  endingLineNumber = "111"
-                  offsetFromSymbolStart = "3930">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[ViewController viewDidLoad]"
-                  moduleName = "eval114.dylib"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/chengjian/work/ios_git_git/TestBase/TestBase/ViewController.m"
-                  timestampString = "581606708.962788"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "111"
-                  endingLineNumber = "111"
-                  offsetFromSymbolStart = "3930">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[ViewController viewDidLoad]"
-                  moduleName = "eval115.dylib"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/chengjian/work/ios_git_git/TestBase/TestBase/ViewController.m"
-                  timestampString = "581606717.1513079"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "111"
-                  endingLineNumber = "111"
-                  offsetFromSymbolStart = "3930">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[ViewController viewDidLoad]"
-                  moduleName = "eval117.dylib"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/chengjian/work/ios_git_git/TestBase/TestBase/ViewController.m"
-                  timestampString = "581606754.54842"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "111"
-                  endingLineNumber = "111"
-                  offsetFromSymbolStart = "3930">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[ViewController viewDidLoad]"
-                  moduleName = "eval118.dylib"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/chengjian/work/ios_git_git/TestBase/TestBase/ViewController.m"
-                  timestampString = "581606836.198715"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "111"
-                  endingLineNumber = "111"
-                  offsetFromSymbolStart = "3930">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[ViewController viewDidLoad]"
-                  moduleName = "eval120.dylib"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/chengjian/work/ios_git_git/TestBase/TestBase/ViewController.m"
-                  timestampString = "581606859.768383"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "111"
-                  endingLineNumber = "111"
-                  offsetFromSymbolStart = "3930">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1928,7 +1228,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TestBase/TestBase/NextViewController.m"
-            timestampString = "581607722.681976"
+            timestampString = "581676855.14113"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "14"
@@ -2027,6 +1327,22 @@
                   offsetFromSymbolStart = "152">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TestBase/TestBase/ViewController.m"
+            timestampString = "581680675.887285"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "-viewDidLoad"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
