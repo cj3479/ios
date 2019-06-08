@@ -9,7 +9,7 @@
 #import "ViewController.h"
 #import "Person.h"
 #import "NextViewController.h"
-
+#import "UITableviewVC.h"
 @implementation ViewController
 - (IBAction)clickon:(id)sender {
     NSLog(@"clickon......");
@@ -109,19 +109,33 @@
     Person *person =     [[Person     alloc]init];
     [person run];
     NextViewController *next =[[NextViewController alloc]init];
+    NSLog(@"aaaaaaaaa：%@",next.labels);
+    next.labels.text=@"startinghhhh";
+    next.view.frame = CGRectMake(0, 250, 120, 400);
     [self addChildViewController:next];
-    next.view.frame = CGRectMake(0, 250, 120, 100);
-    [self.view addSubview:next.view];
+    NSLog(@"aaaaaaaaa11：%@",next.labels);
+//    next.view.hidden = YES;
+    next.view.backgroundColor = [UIColor colorWithRed:255 green:0 blue:0 alpha:0];
+//    [self.view addSubview:next.view];
+    NSLog(@"aaaaaaaaa22：%@",next.labels);
     self.view.clipsToBounds = NO;
-    
+    UITableviewVC *table =[[UITableviewVC alloc]init];
+    NSLog(@" UITableviewVC addChildViewController 1");
+    [self addChildViewController:table];
+    NSLog(@" UITableviewVC addChildViewController 2");
+    table.view.frame = CGRectMake(0, 0, 220, 400);
+    table.view.backgroundColor = [UIColor colorWithRed:255 green:0 blue:0 alpha:255];
+    [self.view addSubview:table.view];
+    NSLog(@" UITableviewVC addChildViewController 3");
+    self.view.clipsToBounds = NO;
     //分配内存
     array = [[NSMutableArray alloc] init];
     condition = [[NSCondition alloc] init];
-//    //创建生产者
-//    [NSThread detachNewThreadSelector:@selector(produceAction) toTarget:self withObject:nil];
-//    //创建消费者
-//    [NSThread detachNewThreadSelector:@selector(consumerAction) toTarget:self withObject:nil];
-//    [NSThread detachNewThreadSelector:@selector(consumerAction) toTarget:self withObject:nil];
+    //    //创建生产者
+    //    [NSThread detachNewThreadSelector:@selector(produceAction) toTarget:self withObject:nil];
+    //    //创建消费者
+    //    [NSThread detachNewThreadSelector:@selector(consumerAction) toTarget:self withObject:nil];
+    //    [NSThread detachNewThreadSelector:@selector(consumerAction) toTarget:self withObject:nil];
     label =UILabel.alloc.init;
 }
 
@@ -168,7 +182,7 @@
             }
             
             //模拟生产，没0.2~2秒生产一个
-            [NSThread sleepForTimeInterval:(arc4random()%10+1)/5.0];
+//            [NSThread sleepForTimeInterval:(arc4random()%10+1)/5.0];
             [array addObject:@"牛奶"];
             //同时打印
             NSLog(@"生产了一个产品,当前个数是：%ld",array.count);
@@ -202,7 +216,7 @@
             }
             
             //模拟消费，没0.2~2秒消费一个
-            [NSThread sleepForTimeInterval:(arc4random()%10+1)/5.0];
+//            [NSThread sleepForTimeInterval:(arc4random()%10+1)/5.0];
             [array removeLastObject];
             //同时打印
             NSLog(@"消费了一个产品,当前个数是：%ld",array.count);

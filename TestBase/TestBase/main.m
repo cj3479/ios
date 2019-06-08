@@ -17,32 +17,51 @@
 #import "testDMlib/LibPerson.h"
 typedef unsigned long long        QUINT64;
 int main(int argc, char * argv[]) {
+    NSIndexPath *oneNodeIndexPath = [NSIndexPath indexPathWithIndex:6];
+    NSLog(@"oneNodeIndexPath: %@", oneNodeIndexPath);
     NSLog(@"currentThread---%@",[NSThread currentThread]);
+    
+    // 定义并初始化一个C数组：1个元素
+    NSUInteger indexs[] = {1};
+    NSIndexPath *oneNodeIndexPath2 = [NSIndexPath indexPathWithIndexes:indexs length:3];
+    NSLog(@"oneNodeIndexPath: %@", oneNodeIndexPath2);
+    
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:9];
+    NSLog(@"indexPath: %@", indexPath);
+    // 定义并初始化一个C数组：2个元素
+    NSUInteger indexs2[] = {1, 2};
+    NSIndexPath *twoNodeIndexPath = [NSIndexPath indexPathWithIndexes:indexs2 length:2];
+    NSLog(@"twoNodeIndexPath: %@", twoNodeIndexPath);
+    
+    // 定义并初始化一个C数组：3个元素
+    NSUInteger indexs3[] = {1, 2, 3};
+    NSIndexPath *threeNodeIndexPath = [NSIndexPath indexPathWithIndexes:indexs3 length:3];
+    NSLog(@"threeNodeIndexPath: %@", threeNodeIndexPath);
     // 串行队列的创建方法
     dispatch_queue_t queue = dispatch_queue_create("net.bujige.testQueue", DISPATCH_QUEUE_SERIAL);
-    dispatch_sync(queue, ^{
-        // 追加任务1
-        for (int i = 0; i < 2; ++i) {
-            [NSThread sleepForTimeInterval:2];              // 模拟耗时操作
-            NSLog(@"1---%@",[NSThread currentThread]);      // 打印当前线程
-        }
-    });
-    NSLog(@"111111111111111");
-    dispatch_sync(queue, ^{
-        // 追加任务2
-        for (int i = 0; i < 2; ++i) {
-            [NSThread sleepForTimeInterval:2];              // 模拟耗时操作
-            NSLog(@"2---%@",[NSThread currentThread]);      // 打印当前线程
-        }
-    });
-    NSLog(@"222222222");
-    dispatch_sync(queue, ^{
-        // 追加任务3
-        for (int i = 0; i < 2; ++i) {
-            [NSThread sleepForTimeInterval:2];              // 模拟耗时操作
-            NSLog(@"3---%@",[NSThread currentThread]);      // 打印当前线程
-        }
-    });
+//    dispatch_sync(queue, ^{
+//        // 追加任务1
+//        for (int i = 0; i < 2; ++i) {
+//            [NSThread sleepForTimeInterval:1];              // 模拟耗时操作
+//            NSLog(@"1---%@",[NSThread currentThread]);      // 打印当前线程
+//        }
+//    });
+//    NSLog(@"111111111111111");
+//    dispatch_sync(queue, ^{
+//        // 追加任务2
+//        for (int i = 0; i < 2; ++i) {
+//            [NSThread sleepForTimeInterval:1];              // 模拟耗时操作
+//            NSLog(@"2---%@",[NSThread currentThread]);      // 打印当前线程
+//        }
+//    });
+//    NSLog(@"222222222");
+//    dispatch_sync(queue, ^{
+//        // 追加任务3
+//        for (int i = 0; i < 2; ++i) {
+//            [NSThread sleepForTimeInterval:1];              // 模拟耗时操作
+//            NSLog(@"3---%@",[NSThread currentThread]);      // 打印当前线程
+//        }
+//    });
     NSLog(@"3333333");
     NSLog(@"syncConcurrent---end");
 //    // 并发队列的创建方法
@@ -82,7 +101,7 @@ int main(int argc, char * argv[]) {
     NSLog(@"userInfo=%@",userInfo[@"channel_id"]);
     NSLog(@"userInfo=%lld",channelID3);
     bool add =YES;
-    NSLog(@"%lld",YES);
+    NSLog(@"YES = %d",YES);
     //    NSDictionary *pop_sheet = [NSJSONSerialization JSONObjectWithData:NULL
     //                                                    options:NSJSONReadingMutableContainers
     //                                                                error:nil];
@@ -171,7 +190,7 @@ int main(int argc, char * argv[]) {
     [person exercise:^(NSString *name, int age) {
         NSLog(@"%@,%d",name,age);
     }];
-    NSLog(@"%s", (char *)(@selector(doSomething)));
+    NSLog(@"ssssssss=%s", (char *)(@selector(doSomething)));
     //调用类别中增加的eat方法
     [person eat];
     @autoreleasepool {

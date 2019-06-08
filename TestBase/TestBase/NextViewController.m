@@ -11,7 +11,24 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.labels.text=@"startinghhhh";
-//    self.testbtn.currentTitle =@"1111";
+    [self.labels sizeToFit];
+    UILabel *label =UILabel.alloc.init;
+    //这一句创建了一个静态文本控件，未指定内容、大小和位置
+    
+    
+    
+    label.text=@"hello world ddd";
+//    label.opaque = NO;
+    label.backgroundColor = [UIColor redColor];
+    //"@"的作用是把一个c风格的字符串"hello world"包装成一个NSString对象
+    [label sizeToFit];
+    CGPoint tempCenter ;
+    tempCenter.x=150;
+    tempCenter.y=10;
+    label.center = tempCenter;
+    [self.view addSubview:label];
+    self.view.backgroundColor = [UIColor colorWithRed:100 green:100 blue:0 alpha:0];
+    //    self.testbtn.currentTitle =@"1111";
     // Do any additional setup after loading the view from its nib.
 }
 

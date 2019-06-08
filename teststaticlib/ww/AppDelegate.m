@@ -1,9 +1,9 @@
 //
 //  AppDelegate.m
-//  TestBase
+//  ww
 //
-//  Created by chengjian on 2019/5/24.
-//  Copyright © 2019年 chengjian. All rights reserved.
+//  Created by chengjian on 2019/6/7.
+//  Copyright © 2019 chengjian. All rights reserved.
 //
 
 #import "AppDelegate.h"
@@ -14,11 +14,9 @@
 
 @implementation AppDelegate
 
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    [[NSBundle bundleWithPath:@"/Applications/InjectionIII.app/Contents/Resources/iOSInjection.bundle"] load];
-//    [[[NSBundle alloc] initWithPath:@"/Applications/InjectionIII.app/Contents/Resources/iOSInjection.bundle"] load];
     // Override point for customization after application launch.
-    NSLog(@"application initWithPath 当前栈信息1111：%@", [NSThread callStackSymbols]);
     return YES;
 }
 
