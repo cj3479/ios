@@ -16,9 +16,10 @@
 		09477BB9229824FA009A47AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09477BB8229824FA009A47AF /* Assets.xcassets */; };
 		09477BBC229824FA009A47AF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09477BBA229824FA009A47AF /* LaunchScreen.storyboard */; };
 		09477BBF229824FA009A47AF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 09477BBE229824FA009A47AF /* main.m */; };
-		09477BC9229824FA009A47AF /* TestBaseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 09477BC8229824FA009A47AF /* TestBaseTests.m */; };
-		09477BD4229824FA009A47AF /* TestBaseUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 09477BD3229824FA009A47AF /* TestBaseUITests.m */; };
+		09477BC9229824FA009A47AF /* TestBaseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 09477BC8229824FA009A47AF /* TestBaseTests.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		09477BD4229824FA009A47AF /* TestBaseUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 09477BD3229824FA009A47AF /* TestBaseUITests.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		094AD2A6229EBA2A006855A9 /* MyObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 094AD2A5229EBA2A006855A9 /* MyObject.m */; };
+		095FCFC822BA24CE00B778E7 /* TestThread.m in Sources */ = {isa = PBXBuildFile; fileRef = 095FCFC722BA24CE00B778E7 /* TestThread.m */; };
 		09635EBE22A619C900E773F4 /* SelectorSub.m in Sources */ = {isa = PBXBuildFile; fileRef = 09635EBD22A619C900E773F4 /* SelectorSub.m */; };
 		0995780B229832AB00A68CE9 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 09957806229832AB00A68CE9 /* Person.m */; };
 		0995780C229832AB00A68CE9 /* Person+NewFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = 09957809229832AB00A68CE9 /* Person+NewFunction.m */; };
@@ -120,6 +121,8 @@
 		094AD2A4229EBA2A006855A9 /* MyObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyObject.h; sourceTree = "<group>"; };
 		094AD2A5229EBA2A006855A9 /* MyObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyObject.m; sourceTree = "<group>"; };
 		094D7CC822A126F500AF2345 /* mystaticfmli.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = mystaticfmli.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		095FCFC622BA24CE00B778E7 /* TestThread.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestThread.h; sourceTree = "<group>"; };
+		095FCFC722BA24CE00B778E7 /* TestThread.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestThread.m; sourceTree = "<group>"; };
 		0961F8B822A4C6B000F804C7 /* testfwstatic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = testfwstatic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0961F8BF22A4CDAE00F804C7 /* libteststaticlib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libteststaticlib.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		09635EBC22A619C900E773F4 /* SelectorSub.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SelectorSub.h; sourceTree = "<group>"; };
@@ -249,6 +252,7 @@
 		09477BAE229824F9009A47AF /* TestBase */ = {
 			isa = PBXGroup;
 			children = (
+				095FCFC922BA24D900B778E7 /* thread */,
 				09957807229832AB00A68CE9 /* Person.h */,
 				09957806229832AB00A68CE9 /* Person.m */,
 				09957808229832AB00A68CE9 /* Person+NewFunction.h */,
@@ -310,6 +314,15 @@
 				094D7CC822A126F500AF2345 /* mystaticfmli.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		095FCFC922BA24D900B778E7 /* thread */ = {
+			isa = PBXGroup;
+			children = (
+				095FCFC622BA24CE00B778E7 /* TestThread.h */,
+				095FCFC722BA24CE00B778E7 /* TestThread.m */,
+			);
+			path = thread;
 			sourceTree = "<group>";
 		};
 		09A814BD22A11224000D9C17 /* Happy */ = {
@@ -616,6 +629,7 @@
 				09F824F522A502C6008D48DF /* NextViewController.m in Sources */,
 				090C706922A60C0600BE63ED /* SelectDemo.m in Sources */,
 				0995780B229832AB00A68CE9 /* Person.m in Sources */,
+				095FCFC822BA24CE00B778E7 /* TestThread.m in Sources */,
 				09477BB1229824F9009A47AF /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -746,7 +760,7 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
@@ -762,6 +776,7 @@
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_REPEATED_USE_OF_WEAK = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
@@ -793,6 +808,7 @@
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				WARNING_CFLAGS = "";
 				"WARNING_CFLAGS[arch=*]" = "";
 			};
 			name = Debug;
@@ -806,7 +822,7 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
@@ -822,6 +838,7 @@
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_REPEATED_USE_OF_WEAK = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
@@ -848,6 +865,7 @@
 				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
+				WARNING_CFLAGS = "";
 			};
 			name = Release;
 		};
@@ -856,11 +874,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_OBJC_REPEATED_USE_OF_WEAK = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 65T72LT3SH;
 				INFOPLIST_FILE = TestBase/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -883,11 +904,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_OBJC_REPEATED_USE_OF_WEAK = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 65T72LT3SH;
 				INFOPLIST_FILE = TestBase/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -908,6 +931,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 65T72LT3SH;
 				INFOPLIST_FILE = TestBaseTests/Info.plist;
@@ -927,6 +951,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 65T72LT3SH;
 				INFOPLIST_FILE = TestBaseTests/Info.plist;
@@ -945,6 +970,7 @@
 		09477BDF229824FA009A47AF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 65T72LT3SH;
 				INFOPLIST_FILE = TestBaseUITests/Info.plist;
@@ -963,6 +989,7 @@
 		09477BE0229824FA009A47AF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 65T72LT3SH;
 				INFOPLIST_FILE = TestBaseUITests/Info.plist;

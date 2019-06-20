@@ -11,7 +11,7 @@
 @implementation UITableviewVC
 - (void)viewDidLoad{
     // 创建UItableView，style选择Grouped或Plain，这里我们以Grouped为例
-    UITableView *tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 20, self.view.frame.size.width, self.view.frame.size.height-20) style:UITableViewStyleGrouped];
+    UITableView *tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height) style:UITableViewStyleGrouped];
     // 声明 tableView 的代理和数据源
     tableView.delegate = self;
     tableView.dataSource = self;
@@ -32,16 +32,16 @@
     cell.textLabel.text = [NSString stringWithFormat:@"这是第%li个cell", (long)indexPath.row];
     // 设置 cell 的副标题
     cell.detailTextLabel.text = @"副标题";
-    NSLog(@"getview selection=%d,row=%d", indexPath.section,indexPath.row);
+    NSLog(@"getview selection=%d,row=%d，,cell=%@", indexPath.section,indexPath.row,cell);
     return cell;
 }
 // tableView 中 Section 的个数
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    return 1;
+    return 3;
 }
 // 每个 Section 中的 Cell 个数
 - (NSInteger)tableView:(nonnull UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 3;
+    return 18;
 }
 
 #pragma mark - UITableViewDelegate
@@ -60,27 +60,28 @@
 }
 // 设置 section 的 footer 高度
 -(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
-    return 20;
+    return 0;
 }
 // 设置 cell 的高度
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return 80;
 }
-// 自定义 section 的 header
--(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
-    UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 100, 10)];
-    headerView.backgroundColor = [UIColor redColor];
-    return headerView;
-}
-// 自定义 section 的 footer
--(UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section {
-    UIView *footerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 100, 10)];
-    footerView.backgroundColor = [UIColor orangeColor];
-    return footerView;
-}
+//// 自定义 section 的 header
+//-(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+//    UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 100, 10)];
+//    headerView.backgroundColor = [UIColor redColor];
+//    return headerView;
+//}
+//// 自定义 section 的 footer
+//-(UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section {
+//    UIView *footerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 100, 10)];
+//    footerView.backgroundColor = [UIColor orangeColor];
+//    return footerView;
+//}
 // 选中了 cell 时触发
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     NSLog(@"选中了第%li个cell", (long)indexPath.row);
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 // 设置 cell 是否允许左滑
@@ -117,5 +118,28 @@
     }];
     // 注意这里返回的是一个按钮组，即使只定义了一个按钮也要返回一个组
     return @[cellActionA, cellActionB];
+}
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
+    NSLog(@"scrollViewDidEndDecelerating");
+}
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView{
+//    NSLog(@"scrollViewDidScroll scrollView");
+}
+- (void)scrollViewDidScrollToTop:(UIScrollView *)scrollView{
+    NSLog(@"%s",__FUNCTION__);
+}
+- (void)scrollViewWillBeginDecelerating:(UIScrollView *)scrollView{
+     NSLog(@"%s",__FUNCTION__);
+}
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate{
+    NSLog(@"%s,%@", __FUNCTION__, decelerate ?@"YES": @"NO");
+}
+- (void)scrollViewWillEndDragging:(UIScrollView *)scrollView withVelocity:(CGPoint)velocity targetContentOffset:(inout CGPoint *)targetContentOffset{
+    NSLog(@"%s,%d,%d",__FUNCTION__,targetContentOffset->x,targetContentOffset->y);
+    //targetContentOffset->y = 100;
+}
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath{
+    NSLog(@"%s,%@",__FUNCTION__,indexPath);
+//    NSLog(@"%@:%@",[self class],NSStringFromSelector(_cmd));
 }
 @end

@@ -42,6 +42,14 @@
 +(void)displayClass{
     NSLog(@"类扩展中声明的类方法");
 }
+- (void)dealloc
+{
+   NSLog(@"dealloc222222 %@",self);
+}
+//+ (instancetype)alloc{
+//    NSLog(@"alloc1111111");
+//    return [super alloc];
+//}
 //-(int)age{
 //    return _age;
 //}

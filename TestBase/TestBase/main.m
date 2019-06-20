@@ -15,14 +15,52 @@
 #import "testFWStatic/teststaticlib.h"
 #import "testFWStatic/testFWStatic.h"
 #import "testDMlib/LibPerson.h"
+#import "TestThread.h"
 typedef unsigned long long        QUINT64;
+#define FBKVOKeyPath(KEYPATH) \
+@(((void)(NO && ((void)KEYPATH, NO)), \
+({ const char *fbkvokeypath = strchr(#KEYPATH, '.'); NSCAssert(fbkvokeypath, @"Provided key path is invalid."); fbkvokeypath + 1; })))
+typedef NS_ENUM(NSUInteger, RIJShortVideoRequestState) {
+    RIJShortVideoRequestStateLoading,
+    RIJShortVideoRequestStateNoData,
+    RIJShortVideoRequestStateError,
+    RIJShortVideoRequestStateSuccess,
+};
+extern int externInt =10;
+void testThreadMethod(){
+    TestThread *testThread = [[TestThread alloc]init];
+    [testThread startThread];
+}
+void testNSThread(){
+    TestThread *testThread = [[TestThread alloc]init];
+    [testThread testNSThread];
+}
+void testNSGCD(){
+    TestThread *testThread = [[TestThread alloc]init];
+    [testThread testGCD];
+}
+#define AA 1
 int main(int argc, char * argv[]) {
+//    testThreadMethod();
+//    testNSThread();
+    testNSGCD();
+    float aaaaa = 1.1f;
+    int bbbbb = (int)(aaaaa * 1000);
+    NSLog(@"aaaaa: %f", aaaaa);
+    NSLog(@"bbbbb: %d", bbbbb);
+    BOOL a = TRUE;
+    a = true;
+    a = YES;
+//    NSUInteger startIndex =2;
+//    for (NSUInteger index = startIndex - 1; index >= 0; index--) {
+//        NSLog(@"oneNodeIndexPath: ");
+//    }
     NSString *testStr = nil;
-     NSLog(@"oneNodeIndexPath: %d", testStr.length);
+//     NSString *testStr1 = FBKVOKeyPath(RIJShortVideoRequestStateSuccess);
+//     NSLog(@"oneNodeIndexPath: %d", testStr.length);
     NSIndexPath *oneNodeIndexPath = [NSIndexPath indexPathWithIndex:6];
     NSLog(@"oneNodeIndexPath: %@", oneNodeIndexPath);
     NSLog(@"currentThread---%@",[NSThread currentThread]);
-    
     // 定义并初始化一个C数组：1个元素
     NSUInteger indexs[] = {1};
     NSIndexPath *oneNodeIndexPath2 = [NSIndexPath indexPathWithIndexes:indexs length:3];
@@ -70,7 +108,7 @@ int main(int argc, char * argv[]) {
 //    dispatch_queue_t queue = dispatch_queue_create("net.bujige.testQueue", DISPATCH_QUEUE_CONCURRENT);
     // 主队列的获取方法
 //    dispatch_queue_t queue = dispatch_get_main_queue();
-    int (^helloWorld)(int)=^(int i){
+    int (^ helloWorld)(int) = ^(int i) {
         NSLog(@"Hello World!");
         return i;
     };
@@ -88,7 +126,7 @@ int main(int argc, char * argv[]) {
     NSLog(@"%@",arraya);
     QUINT64 channelID =10;
     NSNumber *longlongNumber = [NSNumber numberWithLongLong:channelID];
-    NSDictionary *userInfo = @{@"isRefreshChannel":@(YES),@"channel_id":@(channelID),@"channel_id_qq":@(0)};
+    NSDictionary *userInfo = @{@"isRefreshChannel":@(YES),@"channel_id":@(channelID),@"channel_id_qq":@(0),@"type":@"1",@"type":@"1",@"typess":@(AA)};
     if(userInfo[@"channel_id"]){
         NSLog(@"dfdsfdsdddfddf");
     }
@@ -101,9 +139,11 @@ int main(int argc, char * argv[]) {
     //    NSDictionary *userInfo;
     QUINT64 channelID3 =[userInfo[@"channel_id"] unsignedLongLongValue];
     NSLog(@"userInfo=%@",userInfo[@"channel_id"]);
-    NSLog(@"userInfo=%lld",channelID3);
-    bool add =YES;
-    NSLog(@"YES = %d",YES);
+    int channelID4 =[userInfo[@"type"] intValue];
+//    NSLog(@"userInfo=%@",userInfo[@"channel_id"]);
+    NSLog(@"userInfsssssssso=%d",channelID4);
+    bool add = YES;
+    NSLog(@"YES = %d", add ? YES : NO);
     //    NSDictionary *pop_sheet = [NSJSONSerialization JSONObjectWithData:NULL
     //                                                    options:NSJSONReadingMutableContainers
     //                                                                error:nil];
@@ -133,7 +173,9 @@ int main(int argc, char * argv[]) {
     //    [ss release];
     NSLog(@"main 当前栈信息：%@", [NSThread callStackSymbols]);
     NSLog(@"%s", (char *)(@selector(doSomething)));
-    Person * person33=[[Person alloc] init];
+    Person * person33=[Person alloc];
+    person33.name=@"1239999";
+    NSLog(@"222222 person33=%@,name=%@",person33,person33.name);
     LibPerson *person11 = [[LibPerson alloc]init];
     person11.watch;
     Teststaticlib *lib = [[Teststaticlib alloc]init];
@@ -178,13 +220,17 @@ int main(int argc, char * argv[]) {
     
     NSLog(@"main 1111");
     Person * person=[[Person alloc] init];
+    NSLog(@"222222 person=%@",person);
     Person * person2=[Person alloc];
+    NSLog(@"222222 person2=%@,name=%@",person2,person2.name);
     [person2 testlib:@"cj" andage:@"88"];
     NSLog(@"person2。1=%p,obj7 class is %@",person2,NSStringFromClass([person2 class]));
     person2=[person2 init];
+    NSLog(@"222222222 person2=%@,name=%@",person2,person2.name);
     //    [person2 testlib:@"cj11" :@"88"];
     NSLog(@"person2。2=%p,obj8 class is %@",person2,NSStringFromClass([person2 class]));
     id person1=[[NSObject alloc] init];
+//    NSLog(@"222222 person1=%@",person1);
     //    id person1=[[Person alloc] init];
     //        [person1 exercis];
     [person exercis];
@@ -192,8 +238,10 @@ int main(int argc, char * argv[]) {
     [person exercise:^(NSString *name, int age) {
         NSLog(@"%@,%d",name,age);
     }];
+//    dispatch_main();
     NSLog(@"ssssssss=%s", (char *)(@selector(doSomething)));
     //调用类别中增加的eat方法
+    [NSThread sleepForTimeInterval:15];
     [person eat];
 //    NSArray * array=[NSArray arrayWithObjects:@"4",@"1",@"2",@"3",@"5", nil];
 //    array= [array sortedArrayUsingComparator:^NSComparisonResult(id obj1, id obj2) {
@@ -205,4 +253,5 @@ int main(int argc, char * argv[]) {
     @autoreleasepool {
         return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
     }
+//    return 1;
 }

@@ -24,6 +24,10 @@
 //- (void)layoutSubviews {
 //}
 - (void)viewDidLoad {
+    CGRect screenRect = [[UIScreen mainScreen] bounds];
+    CGSize screenSize = screenRect.size;
+    CGFloat scale = [UIScreen mainScreen].scale;
+    CGFloat screenX = screenSize.width * scale;
     NSLog(@"viewDidLoad: %@", self);
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
@@ -37,7 +41,7 @@
     label.text=text;
     //"@"的作用是把一个c风格的字符串"hello world"包装成一个NSString对象
     [label sizeToFit];
-    label.center =self.view.center;
+    label.center = self.view.center;
     NSLog(@"dddddd");
     
     NSLog(@"dddddd");
@@ -51,7 +55,7 @@
     
     NSLog(@"当前文件存储路径：%s",__FILE__);
     NSString *pathStr = [NSString stringWithCString:__FILE__ encoding:NSUTF8StringEncoding]; //将CString -> NSString
-    NSLog(@"当前文件名：%@",[pathStr lastPathComponent]);
+       NSLog(@"当前文件名：%@",[pathStr lastPathComponent]);
     
     NSLog(@"当前日期：%s",__DATE__);
     NSLog(@"当前时间：%s",__TIME__);
@@ -99,7 +103,7 @@
     //   [button setBackgroundImage:[UIImage imageNamed:@"power_bg_img_normal.png"] forState:UIControlStateHighlighted];
     //    [button setBackgroundImage:[UIImage imageNamed:@"power_bg_img_pressed.png"] forState:UIControlStateHighlighted];
     //    添加到ViewController中去
-    [self.view addSubview:button];
+       [self.view addSubview:button];
     //
     [self.view addSubview:label];
     
@@ -118,6 +122,7 @@
     // Do any additional setup after loading the view, typically from a nib.
     Person *person =     [[Person     alloc]init];
     [person run];
+    NSLog(@"viewDidLoad 222222222：%@",person);
     NextViewController *next =[[NextViewController alloc]init];
     NSLog(@"aaaaaaaaa：%@",next.labels);
     next.labels.text=@"startinghhhh";
@@ -133,10 +138,10 @@
     NSLog(@" UITableviewVC addChildViewController 1");
     [self addChildViewController:table];
     NSLog(@" UITableviewVC addChildViewController 2");
-    table.view.frame = CGRectMake(0, 0, 220, 400);
-    table.view.backgroundColor = [UIColor colorWithRed:255 green:0 blue:0 alpha:255];
-    //    [self.view addSubview:table.view];
-    NSLog(@" UITableviewVC addChildViewController 3");
+//    table.view.frame = CGRectMake(0, 0, 220, 400);
+//    table.view.backgroundColor = [UIColor colorWithRed:255 green:0 blue:0 alpha:255];
+        [self.view addSubview:table.view];
+         NSLog(@" UITableviewVC addChildViewController 3");
     self.view.clipsToBounds = NO;
     //分配内存
     array = [[NSMutableArray alloc] init];
@@ -146,7 +151,11 @@
     //    //创建消费者
     //    [NSThread detachNewThreadSelector:@selector(consumerAction) toTarget:self withObject:nil];
     //    [NSThread detachNewThreadSelector:@selector(consumerAction) toTarget:self withObject:nil];
-    label =UILabel.alloc.init;
+    label = UILabel.alloc.init;
+    NSLog(@"22222222end");
+//    dispatch_queue_t queue = dispatch_queue_create("net.bujige.testQueue", DISPATCH_QUEUE_SERIAL);
+//    dispatch_main();
+     NSLog(@"22222222end 111");
 }
 
 -(void)injected{
