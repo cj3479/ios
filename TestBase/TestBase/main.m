@@ -16,6 +16,7 @@
 #import "testFWStatic/testFWStatic.h"
 #import "testDMlib/LibPerson.h"
 #import "TestThread.h"
+#import "MonitorGCD.h"
 typedef unsigned long long        QUINT64;
 #define FBKVOKeyPath(KEYPATH) \
 @(((void)(NO && ((void)KEYPATH, NO)), \
@@ -39,11 +40,52 @@ void testNSGCD(){
     TestThread *testThread = [[TestThread alloc]init];
     [testThread testGCD];
 }
+void testMonitorGCD(){
+    TestThread *testThread = [[TestThread alloc]init];
+    [testThread testMonitorGCD];
+}
 #define AA 1
 int main(int argc, char * argv[]) {
+//    Person* personOne = [[Person alloc]init];
+//    NSLog(@"person is %@", personOne);
+//    [personOne release];
+//    NSLog(@"person is %@", personOne);
+    Tmsg value;
+    Tmsg *valueP = &value;
+    NSLog(@"value.add is %p,%p", &value,valueP);
+    valueP = nil;
+    NSLog(@"value.add is %p,%p", &value,valueP);
+    Tmsg valueP1 = {nil,nil,nil};
+    Tmsg *valuePa = &valueP1;
+    NSLog(@"value.add111 is %p",valuePa);
+    Tmsg valueP2 = {nil,nil,nil};
+    Tmsg *valueP2a = &valueP1;
+    NSLog(@"value.add111 is %p",valuePa);
+    int var =20;
+    int *ip;
+    ip = &var;
+    int var1 =*ip;
+    NSLog(@"ip is %p", ip);
+    NSLog(@"ip is %d", *ip);
+     NSLog(@"var1 is %d", var1);
+    var = 30;
+    NSLog(@"ip is %d", *ip);
+    NSLog(@"var1 is %d", var1);
+    testMonitorGCD();
 //    testThreadMethod();
 //    testNSThread();
-    testNSGCD();
+//    testNSGCD();
+    BOOL aaaa = 2;
+    if (aaaa) {
+        NSLog(@"a is YES");
+    } else {
+        NSLog(@"a is NO");
+    }
+    if (aaaa == YES) {
+        NSLog(@"a == YES");
+    } else {
+        NSLog(@"a != YES");
+    }
     float aaaaa = 1.1f;
     int bbbbb = (int)(aaaaa * 1000);
     NSLog(@"aaaaa: %f", aaaaa);
@@ -127,6 +169,8 @@ int main(int argc, char * argv[]) {
     QUINT64 channelID =10;
     NSNumber *longlongNumber = [NSNumber numberWithLongLong:channelID];
     NSDictionary *userInfo = @{@"isRefreshChannel":@(YES),@"channel_id":@(channelID),@"channel_id_qq":@(0),@"type":@"1",@"type":@"1",@"typess":@(AA)};
+    NSInteger count = userInfo.count;
+    NSLog(@"userInf count=%d",count);
     if(userInfo[@"channel_id"]){
         NSLog(@"dfdsfdsdddfddf");
     }

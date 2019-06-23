@@ -8,6 +8,7 @@
 
 #import "TestThread.h"
 #import <pthread.h>
+#import "MonitorGCD.h"
 @implementation TestThread
 - (void)startThread {
     pthread_t thread;
@@ -43,6 +44,34 @@ void starta() {
     [thread setName:@"abcd"];
     [thread start];
 }
+- (void)testMonitorGCD {
+    NSLog(@"testMonitorGCD begin thread=%@",[NSThread currentThread]);
+    //创建信号量  初始化为0
+    dispatch_semaphore_t semaphore = dispatch_semaphore_create(0);
+    //栈上创建
+//    Queue queue = {nil,YES,semaphore};
+//    Queue *queueP = &queue;
+       //堆上创建
+    Queue *queueP = (Queue*)calloc(1, sizeof(Queue));;
+    queueP->isSerial = YES;
+    queueP->semaphore = semaphore;
+    MonitorGCD *gcd = [[MonitorGCD alloc]init];
+    [gcd test_async:queueP block_t:^{
+//        [NSThread sleepForTimeInterval:1];
+        NSLog(@"testMonitorGCD async thread=%@，%d", [NSThread currentThread],queueP->isSerial?YES:NO);
+        [gcd test_sync:queueP block_t:^{
+            [NSThread sleepForTimeInterval:1];
+            NSLog(@"testMonitorGCD sync thread=%@", [NSThread currentThread]);
+        }];
+        NSLog(@"testMonitorGCD async thread=%@，%d", [NSThread currentThread],queueP->isSerial?YES:NO);
+    }];
+//    [gcd test_sync:queueP block_t:^{
+//        [NSThread sleepForTimeInterval:1];
+//        NSLog(@"testMonitorGCD sync thread=%@", [NSThread currentThread]);
+//    }];
+    NSLog(@"testMonitorGCD end");
+}
+    
 - (void)testGCD {
     dispatch_queue_t queue =
     dispatch_queue_create("test_serial_queue", DISPATCH_QUEUE_SERIAL);
@@ -63,7 +92,7 @@ void starta() {
 //    dispatch_async(queue, ^{
 //        NSLog(@"testGCD2=%@", [NSThread currentThread]); // 打印当前线程
 //    });
-    dispatch_queue_t cQueue = dispatch_queue_create("test_concurrent_queue", DISPATCH_QUEUE_SERIAL);
+    dispatch_queue_t cQueue = dispatch_queue_create("test_concurrent_queue", DISPATCH_QUEUE_CONCURRENT);
     dispatch_async(cQueue, ^{
         [NSThread sleepForTimeInterval:1];
         NSLog(@"testGCD  1 concurrent=%@", [NSThread currentThread]); // 打印当前线程

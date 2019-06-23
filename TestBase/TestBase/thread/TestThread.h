@@ -14,5 +14,6 @@ extern int externInt;
 - (void)run;
 - (void) testNSThread;
 - (void) testGCD;
+- (void)testMonitorGCD;
 @end
 
