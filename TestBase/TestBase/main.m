@@ -46,6 +46,16 @@ void testMonitorGCD(){
 }
 #define AA 1
 int main(int argc, char * argv[]) {
+    for(int i=0;i<10;i++)
+    {
+        if(i==3||i==4)
+        {
+            continue;
+        }
+       NSLog(@"test for is %d", i);
+    }
+    NSString *testStr1 = [NSString stringWithFormat:@"%d",RIJShortVideoRequestStateSuccess];
+    NSLog(@"value.add is %@", testStr1);
 //    Person* personOne = [[Person alloc]init];
 //    NSLog(@"person is %@", personOne);
 //    [personOne release];
@@ -168,9 +178,14 @@ int main(int argc, char * argv[]) {
     NSLog(@"%@",arraya);
     QUINT64 channelID =10;
     NSNumber *longlongNumber = [NSNumber numberWithLongLong:channelID];
-    NSDictionary *userInfo = @{@"isRefreshChannel":@(YES),@"channel_id":@(channelID),@"channel_id_qq":@(0),@"type":@"1",@"type":@"1",@"typess":@(AA)};
+    NSDictionary *userInfo = @{@"isRefreshChannel":@(YES),@"channel_id":@(channelID),@"channel_id_qq":@(0),@"type":@"1",@"type":@"1",@"typess":@(AA),@"hello":@(NO)};
     NSInteger count = userInfo.count;
     NSLog(@"userInf count=%d",count);
+    bool isAppear = [userInfo objectForKey:@"isRefreshChannel"]==YES;
+    NSNumber * boolNum = userInfo[@"isRefreshChannel"];
+    BOOL isOn = [boolNum boolValue];
+    NSNumber * boolNum1 = userInfo[@"hello"];
+    BOOL isOn1 = [boolNum1 boolValue];
     if(userInfo[@"channel_id"]){
         NSLog(@"dfdsfdsdddfddf");
     }
@@ -264,6 +279,7 @@ int main(int argc, char * argv[]) {
     
     NSLog(@"main 1111");
     Person * person=[[Person alloc] init];
+//    [person ea];
     NSLog(@"222222 person=%@",person);
     Person * person2=[Person alloc];
     NSLog(@"222222 person2=%@,name=%@",person2,person2.name);
@@ -285,7 +301,7 @@ int main(int argc, char * argv[]) {
 //    dispatch_main();
     NSLog(@"ssssssss=%s", (char *)(@selector(doSomething)));
     //调用类别中增加的eat方法
-    [NSThread sleepForTimeInterval:15];
+//    [NSThread sleepForTimeInterval:15];
     [person eat];
 //    NSArray * array=[NSArray arrayWithObjects:@"4",@"1",@"2",@"3",@"5", nil];
 //    array= [array sortedArrayUsingComparator:^NSComparisonResult(id obj1, id obj2) {

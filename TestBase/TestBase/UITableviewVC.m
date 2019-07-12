@@ -7,15 +7,16 @@
 //
 
 #import "UITableviewVC.h"
-
+static int m=1;
 @implementation UITableviewVC
 - (void)viewDidLoad{
     // 创建UItableView，style选择Grouped或Plain，这里我们以Grouped为例
-    UITableView *tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height) style:UITableViewStyleGrouped];
+    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height) style:UITableViewStyleGrouped];
     // 声明 tableView 的代理和数据源
-    tableView.delegate = self;
-    tableView.dataSource = self;
-    [self.view addSubview:tableView];
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
+    self.tableView.prefetchDataSource = self;
+    [self.view addSubview:self.tableView];
     NSLog(@" UITableviewVC viewDidLoad");
 }
 // 设置每个 Cell
@@ -37,10 +38,13 @@
 }
 // tableView 中 Section 的个数
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    m++;
+    NSLog(@"numberOfSectionsInTableView 111111 %d",m);
     return 3;
 }
 // 每个 Section 中的 Cell 个数
 - (NSInteger)tableView:(nonnull UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    NSLog(@"numberOfRowsInSection 111111 %ld",section);
     return 18;
 }
 
@@ -82,6 +86,58 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     NSLog(@"选中了第%li个cell", (long)indexPath.row);
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    
+        NSArray* indexPaths = [_tableView indexPathsForVisibleRows];
+        if (!indexPaths.count) {
+            return;
+        }
+        
+        NSIndexPath *lastIndexPath = (NSIndexPath*)(indexPaths.lastObject);
+        NSInteger lastIndex = lastIndexPath.row;
+    
+        for (int i=0; i<indexPaths.count; i++) {
+            NSIndexPath *indexPath = (NSIndexPath*)indexPaths[i];
+            NSInteger index = indexPath.row;
+            NSInteger sections = [_tableView numberOfSections];
+            if (indexPath.section >= sections)//保护一下,避免数组越界
+            {
+                continue;
+            }
+            else
+            {
+                NSInteger rows = [_tableView numberOfRowsInSection:indexPath.section];
+                if (index >= rows) {
+                    continue;
+                }
+            }
+            
+//            id obj = CZ_DicGetObjectAtIndex(dataSource, index);
+//            if (CZ_isKindOfClass(obj, [ReadInJoyChannelAd class])) {
+//                NSInteger sections = [_tableView numberOfSections];
+//                if (indexPath.section > = sections)//保护一下,避免数组越界
+//                {
+//                    continue;
+//                }
+//                else
+//                {
+//                    NSInteger rows = [_tableView numberOfRowsInSection:indexPath.section];
+//                    if (index > = rows) {
+//                        continue;
+//                    }
+//                }
+//
+//                CGRect rectInTableView = [_tableView rectForRowAtIndexPath:indexPath];
+//                CGRect rectInWindow = [_tableView convertRect:rectInTableView toView:[UIApplication sharedApplication].keyWindow];
+//                UITableViewCell *cell = [_tableView cellForRowAtIndexPath:indexPath];
+//                cell.accessibilityValue = NSStringFromCGRect(rectInWindow);
+//
+//                dispatch_async(dispatch_get_main_queue(), ^{
+//                    [cell setNeedsLayout];
+//                    [cell layoutIfNeeded];
+//                });
+//            }
+        }
 }
 
 // 设置 cell 是否允许左滑
@@ -120,6 +176,9 @@
     return @[cellActionA, cellActionB];
 }
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
+    NSArray* indexPaths = [_tableView indexPathsForVisibleRows];
+    int a = [self.tableView numberOfSections];
+    int b = [self.tableView numberOfRowsInSection:0];
     NSLog(@"scrollViewDidEndDecelerating");
 }
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView{
@@ -139,7 +198,7 @@
     //targetContentOffset->y = 100;
 }
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath{
-    NSLog(@"%s,%@",__FUNCTION__,indexPath);
+//    NSLog(@"%s,%@",__FUNCTION__,indexPath);
 //    NSLog(@"%@:%@",[self class],NSStringFromSelector(_cmd));
 }
 @end

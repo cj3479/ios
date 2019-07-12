@@ -19,10 +19,20 @@
 //    [[[NSBundle alloc] initWithPath:@"/Applications/InjectionIII.app/Contents/Resources/iOSInjection.bundle"] load];
     // Override point for customization after application launch.
     NSLog(@"application initWithPath 当前栈信息1111：%@", [NSThread callStackSymbols]);
+    [self redirectConsoleLog];
     return YES;
 }
 
-
+-(void)redirectConsoleLog{
+#ifdef DEBUG
+    NSString *documentDir = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
+    NSLog(@"documentPath : %@",documentDir);
+    
+    //重定向NSLog
+    NSString* logPath = [documentDir stringByAppendingPathComponent:@"console.log"];
+    freopen([logPath fileSystemRepresentation], "a+", stderr);
+#endif
+}
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
     // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.

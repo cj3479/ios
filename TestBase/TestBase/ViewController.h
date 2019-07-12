@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "SampleProtocol.h"
+@class Person;
+typedef NS_ENUM(NSUInteger, AdStatSrc) {
+    AdStatSrc_NONE = 0,//统计来源，imax页
+    AdStatSrc_IMAX_PAGE = 3,//统计来源，imax页
+    AdStatSrc_LANDING_PAGE = 5 //统计来源，落地页
+};
 @interface ViewController : UIViewController<SampleProtocolDelegate>
 {
     IBOutlet UILabel *label;
@@ -16,8 +22,8 @@
     //2.创建一个条件
     NSCondition *condition;
 }
-
-
+@property (nonatomic, assign) BOOL tempRDVTabBarHeight;
+@property (nonatomic, strong) Person *person1;
 
 @end
 

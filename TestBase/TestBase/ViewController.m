@@ -8,8 +8,10 @@
 
 #import "ViewController.h"
 #import "Person.h"
+//#import "TestPersonSub.h"
 #import "NextViewController.h"
 #import "UITableviewVC.h"
+#define  PROTEUS_EVENT_CMD_AD_PK_LEFT_CLICK        @"cmd_ad_pk_left_clickg"
 @implementation ViewController
 - (IBAction)clickon:(id)sender {
     NSLog(@"clickon......");
@@ -20,28 +22,79 @@
 - (void)viewDidLayoutSubviews{
     
 }
+
+- (void)test:(AdStatSrc) statSrc
+{
+    switch (statSrc) {
+        case AdStatSrc_IMAX_PAGE :
+            NSLog(@"test.........true");
+            break;
+        case AdStatSrc_NONE :
+            NSLog(@"test.........none");
+            break;
+        default:
+            break;
+    }
+    NSLog(@"test.........");
+}
+
+- (void)scrollToLandingPage:(UITapGestureRecognizer *)tap
+{
+    NSLog(@"scrollToLandingPage....");
+}
 ////从下往上计算布局
 //- (void)layoutSubviews {
 //}
 - (void)viewDidLoad {
+    _person1 = [[Person alloc] init];
+    bool isque =   [@"cmd_ad_pk_left_click" isEqualToString:PROTEUS_EVENT_CMD_AD_PK_LEFT_CLICK];
+    for (int i = 0; i < 10; i++) {
+        self.title = @"崩溃ssss1111";
+    }
+    UIWindow *window1 = [[UIApplication sharedApplication].windows lastObject];
+    window1.windowLevel = UIWindowLevelAlert;
+    NSArray *windows =  [[UIApplication sharedApplication] windows];
+    for (UIWindow *win in windows) {
+        NSLog(@"viewDidLoad111: %f", win.windowLevel);
+    }
+    NSLog(@"viewDidLoadssssss: %f", UIWindowLevelAlert);
+//    NSLog(@"viewDidLoadddd: %@,%@", TestDEfault,TestExtern);
+    [self test:nil];
+    AdStatSrc aab = AdStatSrc_IMAX_PAGE ;
+    NSDictionary * dic1=[NSDictionary dictionaryWithObject:@(aab) forKey:@"key1"];
+    AdStatSrc aa=[[dic1 objectForKey:@"key1"] intValue];
+//    NSLog(@"test.........aa=%d",aa);
+    [self test:aa];
+    self.title = @"崩溃1111";
     CGRect screenRect = [[UIScreen mainScreen] bounds];
     CGSize screenSize = screenRect.size;
     CGFloat scale = [UIScreen mainScreen].scale;
     CGFloat screenX = screenSize.width * scale;
-    NSLog(@"viewDidLoad: %@", self);
+    NSLog(@"viewDidLoadssssss: %d", self.tempRDVTabBarHeight);
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     //    label = [[UILabel alloc]init];
     label =UILabel.alloc.init;
     //这一句创建了一个静态文本控件，未指定内容、大小和位置
+    label.frame = CGRectMake(200, 200, 40, 90);
     
-    
-    NSString *text =@"hello world ddd";
+    NSString *text =@"hello world ddd fffff gfdgg dgdfgf dgfdgfg";
     NSLog(@"dddddd");
-    label.text=text;
     //"@"的作用是把一个c风格的字符串"hello world"包装成一个NSString对象
-    [label sizeToFit];
-    label.center = self.view.center;
+    label.text = text;
+    label.backgroundColor = UIColor.blueColor;
+    label.numberOfLines = 1;
+    label.userInteractionEnabled = YES;
+    label.lineBreakMode =  NSLineBreakByTruncatingTail;
+//    [label sizeToFit];
+    UITapGestureRecognizer *tapScrollPanelGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(scrollToLandingPage:)];
+    [label addGestureRecognizer:tapScrollPanelGesture];
+    CGRect tempFrame = label.frame;
+//    tempFrame.origin.y = 20;
+//    label.frame = tempFrame;
+//    NSLog(@"dddddd %@",label.frame);
+//    label.center = self.view.center;
+//    label.backgroundColor = [UIColor colorWithRed:255 green:0 blue:0 alpha:0];
     NSLog(@"dddddd");
     
     NSLog(@"dddddd");
@@ -103,7 +156,7 @@
     //   [button setBackgroundImage:[UIImage imageNamed:@"power_bg_img_normal.png"] forState:UIControlStateHighlighted];
     //    [button setBackgroundImage:[UIImage imageNamed:@"power_bg_img_pressed.png"] forState:UIControlStateHighlighted];
     //    添加到ViewController中去
-       [self.view addSubview:button];
+//       [self.view addSubview:button];
     //
     [self.view addSubview:label];
     
@@ -120,9 +173,9 @@
 //    [label setText:@"Proc..nnsss."];
     [sampleProtocol startSampleProcess];
     // Do any additional setup after loading the view, typically from a nib.
-    Person *person =     [[Person     alloc]init];
-    [person run];
-    NSLog(@"viewDidLoad 222222222：%@",person);
+//    Person *person =     [[TestPersonSub   alloc]init];
+//    [person eataaa];
+    NSLog(@"viewDidLoad 222222222：%@",_person1);
     NextViewController *next =[[NextViewController alloc]init];
     NSLog(@"aaaaaaaaa：%@",next.labels);
     next.labels.text=@"startinghhhh";
@@ -136,13 +189,15 @@
     self.view.clipsToBounds = NO;
     UITableviewVC *table =[[UITableviewVC alloc]init];
     NSLog(@" UITableviewVC addChildViewController 1");
-    [self addChildViewController:table];
+//    [self addChildViewController:table];
     NSLog(@" UITableviewVC addChildViewController 2");
-//    table.view.frame = CGRectMake(0, 0, 220, 400);
+    table.view.frame = CGRectMake(0, 200, 220, 900);
 //    table.view.backgroundColor = [UIColor colorWithRed:255 green:0 blue:0 alpha:255];
-        [self.view addSubview:table.view];
-         NSLog(@" UITableviewVC addChildViewController 3");
-    self.view.clipsToBounds = NO;
+//    [self.view addSubview:table.view];
+    bool isSubview = [self.view isDescendantOfView:table.view];
+    bool isSubview1 = [table.view isDescendantOfView:self.view];
+    NSLog(@" UITableviewVC addChildViewController 3 =%d,%d",isSubview,isSubview1);
+//    self.view.clipsToBounds = NO;
     //分配内存
     array = [[NSMutableArray alloc] init];
     condition = [[NSCondition alloc] init];
@@ -151,7 +206,7 @@
     //    //创建消费者
     //    [NSThread detachNewThreadSelector:@selector(consumerAction) toTarget:self withObject:nil];
     //    [NSThread detachNewThreadSelector:@selector(consumerAction) toTarget:self withObject:nil];
-    label = UILabel.alloc.init;
+//    label = UILabel.alloc.init;
     NSLog(@"22222222end");
 //    dispatch_queue_t queue = dispatch_queue_create("net.bujige.testQueue", DISPATCH_QUEUE_SERIAL);
 //    dispatch_main();
@@ -177,7 +232,10 @@
 -(void)processCompleted{
     //    [label setText:@"Process Completed"];
 }
-
+- (void)viewDidDisappear:(BOOL)animated
+{
+    [super viewDidDisappear:animated];
+}
 -(void)demo:(UIButton *) buttona{
     NSLog(@"%@",buttona);
 }
@@ -220,7 +278,9 @@
         }
     }
 }
-
+- (void)viewWillAppear:(BOOL)animated{
+    
+}
 - (void)consumerAction{
     
     //异常捕捉
