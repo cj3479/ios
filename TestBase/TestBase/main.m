@@ -28,6 +28,7 @@ typedef NS_ENUM(NSUInteger, RIJShortVideoRequestState) {
     RIJShortVideoRequestStateSuccess,
 };
 extern int externInt =10;
+//static NSDictionary* const clickPosDic = @{@"ProteusEventCmdAdLargeImgClick":@"ww"};
 void testThreadMethod(){
     TestThread *testThread = [[TestThread alloc]init];
     [testThread startThread];
@@ -44,8 +45,33 @@ void testMonitorGCD(){
     TestThread *testThread = [[TestThread alloc]init];
     [testThread testMonitorGCD];
 }
+
+#define FBKVOKeyPath(KEYPATH) \
+@(((void)(NO && ((void)KEYPATH, NO)), \
+({ const char *fbkvokeypath = strchr(#KEYPATH, '.'); fbkvokeypath + 1; })))
+
 #define AA 1
 int main(int argc, char * argv[]) {
+    int seq = 10;
+    int *p = &seq;
+    NSLog(@"main sssss %p,%p", &seq,p);
+    *p = 20;
+    NSLog(@"main value %d,%p", seq,p);
+    Person * person1121 = nil;
+    char *aaa = "person1121.name";
+    const char *fbkvokeypath = strchr(aaa, '.');
+    fbkvokeypath+1;
+//    NSString *test11 = FBKVOKeyPath(person1121.name);
+    NSString *test11 = @(({ const char *fbkvokeypath = strchr("person1121.name", '.'); "fbkvokeypath + 1"; }));
+    if(!person1121.name)
+    {
+        person1121.name = @"sadsadsd";
+    }
+    Person * person10 = [Person alloc];
+    [person10 setName:@"dddd"];
+    person10.name = @"ddddddddd";
+    NSString *testStr11= @"ddd";
+    NSString *testStr111 = testStr11?:@"";
     for(int i=0;i<10;i++)
     {
         if(i==3||i==4)
@@ -176,6 +202,7 @@ int main(int argc, char * argv[]) {
         return a1>=a2?-1:1;
     }];
     NSLog(@"%@",arraya);
+    NSLog(@"%@",arraya[100]);
     QUINT64 channelID =10;
     NSNumber *longlongNumber = [NSNumber numberWithLongLong:channelID];
     NSDictionary *userInfo = @{@"isRefreshChannel":@(YES),@"channel_id":@(channelID),@"channel_id_qq":@(0),@"type":@"1",@"type":@"1",@"typess":@(AA),@"hello":@(NO)};
@@ -202,6 +229,7 @@ int main(int argc, char * argv[]) {
 //    NSLog(@"userInfo=%@",userInfo[@"channel_id"]);
     NSLog(@"userInfsssssssso=%d",channelID4);
     bool add = YES;
+    BOOL add11 = YES;
     NSLog(@"YES = %d", add ? YES : NO);
     //    NSDictionary *pop_sheet = [NSJSONSerialization JSONObjectWithData:NULL
     //                                                    options:NSJSONReadingMutableContainers
@@ -209,6 +237,7 @@ int main(int argc, char * argv[]) {
     SelectorSub *ss = [[SelectorSub alloc]init];
     NSDictionary * dic1=[NSDictionary dictionaryWithObject:@(channelID) forKey:@"key1"];
     SelectorSub * str111=[dic1 objectForKey:@"key1"];
+    SelectorSub * str1111=dic1[@"key1"];
     NSNumber *longlongNumber2 =[dic1 objectForKey:@"key1"];
     NSLog(@"%@",longlongNumber2);
     QUINT64 channelID2 =longlongNumber2.longLongValue;

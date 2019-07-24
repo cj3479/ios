@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "SampleProtocol.h"
+//#import "Person.h"
+#define AdLargeImgClick @"cmd_large_img_click"
+//static NSString* const ProteusEventCmdAdTripleImgClick = @"cmd_triple_img_click";
+static const int RIJConstantMultiVideoChannelID = 409409;
+//static NSString* const ProteusEventCmdAdLargeImgClick = AdLargeImgClick;
 @class Person;
 typedef NS_ENUM(NSUInteger, AdStatSrc) {
     AdStatSrc_NONE = 0,//统计来源，imax页

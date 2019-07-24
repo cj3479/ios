@@ -5,7 +5,7 @@
 //  Created by chengjian on 2019/5/24.
 //  Copyright © 2019年 chengjian. All rights reserved.
 //Ne
-
+int bb=110;
 #import "Person+NewFunction.h"
 NSString * const TestDEfault = @"__default__";
 extern NSString * const TestExtern = @"__extern__";

@@ -5,11 +5,14 @@
 //  Created by chengjian on 2019/5/24.
 //  Copyright © 2019年 chengjian. All rights reserved.
 //
-
 #import "Person.h"
-
+#import "TestARC.h"
+//const NSArray*  defaultTitlesGroup = @[ProteusEventCmdAdTripleImgClick,ProteusEventCmdAdLargeImgClick];
+const NSDictionary *defaultTitlesGroup = @{ProteusEventCmdAdLargeImgClick:@(FeedsAdLogo)};
+int bbb=10;
 @implementation Person
 -(void)exercise:(myBlock)aa{
+    NSLog(@"I am cj %@",aa);
     NSString * theName=@"ZhangSan";
     int age=10;
     aa(theName,age);
@@ -21,6 +24,10 @@
 -(void)testlib:(NSString *)nm andage:(NSString *)age{
     NSLog(@"name=%@",nm);
     NSLog(@"age=%@",age);
+}
+-(void)setName:(NSString *)name{
+    NSLog(@"name=%@",name);
+    self.name = name;
 }
 -(void)run{
     a=10;
@@ -35,6 +42,18 @@
     NSLog(@"类扩展中声明的对象方法=%d",_age);
      NSLog(@"类扩展中声明的对象方法=%@",_name);
 //     NSLog(@"类扩展中声明的对象方法=%d",shuaiI);
+}
+//第一种就是直接赋值
+- (void)changeEnName:(NSString*)name{
+    _enName = name;
+}
+//第二种点语法赋值
+- (void)changeEnNameFromSetter:(NSString*)name {
+    self.enName = name;
+}
+- (void)changeAgeFromSetter:(int)age
+{
+    self.age = age;
 }
 
 -(void)testPerson:(NSString *)nm :(NSString *)age{

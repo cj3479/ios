@@ -11,10 +11,181 @@
 //#import "TestPersonSub.h"
 #import "NextViewController.h"
 #import "UITableviewVC.h"
+#import "A.h"
+#import "B.h"
 #define  PROTEUS_EVENT_CMD_AD_PK_LEFT_CLICK        @"cmd_ad_pk_left_clickg"
+#define  PROTEUS_EVENT_CMD_AD_PK_LEFT_CLICK        @"cmd_ad_pk_left_click"
+#define  PROTEUS_EVENT_CMD_AD_PK_RIGHT_CLICK       @"cmd_ad_pk_right_click"
+#define  PROTEUS_EVENT_CMD_AD_PK_TITLE_CLICK       @"cmd_ad_pk_title_click"
+#define  PROTEUS_EVENT_CMD_AD_PK_BOTTOM_CLICK       @"cmd_ad_pk_bottom_click"
+
+#pragma mark - 广告解析相关的字段
+#define  RIJ_AD_KEY_EXTRA_DATA       @"bytes_extra_data"
+#define  RIJ_AD_KEY_SHOWADTYPE       @"showAdType"
+#define  RIJ_AD_KEY_PK_VS_BG       @"pk_ad_vs_pic"
+#define  RIJ_AD_KEY_CONTAINER_AD_ITEM       @"container_ad_item"
+#define  RIJ_AD_KEY_DEST_URL       @"dest_url"
+#define  RIJ_AD_KEY_RL       @"rl"
+#define  RIJ_AD_KEY_BUTTON_TXT       @"button_txt"
+#define  RIJ_AD_KEY_BUTTON_BG       @"button_bg"
+//回包相关model
+typedef NS_ENUM(unsigned int, FeedsType_0x6cf) {
+    FeedsType0x6cf_Article = 0,          //普通文章
+    FeedsType0x6cf_Advertise = 1,        //位置广告
+};
+
+typedef NS_ENUM(unsigned int, PosLayout_0x6cf) {
+    PosLayout0x6cf_Normal = 0,              //普通图文类广告
+    PosLayout0x6cf_SinglePicTxt = 1,        //一拖多，单图文
+    PosLayout0x6cf_MultiPicTxt = 2,         //一拖多，多图文
+    PosLayout0x6cf_AddFan = 3,              //一拖多， 关注类
+    PosLayout0x6cf_MultiPic = 4,            //多图
+};
+
+typedef NS_ENUM(unsigned int, AdLayout_0x6cf) { // 广告层级，解决一个广告位多条广告的情况
+    AdLayout0x6cf_Normal = 0,                // 普通图文类广告
+    AdLayout0x6cf_SinglePicTxt = 1,               // 一拖多，单图文
+    AdLayout0x6cf_MulPicTxt = 2,                  // 一拖多，多图文
+    AdLayout0x6cf_AddFan = 3,                      // 一拖多， 关注类
+    AdLayout0x6cf_MulPic = 4,                      // 多图
+    AdLayout0x6cf_Video = 5,                        //视频
+};
+
+typedef NS_ENUM(unsigned int, AdJumpMode_0x6cf) {
+    AdJumpMode_Normal   = 1,    //普通外链
+    AdJumpMode_APP      = 2,    //app下载页
+    AdJumpMode_TOP      = 3,    //七巧板视频置顶落地页
+    AdJumpMode_ORIGINAL = 4,    //看点原生视频广告落地页
+    AdJumpMode_MidVideo = 5,    //中部视频广告页面
+};
+
+typedef NS_ENUM(unsigned int, AdShowStyle_0x6cf) { //一拖三广告显示样式
+    AdShowStyle_unknow = 0,
+    AdShowStyle_video = 1,                  //视频样式
+    AdShowStyle_Picture = 2,                //图片样式
+};
+typedef NS_ENUM(NSUInteger, PAAdNativeFetchRet) {
+    PAAdNativeFetchRet_Sucess = 0,
+    PAAdNativeFetchRet_Fail = 10001,
+    PAAdNativeFetchRet_Illegal = 10002,
+    PAAdNativeFetchRet_ParamErr = 10003,
+    PAAdNativeFetchRet_SendRequestFail = 10004,
+    PAAdNativeFetchRet_SendingRequest = 10005,
+    PAAdNativeFetchRet_NetErr = 10006, // 网络不通
+};
+
+typedef NS_ENUM(NSUInteger, PAAdReportType) {
+    PAAdReportType_Default = 0,
+    PAAdReportType_Click = 1,
+    PAAdReportType_Exposure = 2,
+    PAAdReportType_NegFeedback = 3,
+    PAAdReportType_Close = 4,
+    PAAdReportType_Download = 5,
+    PAAdReportType_VideoPlay = 6,
+    PAAdReportType_Slide = 7,
+    PAAdReportType_OpenApp = 8,
+    PAAdReportType_InstallApp = 9,
+    PAAdReportType_UGCAd_Like = 11,
+    PAAdReportType_UGCAd_Comment = 12,
+    PAAdReportType_UGCAd_Biu = 13,
+    PAAdReportType_UGCAd_Follow = 14,
+    PAAdReportType_Click_Pause = 16,//点击暂停
+    PAAdReportType_Imax_Slide = 17,//点击imax广告下滑
+    PAAdReportType_Click_Resume = 18,//点击继续播放
+    PAAdReportType_Click_View_Detail = 19,//点击查看详情
+    PAAdReportType_Click_Share = 21,//点击分享
+    PAAdReportType_Click_IMAX_Close = 22,//点击关闭
+    PAAdReportType_IMAX_AUTO_JUMP = 23,//imax视频页自动跳转到落地页
+    PAAdReportType_PopUpWindow_Click = 42,
+    PAAdReportType_AdRespond = 80, //端收到或者丢失广告   7.9.2
+    PAAdReportType_ExtraExposure = 81,//补充曝光（用作统计，查问题）
+    PAAdReportType_InnerAdSubscribe = 108, //文中广告表单提交
+    PAAdReportType_SubscribeGame = 109, //预约游戏
+    PAAdReportType_RIJNA_SubscribeGame = 110, //文中预约游戏
+    PAAdReportType_PhoneCall = 116, //810 看点广告电话组件 点击电话组件
+    PAAdReportType_PhoneCancel = 117, //810 看点广告电话组件 点击电话取消
+    PAAdReportType_PhoneConfirm = 118 //810 看点广告电话组件 点击确认
+};
+
+typedef NS_ENUM(NSUInteger, PAAdReportOrigin) {
+    PAAdReportOrigin_Default = 0,
+    PAAdReportOrigin_NativeArticle = 1,
+    PAAdReportOrigin_Web = 2,
+    PAAdReportOrigin_MainFeedsArticle = 3,
+    PAAdReportOrigin_VideoChannel = 4,
+    PAAdReportOrigin_VideoList = 5,
+    PAAdReportOrigin_NativeImg = 6,
+    PAAdReportOrigin_NativeVideo = 7,
+    PAAdReportOrigin_Gdt = 8,
+    PAAdReportOrigin_ShortVideo = 10,
+    PAAdReportOrigin_MainFeedsVideo = 11,
+    
+    PAAdReportOrigin_Ad_68b = 12,//68b广告   7.9.2
+    PAAdReportOrigin_Ad_6cf = 13,//6cf广告   7.9.2
+    
+    PAAdReportOrigin_BrandAdVideo = 17,//799 品牌广告视频
+    PAAdReportOrigin_NativeArticleInnerAd = 18,
+    PAAdReportOrigin_Ad_6cf_Video_Guide_Card = 21, // 805 看点视频浮层广告播放中引导
+    PAAdReportOrigin_FeedsCardClick = 22, //805 feeds流本地卡片样式的点击
+    PAAdReportOrigin_AlbumGalleryAdvertisement = 24, //808 图集广告origin
+    PAAdReportOrigin_NativeArticleGameComponent = 25, //808 详情页-游戏组件（包括文中游戏，文底游戏）
+    PAAdReportOrigin_FloatVideoGameComponent = 26, //808 浮层视频游戏组件
+    PAAdReportOrigin_IMAX = 27, //810 Imax广告
+    PAAdReportOrigin_PhoneComponent = 28 //810 电话组件
+};
+
+typedef NS_ENUM(NSUInteger, PAAdReportOudid) {
+    PAAdReportOudid_Default = 0,
+    PAAdReportOudid_Spa = 1, // spa
+    PAAdReportOudid_Zz = 2, // 增值
+    PAAdReportOudid_Omg = 3, // omg
+};
+
+typedef enum : NSUInteger {
+    
+    QQReadInJoyAdClickPositionFeedsAdLogo = 1,
+    QQReadInJoyAdClickPositionFeedsAdvertisersAvatar = 2,
+    QQReadInJoyAdClickPositionFeedsAdvertisersName = 3,
+    QQReadInJoyAdClickPositionFeedsTitle = 4,
+    QQReadInJoyAdClickPositionFeedsImage = 5,
+    QQReadInJoyAdClickPositionFeedsVideoPlay = 6,
+    QQReadInJoyAdClickPositionFeedsButton = 8,
+    
+    QQReadInJoyAdClickPositionFeedsVideoEndAdvertisersIcon = 15,
+    QQReadInJoyAdClickPositionFeedsVideoEndAdvertisersName = 16,
+    QQReadInJoyAdClickPositionFeedsVideoEndButton = 17,
+    QQReadInJoyAdClickPositionFeedsVideoEndReplayButton = 21,
+    
+    RIJShortVideoCellAdPopGuideClickWhiteArea = 18,              // 其他空白区域
+    RIJShortVideoCellAdPopGuideClickTitle = 35,                  // 标题区域
+    RIJShortVideoCellAdPopGuideClickAdvertiserAvatar = 34,       // 广告主头像
+    RIJShortVideoCellAdPopGuideClickDesc = 37,                   // 广告描述
+    RIJShortVideoCellAdPopGuideClickButton = 38,                 // 按钮区域
+    RIJShortVideoCellAdPopGuideClickClose = 39,                  // 关闭按钮
+    QQReadInJoyAdPKClickPositionLeftArea = 101,  //PK广告左侧点击
+    QQReadInJoyAdPKClickPositionRightArea = 102, //PK广告右侧点击
+    QQReadInJoyAdClickPositionBlankArea = 1000,
+} QQReadInJoyAdClickPosition;
+//extern const NSArray*   g_DomainIpDic = @{@"1":@"imgcache.qq.com",
+//                                        @"2":@"imgcache.gtimg.cn",
+//                                        @"3":@"i.gtimg.cn",
+//                                        @"4":@"collector.weiyun.com",
+//                                        @"5":@"pic.pieceup.qq.com",
+//                                        @"6":@"shp.qpic.cn",
+//                                        @"7":@"jiankang.qq.com"};
+//NSArray* const defaultTitlesGroup;
+extern int bbb;
+extern int bb;
+extern NSDictionary* defaultTitlesGroup;
 @implementation ViewController
 - (IBAction)clickon:(id)sender {
-    NSLog(@"clickon......");
+//      const NSDictionary*   g_DomainIpDic = @{@"1":@"imgcache.qq.com",
+//                                                 @"2":@"imgcache.gtimg.cn",
+//                                                 @"3":@"i.gtimg.cn",
+//                                                 @"4":@"collector.weiyun.com",
+//                                                 @"5":@"pic.pieceup.qq.com",
+//                                                 @"6":@"shp.qpic.cn",
+//                                                 @"7":@"jiankang.qq.com"};
 }
 - (void)viewWillLayoutSubviews{
     
@@ -46,6 +217,12 @@
 //- (void)layoutSubviews {
 //}
 - (void)viewDidLoad {
+    if(!self.person1.name)
+    {
+        self.person1.name = @"sdsfdf";
+    }
+//     NSLog(@"viewDidLoad......%@",RIJ_AD_KEY_EXTRA_DATA);
+//    NSLog(@"viewDidLoad......%d",PosLayout0x6cf_MultiPicTxt);
     _person1 = [[Person alloc] init];
     bool isque =   [@"cmd_ad_pk_left_click" isEqualToString:PROTEUS_EVENT_CMD_AD_PK_LEFT_CLICK];
     for (int i = 0; i < 10; i++) {
@@ -57,7 +234,9 @@
     for (UIWindow *win in windows) {
         NSLog(@"viewDidLoad111: %f", win.windowLevel);
     }
-    NSLog(@"viewDidLoadssssss: %f", UIWindowLevelAlert);
+    NSLog(@"viewDidLoadssssss: %@", defaultTitlesGroup);
+    id values = defaultTitlesGroup[@"dd"];
+    NSLog(@"viewDidLoadssssss: %d", bbb);
 //    NSLog(@"viewDidLoadddd: %@,%@", TestDEfault,TestExtern);
     [self test:nil];
     AdStatSrc aab = AdStatSrc_IMAX_PAGE ;
@@ -158,6 +337,7 @@
     //    添加到ViewController中去
 //       [self.view addSubview:button];
     //
+    self.view.backgroundColor = [UIColor colorWithPatternImage:image];
     [self.view addSubview:label];
     
     //    //    Button监听事件，非常重要
@@ -189,11 +369,11 @@
     self.view.clipsToBounds = NO;
     UITableviewVC *table =[[UITableviewVC alloc]init];
     NSLog(@" UITableviewVC addChildViewController 1");
-//    [self addChildViewController:table];
+    [self addChildViewController:table];
     NSLog(@" UITableviewVC addChildViewController 2");
-    table.view.frame = CGRectMake(0, 200, 220, 900);
+    table.view.frame = CGRectMake(0, 200, 220, 600);
 //    table.view.backgroundColor = [UIColor colorWithRed:255 green:0 blue:0 alpha:255];
-//    [self.view addSubview:table.view];
+    [self.view addSubview:table.view];
     bool isSubview = [self.view isDescendantOfView:table.view];
     bool isSubview1 = [table.view isDescendantOfView:self.view];
     NSLog(@" UITableviewVC addChildViewController 3 =%d,%d",isSubview,isSubview1);
@@ -211,6 +391,79 @@
 //    dispatch_queue_t queue = dispatch_queue_create("net.bujige.testQueue", DISPATCH_QUEUE_SERIAL);
 //    dispatch_main();
      NSLog(@"22222222end 111");
+    // UIBlurEffectStyleLight模式
+//    UIVisualEffectView *lightView = [[UIVisualEffectView alloc] initWithEffect:[UIBlurEffect effectWithStyle:UIBlurEffectStyleLight]];
+//    lightView.frame = CGRectMake(40, 40, 300, 100);
+//    [self.view addSubview:lightView];
+    
+    // UIBlurEffectStyleExtraLight模式
+//    UIVisualEffectView *extraLightView = [[UIVisualEffectView alloc] initWithEffect:[UIBlurEffect effectWithStyle:UIBlurEffectStyleExtraLight]];
+//    extraLightView.frame = CGRectMake(40, 160, 300, 100);
+//    [self.view addSubview:extraLightView];
+    
+    // UIBlurEffectStyleDark
+//    UIVisualEffectView *darkView = [[UIVisualEffectView alloc] initWithEffect:[UIBlurEffect effectWithStyle:UIBlurEffectStyleDark]];
+//    darkView.frame = CGRectMake(40, 280, 300, 100);
+//    [self.view addSubview:darkView];
+    self.person1 = [[Person alloc] init];
+    self.person1.enName = @"最初的名字";
+    //observer观察者 (观察self.view对象的属性的变化)
+    //KeyPath: 被观察属性的名称
+    //options: 观察属性的新值,旧值等的一些配置(枚举值)
+    //context:上下文 可以为kvo的回调方法传值
+    //这儿的self.view是被观察者
+    //注册观察者(可以是多个)
+    /*
+     options: 有4个值，分别是：
+     
+     　　NSKeyValueObservingOptionOld 把更改之前的值提供给处理方法
+     
+     　　NSKeyValueObservingOptionNew 把更改之后的值提供给处理方法
+     
+     　　NSKeyValueObservingOptionInitial 把初始化的值提供给处理方法，一旦注册，立马就会调用一次。通常它会带有新值，而不会带有旧值。
+     
+     　　NSKeyValueObservingOptionPrior 分2次调用。在值改变之前和值改变之后。
+     */
+    self.person1.height = 10;
+    [self.person1 addObserver:self forKeyPath:@"enName" options:NSKeyValueObservingOptionOld context:nil];
+//    [self.person1 addObserver:self forKeyPath:@"height" options:NSKeyValueObservingOptionNew context:nil];
+//    [self.person1 addObserver:self forKeyPath:@"height" options:NSKeyValueObservingOptionNew context:(__bridge void *)self.person1];
+//     [self.person1 addObserver:self forKeyPath:@"height" options:NSKeyValueObservingOptionNew context:(__bridge void *)self];
+    [self.person1 addObserver:self forKeyPath:@"height" options:NSKeyValueObservingOptionOld|NSKeyValueObservingOptionNew context:nil];
+    //导航栏左按钮
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"下划线" style:UIBarButtonItemStylePlain target:self action:@selector(oldAction)];
+    //导航栏右按钮
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"点语法" style:UIBarButtonItemStylePlain target:self action:@selector(newAction)];
+}
+
+#pragma mark - kvo的回调方法(系统提供的回调方法)
+//keyPath:属性名称
+//object:被观察的对象
+//change:变化前后的值都存储在change字典中
+//context:注册观察者的时候,context传递过来的值
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSString *,id> *)change context:(void *)context {
+    id oldName = [change objectForKey:NSKeyValueChangeOldKey];
+    NSLog(@"oldName----------%@",oldName);
+    id newName = [change objectForKey:NSKeyValueChangeNewKey];
+    NSLog(@"oldName----------%@",newName);
+//    Person * dd = (__bridge Person *)context;
+//    dd.name = @"12121";
+//    NSLog(@"newName-----------%@,context=%@,context=%@",newName,dd,dd.name);
+    //当界面要消失的时候,移除kvo
+    //    [object removeObserver:self forKeyPath:@"name"];
+}
+#pragma mark - 导航栏按钮方法(如果赋值没有通过setter方法或者是kvc,例如(_name = @"新值"),这个时候不会触发kvc的回调方法)
+//通过下划线赋值(不会触发回调方法)
+- (void)oldAction {
+    [self.person1 changeEnName:@"张三"];
+}
+
+//通过点语法赋值
+- (void)newAction {
+//    [self.person1 changeEnNameFromSetter:@"李四"];
+     [self.person1 changeAgeFromSetter:10];
+    self.person1.height = 100;
+    NSLog(@"after newAction");
 }
 
 -(void)injected{

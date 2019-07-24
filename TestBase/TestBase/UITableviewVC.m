@@ -10,6 +10,11 @@
 static int m=1;
 @implementation UITableviewVC
 - (void)viewDidLoad{
+    _datas = [NSMutableArray array];
+    for(int i=0;i<17;i++)
+    {
+        [_datas addObject:[NSString stringWithFormat:@"这是第%d个cell",i]];
+    }
     // 创建UItableView，style选择Grouped或Plain，这里我们以Grouped为例
     self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height) style:UITableViewStyleGrouped];
     // 声明 tableView 的代理和数据源
@@ -18,7 +23,23 @@ static int m=1;
     self.tableView.prefetchDataSource = self;
     [self.view addSubview:self.tableView];
     NSLog(@" UITableviewVC viewDidLoad");
+    
 }
+
+#pragma mark - kvo的回调方法(系统提供的回调方法)
+//keyPath:属性名称
+//object:被观察的对象
+//change:变化前后的值都存储在change字典中
+//context:注册观察者的时候,context传递过来的值
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSString *,id> *)change context:(void *)context {
+    id oldName = [change objectForKey:NSKeyValueChangeOldKey];
+    NSLog(@"oldName----------%@",oldName);
+    id newName = [change objectForKey:NSKeyValueChangeNewKey];
+    NSLog(@"newName-----------%@",newName);
+    //当界面要消失的时候,移除kvo
+    //    [object removeObserver:self forKeyPath:@"name"];
+}
+
 // 设置每个 Cell
 - (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
     // 创建一个cellID，用于cell的重用
@@ -30,9 +51,10 @@ static int m=1;
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue2 reuseIdentifier:cellID];
     }
     // 设置 cell 的标题
-    cell.textLabel.text = [NSString stringWithFormat:@"这是第%li个cell", (long)indexPath.row];
+//    cell.textLabel.text = [NSString stringWithFormat:@"这是第%li个cell", (long)indexPath.row];
+    cell.textLabel.text = _datas[indexPath.row];
     // 设置 cell 的副标题
-    cell.detailTextLabel.text = @"副标题";
+//    cell.detailTextLabel.text = @"副标题";
     NSLog(@"getview selection=%d,row=%d，,cell=%@", indexPath.section,indexPath.row,cell);
     return cell;
 }
@@ -40,12 +62,12 @@ static int m=1;
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     m++;
     NSLog(@"numberOfSectionsInTableView 111111 %d",m);
-    return 3;
+    return 1;
 }
 // 每个 Section 中的 Cell 个数
 - (NSInteger)tableView:(nonnull UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     NSLog(@"numberOfRowsInSection 111111 %ld",section);
-    return 18;
+    return _datas.count;
 }
 
 #pragma mark - UITableViewDelegate
@@ -68,6 +90,7 @@ static int m=1;
 }
 // 设置 cell 的高度
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSLog(@"heightForRowAtIndexPath %ld", indexPath.row);
     return 80;
 }
 //// 自定义 section 的 header
@@ -85,9 +108,46 @@ static int m=1;
 // 选中了 cell 时触发
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     NSLog(@"选中了第%li个cell", (long)indexPath.row);
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    [cell addObserver:self forKeyPath:@"frame" options:NSKeyValueObservingOptionOld context:nil];
+//    //操作1 删除
+//    [_datas removeObjectAtIndex:0];
+//    [self.tableView deleteRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:0 inSection:0]] withRowAnimation:UITableViewRowAnimationAutomatic];
+//
+//    //操作2 删除
+//    [_datas removeObjectAtIndex:3];
+//    [self.tableView deleteRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:1 inSection:0]] withRowAnimation:UITableViewRowAnimationAutomatic];
+//    //操作2 插入
+//    [_datas insertObject:@"这是第3个cell" atIndex:2];
+//    [self.tableView insertRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:2 inSection:0]] withRowAnimation:UITableViewRowAnimationAutomatic];
+    
+    //操作1 删除
+    [_datas removeObjectAtIndex:0];
+    
+    //操作2 删除
+//    [_datas removeObjectAtIndex:3];
+    //操作2 插入
+//    [_datas insertObject:@"这是第3个cell" atIndex:2];
+    [self.tableView beginUpdates];
+    [self.tableView deleteRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:0 inSection:0]] withRowAnimation:UITableViewRowAnimationAutomatic];
+//    [self.tableView deleteRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:3 inSection:0]] withRowAnimation:UITableViewRowAnimationAutomatic];
+//    [self.tableView insertRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:2 inSection:0]] withRowAnimation:UITableViewRowAnimationAutomatic];
+    [self.tableView endUpdates];
     
     
+//    [self.tableView beginUpdates];
+//    [self.tableView endUpdates];
+//    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+//    [_datas removeObjectAtIndex:indexPath.row];
+//    [_datas removeObjectAtIndex:(indexPath.row+1)];
+//
+//                // 刷新
+////       [self.tableView reloadData];
+//    [self.tableView beginUpdates];
+//    [self.tableView deleteRowsAtIndexPaths:[NSMutableArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
+//    [self.tableView deleteRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:(indexPath.row+1) inSection:0]] withRowAnimation:UITableViewRowAnimationFade];//删除对应数据的cell
+//    [self.tableView endUpdates];
+//     [self.tableView reloadData];
         NSArray* indexPaths = [_tableView indexPathsForVisibleRows];
         if (!indexPaths.count) {
             return;
@@ -158,6 +218,8 @@ static int m=1;
 }
 // 自定义左滑cell时的按钮和触发方法
 - (nullable NSArray<UITableViewRowAction *> *)tableView:(UITableView *)tableView editActionsForRowAtIndexPath:(NSIndexPath *)indexPath {
+    [_datas removeObjectAtIndex:indexPath.row];
+    NSLog(@"点击了 位置 %ld,%ld",indexPath.section,indexPath.row);
     // 创建第一个按钮和触发事件
     UITableViewRowAction *cellActionA = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDefault title:@"按钮-1" handler:^(UITableViewRowAction *action, NSIndexPath *indexPath){
         // 在此写点击按钮时的触发事件
@@ -176,9 +238,9 @@ static int m=1;
     return @[cellActionA, cellActionB];
 }
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
-    NSArray* indexPaths = [_tableView indexPathsForVisibleRows];
-    int a = [self.tableView numberOfSections];
-    int b = [self.tableView numberOfRowsInSection:0];
+//    NSArray* indexPaths = [_tableView indexPathsForVisibleRows];
+//    int a = [self.tableView numberOfSections];
+//    int b = [self.tableView numberOfRowsInSection:0];
     NSLog(@"scrollViewDidEndDecelerating");
 }
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView{
