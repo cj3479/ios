@@ -126,7 +126,7 @@
 		094894B32333786000802E2D /* testDMlib.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = testDMlib.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		094894D02333A52F00802E2D /* HappyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HappyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		094894D12333A52F00802E2D /* HappyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HappyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		094894D22333A52F00802E2D /* TestBase copy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TestBase copy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		094894D22333A52F00802E2D /* TestBase_copy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestBase_copy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		094894F12333ABD600802E2D /* TestAFnetworking.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestAFnetworking.h; sourceTree = "<group>"; };
 		094894F22333ABD600802E2D /* TestAFnetworking.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestAFnetworking.m; sourceTree = "<group>"; };
 		094894F623347EB900802E2D /* test.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = test.bundle; sourceTree = "<group>"; };
@@ -276,7 +276,7 @@
 				4D03E7F035FC72F19A45D097 /* Pods */,
 				094894D02333A52F00802E2D /* HappyTests.xctest */,
 				094894D12333A52F00802E2D /* HappyUITests.xctest */,
-				094894D22333A52F00802E2D /* TestBase copy.app */,
+				094894D22333A52F00802E2D /* TestBase_copy.app */,
 			);
 			sourceTree = "<group>";
 		};
@@ -572,9 +572,9 @@
 			productReference = 094894D12333A52F00802E2D /* HappyUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
-		09FABCF522A1197D00AD1E79 /* TestBase copy */ = {
+		09FABCF522A1197D00AD1E79 /* TestBase_copy */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 09FABD0322A1197D00AD1E79 /* Build configuration list for PBXNativeTarget "TestBase copy" */;
+			buildConfigurationList = 09FABD0322A1197D00AD1E79 /* Build configuration list for PBXNativeTarget "TestBase_copy" */;
 			buildPhases = (
 				09FABCF622A1197D00AD1E79 /* Sources */,
 				09FABCFE22A1197D00AD1E79 /* Frameworks */,
@@ -584,9 +584,9 @@
 			);
 			dependencies = (
 			);
-			name = "TestBase copy";
+			name = TestBase_copy;
 			productName = TestBase;
-			productReference = 094894D22333A52F00802E2D /* TestBase copy.app */;
+			productReference = 094894D22333A52F00802E2D /* TestBase_copy.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -638,7 +638,7 @@
 				09A814BB22A11224000D9C17 /* Happy */,
 				09A814D222A11226000D9C17 /* HappyTests */,
 				09A814DD22A11226000D9C17 /* HappyUITests */,
-				09FABCF522A1197D00AD1E79 /* TestBase copy */,
+				09FABCF522A1197D00AD1E79 /* TestBase_copy */,
 			);
 		};
 /* End PBXProject section */
@@ -1231,7 +1231,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		09FABD0322A1197D00AD1E79 /* Build configuration list for PBXNativeTarget "TestBase copy" */ = {
+		09FABD0322A1197D00AD1E79 /* Build configuration list for PBXNativeTarget "TestBase_copy" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				09FABD0422A1197D00AD1E79 /* Debug */,
