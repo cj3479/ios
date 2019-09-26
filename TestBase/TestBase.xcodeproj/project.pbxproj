@@ -27,9 +27,6 @@
 		096910EA2301510800BBAE04 /* RIJIEAdUIHandlerFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 096910E92301510800BBAE04 /* RIJIEAdUIHandlerFactory.m */; };
 		097170D3233C6F9B005853B3 /* testDMlib.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 094894B32333786000802E2D /* testDMlib.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		097170D5233C6FAB005853B3 /* testDMlib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 097170D4233C6FAB005853B3 /* testDMlib.framework */; };
-		09717169233C930D005853B3 /* sss.h in Headers */ = {isa = PBXBuildFile; fileRef = 09717159233C930D005853B3 /* sss.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0971716C233C930D005853B3 /* sss.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09717157233C930D005853B3 /* sss.framework */; };
-		0971716D233C930D005853B3 /* sss.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 09717157233C930D005853B3 /* sss.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0972B3912330AE5D003600CF /* NSJSONSerialization+QGW.m in Sources */ = {isa = PBXBuildFile; fileRef = 0972B3902330AE5D003600CF /* NSJSONSerialization+QGW.m */; };
 		098B2E4122BF443D00DEBD73 /* MonitorGCD.m in Sources */ = {isa = PBXBuildFile; fileRef = 098B2E4022BF443D00DEBD73 /* MonitorGCD.m */; };
 		0995780B229832AB00A68CE9 /* Person.mm in Sources */ = {isa = PBXBuildFile; fileRef = 09957806229832AB00A68CE9 /* Person.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -71,13 +68,6 @@
 			remoteGlobalIDString = 092B2BF8232E712F00013EA7;
 			remoteInfo = TestOC;
 		};
-		0971716A233C930D005853B3 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 09477BA4229824F9009A47AF /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 09717156233C930D005853B3;
-			remoteInfo = sss;
-		};
 		09A814D422A11226000D9C17 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 09477BA4229824F9009A47AF /* Project object */;
@@ -101,7 +91,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				0971716D233C930D005853B3 /* sss.framework in Embed Frameworks */,
 				097170D3233C6F9B005853B3 /* testDMlib.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -163,7 +152,6 @@
 		097170D0233C6F78005853B3 /* testfwstatic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = testfwstatic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		097170D4233C6FAB005853B3 /* testDMlib.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = testDMlib.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		097170D6233C7131005853B3 /* libteststaticlib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libteststaticlib.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		09717157233C930D005853B3 /* sss.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = sss.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		09717159233C930D005853B3 /* sss.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = sss.h; sourceTree = "<group>"; };
 		0971715A233C930D005853B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		09717166233C930D005853B3 /* sssTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = sssTests.m; sourceTree = "<group>"; };
@@ -220,16 +208,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0971716C233C930D005853B3 /* sss.framework in Frameworks */,
 				097170D5233C6FAB005853B3 /* testDMlib.framework in Frameworks */,
 				00E3BE9BF5D883A38404308B /* libPods-TestBase.a in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		09717154233C930D005853B3 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,7 +277,6 @@
 				094894D02333A52F00802E2D /* HappyTests.xctest */,
 				094894D12333A52F00802E2D /* HappyUITests.xctest */,
 				094894D22333A52F00802E2D /* TestBase copy.app */,
-				09717157233C930D005853B3 /* sss.framework */,
 			);
 			sourceTree = "<group>";
 		};
@@ -520,17 +499,6 @@
 		};
 /* End PBXGroup section */
 
-/* Begin PBXHeadersBuildPhase section */
-		09717152233C930D005853B3 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				09717169233C930D005853B3 /* sss.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXHeadersBuildPhase section */
-
 /* Begin PBXNativeTarget section */
 		09477BAB229824F9009A47AF /* TestBase */ = {
 			isa = PBXNativeTarget;
@@ -545,30 +513,11 @@
 			buildRules = (
 			);
 			dependencies = (
-				0971716B233C930D005853B3 /* PBXTargetDependency */,
 			);
 			name = TestBase;
 			productName = TestBase;
 			productReference = 093BFC68233361F6000FA39D /* TestBase.app */;
 			productType = "com.apple.product-type.application";
-		};
-		09717156233C930D005853B3 /* sss */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 0971716E233C930D005853B3 /* Build configuration list for PBXNativeTarget "sss" */;
-			buildPhases = (
-				09717152233C930D005853B3 /* Headers */,
-				09717153233C930D005853B3 /* Sources */,
-				09717154233C930D005853B3 /* Frameworks */,
-				09717155233C930D005853B3 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = sss;
-			productName = sss;
-			productReference = 09717157233C930D005853B3 /* sss.framework */;
-			productType = "com.apple.product-type.framework";
 		};
 		09A814BB22A11224000D9C17 /* Happy */ = {
 			isa = PBXNativeTarget;
@@ -653,9 +602,6 @@
 					09477BAB229824F9009A47AF = {
 						CreatedOnToolsVersion = 10.1;
 					};
-					09717156233C930D005853B3 = {
-						CreatedOnToolsVersion = 11.0;
-					};
 					09A814BB22A11224000D9C17 = {
 						CreatedOnToolsVersion = 10.2.1;
 					};
@@ -693,7 +639,6 @@
 				09A814D222A11226000D9C17 /* HappyTests */,
 				09A814DD22A11226000D9C17 /* HappyUITests */,
 				09FABCF522A1197D00AD1E79 /* TestBase copy */,
-				09717156233C930D005853B3 /* sss */,
 			);
 		};
 /* End PBXProject section */
@@ -721,13 +666,6 @@
 				09C6C44322DC6BC600E0A448 /* d.jpg in Resources */,
 				09477BB9229824FA009A47AF /* Assets.xcassets in Resources */,
 				09477BB7229824F9009A47AF /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		09717155233C930D005853B3 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -822,13 +760,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		09717153233C930D005853B3 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		09A814B822A11224000D9C17 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -872,11 +803,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		0971716B233C930D005853B3 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 09717156233C930D005853B3 /* sss */;
-			targetProxy = 0971716A233C930D005853B3 /* PBXContainerItemProxy */;
-		};
 		09A814D522A11226000D9C17 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 09A814BB22A11224000D9C17 /* Happy */;
@@ -1106,64 +1032,6 @@
 			};
 			name = Release;
 		};
-		0971716F233C930D005853B3 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 65T72LT3SH;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = sss/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = qq.sss;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		09717170233C930D005853B3 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 65T72LT3SH;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = sss/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = qq.sss;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 		09A814E622A11226000D9C17 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1332,15 +1200,6 @@
 			buildConfigurations = (
 				09477BD9229824FA009A47AF /* Debug */,
 				09477BDA229824FA009A47AF /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		0971716E233C930D005853B3 /* Build configuration list for PBXNativeTarget "sss" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				0971716F233C930D005853B3 /* Debug */,
-				09717170233C930D005853B3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
