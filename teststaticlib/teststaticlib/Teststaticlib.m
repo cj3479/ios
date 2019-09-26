@@ -10,6 +10,6 @@
 
 @implementation Teststaticlib
 -(void)testslib:(NSString *)name{
-    NSLog(@"test static 呵呵呵呵qqqddd name=%@",name);
+    NSLog(@"test static 111111qqqddd name=%@",name);
 }
 @end

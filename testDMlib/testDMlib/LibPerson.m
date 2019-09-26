@@ -10,11 +10,11 @@
 
 @implementation LibPerson
 - (void)eat{
-    NSLog(@"eating.....start");
+    NSLog(@"eating....sfdsfsdfsdfsd.start");
     sleep(1);
-    NSLog(@"eating.....start");
+    NSLog(@"eating....dsfdfd.start");
 }
 - (void)watch{
-    NSLog(@"watch.....");
+    NSLog(@"watch.....sdfsdfdsdsfdfd");
 }
 @end

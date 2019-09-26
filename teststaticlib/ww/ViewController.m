@@ -20,4 +20,8 @@
 }
 
 
+- (void)dealloc {
+    [hellobtn release];
+    [super dealloc];
+}
 @end

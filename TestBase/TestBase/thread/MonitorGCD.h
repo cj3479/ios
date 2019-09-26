@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
+//extern const NSDictionary *defaultTitlesGroup;
 typedef void (^monitor_block_t)(void);
 struct Msg{
     struct Msg *next;

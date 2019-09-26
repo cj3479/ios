@@ -8,7 +8,12 @@
 #import "Person.h"
 #import "TestARC.h"
 //const NSArray*  defaultTitlesGroup = @[ProteusEventCmdAdTripleImgClick,ProteusEventCmdAdLargeImgClick];
-const NSDictionary *defaultTitlesGroup = @{ProteusEventCmdAdLargeImgClick:@(FeedsAdLogo)};
+//const NSDictionary *defaultTitlesGroup = @{ProteusEventCmdAdLargeImgClick:@(FeedsAdLogo)};
+NSDictionary* const defaultTitlesGroup = @{ProteusEventCmdAdLargeImgClick:@(FeedsAdLogo)};
+NSDictionary * const defaultTitlesGroup1 = @{@"d":@"d"};
+int a =10;
+int* const testConstInt = &a;
+const int* testConstIntA = &a;
 int bbb=10;
 @implementation Person
 -(void)exercise:(myBlock)aa{
@@ -27,7 +32,7 @@ int bbb=10;
 }
 -(void)setName:(NSString *)name{
     NSLog(@"name=%@",name);
-    self.name = name;
+//    self.name = name;
 }
 -(void)run{
     a=10;

@@ -11,7 +11,8 @@
 //#import "Person.h"
 #define AdLargeImgClick @"cmd_large_img_click"
 //static NSString* const ProteusEventCmdAdTripleImgClick = @"cmd_triple_img_click";
-static const int RIJConstantMultiVideoChannelID = 409409;
+//extern const int RIJConstantMultiVideoChannelID = 409409;
+static const CGFloat scaleUItopImgViewW = 10;
 //static NSString* const ProteusEventCmdAdLargeImgClick = AdLargeImgClick;
 @class Person;
 typedef NS_ENUM(NSUInteger, AdStatSrc) {
@@ -22,6 +23,7 @@ typedef NS_ENUM(NSUInteger, AdStatSrc) {
 @interface ViewController : UIViewController<SampleProtocolDelegate>
 {
     IBOutlet UILabel *label;
+//    IBOutlet UIButton *hellobtn;
     //1.创建库房，用来存储产品
     NSMutableArray *array ;
     //2.创建一个条件
@@ -29,6 +31,6 @@ typedef NS_ENUM(NSUInteger, AdStatSrc) {
 }
 @property (nonatomic, assign) BOOL tempRDVTabBarHeight;
 @property (nonatomic, strong) Person *person1;
-
++ (NSString *)jsonStringForNSJsonData:(id)object options:(NSJSONWritingOptions)options;
 @end
 

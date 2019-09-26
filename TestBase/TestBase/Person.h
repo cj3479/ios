@@ -10,7 +10,15 @@
 #import "ViewController.h"
 //#define AdLargeImgClick @"cmd_large_img_click"
 static NSString* const ProteusEventCmdAdLargeImgClick = @"cmd_large_img_click";
+//static NSString* const ProteusEventCmdAdTripleImgClick = @"cmd_triple_img_click";
 static NSString* const ProteusEventCmdAdTripleImgClick = @"cmd_triple_img_click";
+extern NSDictionary* const defaultTitlesGroup;
+//extern const NSDictionary *defaultTitlesGroup;
+extern int* const testConstInt;
+extern const int*  testConstIntA;
+static void changeEnNameDDD(NSString* name){
+    
+}
 typedef enum : NSUInteger {
     FeedsAdLogo = 1,
 } QQReadInJoyAdClickPositionDD;
@@ -18,6 +26,7 @@ typedef enum : NSUInteger {
 @interface Person : NSObject{
     int a;
 }
+
 //第一种就是直接赋值
 - (void)changeEnName:(NSString*)name;
 //第二种点语法赋值

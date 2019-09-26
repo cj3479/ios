@@ -15,4 +15,11 @@
     }
     return self;
 }
+-(void)testStatic{
+    static int a= 10;
+    a = 
+    a++;
+    NSLog(@"chengjian_test_static %d",a);
+    NSLog(@"chengjian_test_static %f",scaleUItopImgViewW);
+}
 @end

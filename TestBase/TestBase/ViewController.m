@@ -8,11 +8,14 @@
 
 #import "ViewController.h"
 #import "Person.h"
-//#import "TestPersonSub.h"
+//#import "TestPersonSub.h"1
 #import "NextViewController.h"
 #import "UITableviewVC.h"
+#import "MyObject.h"
 #import "A.h"
 #import "B.h"
+#import "TestRunLoop.h"
+//#import "testfwstatic/testFWStatic.h"
 #define  PROTEUS_EVENT_CMD_AD_PK_LEFT_CLICK        @"cmd_ad_pk_left_clickg"
 #define  PROTEUS_EVENT_CMD_AD_PK_LEFT_CLICK        @"cmd_ad_pk_left_click"
 #define  PROTEUS_EVENT_CMD_AD_PK_RIGHT_CLICK       @"cmd_ad_pk_right_click"
@@ -174,19 +177,48 @@ typedef enum : NSUInteger {
 //                                        @"6":@"shp.qpic.cn",
 //                                        @"7":@"jiankang.qq.com"};
 //NSArray* const defaultTitlesGroup;
+//const CGFloat scaleUItopImgViewW = 80;
 extern int bbb;
 extern int bb;
-extern NSDictionary* defaultTitlesGroup;
-@implementation ViewController
-- (IBAction)clickon:(id)sender {
-//      const NSDictionary*   g_DomainIpDic = @{@"1":@"imgcache.qq.com",
-//                                                 @"2":@"imgcache.gtimg.cn",
-//                                                 @"3":@"i.gtimg.cn",
-//                                                 @"4":@"collector.weiyun.com",
-//                                                 @"5":@"pic.pieceup.qq.com",
-//                                                 @"6":@"shp.qpic.cn",
-//                                                 @"7":@"jiankang.qq.com"};
+//extern NSDictionary* defaultTitlesGroup;
+@implementation ViewController{
+    TestRunLoop *runloop;
 }
+//- (IBAction)clickon:(id)sender {
+////      const NSDictionary*   g_DomainIpDic = @{@"1":@"imgcache.qq.com",
+////                                                 @"2":@"imgcache.gtimg.cn",
+////                                                 @"3":@"i.gtimg.cn",
+////                                                 @"4":@"collector.weiyun.com",
+////                                                 @"5":@"pic.pieceup.qq.com",
+////                                                 @"6":@"shp.qpic.cn",
+////                                                 @"7":@"jiankang.qq.com"};
+//}
++ (NSString *)jsonStringForNSJsonData:(id)object options:(NSJSONWritingOptions)options
+{
+    if (nil == object)
+    {
+        return nil;
+    }
+    
+    // add by pangzhang v5.2 补充一个判断 这里可能会出问题
+    if (![NSJSONSerialization isValidJSONObject:object])
+    {
+        return nil;
+    }
+    
+    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:object options:options error:nil];
+    if (jsonData)
+    {
+        NSString *urlArrStr = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+       // NSString *urlArrStr = CZ_Autorelease(CZ_NewUTF8StringWithData(jsonData));
+        return urlArrStr;
+    }
+
+    return nil;
+}
+
+
+
 - (void)viewWillLayoutSubviews{
     
 }
@@ -209,9 +241,79 @@ extern NSDictionary* defaultTitlesGroup;
     NSLog(@"test.........");
 }
 
+
+- (void)scrollToLandingPageABC:(UITapGestureRecognizer *)tap
+{
+    NSLog(@"chengjian_test_static scrollToLandingPageABC %@,%@",NSStringFromCGRect(tap.view.bounds),NSStringFromCGRect(tap.view.superview.bounds));
+    NSLog(@"chengjian_test_static scrollToLandingPageABC %@",tap.view);
+    UITapGestureRecognizer *tap1 = nil;
+    NSMutableArray *ieAdUIHandlerViewsArr = [[NSMutableArray alloc] init];
+    [ieAdUIHandlerViewsArr addObject:tap];
+    [ieAdUIHandlerViewsArr addObject:tap.view];
+    if([ieAdUIHandlerViewsArr containsObject:tap1.view])
+    {
+        NSLog(@"chengjian_test_static scrollToLandingPageABC %@",tap1.view);
+    }
+    [ieAdUIHandlerViewsArr removeObject:nil];
+    [ieAdUIHandlerViewsArr removeObject:nil];
+    tap.view.transform = CGAffineTransformMakeScale(1.0, 1.0);
+    NSLog(@"chengjian_test_static scrollToLandingPageABC %@",tap.view);
+//    tap.view.frame = CGRectMake(120, 500, 40, 90);
+    tap.view.frame = CGRectMake(80, 10, 40, 90);
+    NSLog(@"chengjian_test_static scrollToLandingPageABC %@,%@",NSStringFromCGRect(tap.view.bounds),NSStringFromCGRect(tap.view.superview.bounds));
+    NSLog(@"chengjian_test_static scrollToLandingPageABC %@",tap.view);
+//    tap.view.center = self.view.center;
+//    MyObject *obj = [[MyObject alloc]init];
+//    NSLog(@"chengjian_test_static %p",obj);
+//    [obj testStatic];
+//    NSArray<UITapGestureRecognizer *>  *grs = [tap.view gestureRecognizers];
+//        [UIView animateWithDuration:1 animations:^{
+//            NSLog(@"chengjian_ani");
+//    //        tap.view.frame = CGRectMake(200, 500, 40, 90);
+//            tap.view.transform = CGAffineTransformMakeScale(2.5, 2.5);
+//        } completion:^(BOOL finished) {
+//            NSLog(@"chengjian_ani end");
+//    //        [UIView animateWithDuration:1 animations:^{
+//    //            tap.view.transform = CGAffineTransformIdentity;
+//    //        }];
+//        }];
+    //    if(grs && grs.count>0)
+    //    {
+    //        for (UITapGestureRecognizer *tgr in grs) {
+    //            NSLog(@"chengjian_test tgr=%@",tgr);
+    //            [tap.view removeGestureRecognizer:tgr];
+    //        }
+    //    }
+    NSLog(@"chengjian_test scrollToLandingPageABC tap=%@",tap);
+    NSLog(@"chengjian_test scrollToLandingPageABC....");
+}
+
 - (void)scrollToLandingPage:(UITapGestureRecognizer *)tap
 {
-    NSLog(@"scrollToLandingPage....");
+    NSLog(@"chengjian_test_static scrollToLandingPage before %@",tap.view);
+//    tap.view.transform = CGAffineTransformMakeScale(2.5, 2.5);
+    tap.view.frame = CGRectMake(tap.view.frame.origin.x + 10, tap.view.frame.origin.y, tap.view.frame.size.width, tap.view.frame.size.height);
+    NSLog(@"chengjian_test_static scrollToLandingPage end %@",tap.view);
+//    [UIView animateWithDuration:1 animations:^{
+//        NSLog(@"chengjian_ani");
+////        tap.view.frame = CGRectMake(200, 500, 40, 90);
+//        tap.view.transform = CGAffineTransformMakeScale(1.5, 1.5);
+//    } completion:^(BOOL finished) {
+//        NSLog(@"chengjian_ani end");
+////        [UIView animateWithDuration:1 animations:^{
+////            tap.view.transform = CGAffineTransformIdentity;
+////        }];
+//    }];
+    NSArray<UITapGestureRecognizer *>  *grs = [tap.view gestureRecognizers];
+//    if(grs && grs.count>0)
+//    {
+//        for (UITapGestureRecognizer *tgr in grs) {
+//            NSLog(@"chengjian_test tgr=%@",tgr);
+//            [tap.view removeGestureRecognizer:tgr];
+//        }
+//    }
+    NSLog(@"chengjian_test scrollToLandingPage tap=%@",tap);
+    NSLog(@"chengjian_test scrollToLandingPage....");
 }
 ////从下往上计算布局
 //- (void)layoutSubviews {
@@ -221,6 +323,8 @@ extern NSDictionary* defaultTitlesGroup;
     {
         self.person1.name = @"sdsfdf";
     }
+    CGFloat scale11 = 2.0f ;
+    CGFloat scale1222 = scale11<1.0f?:10.0f;
 //     NSLog(@"viewDidLoad......%@",RIJ_AD_KEY_EXTRA_DATA);
 //    NSLog(@"viewDidLoad......%d",PosLayout0x6cf_MultiPicTxt);
     _person1 = [[Person alloc] init];
@@ -234,13 +338,20 @@ extern NSDictionary* defaultTitlesGroup;
     for (UIWindow *win in windows) {
         NSLog(@"viewDidLoad111: %f", win.windowLevel);
     }
-    NSLog(@"viewDidLoadssssss: %@", defaultTitlesGroup);
+    AdStatSrc aab = AdStatSrc_IMAX_PAGE ;
+    NSDictionary * dic1=[NSDictionary dictionaryWithObject:@(aab) forKey:@"key1"];
+//    *defaultTitlesGroup = 11;
+    int aaaaaa = 10000;
+    *testConstInt = 20;
+    testConstIntA = &aaaaaa;
+    NSLog(@"viewDidLoadssssss:testConstInt=%d,%d,%p,%d,%d", testConstInt,*testConstInt,testConstInt,testConstIntA,*testConstIntA);
+    NSLog(@"viewDidLoadssssss:defaultTitlesGroup=%@", defaultTitlesGroup);
+    NSLog(@"viewDidLoadssssss ProteusEventCmdAdTripleImgClick: %@", ProteusEventCmdAdTripleImgClick);
     id values = defaultTitlesGroup[@"dd"];
     NSLog(@"viewDidLoadssssss: %d", bbb);
 //    NSLog(@"viewDidLoadddd: %@,%@", TestDEfault,TestExtern);
     [self test:nil];
-    AdStatSrc aab = AdStatSrc_IMAX_PAGE ;
-    NSDictionary * dic1=[NSDictionary dictionaryWithObject:@(aab) forKey:@"key1"];
+//    NSDictionary * dic1=[NSDictionary dictionaryWithObject:@(aab) forKey:@"key1"];
     AdStatSrc aa=[[dic1 objectForKey:@"key1"] intValue];
 //    NSLog(@"test.........aa=%d",aa);
     [self test:aa];
@@ -253,10 +364,18 @@ extern NSDictionary* defaultTitlesGroup;
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     //    label = [[UILabel alloc]init];
+    UIView *uiview = [[UIView alloc]init];
+    uiview.frame = CGRectMake(300, 400, 100, 200);
+    uiview.clipsToBounds = YES;
+//    uiview.center = self.view.center;
+    uiview.backgroundColor = UIColor.greenColor;
     label =UILabel.alloc.init;
     //这一句创建了一个静态文本控件，未指定内容、大小和位置
-    label.frame = CGRectMake(200, 200, 40, 90);
-    
+    label.frame = CGRectMake(0, 10, 40, 90);
+//    label.bounds = CGRectMake(0, 0, 80, 100);
+//    label.clipsToBounds = YES;
+//    label.layer.masksToBounds = YES;
+//    label.center = self.view.center;
     NSString *text =@"hello world ddd fffff gfdgg dgdfgf dgfdgfg";
     NSLog(@"dddddd");
     //"@"的作用是把一个c风格的字符串"hello world"包装成一个NSString对象
@@ -264,11 +383,28 @@ extern NSDictionary* defaultTitlesGroup;
     label.backgroundColor = UIColor.blueColor;
     label.numberOfLines = 1;
     label.userInteractionEnabled = YES;
-    label.lineBreakMode =  NSLineBreakByTruncatingTail;
+//    label.lineBreakMode =  NSLineBreakByTruncatingTail;
 //    [label sizeToFit];
+    
+    UIImageView *uiIamgeView = [[UIImageView alloc]init];
+    uiIamgeView.frame = CGRectMake(-80, 10, 180, 180);
+    [uiIamgeView setImage:[UIImage imageNamed:@"d.jpg"]];
+    uiIamgeView.contentMode = UIViewContentModeScaleAspectFit;
+    uiIamgeView.backgroundColor = UIColor.redColor;
+    uiIamgeView.userInteractionEnabled = YES;
+    UITapGestureRecognizer *tapScrollPanelGesture2 = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(scrollToLandingPage:)];
+    NSLog(@"chengjian_test tapScrollPanelGesture=%@",tapScrollPanelGesture2);
+    [uiIamgeView addGestureRecognizer:tapScrollPanelGesture2];
+    
     UITapGestureRecognizer *tapScrollPanelGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(scrollToLandingPage:)];
+    NSLog(@"chengjian_test tapScrollPanelGesture=%@",tapScrollPanelGesture);
     [label addGestureRecognizer:tapScrollPanelGesture];
-    CGRect tempFrame = label.frame;
+    UITapGestureRecognizer *tapScrollPanelGesture1 = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(scrollToLandingPageABC:)];
+    tapScrollPanelGesture1.numberOfTapsRequired = 2;
+    [tapScrollPanelGesture requireGestureRecognizerToFail:tapScrollPanelGesture1];
+    NSLog(@"chengjian_test tapScrollPanelGesture1=%@",tapScrollPanelGesture1);
+    [label addGestureRecognizer:tapScrollPanelGesture1];
+//    CGRect tempFrame = label.frame;
 //    tempFrame.origin.y = 20;
 //    label.frame = tempFrame;
 //    NSLog(@"dddddd %@",label.frame);
@@ -308,7 +444,7 @@ extern NSDictionary* defaultTitlesGroup;
     //    注：设置类型只能在初始化的时候
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
     //    设置frame
-    button.frame = CGRectMake(100, 100, 170, 44);
+    button.frame = CGRectMake(100, 100, 270, 200);
     //    设置背景颜色,分状态
     button.backgroundColor = [UIColor redColor];
     [button setTitle:@"普通Button" forState:UIControlStateNormal];
@@ -323,22 +459,30 @@ extern NSDictionary* defaultTitlesGroup;
     button.titleLabel.shadowOffset = CGSizeMake(3, 2);
     //    设置内容图片,分状态
     NSString *strResourcesBundle = [[NSBundle mainBundle] pathForResource:@"test" ofType:@"bundle"];
-    NSString *strC = [[NSBundle bundleWithPath:strResourcesBundle] pathForResource:@"a" ofType:@"jpg" inDirectory:@"images"];
+    NSString *strC = [[NSBundle bundleWithPath:strResourcesBundle] pathForResource:@"a" ofType:@"jpg" inDirectory:@"Pictures"];
+    NSString *strResourcesBundle1 = [[NSBundle mainBundle] pathForResource:@"fwbundle" ofType:@"bundle"];
+//    NSString *strC1 = [[NSBundle bundleWithPath:strResourcesBundle1] pathForResource:@"b" ofType:@"jpg" inDirectory:@"Contents/Resources"];
+     NSString *strC1 = [[[NSBundle bundleWithPath:strResourcesBundle1] resourcePath] stringByAppendingFormat:@"/b.jpg"];
     UIImage *imgC = [UIImage imageWithContentsOfFile:strC];
-    UIImage *image = [UIImage imageNamed:@"d.jpg"];
-    [button setImage:image forState:UIControlStateNormal];
+    UIImage *image = [UIImage imageNamed:@"car_h.png"];
+//    UIImage *testUmage = [testFWStatic getImage];
+    UIImage *testUmage11 = [UIImage imageWithContentsOfFile:strC1];
+//    UIImage *image = [UIImage imageNamed:@"c.jpeg"];
+    [button setImage:testUmage11 forState:UIControlStateNormal];
     [button setImage:imgC forState:UIControlStateHighlighted];
     //    设置button的imageview的背景
     //    [button setImage:[UIImage imageNamed:@"power_pressed.png"] forState:UIControlStateHighlighted];
     button.imageView.backgroundColor = [UIColor purpleColor];
+    button.contentEdgeInsets = UIEdgeInsetsMake(20, 30, 40, 70);
     //    //    设置Button背景图片,分状态
     //   [button setBackgroundImage:[UIImage imageNamed:@"power_bg_img_normal.png"] forState:UIControlStateHighlighted];
     //    [button setBackgroundImage:[UIImage imageNamed:@"power_bg_img_pressed.png"] forState:UIControlStateHighlighted];
     //    添加到ViewController中去
-//       [self.view addSubview:button];
+       [self.view addSubview:button];
     //
     self.view.backgroundColor = [UIColor colorWithPatternImage:image];
-    [self.view addSubview:label];
+    [self.view addSubview:uiview];
+    [uiview addSubview:uiIamgeView];
     
     //    //    Button监听事件，非常重要
     //    /**
@@ -347,7 +491,7 @@ extern NSDictionary* defaultTitlesGroup;
     //     *forControlEvents:事件
     //     */
     [button addTarget:self action:@selector(demo:) forControlEvents:UIControlEventTouchUpInside];
-    
+//    button.cancelsTouchesInView = NO;
     SampleProtocol *sampleProtocol = [[SampleProtocol alloc]init];
     sampleProtocol.delegate = self;
 //    [label setText:@"Proc..nnsss."];
@@ -366,14 +510,14 @@ extern NSDictionary* defaultTitlesGroup;
     next.view.backgroundColor = [UIColor colorWithRed:255 green:0 blue:0 alpha:0];
     //    [self.view addSubview:next.view];
     NSLog(@"aaaaaaaaa22：%@",next.labels);
-    self.view.clipsToBounds = NO;
+//    self.view.clipsToBounds = NO;
     UITableviewVC *table =[[UITableviewVC alloc]init];
     NSLog(@" UITableviewVC addChildViewController 1");
-    [self addChildViewController:table];
+//    [self addChildViewController:table];
     NSLog(@" UITableviewVC addChildViewController 2");
-    table.view.frame = CGRectMake(0, 200, 220, 600);
+    table.view.frame = CGRectMake(0, 100, 220, self.view.frame.size.height);
 //    table.view.backgroundColor = [UIColor colorWithRed:255 green:0 blue:0 alpha:255];
-    [self.view addSubview:table.view];
+//    [self.view addSubview:table.view];
     bool isSubview = [self.view isDescendantOfView:table.view];
     bool isSubview1 = [table.view isDescendantOfView:self.view];
     NSLog(@" UITableviewVC addChildViewController 3 =%d,%d",isSubview,isSubview1);
@@ -430,11 +574,35 @@ extern NSDictionary* defaultTitlesGroup;
 //    [self.person1 addObserver:self forKeyPath:@"height" options:NSKeyValueObservingOptionNew context:(__bridge void *)self.person1];
 //     [self.person1 addObserver:self forKeyPath:@"height" options:NSKeyValueObservingOptionNew context:(__bridge void *)self];
     [self.person1 addObserver:self forKeyPath:@"height" options:NSKeyValueObservingOptionOld|NSKeyValueObservingOptionNew context:nil];
+    [self.person1 addObserver:self forKeyPath:@"age" options:NSKeyValueObservingOptionOld|NSKeyValueObservingOptionNew context:nil];
     //导航栏左按钮
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"下划线" style:UIBarButtonItemStylePlain target:self action:@selector(oldAction)];
     //导航栏右按钮
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"点语法" style:UIBarButtonItemStylePlain target:self action:@selector(newAction)];
+    
+    NSLog(@"runloop delay start …");
+    [self performSelector:@selector(runOnNewThread) withObject:nil afterDelay:2];
+    NSLog(@"runloop delay end..");
 }
+
+
+
+- (void)runOnNewThread {
+//    TestRunLoop *runloop = [[TestRunLoop alloc]init];
+//    [runloop testBlock];
+    runloop = [[TestRunLoop alloc]init];
+    [runloop testPort];
+}
+- (void)test {
+//    NSLog("@chengjian test....")
+}
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    NSLog(@"chengjian touchesBegan....");
+//    // 默认情况下一个线程只能使用一次, 也就是说只能执行一个操作, 执行完毕之后就不能使用了
+//    [self performSelector:@selector(test) onThread:NSThread currentThread withObject:nil waitUntilDone:YES];
+}
+
 
 #pragma mark - kvo的回调方法(系统提供的回调方法)
 //keyPath:属性名称
@@ -461,8 +629,9 @@ extern NSDictionary* defaultTitlesGroup;
 //通过点语法赋值
 - (void)newAction {
 //    [self.person1 changeEnNameFromSetter:@"李四"];
-     [self.person1 changeAgeFromSetter:10];
-    self.person1.height = 100;
+//     [self.person1 changeAgeFromSetter:10];
+//    self.person1.height = 100;
+     self.person1.age = 100;
     NSLog(@"after newAction");
 }
 
@@ -490,12 +659,14 @@ extern NSDictionary* defaultTitlesGroup;
     [super viewDidDisappear:animated];
 }
 -(void)demo:(UIButton *) buttona{
+    [label removeFromSuperview];
     NSLog(@"%@",buttona);
 }
--(IBAction)clickButton:(UIButton *)button{
-    NSLog(@"%@",button);
-    button.enabled = NO;
-}
+
+//-(IBAction)clickButton:(UIButton *)button{
+//    NSLog(@"%@",button);
+//    button.enabled = NO;
+//}
 
 
 - (void)produceAction{

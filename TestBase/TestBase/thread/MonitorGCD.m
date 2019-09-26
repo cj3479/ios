@@ -7,7 +7,8 @@
 //
 
 #import "MonitorGCD.h"
-
+//static  NSDictionary* const defaultTitlesGroup1 = @{};
+static NSString* const ProteusEventCmdAdLargeImgClick = @"cmd_large_img_click";
 @implementation MonitorGCD
 -(void)test_sync:(Queue *) queue block_t :(monitor_block_t)block{
     Tmsg* msg = (Tmsg*)calloc(1, sizeof(Tmsg));

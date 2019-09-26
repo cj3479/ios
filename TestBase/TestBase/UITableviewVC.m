@@ -11,7 +11,7 @@ static int m=1;
 @implementation UITableviewVC
 - (void)viewDidLoad{
     _datas = [NSMutableArray array];
-    for(int i=0;i<17;i++)
+    for(int i=0;i<30;i++)
     {
         [_datas addObject:[NSString stringWithFormat:@"这是第%d个cell",i]];
     }
@@ -90,7 +90,7 @@ static int m=1;
 }
 // 设置 cell 的高度
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSLog(@"heightForRowAtIndexPath %ld", indexPath.row);
+//    NSLog(@"heightForRowAtIndexPath %ld", indexPath.row);
     return 80;
 }
 //// 自定义 section 的 header
@@ -107,13 +107,23 @@ static int m=1;
 //}
 // 选中了 cell 时触发
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSLog(@"选中了第%li个cell", (long)indexPath.row);
+    NSLog(@"选中了第%li个cell,size=%lu", (long)indexPath.row,(unsigned long)_datas.count);
     UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
     [cell addObserver:self forKeyPath:@"frame" options:NSKeyValueObservingOptionOld context:nil];
-//    //操作1 删除
-//    [_datas removeObjectAtIndex:0];
-//    [self.tableView deleteRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:0 inSection:0]] withRowAnimation:UITableViewRowAnimationAutomatic];
-//
+    NSMutableArray *oldDataSource = [NSMutableArray arrayWithArray:_datas];
+    [oldDataSource removeObjectAtIndex:indexPath.row];
+    NSLog(@"after,old.size=%lu,data.size=%d,old=%p,data=%p", (unsigned long)oldDataSource.count,_datas.count,oldDataSource,_datas);
+    _datas = [NSMutableArray arrayWithArray:oldDataSource];
+    NSLog(@"after,old.size=%lu,data.size=%d,old=%p,data=%p", (unsigned long)oldDataSource.count,_datas.count,oldDataSource,_datas);
+    [self.tableView indexPathsForVisibleRows];
+    //操作1 删除
+//    [_datas removeObjectAtIndex:indexPath.row];
+//    [self.tableView reloadData];
+    [self.tableView beginUpdates];
+    [self.tableView deleteRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:indexPath.row inSection:indexPath.section]] withRowAnimation:UITableViewRowAnimationAutomatic];
+//     [self.tableView reloadData];
+    [self.tableView endUpdates];
+
 //    //操作2 删除
 //    [_datas removeObjectAtIndex:3];
 //    [self.tableView deleteRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:1 inSection:0]] withRowAnimation:UITableViewRowAnimationAutomatic];
@@ -122,18 +132,23 @@ static int m=1;
 //    [self.tableView insertRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:2 inSection:0]] withRowAnimation:UITableViewRowAnimationAutomatic];
     
     //操作1 删除
-    [_datas removeObjectAtIndex:0];
+//    [_datas removeObjectAtIndex:0];
     
     //操作2 删除
 //    [_datas removeObjectAtIndex:3];
     //操作2 插入
 //    [_datas insertObject:@"这是第3个cell" atIndex:2];
-    [self.tableView beginUpdates];
-    [self.tableView deleteRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:0 inSection:0]] withRowAnimation:UITableViewRowAnimationAutomatic];
+//    [self.tableView beginUpdates];
+//    [self.tableView deleteRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:0 inSection:0]] withRowAnimation:UITableViewRowAnimationAutomatic];
 //    [self.tableView deleteRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:3 inSection:0]] withRowAnimation:UITableViewRowAnimationAutomatic];
 //    [self.tableView insertRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:2 inSection:0]] withRowAnimation:UITableViewRowAnimationAutomatic];
-    [self.tableView endUpdates];
-    
+//    [self.tableView endUpdates];
+//    [UIView animateWithDuration:10 animations:^{
+//        NSLog(@"chengjian_ani");
+//        self.tableView.backgroundColor = UIColor.redColor;
+//    } completion:^(BOOL finished) {
+//         NSLog(@"chengjian_ani end");
+//    }];
     
 //    [self.tableView beginUpdates];
 //    [self.tableView endUpdates];
@@ -148,30 +163,30 @@ static int m=1;
 //    [self.tableView deleteRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:(indexPath.row+1) inSection:0]] withRowAnimation:UITableViewRowAnimationFade];//删除对应数据的cell
 //    [self.tableView endUpdates];
 //     [self.tableView reloadData];
-        NSArray* indexPaths = [_tableView indexPathsForVisibleRows];
-        if (!indexPaths.count) {
-            return;
-        }
-        
-        NSIndexPath *lastIndexPath = (NSIndexPath*)(indexPaths.lastObject);
-        NSInteger lastIndex = lastIndexPath.row;
+//        NSArray* indexPaths = [_tableView indexPathsForVisibleRows];
+//        if (!indexPaths.count) {
+//            return;
+//        }
+//
+//        NSIndexPath *lastIndexPath = (NSIndexPath*)(indexPaths.lastObject);
+//        NSInteger lastIndex = lastIndexPath.row;
+//
+//        for (int i=0; i<indexPaths.count; i++) {
+//            NSIndexPath *indexPath = (NSIndexPath*)indexPaths[i];
+//            NSInteger index = indexPath.row;
+//            NSInteger sections = [_tableView numberOfSections];
+//            if (indexPath.section >= sections)//保护一下,避免数组越界
+//            {
+//                continue;
+//            }
+//            else
+//            {
+//                NSInteger rows = [_tableView numberOfRowsInSection:indexPath.section];
+//                if (index >= rows) {
+//                    continue;
+//                }
+//            }
     
-        for (int i=0; i<indexPaths.count; i++) {
-            NSIndexPath *indexPath = (NSIndexPath*)indexPaths[i];
-            NSInteger index = indexPath.row;
-            NSInteger sections = [_tableView numberOfSections];
-            if (indexPath.section >= sections)//保护一下,避免数组越界
-            {
-                continue;
-            }
-            else
-            {
-                NSInteger rows = [_tableView numberOfRowsInSection:indexPath.section];
-                if (index >= rows) {
-                    continue;
-                }
-            }
-            
 //            id obj = CZ_DicGetObjectAtIndex(dataSource, index);
 //            if (CZ_isKindOfClass(obj, [ReadInJoyChannelAd class])) {
 //                NSInteger sections = [_tableView numberOfSections];
@@ -197,7 +212,7 @@ static int m=1;
 //                    [cell layoutIfNeeded];
 //                });
 //            }
-        }
+//        }
 }
 
 // 设置 cell 是否允许左滑
@@ -217,26 +232,26 @@ static int m=1;
     NSLog(@"左滑结束");
 }
 // 自定义左滑cell时的按钮和触发方法
-- (nullable NSArray<UITableViewRowAction *> *)tableView:(UITableView *)tableView editActionsForRowAtIndexPath:(NSIndexPath *)indexPath {
-    [_datas removeObjectAtIndex:indexPath.row];
-    NSLog(@"点击了 位置 %ld,%ld",indexPath.section,indexPath.row);
-    // 创建第一个按钮和触发事件
-    UITableViewRowAction *cellActionA = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDefault title:@"按钮-1" handler:^(UITableViewRowAction *action, NSIndexPath *indexPath){
-        // 在此写点击按钮时的触发事件
-        // ......
-        NSLog(@"点击了 按钮-1");
-    }];
-    // 定义按钮的颜色
-    cellActionA.backgroundColor = [UIColor greenColor];
-    
-    // 创建第二个按钮和触发事件
-    UITableViewRowAction *cellActionB = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDefault title:@"按钮-2" handler:^(UITableViewRowAction *action, NSIndexPath *indexPath){
-        // 在此写点击按钮时的触发事件
-        // ......
-    }];
-    // 注意这里返回的是一个按钮组，即使只定义了一个按钮也要返回一个组
-    return @[cellActionA, cellActionB];
-}
+//- (nullable NSArray<UITableViewRowAction *> *)tableView:(UITableView *)tableView editActionsForRowAtIndexPath:(NSIndexPath *)indexPath {
+//    [_datas removeObjectAtIndex:indexPath.row];
+//    NSLog(@"点击了 位置 %ld,%ld",indexPath.section,indexPath.row);
+//    // 创建第一个按钮和触发事件
+//    UITableViewRowAction *cellActionA = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDefault title:@"按钮-1" handler:^(UITableViewRowAction *action, NSIndexPath *indexPath){
+//        // 在此写点击按钮时的触发事件
+//        // ......
+//        NSLog(@"点击了 按钮-1");
+//    }];
+//    // 定义按钮的颜色
+//    cellActionA.backgroundColor = [UIColor greenColor];
+//    
+//    // 创建第二个按钮和触发事件
+//    UITableViewRowAction *cellActionB = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDefault title:@"按钮-2" handler:^(UITableViewRowAction *action, NSIndexPath *indexPath){
+//        // 在此写点击按钮时的触发事件
+//        // ......
+//    }];
+//    // 注意这里返回的是一个按钮组，即使只定义了一个按钮也要返回一个组
+//    return @[cellActionA, cellActionB];
+//}
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
 //    NSArray* indexPaths = [_tableView indexPathsForVisibleRows];
 //    int a = [self.tableView numberOfSections];
@@ -245,6 +260,12 @@ static int m=1;
 }
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView{
 //    NSLog(@"scrollViewDidScroll scrollView");
+    NSLog(@"runloop scrollView. mode %@",[NSRunLoop currentRunLoop].currentMode);
+    [self performSelector:@selector(actionTest) withObject:nil afterDelay:1 inModes:@[NSDefaultRunLoopMode]];
+}
+- (void)actionTest{
+    NSLog(@"runloop actionTest. mode %@",[NSRunLoop currentRunLoop].currentMode);
+    sleep(1);
 }
 - (void)scrollViewDidScrollToTop:(UIScrollView *)scrollView{
     NSLog(@"%s",__FUNCTION__);
@@ -260,7 +281,16 @@ static int m=1;
     //targetContentOffset->y = 100;
 }
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath{
-//    NSLog(@"%s,%@",__FUNCTION__,indexPath);
+    NSLog(@"%s,%@",__FUNCTION__,indexPath);
 //    NSLog(@"%@:%@",[self class],NSStringFromSelector(_cmd));
+}
+
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+{
+    NSLog(@"chengjian table touchesBegan....");
+    // 选其一即可
+    [super touchesBegan:touches withEvent:event];
+//    [[self nextResponder] touchesBegan:touches withEvent:event];
 }
 @end

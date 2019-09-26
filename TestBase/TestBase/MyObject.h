@@ -14,7 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
     NSString *a;
 }
 @property(retain) NSString *a;
-
+-(void)testStatic;
 @end
 
 NS_ASSUME_NONNULL_END

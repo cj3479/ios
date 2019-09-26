@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		094D7CD822A127D300AF2345 /* Teststaticlib.m in Sources */ = {isa = PBXBuildFile; fileRef = 094D7CD722A127D300AF2345 /* Teststaticlib.m */; };
+		097170C1233C69EB005853B3 /* LibPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 097170C0233C69EB005853B3 /* LibPerson.m */; };
 		09EA790622AA0A5100B2D688 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 09EA790522AA0A5100B2D688 /* AppDelegate.m */; };
 		09EA790922AA0A5100B2D688 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09EA790822AA0A5100B2D688 /* ViewController.m */; };
 		09EA790C22AA0A5100B2D688 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09EA790A22AA0A5100B2D688 /* Main.storyboard */; };
@@ -50,6 +51,8 @@
 /* Begin PBXFileReference section */
 		094D7CD622A127D300AF2345 /* Teststaticlib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Teststaticlib.h; sourceTree = "<group>"; };
 		094D7CD722A127D300AF2345 /* Teststaticlib.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Teststaticlib.m; sourceTree = "<group>"; };
+		097170BF233C69EB005853B3 /* LibPerson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LibPerson.h; sourceTree = "<group>"; };
+		097170C0233C69EB005853B3 /* LibPerson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LibPerson.m; sourceTree = "<group>"; };
 		09BFD09A22A149E6000E3D10 /* libteststaticlib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libteststaticlib.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		09EA790222AA0A5100B2D688 /* ww.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ww.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09EA790422AA0A5100B2D688 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -118,6 +121,8 @@
 		094D7CD522A127D300AF2345 /* teststaticlib */ = {
 			isa = PBXGroup;
 			children = (
+				097170BF233C69EB005853B3 /* LibPerson.h */,
+				097170C0233C69EB005853B3 /* LibPerson.m */,
 				094D7CD622A127D300AF2345 /* Teststaticlib.h */,
 				094D7CD722A127D300AF2345 /* Teststaticlib.m */,
 			);
@@ -310,6 +315,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				097170C1233C69EB005853B3 /* LibPerson.m in Sources */,
 				094D7CD822A127D300AF2345 /* Teststaticlib.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -27,6 +27,15 @@
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "09477BAB229824F9009A47AF"
+            BuildableName = "TestBase.app"
+            BlueprintName = "TestBase"
+            ReferencedContainer = "container:TestBase.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <Testables>
          <TestableReference
             skipped = "NO">
@@ -48,18 +57,17 @@
                ReferencedContainer = "container:TestBase.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "0971715E233C930D005853B3"
+               BuildableName = "sssTests.xctest"
+               BlueprintName = "sssTests"
+               ReferencedContainer = "container:TestBase.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "09477BAB229824F9009A47AF"
-            BuildableName = "TestBase.app"
-            BlueprintName = "TestBase"
-            ReferencedContainer = "container:TestBase.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
-      <AdditionalOptions>
-      </AdditionalOptions>
    </TestAction>
    <LaunchAction
       buildConfiguration = "Debug"
