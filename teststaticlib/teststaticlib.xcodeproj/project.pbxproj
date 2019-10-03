@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		094D7CD822A127D300AF2345 /* Teststaticlib.m in Sources */ = {isa = PBXBuildFile; fileRef = 094D7CD722A127D300AF2345 /* Teststaticlib.m */; };
-		097170C1233C69EB005853B3 /* LibPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 097170C0233C69EB005853B3 /* LibPerson.m */; };
+		097D331923404C21003AE421 /* LibPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 097170C0233C69EB005853B3 /* LibPerson.m */; };
 		09EA790622AA0A5100B2D688 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 09EA790522AA0A5100B2D688 /* AppDelegate.m */; };
 		09EA790922AA0A5100B2D688 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09EA790822AA0A5100B2D688 /* ViewController.m */; };
 		09EA790C22AA0A5100B2D688 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09EA790A22AA0A5100B2D688 /* Main.storyboard */; };
@@ -315,7 +315,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				097170C1233C69EB005853B3 /* LibPerson.m in Sources */,
+				097D331923404C21003AE421 /* LibPerson.m in Sources */,
 				094D7CD822A127D300AF2345 /* Teststaticlib.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

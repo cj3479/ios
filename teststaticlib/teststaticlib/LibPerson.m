@@ -9,6 +9,9 @@
 #import "LibPerson.h"
 
 @implementation LibPerson
++(void)load{
+   NSLog(@"load static lib.....");
+}
 - (void)eat{
     NSLog(@"eating.....start");
     sleep(1);

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<array>
+		<integer>0</integer>
+		<real>15264235</real>
+		<string>默认</string>
+		<integer>2960685</integer>
+	</array>
+	<array>
+		<integer>1</integer>
+		<integer>16705007</integer>
+		<string>粉红</string>
+		<integer>9325380</integer>
+	</array>
+	<array>
+		<integer>2</integer>
+		<integer>16507334</integer>
+		<string>橘黄</string>
+		<real>9723430</real>
+	</array>
+	<array>
+		<integer>3</integer>
+		<integer>14871478</integer>
+		<string>草绿</string>
+		<integer>6119441</integer>
+	</array>
+	<array>
+		<integer>4</integer>
+		<integer>13429451</integer>
+		<string>青葱</string>
+		<integer>3109421</integer>
+	</array>
+	<array>
+		<integer>5</integer>
+		<integer>11593444</integer>
+		<string>水蓝</string>
+		<integer>1205096</integer>
+	</array>
+</array>
+</plist>

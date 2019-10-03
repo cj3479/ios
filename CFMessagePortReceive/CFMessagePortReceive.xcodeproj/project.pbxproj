@@ -14,6 +14,8 @@
 		0948967B233B0C6500802E2D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0948967A233B0C6500802E2D /* Assets.xcassets */; };
 		09489681233B0C6500802E2D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 09489680233B0C6500802E2D /* main.m */; };
 		094896AB233B42AB00802E2D /* backgrounmusic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 094896AA233B42AB00802E2D /* backgrounmusic.mp3 */; };
+		0953A632233DEE0900933231 /* mttlite_copy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0953A631233DEE0900933231 /* mttlite_copy.framework */; };
+		0953A633233DEE0D00933231 /* mttlite_copy.framework in Resources */ = {isa = PBXBuildFile; fileRef = 0953A631233DEE0900933231 /* mttlite_copy.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,7 @@
 		09489686233B0C6500802E2D /* CFMessagePortReceiveTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CFMessagePortReceiveTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		09489691233B0C6500802E2D /* CFMessagePortReceiveUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CFMessagePortReceiveUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		094896AA233B42AB00802E2D /* backgrounmusic.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = backgrounmusic.mp3; sourceTree = "<group>"; };
+		0953A631233DEE0900933231 /* mttlite_copy.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = mttlite_copy.framework; path = ../../../Downloads/mttlite_copy.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0953A632233DEE0900933231 /* mttlite_copy.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,6 +84,7 @@
 			children = (
 				0948966D233B0C6300802E2D /* CFMessagePortReceive */,
 				0948966C233B0C6300802E2D /* Products */,
+				0953A630233DEE0800933231 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -109,6 +114,14 @@
 				09489680233B0C6500802E2D /* main.m */,
 			);
 			path = CFMessagePortReceive;
+			sourceTree = "<group>";
+		};
+		0953A630233DEE0800933231 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0953A631233DEE0900933231 /* mttlite_copy.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -214,6 +227,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0953A633233DEE0D00933231 /* mttlite_copy.framework in Resources */,
 				0948967B233B0C6500802E2D /* Assets.xcassets in Resources */,
 				09489679233B0C6300802E2D /* Main.storyboard in Resources */,
 				094896AB233B42AB00802E2D /* backgrounmusic.mp3 in Resources */,

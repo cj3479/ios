@@ -12,12 +12,17 @@
 #import "Person+NewFunction.h"
 #import "MyObject.h"
 #import "SelectorSub.h"
+//#import "teststaticlib.h"
 //#import "testFWStatic/teststaticlib.h"
 //#import "testFWStatic/testFWStatic.h"
-#import "testDMlib/LibPerson.h"
+//#import "testDMlib/LibPerson.h"
+#import "LibPerson.h"
 #import "TestThread.h"
 #import "MonitorGCD.h"
 #import "TestAFnetworking.h"
+#import "swizzle/Person+swizzle.h"
+#import "swizzle/TestAdd.h"
+#import "swizzle/ViewController+appear.h"
 typedef unsigned long long QUINT64;
 #define FBKVOKeyPath(KEYPATH) \
     @(((void)(NO && ((void)KEYPATH, NO)), \
@@ -64,13 +69,20 @@ typedef NS_ENUM (QUINT64, BigCellType) {
     BigCellType_InterActive = 2, //随心互动类型广告
 };
 #define AA 1
-
+//#define AAA 10
 int main(int argc, char *argv[])
 {
+//    int abc = BBB;
+//        #ifdef BBBB
+//        NSLog(@"main: %d", abc);
+//        #else
+//        NSLog(@"main111: %d", abc);
+//        #endif
+
     TestAFnetworking *af = [[TestAFnetworking alloc]init];
     [af testAFDownload];
 //    [NSJSONSerialization swizzleClassMethod:@selector(dataWithJSONObject:options:error:) withClassMethod:@selector(qgw_dataWithJSONObject:options:error:)];
-    NSMutableDictionary * funcExtInfo = [NSMutableDictionary new];
+    NSMutableDictionary *funcExtInfo = [NSMutableDictionary new];
     [funcExtInfo setValue:@"abcd" forKey:@"source_id"];
     [funcExtInfo setValue:@"abcd" forKey:@"platform_id"];
     [funcExtInfo setValue:@"abcd" forKey:@"goods_type"];
@@ -90,19 +102,25 @@ int main(int argc, char *argv[])
 
     NSUInteger indexs31[] = { 1, 2, 3 };
     NSIndexPath *threeNodeIndexPath = [NSIndexPath indexPathWithIndexes:indexs31 length:3];
-    NSLog(@"jsonStr=%@,funcExtInfo=%@,jsonStr.UTF8String=%s", jsonStr,funcExtInfo,jsonStr.UTF8String);
+    NSLog(@"jsonStr=%@,funcExtInfo=%@,jsonStr.UTF8String=%s", jsonStr, funcExtInfo, jsonStr.UTF8String);
     NSDictionary *result22 = nil;
     result22 = @{ @"click_info_report": jsonStr };
     NSLog(@"result22: %@", result22);
     NSString *jsonData11 = [ViewController jsonStringForNSJsonData:result22 options:0];
-    NSLog(@"jsonData11: %@,jsonData11=%s", jsonData11,jsonData11.UTF8String);
+    NSLog(@"jsonData11: %@,jsonData11=%s", jsonData11, jsonData11.UTF8String);
     QUINT32 testNum = 2;
     Person *dic = [[NSMutableDictionary alloc] initWithCapacity:10];
     NSMutableDictionary *dic111 = [[NSMutableDictionary alloc] initWithCapacity:10];
     NSMutableArray *testMA = [[NSMutableArray alloc] init];
     Person *Person11 = [[Person alloc]init];
+//    [Person11 sayHello11];
     LibPerson *Person222222 = [[LibPerson alloc]init];
     [Person222222 watch];
+//    [Person222222 haha];
+//    Teststaticlib *staticLib = [[Teststaticlib alloc]init];
+//    [Teststaticlib testStatic];
+//    [staticLib testshaha];
+//    [Person222222 haha];
     [testMA addObject:Person11];
     [testMA addObject:@"ssfdsfdsf"];
     [dic111 setObject:testMA forKey:@"fdsfd"];
@@ -402,6 +420,10 @@ int main(int argc, char *argv[])
 //        return a1>=a2?-1:1;
 //    }];
 //    NSLog(@"%@",array);
+    [Person loadTest];
+    Person *testSWitchPerson = [[Person alloc]init];
+    [testSWitchPerson sayHello];
+    [ViewController loadTest];
     @autoreleasepool {
         return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
     }

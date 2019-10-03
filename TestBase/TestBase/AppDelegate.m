@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "ViewController.h"
+#import <Rqd/CrashReporter.h>
 @interface AppDelegate ()
 
 @end
@@ -24,6 +25,9 @@
 //    UINavigationController *navgationController = [[UINavigationController alloc]initWithRootViewController:vc];
 //    //    self.navgationController = [[UINavigationController alloc]initWithRootViewController:vc];
 //    self.window.rootViewController = navgationController;
+//    UIWindow *window = [UIApplication sharedApplication].delegate.window;
+    [[CrashReporter sharedInstance] setUserId:@"2004"];
+//    [[CrashReporter sharedInstance] startBlockMonitor];//非后台启动了，自动再开启卡顿上报.
     return YES;
 }
 

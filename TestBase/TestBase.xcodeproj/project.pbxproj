@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		00E3BE9BF5D883A38404308B /* libPods-TestBase.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19CD6AACEF10361ADD2B74B9 /* libPods-TestBase.a */; };
 		090C706922A60C0600BE63ED /* SelectDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 090C706822A60C0600BE63ED /* SelectDemo.m */; };
 		090F4F4E22AA81E0007FCDB7 /* UITableviewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 090F4F4D22AA81E0007FCDB7 /* UITableviewVC.m */; };
 		090F4F5122AB5962007FCDB7 /* Person+TestCategpryPerson_CF.m in Sources */ = {isa = PBXBuildFile; fileRef = 090F4F5022AB5962007FCDB7 /* Person+TestCategpryPerson_CF.m */; };
@@ -42,6 +41,10 @@
 		09A814D822A11226000D9C17 /* HappyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 09A814D722A11226000D9C17 /* HappyTests.m */; };
 		09A814E322A11226000D9C17 /* HappyUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 09A814E222A11226000D9C17 /* HappyUITests.m */; };
 		09A968B7233B522500C3DFAC /* MyWorker.m in Sources */ = {isa = PBXBuildFile; fileRef = 09A968B6233B522500C3DFAC /* MyWorker.m */; };
+		09B56FE12345CEA000AA0DBB /* Student.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B56FDB2345CEA000AA0DBB /* Student.m */; };
+		09B56FE22345CEA000AA0DBB /* Person+swizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B56FDD2345CEA000AA0DBB /* Person+swizzle.m */; };
+		09B56FE32345CEA000AA0DBB /* ViewController+appear.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B56FDE2345CEA000AA0DBB /* ViewController+appear.m */; };
+		09B56FE42345CEA000AA0DBB /* TestAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B56FE02345CEA000AA0DBB /* TestAdd.m */; };
 		09C6C44322DC6BC600E0A448 /* d.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 09C6C44222DC6BC600E0A448 /* d.jpg */; };
 		09E1523E22C26F110081C136 /* TestPersonSub.m in Sources */ = {isa = PBXBuildFile; fileRef = 09E1523D22C26F110081C136 /* TestPersonSub.m */; };
 		09E6C1A722D832440058176C /* TestARC.m in Sources */ = {isa = PBXBuildFile; fileRef = 09E6C1A622D832440058176C /* TestARC.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
@@ -51,13 +54,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		092B2C06232E713000013EA7 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 092B2C02232E712F00013EA7 /* TestOC.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 092B2BF8232E712F00013EA7;
-			remoteInfo = TestOC;
-		};
 		09A814D422A11226000D9C17 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 09477BA4229824F9009A47AF /* Project object */;
@@ -95,7 +91,6 @@
 		090F4F4D22AA81E0007FCDB7 /* UITableviewVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UITableviewVC.m; sourceTree = "<group>"; };
 		090F4F4F22AB5962007FCDB7 /* Person+TestCategpryPerson_CF.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Person+TestCategpryPerson_CF.h"; sourceTree = "<group>"; };
 		090F4F5022AB5962007FCDB7 /* Person+TestCategpryPerson_CF.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Person+TestCategpryPerson_CF.m"; sourceTree = "<group>"; };
-		092B2C02232E712F00013EA7 /* TestOC.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = TestOC.xcodeproj; path = TestOC/TestOC.xcodeproj; sourceTree = "<group>"; };
 		093BFC6623336142000FA39D /* testfwstatic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = testfwstatic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		093BFC68233361F6000FA39D /* TestBase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestBase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		093BFC692333621B000FA39D /* testDMlib.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = testDMlib.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -147,6 +142,7 @@
 		09717168233C930D005853B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0972B38F2330AE5D003600CF /* NSJSONSerialization+QGW.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSJSONSerialization+QGW.h"; sourceTree = "<group>"; };
 		0972B3902330AE5D003600CF /* NSJSONSerialization+QGW.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSJSONSerialization+QGW.m"; sourceTree = "<group>"; };
+		097ADE822345CBCB002400ED /* NSObject+TestAFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+TestAFNetworking.h"; sourceTree = "<group>"; };
 		098B2E3F22BF443D00DEBD73 /* MonitorGCD.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MonitorGCD.h; sourceTree = "<group>"; };
 		098B2E4022BF443D00DEBD73 /* MonitorGCD.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MonitorGCD.m; sourceTree = "<group>"; };
 		099578052298327D00A68CE9 /* SampleProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SampleProtocol.h; sourceTree = "<group>"; };
@@ -171,6 +167,14 @@
 		09A814E422A11226000D9C17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		09A968B5233B522500C3DFAC /* MyWorker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyWorker.h; sourceTree = "<group>"; };
 		09A968B6233B522500C3DFAC /* MyWorker.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyWorker.m; sourceTree = "<group>"; };
+		09B56FD92345CEA000AA0DBB /* TestAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestAdd.h; sourceTree = "<group>"; };
+		09B56FDA2345CEA000AA0DBB /* Student.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Student.h; sourceTree = "<group>"; };
+		09B56FDB2345CEA000AA0DBB /* Student.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Student.m; sourceTree = "<group>"; };
+		09B56FDC2345CEA000AA0DBB /* Person+swizzle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Person+swizzle.h"; sourceTree = "<group>"; };
+		09B56FDD2345CEA000AA0DBB /* Person+swizzle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Person+swizzle.m"; sourceTree = "<group>"; };
+		09B56FDE2345CEA000AA0DBB /* ViewController+appear.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ViewController+appear.m"; sourceTree = "<group>"; };
+		09B56FDF2345CEA000AA0DBB /* ViewController+appear.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ViewController+appear.h"; sourceTree = "<group>"; };
+		09B56FE02345CEA000AA0DBB /* TestAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestAdd.m; sourceTree = "<group>"; };
 		09C6C44222DC6BC600E0A448 /* d.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = d.jpg; sourceTree = "<group>"; };
 		09E0C5C422A4D67500519955 /* libteststaticlib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libteststaticlib.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		09E1523C22C26F110081C136 /* TestPersonSub.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestPersonSub.h; sourceTree = "<group>"; };
@@ -198,7 +202,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				097170D5233C6FAB005853B3 /* testDMlib.framework in Frameworks */,
-				00E3BE9BF5D883A38404308B /* libPods-TestBase.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -226,14 +229,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		092B2C03232E712F00013EA7 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				092B2C07232E713000013EA7 /* TestOC */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		09477BA3229824F9009A47AF = {
 			isa = PBXGroup;
 			children = (
@@ -264,11 +259,12 @@
 		09477BAE229824F9009A47AF /* TestBase */ = {
 			isa = PBXGroup;
 			children = (
+				097ADE822345CBCB002400ED /* NSObject+TestAFNetworking.h */,
+				09B56FCC2345CE4000AA0DBB /* swizzle */,
 				097170CD233C6E9B005853B3 /* testDMlib */,
 				09489586233A537300802E2D /* ipc */,
 				094895602334B5AC00802E2D /* lock */,
 				094894EE2333AB9800802E2D /* afnetworking */,
-				092B2C02232E712F00013EA7 /* TestOC.xcodeproj */,
 				09F786892318BBC7006E603A /* runloop */,
 				095FCFC922BA24D900B778E7 /* thread */,
 				09957807229832AB00A68CE9 /* Person.h */,
@@ -450,6 +446,21 @@
 			path = HappyUITests;
 			sourceTree = "<group>";
 		};
+		09B56FCC2345CE4000AA0DBB /* swizzle */ = {
+			isa = PBXGroup;
+			children = (
+				09B56FDC2345CEA000AA0DBB /* Person+swizzle.h */,
+				09B56FDD2345CEA000AA0DBB /* Person+swizzle.m */,
+				09B56FDA2345CEA000AA0DBB /* Student.h */,
+				09B56FDB2345CEA000AA0DBB /* Student.m */,
+				09B56FD92345CEA000AA0DBB /* TestAdd.h */,
+				09B56FE02345CEA000AA0DBB /* TestAdd.m */,
+				09B56FDF2345CEA000AA0DBB /* ViewController+appear.h */,
+				09B56FDE2345CEA000AA0DBB /* ViewController+appear.m */,
+			);
+			path = swizzle;
+			sourceTree = "<group>";
+		};
 		09F786892318BBC7006E603A /* runloop */ = {
 			isa = PBXGroup;
 			children = (
@@ -590,12 +601,6 @@
 			mainGroup = 09477BA3229824F9009A47AF;
 			productRefGroup = 09477BA3229824F9009A47AF;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 092B2C03232E712F00013EA7 /* Products */;
-					ProjectRef = 092B2C02232E712F00013EA7 /* TestOC.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				09477BAB229824F9009A47AF /* TestBase */,
@@ -605,16 +610,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		092B2C07232E713000013EA7 /* TestOC */ = {
-			isa = PBXReferenceProxy;
-			fileType = "compiled.mach-o.executable";
-			path = TestOC;
-			remoteRef = 092B2C06232E713000013EA7 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		09477BAA229824F9009A47AF /* Resources */ = {
@@ -690,14 +685,17 @@
 			files = (
 				09477BB4229824F9009A47AF /* ViewController.m in Sources */,
 				09635EBE22A619C900E773F4 /* SelectorSub.m in Sources */,
+				09B56FE12345CEA000AA0DBB /* Student.m in Sources */,
 				0995780D229832AB00A68CE9 /* SampleProtocol.m in Sources */,
 				0972B3912330AE5D003600CF /* NSJSONSerialization+QGW.m in Sources */,
 				094895632334B5C400802E2D /* TestLock.m in Sources */,
 				09E1523E22C26F110081C136 /* TestPersonSub.m in Sources */,
+				09B56FE42345CEA000AA0DBB /* TestAdd.m in Sources */,
 				094AD2A6229EBA2A006855A9 /* MyObject.m in Sources */,
 				09F7868C2318BC04006E603A /* TestRunLoop.m in Sources */,
 				09477BBF229824FA009A47AF /* main.m in Sources */,
 				094894F32333ABD600802E2D /* TestAFnetworking.m in Sources */,
+				09B56FE32345CEA000AA0DBB /* ViewController+appear.m in Sources */,
 				090F4F5122AB5962007FCDB7 /* Person+TestCategpryPerson_CF.m in Sources */,
 				090F4F4E22AA81E0007FCDB7 /* UITableviewVC.m in Sources */,
 				0995780C229832AB00A68CE9 /* Person+NewFunction.m in Sources */,
@@ -708,6 +706,7 @@
 				090C706922A60C0600BE63ED /* SelectDemo.m in Sources */,
 				0995780B229832AB00A68CE9 /* Person.mm in Sources */,
 				095FCFC822BA24CE00B778E7 /* TestThread.m in Sources */,
+				09B56FE22345CEA000AA0DBB /* Person+swizzle.m in Sources */,
 				096910EA2301510800BBAE04 /* RIJIEAdUIHandlerFactory.m in Sources */,
 				09477BB1229824F9009A47AF /* AppDelegate.m in Sources */,
 			);
@@ -920,6 +919,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 65T72LT3SH;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					AAA,
+					"COCOAPODS=1",
+					"BBB=2",
+				);
 				INFOPLIST_FILE = TestBase/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_GENERATE_MAP_FILE = YES;

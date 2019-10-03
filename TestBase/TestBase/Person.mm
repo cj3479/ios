@@ -16,6 +16,9 @@ int* const testConstInt = &a;
 const int* testConstIntA = &a;
 int bbb=10;
 @implementation Person
++ (void)load{
+    NSLog(@"load Person");
+}
 -(void)exercise:(myBlock)aa{
     NSLog(@"I am cj %@",aa);
     NSString * theName=@"ZhangSan";
@@ -74,6 +77,11 @@ int bbb=10;
 + (instancetype)alloc{
     NSLog(@"alloc1111111");
     return [super alloc];
+}
+
+- (void)sayHello {
+//    NSAssert(NO, @"dsfdsfdsf");
+    NSLog(@"person say hello");
 }
 //-(int)age{
 //    return _age;

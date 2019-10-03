@@ -1,0 +1,36 @@
+.MTTEyeGreenMode_NoBorderChangeBGColor {
+    background-color:#bedac0!important;
+}
+.MTTEyeGreenMode_HasBorderChangeBGColor {
+    background-color:#cce3d1!important;
+}
+/*重点链接需要深色*/
+.MTTEyeGreenMode_TextColor {
+    color:#256731!important
+}
+/*.MTTNightMode_changeBgLinear {*/
+/*    background:#bedac0!important*/
+/*}*/
+.MTTNightMode_changeBorder {
+    border-color:#a5c7a4!important
+}
+* {
+    text-shadow:none!important;
+    box-shadow:none!important
+}
+body,html {
+    background-color:#cce3d1!important;
+}
+/*文章段落保持黑色*/
+body:not(p),html:not(p) {
+    color:#256731!important
+}
+/*p {*/
+/*    color:#000;*/
+/*}*/
+textarea {
+    background-color:#bedac0!important;
+}
+input[type=text] {
+    background-color:#edf1e3!important;
+}

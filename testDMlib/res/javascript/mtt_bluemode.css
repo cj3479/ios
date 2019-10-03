@@ -1,0 +1,41 @@
+.MTTEyeGreenMode_NoBorderChangeBGColor {
+    background-color:#d4e7e9!important;
+}
+.MTTEyeGreenMode_HasBorderChangeBGColor {
+    background-color:#c2dde2!important;
+}
+/*重点链接需要深色*/
+.MTTEyeGreenMode_TextColor {
+    color:#036585!important
+}
+/*.MTTNightMode_changeBgLinear {*/
+/*    background:#d4e7e9!important*/
+/*}*/
+.MTTNightMode_changeBorder {
+    border-color:#a6bfc8!important
+}
+* {
+    text-shadow:none!important;
+    box-shadow:none!important
+}
+body,html {
+    background-color:#c2dde2!important;
+}
+/*文章段落保持黑色*/
+body:not(p),html:not(p) {
+    color:#036585!important
+}
+/*
+ bug页面
+ http://info.3g.qq.com/g/s?aid=image&g_f=23604#bigpic/channel=manual&tunnelval=manual&newsid=news_20150626022013
+ 正文颜色改变造成文字颜色和底色相近 看不清
+ */
+/*p{*/
+/*    color:#000;*/
+/*}*/
+textarea {
+    background-color:#d4e7e9!important;
+}
+input[type=text] {
+    background-color:#edf1e3!important;
+}

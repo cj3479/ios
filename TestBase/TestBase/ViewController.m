@@ -16,6 +16,7 @@
 #import "B.h"
 #import "TestRunLoop.h"
 //#import "testfwstatic/testFWStatic.h"
+#import "testDMlib/TestBundle.h"
 #define  PROTEUS_EVENT_CMD_AD_PK_LEFT_CLICK        @"cmd_ad_pk_left_clickg"
 #define  PROTEUS_EVENT_CMD_AD_PK_LEFT_CLICK        @"cmd_ad_pk_left_click"
 #define  PROTEUS_EVENT_CMD_AD_PK_RIGHT_CLICK       @"cmd_ad_pk_right_click"
@@ -323,6 +324,7 @@ extern int bb;
     {
         self.person1.name = @"sdsfdf";
     }
+    UIWindow *window = [UIApplication sharedApplication].delegate.window;
     CGFloat scale11 = 2.0f ;
     CGFloat scale1222 = scale11<1.0f?:10.0f;
 //     NSLog(@"viewDidLoad......%@",RIJ_AD_KEY_EXTRA_DATA);
@@ -461,14 +463,14 @@ extern int bb;
     NSString *strResourcesBundle = [[NSBundle mainBundle] pathForResource:@"test" ofType:@"bundle"];
     NSString *strC = [[NSBundle bundleWithPath:strResourcesBundle] pathForResource:@"a" ofType:@"jpg" inDirectory:@"Pictures"];
     NSString *strResourcesBundle1 = [[NSBundle mainBundle] pathForResource:@"fwbundle" ofType:@"bundle"];
-//    NSString *strC1 = [[NSBundle bundleWithPath:strResourcesBundle1] pathForResource:@"b" ofType:@"jpg" inDirectory:@"Contents/Resources"];
-     NSString *strC1 = [[[NSBundle bundleWithPath:strResourcesBundle1] resourcePath] stringByAppendingFormat:@"/b.jpg"];
+    NSString *strC1 = [[NSBundle bundleWithPath:strResourcesBundle1] pathForResource:@"b" ofType:@"jpg" inDirectory:@"Contents/Resources"];
+//     NSString *strC1 = [[[NSBundle bundleWithPath:strResourcesBundle1] resourcePath] stringByAppendingFormat:@"/b.jpg"];
     UIImage *imgC = [UIImage imageWithContentsOfFile:strC];
     UIImage *image = [UIImage imageNamed:@"car_h.png"];
-//    UIImage *testUmage = [testFWStatic getImage];
+    UIImage *testUmage = [TestBundle testDMBundle];
     UIImage *testUmage11 = [UIImage imageWithContentsOfFile:strC1];
 //    UIImage *image = [UIImage imageNamed:@"c.jpeg"];
-    [button setImage:testUmage11 forState:UIControlStateNormal];
+//    [button setImage:testUmage forState:UIControlStateNormal];
     [button setImage:imgC forState:UIControlStateHighlighted];
     //    设置button的imageview的背景
     //    [button setImage:[UIImage imageNamed:@"power_pressed.png"] forState:UIControlStateHighlighted];
@@ -702,9 +704,9 @@ extern int bb;
         }
     }
 }
-- (void)viewWillAppear:(BOOL)animated{
-    
-}
+//- (void)viewWillAppear:(BOOL)animated{
+//    NSLog(@"chengjian viewWillAppear");
+//}
 - (void)consumerAction{
     
     //异常捕捉

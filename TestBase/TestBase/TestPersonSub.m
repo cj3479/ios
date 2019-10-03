@@ -9,6 +9,9 @@
 #import "TestPersonSub.h"
 
 @implementation TestPersonSub
++(void)load{
+    NSLog(@"load TestPersonSub");
+}
 //-(void)run{
 //    NSLog(@"the TestPersonSub is run!");
 //}

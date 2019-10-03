@@ -42,6 +42,8 @@
 		09EA78EE22AA09F800B2D688 /* sQQUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = sQQUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		09F8246A22A4F768008D48DF /* libteststaticlib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libteststaticlib.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		09F8246C22A4F787008D48DF /* Teststaticlib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Teststaticlib.h; path = ../../teststaticlib/teststaticlib/Teststaticlib.h; sourceTree = "<group>"; };
+		09FC05F6234202DD00B42F00 /* testhaha.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = testhaha.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		09FC05F8234202DD00B42F00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		09FC05F3234202DD00B42F00 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -92,6 +101,7 @@
 				0948955823348A5F00802E2D /* b.jpg */,
 				0961F89722A4BFC300F804C7 /* testfwstatic */,
 				0961F8A222A4BFC300F804C7 /* testfwstaticTests */,
+				09FC05F7234202DD00B42F00 /* testhaha */,
 				0961F89622A4BFC300F804C7 /* Products */,
 				09F8246922A4F768008D48DF /* Frameworks */,
 			);
@@ -105,6 +115,7 @@
 				09EA78E322AA09F800B2D688 /* sQQTests.xctest */,
 				09EA78EE22AA09F800B2D688 /* sQQUITests.xctest */,
 				0948954F23348A0300802E2D /* fwbundle.bundle */,
+				09FC05F6234202DD00B42F00 /* testhaha.bundle */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -135,6 +146,14 @@
 				09F8246A22A4F768008D48DF /* libteststaticlib.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		09FC05F7234202DD00B42F00 /* testhaha */ = {
+			isa = PBXGroup;
+			children = (
+				09FC05F8234202DD00B42F00 /* Info.plist */,
+			);
+			path = testhaha;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -239,6 +258,23 @@
 			productReference = 09EA78EE22AA09F800B2D688 /* sQQUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		09FC05F5234202DD00B42F00 /* testhaha */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 09FC05FB234202DD00B42F00 /* Build configuration list for PBXNativeTarget "testhaha" */;
+			buildPhases = (
+				09FC05F2234202DD00B42F00 /* Sources */,
+				09FC05F3234202DD00B42F00 /* Frameworks */,
+				09FC05F4234202DD00B42F00 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = testhaha;
+			productName = testhaha;
+			productReference = 09FC05F6234202DD00B42F00 /* testhaha.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -266,6 +302,9 @@
 						CreatedOnToolsVersion = 10.2.1;
 						TestTargetID = 09EA78CB22AA09F500B2D688;
 					};
+					09FC05F5234202DD00B42F00 = {
+						CreatedOnToolsVersion = 11.0;
+					};
 				};
 			};
 			buildConfigurationList = 0961F88F22A4BFC300F804C7 /* Build configuration list for PBXProject "testfwstatic" */;
@@ -286,6 +325,7 @@
 				09EA78E222AA09F800B2D688 /* sQQTests */,
 				09EA78ED22AA09F800B2D688 /* sQQUITests */,
 				0948954E23348A0300802E2D /* fwbundle */,
+				09FC05F5234202DD00B42F00 /* testhaha */,
 			);
 		};
 /* End PBXProject section */
@@ -328,6 +368,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		09FC05F4234202DD00B42F00 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -362,6 +409,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		09EA78EA22AA09F800B2D688 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		09FC05F2234202DD00B42F00 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -690,6 +744,40 @@
 			};
 			name = Release;
 		};
+		09FC05F9234202DD00B42F00 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 65T72LT3SH;
+				INFOPLIST_FILE = testhaha/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				PRODUCT_BUNDLE_IDENTIFIER = cj.test.oi.testDMlib.testhaha;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		09FC05FA234202DD00B42F00 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 65T72LT3SH;
+				INFOPLIST_FILE = testhaha/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				PRODUCT_BUNDLE_IDENTIFIER = cj.test.oi.testDMlib.testhaha;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -743,6 +831,15 @@
 			buildConfigurations = (
 				09EA78F922AA09F800B2D688 /* Debug */,
 				09EA78FA22AA09F800B2D688 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		09FC05FB234202DD00B42F00 /* Build configuration list for PBXNativeTarget "testhaha" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				09FC05F9234202DD00B42F00 /* Debug */,
+				09FC05FA234202DD00B42F00 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

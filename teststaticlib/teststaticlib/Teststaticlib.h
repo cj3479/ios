@@ -10,4 +10,6 @@
 
 @interface Teststaticlib : NSObject
 -(void)testslib:(NSString *)name;
+-(void)testshaha;
++(void)testStatic;
 @end

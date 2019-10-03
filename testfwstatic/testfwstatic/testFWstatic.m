@@ -6,7 +6,7 @@
 //  Copyright © 2019 chengjian. All rights reserved.
 //
 
-#import "testFWStatic.h"
+import "testFWStatic.h"
 
 @implementation testFWStatic
 -(void)testFWStaticA{

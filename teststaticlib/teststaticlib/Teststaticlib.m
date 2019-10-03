@@ -9,7 +9,7 @@
 #import "Teststaticlib.h"
 
 @implementation Teststaticlib
--(void)testslib:(NSString *)name{
-    NSLog(@"test static 111111qqqddd name=%@",name);
-}
+//-(void)testslib:(NSString *)name{
+//    NSLog(@"test static 111111qqqddd name=%@",name);
+//}
 @end

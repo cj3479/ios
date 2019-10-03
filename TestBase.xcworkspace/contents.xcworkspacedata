@@ -2,16 +2,22 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:TestBase/TestBase.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:TestStaticLib2/TestStaticLib2.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:testDMlib/testDMlib.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:TestDMlib2/TestDMlib2.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:CFMessagePortSend/CFMessagePortSend.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:CFMessagePortReceive/CFMessagePortReceive.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:TestBase/TestBase.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:testDMlib/testDMlib.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:testfwstatic/testfwstatic.xcodeproj">

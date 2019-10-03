@@ -45,5 +45,7 @@ typedef void(^myBlock)(NSString * name,int age);
 //@property (nonatomic, readonly, unsafe_unretained)int age;
 @property (nonatomic, assign)int age;
 @property (nonatomic, assign)CGFloat height;
+- (void)sayHello;
+- (void)sayHello11;
 @end
 
