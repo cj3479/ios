@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -48,9 +48,11 @@
 		09C6C44322DC6BC600E0A448 /* d.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 09C6C44222DC6BC600E0A448 /* d.jpg */; };
 		09E1523E22C26F110081C136 /* TestPersonSub.m in Sources */ = {isa = PBXBuildFile; fileRef = 09E1523D22C26F110081C136 /* TestPersonSub.m */; };
 		09E6C1A722D832440058176C /* TestARC.m in Sources */ = {isa = PBXBuildFile; fileRef = 09E6C1A622D832440058176C /* TestARC.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		09E92D0723476DED0087F8B1 /* libteststaticlib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 09E92D0623476DED0087F8B1 /* libteststaticlib.a */; };
 		09F7868C2318BC04006E603A /* TestRunLoop.m in Sources */ = {isa = PBXBuildFile; fileRef = 09F7868B2318BC04006E603A /* TestRunLoop.m */; };
 		09F824F522A502C6008D48DF /* NextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09F824F322A502C6008D48DF /* NextViewController.m */; };
 		09F824F622A502C6008D48DF /* NextViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09F824F422A502C6008D48DF /* NextViewController.xib */; };
+		A84236179C4FB3A5856E2E46 /* libPods-TestBase.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19CD6AACEF10361ADD2B74B9 /* libPods-TestBase.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -181,6 +183,7 @@
 		09E1523D22C26F110081C136 /* TestPersonSub.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestPersonSub.m; sourceTree = "<group>"; };
 		09E6C1A522D832440058176C /* TestARC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestARC.h; sourceTree = "<group>"; };
 		09E6C1A622D832440058176C /* TestARC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestARC.m; sourceTree = "<group>"; };
+		09E92D0623476DED0087F8B1 /* libteststaticlib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libteststaticlib.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		09EAB97622F18B0000AE6395 /* testDMlib.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = testDMlib.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		09F7868A2318BC04006E603A /* TestRunLoop.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestRunLoop.h; sourceTree = "<group>"; };
 		09F7868B2318BC04006E603A /* TestRunLoop.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestRunLoop.m; sourceTree = "<group>"; };
@@ -201,7 +204,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09E92D0723476DED0087F8B1 /* libteststaticlib.a in Frameworks */,
 				097170D5233C6FAB005853B3 /* testDMlib.framework in Frameworks */,
+				A84236179C4FB3A5856E2E46 /* libPods-TestBase.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -355,6 +360,7 @@
 		094D7CC722A126F500AF2345 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				09E92D0623476DED0087F8B1 /* libteststaticlib.a */,
 				097170D6233C7131005853B3 /* libteststaticlib.a */,
 				097170D4233C6FAB005853B3 /* testDMlib.framework */,
 				097170D0233C6F78005853B3 /* testfwstatic.framework */,

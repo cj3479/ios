@@ -38,7 +38,7 @@ SPEC REPOS:
   http://git.code.oa.com/QQBrowser_iOS/QBPodSource.git:
     - QBZipArchive
     - RQD
-  https://github.com/cocoapods/specs.git:
+  https://github.com/CocoaPods/Specs.git:
     - AFNetworking
     - SDWebImage
     - SSZipArchive
@@ -50,6 +50,6 @@ SPEC CHECKSUMS:
   SDWebImage: de4d90b5bff3571eae7bd16202b1f43135409fa5
   SSZipArchive: fa16b8cc4cdeceb698e5e5d9f67e9558532fbf23
 
-PODFILE CHECKSUM: f780247555edc751f0446f22b384929cc48dd688
+PODFILE CHECKSUM: c29be16610e3da0a2c45713315a2cc26fc57b447
 
-COCOAPODS: 1.7.1
+COCOAPODS: 1.8.1
