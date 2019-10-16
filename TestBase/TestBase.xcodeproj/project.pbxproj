@@ -24,8 +24,7 @@
 		095FCFC822BA24CE00B778E7 /* TestThread.m in Sources */ = {isa = PBXBuildFile; fileRef = 095FCFC722BA24CE00B778E7 /* TestThread.m */; };
 		09635EBE22A619C900E773F4 /* SelectorSub.m in Sources */ = {isa = PBXBuildFile; fileRef = 09635EBD22A619C900E773F4 /* SelectorSub.m */; };
 		096910EA2301510800BBAE04 /* RIJIEAdUIHandlerFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 096910E92301510800BBAE04 /* RIJIEAdUIHandlerFactory.m */; };
-		097170D3233C6F9B005853B3 /* testDMlib.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 094894B32333786000802E2D /* testDMlib.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		097170D5233C6FAB005853B3 /* testDMlib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 097170D4233C6FAB005853B3 /* testDMlib.framework */; };
+		096C5184234EE11D0027836C /* testDMlib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 096C5183234EE11D0027836C /* testDMlib.framework */; };
 		0972B3912330AE5D003600CF /* NSJSONSerialization+QGW.m in Sources */ = {isa = PBXBuildFile; fileRef = 0972B3902330AE5D003600CF /* NSJSONSerialization+QGW.m */; };
 		098B2E4122BF443D00DEBD73 /* MonitorGCD.m in Sources */ = {isa = PBXBuildFile; fileRef = 098B2E4022BF443D00DEBD73 /* MonitorGCD.m */; };
 		0995780B229832AB00A68CE9 /* Person.mm in Sources */ = {isa = PBXBuildFile; fileRef = 09957806229832AB00A68CE9 /* Person.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -48,7 +47,6 @@
 		09C6C44322DC6BC600E0A448 /* d.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 09C6C44222DC6BC600E0A448 /* d.jpg */; };
 		09E1523E22C26F110081C136 /* TestPersonSub.m in Sources */ = {isa = PBXBuildFile; fileRef = 09E1523D22C26F110081C136 /* TestPersonSub.m */; };
 		09E6C1A722D832440058176C /* TestARC.m in Sources */ = {isa = PBXBuildFile; fileRef = 09E6C1A622D832440058176C /* TestARC.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
-		09E92D0723476DED0087F8B1 /* libteststaticlib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 09E92D0623476DED0087F8B1 /* libteststaticlib.a */; };
 		09F7868C2318BC04006E603A /* TestRunLoop.m in Sources */ = {isa = PBXBuildFile; fileRef = 09F7868B2318BC04006E603A /* TestRunLoop.m */; };
 		09F824F522A502C6008D48DF /* NextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09F824F322A502C6008D48DF /* NextViewController.m */; };
 		09F824F622A502C6008D48DF /* NextViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09F824F422A502C6008D48DF /* NextViewController.xib */; };
@@ -79,7 +77,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				097170D3233C6F9B005853B3 /* testDMlib.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -87,12 +84,24 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0902319D234B745E000E832E /* libteststaticlib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libteststaticlib.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		090231AB234B79B0000E832E /* libteststaticlib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libteststaticlib.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		090231AD234B79B4000E832E /* libTestStaticLib2.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libTestStaticLib2.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		090231AF234B7BBC000E832E /* LibPerson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LibPerson.h; path = TestBase/LibPerson.h; sourceTree = SOURCE_ROOT; };
+		090231B0234B7C2B000E832E /* libTestStaticLib2.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libTestStaticLib2.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		090231B2234B7C36000E832E /* libteststaticlib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libteststaticlib.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		090231B4234B7C44000E832E /* libteststaticlib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libteststaticlib.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		090231B6234B7CBE000E832E /* libteststaticlib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libteststaticlib.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		090231B8234B7D42000E832E /* libteststaticlib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libteststaticlib.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		090231BA234B7D48000E832E /* libTestStaticLib2.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libTestStaticLib2.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		090C706722A60C0600BE63ED /* SelectDemo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SelectDemo.h; sourceTree = "<group>"; };
 		090C706822A60C0600BE63ED /* SelectDemo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SelectDemo.m; sourceTree = "<group>"; };
 		090F4F4C22AA81E0007FCDB7 /* UITableviewVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UITableviewVC.h; sourceTree = "<group>"; };
 		090F4F4D22AA81E0007FCDB7 /* UITableviewVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UITableviewVC.m; sourceTree = "<group>"; };
 		090F4F4F22AB5962007FCDB7 /* Person+TestCategpryPerson_CF.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Person+TestCategpryPerson_CF.h"; sourceTree = "<group>"; };
 		090F4F5022AB5962007FCDB7 /* Person+TestCategpryPerson_CF.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Person+TestCategpryPerson_CF.m"; sourceTree = "<group>"; };
+		09134CD32355B825000A369D /* libteststaticlib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libteststaticlib.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		09134CD52355B89F000A369D /* libteststaticlib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libteststaticlib.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		093BFC6623336142000FA39D /* testfwstatic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = testfwstatic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		093BFC68233361F6000FA39D /* TestBase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestBase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		093BFC692333621B000FA39D /* testDMlib.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = testDMlib.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -132,6 +141,9 @@
 		09635EBD22A619C900E773F4 /* SelectorSub.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SelectorSub.m; sourceTree = "<group>"; };
 		096910E82301510800BBAE04 /* RIJIEAdUIHandlerFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RIJIEAdUIHandlerFactory.h; sourceTree = "<group>"; };
 		096910E92301510800BBAE04 /* RIJIEAdUIHandlerFactory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RIJIEAdUIHandlerFactory.m; sourceTree = "<group>"; };
+		096C5043234B6FE70027836C /* libTestStaticLib2.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libTestStaticLib2.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		096C50FD234C65A80027836C /* testDMlib.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = testDMlib.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		096C5183234EE11D0027836C /* testDMlib.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = testDMlib.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		097170C5233C6BD7005853B3 /* libteststaticlib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libteststaticlib.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		097170CB233C6E55005853B3 /* testDMlib.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = testDMlib.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		097170CE233C6ED2005853B3 /* LibPerson.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LibPerson.h; path = ../../../teststaticlib/teststaticlib/LibPerson.h; sourceTree = "<group>"; };
@@ -177,6 +189,8 @@
 		09B56FDE2345CEA000AA0DBB /* ViewController+appear.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ViewController+appear.m"; sourceTree = "<group>"; };
 		09B56FDF2345CEA000AA0DBB /* ViewController+appear.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ViewController+appear.h"; sourceTree = "<group>"; };
 		09B56FE02345CEA000AA0DBB /* TestAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestAdd.m; sourceTree = "<group>"; };
+		09BCB4B423541A7300F7CEFD /* RCTBridgeModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCTBridgeModule.h; sourceTree = "<group>"; };
+		09C022FD234B6A060067D56F /* libteststaticlib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libteststaticlib.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		09C6C44222DC6BC600E0A448 /* d.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = d.jpg; sourceTree = "<group>"; };
 		09E0C5C422A4D67500519955 /* libteststaticlib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libteststaticlib.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		09E1523C22C26F110081C136 /* TestPersonSub.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestPersonSub.h; sourceTree = "<group>"; };
@@ -194,6 +208,8 @@
 		09F824F422A502C6008D48DF /* NextViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NextViewController.xib; sourceTree = "<group>"; };
 		09FABCF422A1192B00AD1E79 /* TestBase copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "TestBase copy-Info.plist"; path = "/Users/chengjian/work/ios_git_git/TestBase/TestBase copy-Info.plist"; sourceTree = "<absolute>"; };
 		09FABD0722A1197E00AD1E79 /* TestBase copy2-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "TestBase copy2-Info.plist"; path = "/Users/chengjian/work/ios_git_git/TestBase/TestBase copy2-Info.plist"; sourceTree = "<absolute>"; };
+		09FFBCF7234B6B200035795B /* libTestStaticLib2.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libTestStaticLib2.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		09FFBCF9234B6BFC0035795B /* libTestStaticLib2.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libTestStaticLib2.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		19CD6AACEF10361ADD2B74B9 /* libPods-TestBase.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TestBase.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A39EAB5A018153D4C0516AA3 /* Pods-TestBase.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestBase.release.xcconfig"; path = "Target Support Files/Pods-TestBase/Pods-TestBase.release.xcconfig"; sourceTree = "<group>"; };
 		C6D4D4F703234C7385E2A8F7 /* Pods-TestBase.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestBase.debug.xcconfig"; path = "Target Support Files/Pods-TestBase/Pods-TestBase.debug.xcconfig"; sourceTree = "<group>"; };
@@ -204,8 +220,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				09E92D0723476DED0087F8B1 /* libteststaticlib.a in Frameworks */,
-				097170D5233C6FAB005853B3 /* testDMlib.framework in Frameworks */,
+				096C5184234EE11D0027836C /* testDMlib.framework in Frameworks */,
 				A84236179C4FB3A5856E2E46 /* libPods-TestBase.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -264,6 +279,7 @@
 		09477BAE229824F9009A47AF /* TestBase */ = {
 			isa = PBXGroup;
 			children = (
+				09BCB4B423541A7300F7CEFD /* RCTBridgeModule.h */,
 				097ADE822345CBCB002400ED /* NSObject+TestAFNetworking.h */,
 				09B56FCC2345CE4000AA0DBB /* swizzle */,
 				097170CD233C6E9B005853B3 /* testDMlib */,
@@ -360,6 +376,23 @@
 		094D7CC722A126F500AF2345 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				09134CD52355B89F000A369D /* libteststaticlib.a */,
+				09134CD32355B825000A369D /* libteststaticlib.a */,
+				096C5183234EE11D0027836C /* testDMlib.framework */,
+				096C50FD234C65A80027836C /* testDMlib.framework */,
+				090231BA234B7D48000E832E /* libTestStaticLib2.a */,
+				090231B8234B7D42000E832E /* libteststaticlib.a */,
+				090231B6234B7CBE000E832E /* libteststaticlib.a */,
+				090231B4234B7C44000E832E /* libteststaticlib.a */,
+				090231B2234B7C36000E832E /* libteststaticlib.a */,
+				090231B0234B7C2B000E832E /* libTestStaticLib2.a */,
+				090231AD234B79B4000E832E /* libTestStaticLib2.a */,
+				090231AB234B79B0000E832E /* libteststaticlib.a */,
+				0902319D234B745E000E832E /* libteststaticlib.a */,
+				096C5043234B6FE70027836C /* libTestStaticLib2.a */,
+				09FFBCF9234B6BFC0035795B /* libTestStaticLib2.a */,
+				09FFBCF7234B6B200035795B /* libTestStaticLib2.a */,
+				09C022FD234B6A060067D56F /* libteststaticlib.a */,
 				09E92D0623476DED0087F8B1 /* libteststaticlib.a */,
 				097170D6233C7131005853B3 /* libteststaticlib.a */,
 				097170D4233C6FAB005853B3 /* testDMlib.framework */,
@@ -421,6 +454,7 @@
 		09A814BD22A11224000D9C17 /* Happy */ = {
 			isa = PBXGroup;
 			children = (
+				090231AF234B7BBC000E832E /* LibPerson.h */,
 				09A814BE22A11224000D9C17 /* AppDelegate.h */,
 				09A814BF22A11224000D9C17 /* AppDelegate.m */,
 				09A814C122A11224000D9C17 /* ViewController.h */,
@@ -507,6 +541,8 @@
 				09477BA9229824F9009A47AF /* Frameworks */,
 				09477BAA229824F9009A47AF /* Resources */,
 				09F824CC22A4FFFC008D48DF /* Embed Frameworks */,
+				AF56878F8419A21EAFF7F58E /* [CP] Embed Pods Frameworks */,
+				46AA696759E7C9814074C138 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -682,6 +718,40 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		46AA696759E7C9814074C138 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TestBase/Pods-TestBase-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TestBase/Pods-TestBase-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TestBase/Pods-TestBase-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AF56878F8419A21EAFF7F58E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TestBase/Pods-TestBase-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TestBase/Pods-TestBase-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TestBase/Pods-TestBase-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -840,6 +910,7 @@
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
+					"DDD=0",
 				);
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
@@ -930,6 +1001,7 @@
 					AAA,
 					"COCOAPODS=1",
 					"BBB=2",
+					"CCC=0",
 				);
 				INFOPLIST_FILE = TestBase/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -958,6 +1030,7 @@
 				CLANG_WARN_OBJC_REPEATED_USE_OF_WEAK = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEPLOYMENT_POSTPROCESSING = YES;
 				DEVELOPMENT_TEAM = 65T72LT3SH;
 				INFOPLIST_FILE = TestBase/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -990,10 +1063,12 @@
 				DEVELOPMENT_TEAM = 65T72LT3SH;
 				INFOPLIST_FILE = Happy/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_GENERATE_MAP_FILE = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = cj.test.oi.Happy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -1008,6 +1083,7 @@
 				DEVELOPMENT_TEAM = 65T72LT3SH;
 				INFOPLIST_FILE = Happy/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_GENERATE_MAP_FILE = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

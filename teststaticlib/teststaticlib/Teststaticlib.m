@@ -7,9 +7,10 @@
 //
 
 #import "Teststaticlib.h"
-
+#import "LibPerson.h"
 @implementation Teststaticlib
-//-(void)testslib:(NSString *)name{
-//    NSLog(@"test static 111111qqqddd name=%@",name);
-//}
+-(void)testslib11:(NSString *)name{
+    [LibPerson eat22];
+    NSLog(@"test static 111111qqqddd name=%@",name);
+}
 @end

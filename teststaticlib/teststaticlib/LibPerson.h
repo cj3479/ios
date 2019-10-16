@@ -13,7 +13,8 @@ NS_ASSUME_NONNULL_BEGIN
 @interface LibPerson : NSObject
 //@property (nonatomic,copy) NSString *name;
 //-(void)watch;
-//-(void)eat;
+-(void)eat11;
++(void)eat22;
 @end
 
 NS_ASSUME_NONNULL_END

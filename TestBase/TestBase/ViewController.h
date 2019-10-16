@@ -13,6 +13,7 @@
 //static NSString* const ProteusEventCmdAdTripleImgClick = @"cmd_triple_img_click";
 //extern const int RIJConstantMultiVideoChannelID = 409409;
 static const CGFloat scaleUItopImgViewW = 10;
+extern NSString *const MTTDebugItemQQLoginKey;
 //static NSString* const ProteusEventCmdAdLargeImgClick = AdLargeImgClick;
 @class Person;
 typedef NS_ENUM(NSUInteger, AdStatSrc) {

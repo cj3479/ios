@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		096C5040234B6F960027836C /* TestStatic2222.m in Sources */ = {isa = PBXBuildFile; fileRef = 096C503F234B6F960027836C /* TestStatic2222.m */; };
 		097ADE3A2344D6FF002400ED /* TestStaticLib2.m in Sources */ = {isa = PBXBuildFile; fileRef = 097ADE392344D6FF002400ED /* TestStaticLib2.m */; };
 		097ADE3B2344D6FF002400ED /* TestStaticLib2.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 097ADE382344D6FF002400ED /* TestStaticLib2.h */; };
 		097ADE452344D725002400ED /* LibPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 097ADE432344D724002400ED /* LibPerson.m */; };
+		09FFBCFF234B6D520035795B /* TestStaticlib22.m in Sources */ = {isa = PBXBuildFile; fileRef = 09FFBCFE234B6D520035795B /* TestStaticlib22.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -26,11 +28,16 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		096C503E234B6F960027836C /* TestStatic2222.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestStatic2222.h; sourceTree = "<group>"; };
+		096C503F234B6F960027836C /* TestStatic2222.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestStatic2222.m; sourceTree = "<group>"; };
 		097ADE352344D6FF002400ED /* libTestStaticLib2.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libTestStaticLib2.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		097ADE382344D6FF002400ED /* TestStaticLib2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestStaticLib2.h; sourceTree = "<group>"; };
 		097ADE392344D6FF002400ED /* TestStaticLib2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestStaticLib2.m; sourceTree = "<group>"; };
 		097ADE432344D724002400ED /* LibPerson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LibPerson.m; sourceTree = "<group>"; };
 		097ADE442344D724002400ED /* LibPerson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LibPerson.h; sourceTree = "<group>"; };
+		09E92D4C23477ADA0087F8B1 /* AFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AFURLSessionManager.h; path = ../../Pods/AFNetworking/AFNetworking/AFURLSessionManager.h; sourceTree = "<group>"; };
+		09FFBCFD234B6D520035795B /* TestStaticlib22.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestStaticlib22.h; sourceTree = "<group>"; };
+		09FFBCFE234B6D520035795B /* TestStaticlib22.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestStaticlib22.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,10 +70,15 @@
 		097ADE372344D6FF002400ED /* TestStaticLib2 */ = {
 			isa = PBXGroup;
 			children = (
+				09E92D4C23477ADA0087F8B1 /* AFURLSessionManager.h */,
 				097ADE442344D724002400ED /* LibPerson.h */,
 				097ADE432344D724002400ED /* LibPerson.m */,
 				097ADE382344D6FF002400ED /* TestStaticLib2.h */,
 				097ADE392344D6FF002400ED /* TestStaticLib2.m */,
+				09FFBCFD234B6D520035795B /* TestStaticlib22.h */,
+				09FFBCFE234B6D520035795B /* TestStaticlib22.m */,
+				096C503E234B6F960027836C /* TestStatic2222.h */,
+				096C503F234B6F960027836C /* TestStatic2222.m */,
 			);
 			path = TestStaticLib2;
 			sourceTree = "<group>";
@@ -128,8 +140,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09FFBCFF234B6D520035795B /* TestStaticlib22.m in Sources */,
 				097ADE452344D725002400ED /* LibPerson.m in Sources */,
 				097ADE3A2344D6FF002400ED /* TestStaticLib2.m in Sources */,
+				096C5040234B6F960027836C /* TestStatic2222.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,7 +265,6 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 65T72LT3SH;
-				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -263,7 +276,6 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 65T72LT3SH;
-				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";

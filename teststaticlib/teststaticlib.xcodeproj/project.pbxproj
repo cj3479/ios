@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		09134CE02355BF7C000A369D /* libAFNetworking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 09134CDF2355BF7C000A369D /* libAFNetworking.a */; };
 		094D7CD822A127D300AF2345 /* Teststaticlib.m in Sources */ = {isa = PBXBuildFile; fileRef = 094D7CD722A127D300AF2345 /* Teststaticlib.m */; };
-		097D331923404C21003AE421 /* LibPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 097170C0233C69EB005853B3 /* LibPerson.m */; };
+		097F1D232348A53A00010470 /* LibPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 097170C0233C69EB005853B3 /* LibPerson.m */; };
+		09E92EE42348404F0087F8B1 /* LibPerson+static1.m in Sources */ = {isa = PBXBuildFile; fileRef = 09E92EE32348404F0087F8B1 /* LibPerson+static1.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,17 +26,22 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		09134CDF2355BF7C000A369D /* libAFNetworking.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libAFNetworking.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		094D7CD622A127D300AF2345 /* Teststaticlib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Teststaticlib.h; sourceTree = "<group>"; };
 		094D7CD722A127D300AF2345 /* Teststaticlib.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Teststaticlib.m; sourceTree = "<group>"; };
+		0953FDF7234A08B700EDD3BC /* libTestStaticLib2.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libTestStaticLib2.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		0953FDF9234A08C200EDD3BC /* libTestStaticLib2.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libTestStaticLib2.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		097170BF233C69EB005853B3 /* LibPerson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LibPerson.h; sourceTree = "<group>"; };
 		097170C0233C69EB005853B3 /* LibPerson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LibPerson.m; sourceTree = "<group>"; };
 		09BFD09A22A149E6000E3D10 /* libteststaticlib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libteststaticlib.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		09C022F7234B66800067D56F /* libTestStaticLib2.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libTestStaticLib2.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		09E92CF9234750580087F8B1 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
-		09E92D452347701B0087F8B1 /* libAFNetworking.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libAFNetworking.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		09E92D47234770540087F8B1 /* libAFNetworking.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libAFNetworking.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		3DDBDD1C8BF00A7991CA8270 /* libPods-teststaticlib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-teststaticlib.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		4C89F305FDCD98AE1E28C1C3 /* Pods-teststaticlib.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-teststaticlib.debug.xcconfig"; path = "Target Support Files/Pods-teststaticlib/Pods-teststaticlib.debug.xcconfig"; sourceTree = "<group>"; };
-		5A7F549C2CE79192192B3015 /* Pods-teststaticlib.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-teststaticlib.release.xcconfig"; path = "Target Support Files/Pods-teststaticlib/Pods-teststaticlib.release.xcconfig"; sourceTree = "<group>"; };
+		09E92D4D23477B990087F8B1 /* AFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AFURLSessionManager.h; path = ../../../../Downloads/PesonalLive/Source/thirdparty/AFNetworking/AFURLSessionManager.h; sourceTree = "<group>"; };
+		09E92EE22348404F0087F8B1 /* LibPerson+static1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LibPerson+static1.h"; sourceTree = "<group>"; };
+		09E92EE32348404F0087F8B1 /* LibPerson+static1.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "LibPerson+static1.m"; sourceTree = "<group>"; };
+		1E528258D0DD1DD542EEFBAA /* libPods-teststaticlib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-teststaticlib.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6C647DFFA8E75009B30F64EC /* Pods-teststaticlib.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-teststaticlib.debug.xcconfig"; path = "Target Support Files/Pods-teststaticlib/Pods-teststaticlib.debug.xcconfig"; sourceTree = "<group>"; };
+		E4829BF71B696AA46874FAF2 /* Pods-teststaticlib.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-teststaticlib.release.xcconfig"; path = "Target Support Files/Pods-teststaticlib/Pods-teststaticlib.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,49 +49,55 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09134CE02355BF7C000A369D /* libAFNetworking.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		050883F4C22E24DB1C7DF9BE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6C647DFFA8E75009B30F64EC /* Pods-teststaticlib.debug.xcconfig */,
+				E4829BF71B696AA46874FAF2 /* Pods-teststaticlib.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		094D7CCA22A127D300AF2345 = {
 			isa = PBXGroup;
 			children = (
 				09E92CF9234750580087F8B1 /* Podfile */,
 				094D7CD522A127D300AF2345 /* teststaticlib */,
 				09BFD09A22A149E6000E3D10 /* libteststaticlib.a */,
-				1313A296B1FEFE079F3DB317 /* Pods */,
-				5CAD3AC923C9600C72B03DD6 /* Frameworks */,
+				050883F4C22E24DB1C7DF9BE /* Pods */,
+				CA6287B5A2CA139A00683611 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		094D7CD522A127D300AF2345 /* teststaticlib */ = {
 			isa = PBXGroup;
 			children = (
+				09E92D4D23477B990087F8B1 /* AFURLSessionManager.h */,
 				097170BF233C69EB005853B3 /* LibPerson.h */,
 				097170C0233C69EB005853B3 /* LibPerson.m */,
 				094D7CD622A127D300AF2345 /* Teststaticlib.h */,
 				094D7CD722A127D300AF2345 /* Teststaticlib.m */,
+				09E92EE22348404F0087F8B1 /* LibPerson+static1.h */,
+				09E92EE32348404F0087F8B1 /* LibPerson+static1.m */,
 			);
 			path = teststaticlib;
 			sourceTree = "<group>";
 		};
-		1313A296B1FEFE079F3DB317 /* Pods */ = {
+		CA6287B5A2CA139A00683611 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				4C89F305FDCD98AE1E28C1C3 /* Pods-teststaticlib.debug.xcconfig */,
-				5A7F549C2CE79192192B3015 /* Pods-teststaticlib.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
-		5CAD3AC923C9600C72B03DD6 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				09E92D47234770540087F8B1 /* libAFNetworking.a */,
-				09E92D452347701B0087F8B1 /* libAFNetworking.a */,
-				3DDBDD1C8BF00A7991CA8270 /* libPods-teststaticlib.a */,
+				09134CDF2355BF7C000A369D /* libAFNetworking.a */,
+				09C022F7234B66800067D56F /* libTestStaticLib2.a */,
+				0953FDF9234A08C200EDD3BC /* libTestStaticLib2.a */,
+				0953FDF7234A08B700EDD3BC /* libTestStaticLib2.a */,
+				1E528258D0DD1DD542EEFBAA /* libPods-teststaticlib.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -96,6 +109,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 094D7CDC22A127D300AF2345 /* Build configuration list for PBXNativeTarget "teststaticlib" */;
 			buildPhases = (
+				C7A7744BE2EC76E0A8535E40 /* [CP] Check Pods Manifest.lock */,
 				094D7CCF22A127D300AF2345 /* Sources */,
 				094D7CD022A127D300AF2345 /* Frameworks */,
 				094D7CD122A127D300AF2345 /* CopyFiles */,
@@ -142,12 +156,38 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		C7A7744BE2EC76E0A8535E40 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-teststaticlib-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		094D7CCF22A127D300AF2345 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				097D331923404C21003AE421 /* LibPerson.m in Sources */,
+				097F1D232348A53A00010470 /* LibPerson.m in Sources */,
+				09E92EE42348404F0087F8B1 /* LibPerson+static1.m in Sources */,
 				094D7CD822A127D300AF2345 /* Teststaticlib.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -269,13 +309,12 @@
 		};
 		094D7CDD22A127D300AF2345 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6C647DFFA8E75009B30F64EC /* Pods-teststaticlib.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 65T72LT3SH;
-				HEADER_SEARCH_PATHS = (
-					"\"../Pods/Headers/Public\"",
-					"\"../Pods/Headers/Public/AFNetworking\"",
-				);
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -286,12 +325,13 @@
 		};
 		094D7CDE22A127D300AF2345 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5A7F549C2CE79192192B3015 /* Pods-teststaticlib.release.xcconfig */;
+			baseConfigurationReference = E4829BF71B696AA46874FAF2 /* Pods-teststaticlib.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 65T72LT3SH;
 				HEADER_SEARCH_PATHS = "$(inherited)";
-				LIBRARY_SEARCH_PATHS = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;

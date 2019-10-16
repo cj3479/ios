@@ -1,5 +1,6 @@
 # Uncomment this line to define a global platform for your project
 platform :ios, "10.0"
+#use_frameworks!
 project 'TestBase/TestBase.xcodeproj'
 source "http://git.code.oa.com/QQBrowser_iOS/QBPodSource.git"
 source "http://git.code.oa.com/hippy/hippy_pod_source.git"
@@ -18,11 +19,11 @@ def qbRQD_shared
 #  end
 end
 target 'TestBase' do
-  qbRQD_shared
-  qbZipArchive_shared
+#  qbRQD_shared
+#  qbZipArchive_shared
   pod 'SDWebImage', '~> 4.3.2'
   source 'https://github.com/CocoaPods/Specs.git'
   pod 'AFNetworking', '~> 2.5'
-#  pod 'testCj123Pods'
+  pod 'testCj123Pods', '~> 0.1.4'
 end
 

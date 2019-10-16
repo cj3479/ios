@@ -9,11 +9,11 @@
 /* Begin PBXBuildFile section */
 		0948955923348A5F00802E2D /* b.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0948955823348A5F00802E2D /* b.jpg */; };
 		0948955D23348B5500802E2D /* fwbundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0948955C23348B5500802E2D /* fwbundle.bundle */; };
+		0953E6372349E16400163411 /* libteststaticlib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0953E6362349E16400163411 /* libteststaticlib.a */; };
 		0961F89F22A4BFC300F804C7 /* testfwstatic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0961F89522A4BFC300F804C7 /* testfwstatic.framework */; };
 		0961F8A422A4BFC300F804C7 /* testfwstaticTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0961F8A322A4BFC300F804C7 /* testfwstaticTests.m */; };
 		09F8246622A4F5FE008D48DF /* testFWStatic.m in Sources */ = {isa = PBXBuildFile; fileRef = 0961F8B222A4C2F900F804C7 /* testFWStatic.m */; };
 		09F8246822A4F672008D48DF /* testFWStatic.h in Headers */ = {isa = PBXBuildFile; fileRef = 0961F8B122A4C2F900F804C7 /* testFWStatic.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		09F8246B22A4F768008D48DF /* libteststaticlib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 09F8246A22A4F768008D48DF /* libteststaticlib.a */; };
 		09F8246D22A4F787008D48DF /* Teststaticlib.h in Headers */ = {isa = PBXBuildFile; fileRef = 09F8246C22A4F787008D48DF /* Teststaticlib.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
@@ -31,8 +31,8 @@
 		0948954F23348A0300802E2D /* fwbundle.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = fwbundle.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		0948955823348A5F00802E2D /* b.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = b.jpg; sourceTree = "<group>"; };
 		0948955C23348B5500802E2D /* fwbundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = fwbundle.bundle; sourceTree = "<group>"; };
+		0953E6362349E16400163411 /* libteststaticlib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libteststaticlib.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		0961F89522A4BFC300F804C7 /* testfwstatic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = testfwstatic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		0961F89922A4BFC300F804C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0961F89E22A4BFC300F804C7 /* testfwstaticTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = testfwstaticTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0961F8A322A4BFC300F804C7 /* testfwstaticTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = testfwstaticTests.m; sourceTree = "<group>"; };
 		0961F8A522A4BFC300F804C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -58,7 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				09F8246B22A4F768008D48DF /* libteststaticlib.a in Frameworks */,
+				0953E6372349E16400163411 /* libteststaticlib.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -124,7 +124,6 @@
 			isa = PBXGroup;
 			children = (
 				09F8246C22A4F787008D48DF /* Teststaticlib.h */,
-				0961F89922A4BFC300F804C7 /* Info.plist */,
 				0961F8B122A4C2F900F804C7 /* testFWStatic.h */,
 				0961F8B222A4C2F900F804C7 /* testFWStatic.m */,
 			);
@@ -143,6 +142,7 @@
 		09F8246922A4F768008D48DF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0953E6362349E16400163411 /* libteststaticlib.a */,
 				09F8246A22A4F768008D48DF /* libteststaticlib.a */,
 			);
 			name = Frameworks;

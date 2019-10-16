@@ -16,6 +16,7 @@ extern NSDictionary* const defaultTitlesGroup;
 //extern const NSDictionary *defaultTitlesGroup;
 extern int* const testConstInt;
 extern const int*  testConstIntA;
+extern NSString *const MTTDebugItemQQLoginKey;
 static void changeEnNameDDD(NSString* name){
     
 }

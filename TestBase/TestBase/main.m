@@ -23,6 +23,7 @@
 #import "swizzle/Person+swizzle.h"
 #import "swizzle/TestAdd.h"
 #import "swizzle/ViewController+appear.h"
+//#import "TestViewController.h"
 typedef unsigned long long QUINT64;
 #define FBKVOKeyPath(KEYPATH) \
     @(((void)(NO && ((void)KEYPATH, NO)), \
@@ -72,12 +73,24 @@ typedef NS_ENUM (QUINT64, BigCellType) {
 //#define AAA 10
 int main(int argc, char *argv[])
 {
-//    int abc = BBB;
-//        #ifdef BBBB
-//        NSLog(@"main: %d", abc);
+//    TestViewController *vc = [[TestViewController alloc]init];
+//    NSLog(@"chengjian vc = %@",vc);
+//    int abc = AAA;
+//        #ifdef DDD
+//        NSLog(@"main: %d", CCC);
 //        #else
-//        NSLog(@"main111: %d", abc);
+//        NSLog(@"main111: %d", AA);
 //        #endif
+//    #ifdef CCC
+//    NSLog(@"main: %d", CCC);
+//    #else
+//    NSLog(@"main111: %d", AA);
+//    #endif
+//        #if DDD
+//       NSLog(@"main11: %d", abc);
+//       #else
+//       NSLog(@"main22: %d", AAA);
+//       #endif
 
     TestAFnetworking *af = [[TestAFnetworking alloc]init];
     [af testAFDownload];
@@ -116,6 +129,8 @@ int main(int argc, char *argv[])
 //    [Person11 sayHello11];
     LibPerson *Person222222 = [[LibPerson alloc]init];
     [Person222222 watch];
+//    [Person222222 eat];
+//    [Person222222 watch22];
 //    [Person222222 haha];
 //    Teststaticlib *staticLib = [[Teststaticlib alloc]init];
 //    [Teststaticlib testStatic];

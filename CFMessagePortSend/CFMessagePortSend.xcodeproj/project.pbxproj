@@ -13,6 +13,7 @@
 		094895ED233A53FD00802E2D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 094895EC233A53FD00802E2D /* Assets.xcassets */; };
 		094895F3233A53FD00802E2D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 094895F2233A53FD00802E2D /* main.m */; };
 		094896A9233B1EF300802E2D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 094896A7233B1EF300802E2D /* LaunchScreen.storyboard */; };
+		09C3EC1D2348EF5C00B7279E /* ExternalAccessory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09C3EC1C2348EF5C00B7279E /* ExternalAccessory.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,8 @@
 		094895F8233A53FD00802E2D /* CFMessagePortSendTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CFMessagePortSendTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		09489603233A53FD00802E2D /* CFMessagePortSendUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CFMessagePortSendUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		094896A8233B1EF300802E2D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		09C3EC1A2348EF5C00B7279E /* CFMessagePortSendRelease.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CFMessagePortSendRelease.entitlements; sourceTree = "<group>"; };
+		09C3EC1C2348EF5C00B7279E /* ExternalAccessory.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ExternalAccessory.framework; path = System/Library/Frameworks/ExternalAccessory.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09C3EC1D2348EF5C00B7279E /* ExternalAccessory.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +81,7 @@
 			children = (
 				094895DF233A53FB00802E2D /* CFMessagePortSend */,
 				094895DE233A53FB00802E2D /* Products */,
+				09C3EC1B2348EF5C00B7279E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -93,6 +98,7 @@
 		094895DF233A53FB00802E2D /* CFMessagePortSend */ = {
 			isa = PBXGroup;
 			children = (
+				09C3EC1A2348EF5C00B7279E /* CFMessagePortSendRelease.entitlements */,
 				094896A7233B1EF300802E2D /* LaunchScreen.storyboard */,
 				094895E0233A53FB00802E2D /* AppDelegate.h */,
 				094895E1233A53FB00802E2D /* AppDelegate.m */,
@@ -104,6 +110,14 @@
 				094895F2233A53FD00802E2D /* main.m */,
 			);
 			path = CFMessagePortSend;
+			sourceTree = "<group>";
+		};
+		09C3EC1B2348EF5C00B7279E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				09C3EC1C2348EF5C00B7279E /* ExternalAccessory.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -422,6 +436,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = CFMessagePortSend/CFMessagePortSendRelease.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 65T72LT3SH;
 				INFOPLIST_FILE = CFMessagePortSend/Info.plist;

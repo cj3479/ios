@@ -1,1 +1,0 @@
-../../../QBZipArchive/QBZipArchive/Classes/ZipArchive/ZipArchive/ArchiveAll/Interface/SF7zArchive.h

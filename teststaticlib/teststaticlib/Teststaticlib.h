@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import <UIKit/UIKit.h>
 @interface Teststaticlib : NSObject
 -(void)testslib:(NSString *)name;
 -(void)testshaha;

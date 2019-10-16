@@ -1,1 +1,0 @@
-../../../QBZipArchive/QBZipArchive/Classes/ZipArchive/ZipArchive/ArchiveAll/Library/lzma/7zFile.h

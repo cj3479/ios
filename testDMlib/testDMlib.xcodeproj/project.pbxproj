@@ -7,13 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		097D331823404BEC003AE421 /* LibPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 09F824C222A4FBEB008D48DF /* LibPerson.m */; };
+		092A2AC1234B6DBA008CB605 /* TestStaticlib22.h in Headers */ = {isa = PBXBuildFile; fileRef = 092A2AC0234B6DB9008CB605 /* TestStaticlib22.h */; };
+		092A2AC3234B6DD7008CB605 /* libTestStaticLib2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 092A2AC2234B6DD7008CB605 /* libTestStaticLib2.a */; };
+		096C5042234B6FA60027836C /* TestStatic2222.h in Headers */ = {isa = PBXBuildFile; fileRef = 096C5041234B6FA60027836C /* TestStatic2222.h */; };
+		096C5100234D8A840027836C /* LibPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 09F824C222A4FBEB008D48DF /* LibPerson.m */; };
 		097D3400234087C4003AE421 /* WeiboSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 097D33FF234087C4003AE421 /* WeiboSDK.bundle */; };
 		097D3402234087F6003AE421 /* res in Resources */ = {isa = PBXBuildFile; fileRef = 097D3401234087F6003AE421 /* res */; };
+		09C022EF234A1ACC0067D56F /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 09C022EE234A1ACC0067D56F /* Podfile */; };
+		09C022F0234A1BA80067D56F /* TestBundle.m in Sources */ = {isa = PBXBuildFile; fileRef = 09FC0606234228DD00B42F00 /* TestBundle.m */; };
+		09E92DB2234783ED0087F8B1 /* AFURLSessionManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 09E92DB1234783ED0087F8B1 /* AFURLSessionManager.h */; };
 		09F824C322A4FBEB008D48DF /* LibPerson.h in Headers */ = {isa = PBXBuildFile; fileRef = 09F824C122A4FBEB008D48DF /* LibPerson.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		09FC05EF2341FF0900B42F00 /* baa.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 09FC05EE2341FF0900B42F00 /* baa.jpg */; };
 		09FC0607234228DD00B42F00 /* TestBundle.h in Headers */ = {isa = PBXBuildFile; fileRef = 09FC0605234228DD00B42F00 /* TestBundle.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		09FC0608234228DD00B42F00 /* TestBundle.m in Sources */ = {isa = PBXBuildFile; fileRef = 09FC0606234228DD00B42F00 /* TestBundle.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,8 +32,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		092A2AC0234B6DB9008CB605 /* TestStaticlib22.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TestStaticlib22.h; path = ../../TestStaticLib2/TestStaticLib2/TestStaticlib22.h; sourceTree = "<group>"; };
+		092A2AC2234B6DD7008CB605 /* libTestStaticLib2.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libTestStaticLib2.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		096C5041234B6FA60027836C /* TestStatic2222.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TestStatic2222.h; path = ../../TestStaticLib2/TestStaticLib2/TestStatic2222.h; sourceTree = "<group>"; };
 		097D33FF234087C4003AE421 /* WeiboSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = WeiboSDK.bundle; sourceTree = "<group>"; };
 		097D3401234087F6003AE421 /* res */ = {isa = PBXFileReference; lastKnownFileType = folder; path = res; sourceTree = "<group>"; };
+		09C022EE234A1ACC0067D56F /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		09E92DB1234783ED0087F8B1 /* AFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AFURLSessionManager.h; path = ../../../../Downloads/PesonalLive/Source/thirdparty/AFNetworking/AFURLSessionManager.h; sourceTree = "<group>"; };
 		09F824A722A4FB63008D48DF /* testDMlib.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = testDMlib.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		09F824AB22A4FB63008D48DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		09F824B022A4FB63008D48DF /* testDMlibTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = testDMlibTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -37,6 +47,10 @@
 		09FC05EE2341FF0900B42F00 /* baa.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = baa.jpg; sourceTree = "<group>"; };
 		09FC0605234228DD00B42F00 /* TestBundle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestBundle.h; sourceTree = "<group>"; };
 		09FC0606234228DD00B42F00 /* TestBundle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestBundle.m; sourceTree = "<group>"; };
+		09FFBCF5234B6ABA0035795B /* libTestStaticLib2.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libTestStaticLib2.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		12E7CBBE4A9C83FB2D237B33 /* Pods-testDMlib.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testDMlib.release.xcconfig"; path = "Target Support Files/Pods-testDMlib/Pods-testDMlib.release.xcconfig"; sourceTree = "<group>"; };
+		1DCB6952A3B0B3A2A0D08B5E /* Pods-testDMlib.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testDMlib.debug.xcconfig"; path = "Target Support Files/Pods-testDMlib/Pods-testDMlib.debug.xcconfig"; sourceTree = "<group>"; };
+		A76F55A00397DE15E59078BF /* libPods-testDMlib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-testDMlib.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				092A2AC3234B6DD7008CB605 /* libTestStaticLib2.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,11 +75,14 @@
 		09F8249D22A4FB63008D48DF = {
 			isa = PBXGroup;
 			children = (
+				09C022EE234A1ACC0067D56F /* Podfile */,
 				09FC05EE2341FF0900B42F00 /* baa.jpg */,
 				097D3401234087F6003AE421 /* res */,
 				097D33FF234087C4003AE421 /* WeiboSDK.bundle */,
 				09F824A922A4FB63008D48DF /* testDMlib */,
 				09F824A822A4FB63008D48DF /* Products */,
+				FBEED66C91457A3C9B164E91 /* Pods */,
+				93FA9CFC1D40538D3EBA5DF5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -80,6 +98,9 @@
 		09F824A922A4FB63008D48DF /* testDMlib */ = {
 			isa = PBXGroup;
 			children = (
+				096C5041234B6FA60027836C /* TestStatic2222.h */,
+				092A2AC0234B6DB9008CB605 /* TestStaticlib22.h */,
+				09E92DB1234783ED0087F8B1 /* AFURLSessionManager.h */,
 				09F824AB22A4FB63008D48DF /* Info.plist */,
 				09F824C122A4FBEB008D48DF /* LibPerson.h */,
 				09F824C222A4FBEB008D48DF /* LibPerson.m */,
@@ -89,6 +110,25 @@
 			path = testDMlib;
 			sourceTree = "<group>";
 		};
+		93FA9CFC1D40538D3EBA5DF5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				092A2AC2234B6DD7008CB605 /* libTestStaticLib2.a */,
+				09FFBCF5234B6ABA0035795B /* libTestStaticLib2.a */,
+				A76F55A00397DE15E59078BF /* libPods-testDMlib.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FBEED66C91457A3C9B164E91 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1DCB6952A3B0B3A2A0D08B5E /* Pods-testDMlib.debug.xcconfig */,
+				12E7CBBE4A9C83FB2D237B33 /* Pods-testDMlib.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -96,7 +136,10 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				096C5042234B6FA60027836C /* TestStatic2222.h in Headers */,
+				09E92DB2234783ED0087F8B1 /* AFURLSessionManager.h in Headers */,
 				09FC0607234228DD00B42F00 /* TestBundle.h in Headers */,
+				092A2AC1234B6DBA008CB605 /* TestStaticlib22.h in Headers */,
 				09F824C322A4FBEB008D48DF /* LibPerson.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -108,6 +151,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 09F824BB22A4FB63008D48DF /* Build configuration list for PBXNativeTarget "testDMlib" */;
 			buildPhases = (
+				A811BCEDD3AC2C7959CC6A43 /* [CP] Check Pods Manifest.lock */,
 				09F824A222A4FB63008D48DF /* Headers */,
 				09F824A322A4FB63008D48DF /* Sources */,
 				09F824A422A4FB63008D48DF /* Frameworks */,
@@ -182,6 +226,7 @@
 			files = (
 				09FC05EF2341FF0900B42F00 /* baa.jpg in Resources */,
 				097D3400234087C4003AE421 /* WeiboSDK.bundle in Resources */,
+				09C022EF234A1ACC0067D56F /* Podfile in Resources */,
 				097D3402234087F6003AE421 /* res in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -195,13 +240,38 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		A811BCEDD3AC2C7959CC6A43 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-testDMlib-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		09F824A322A4FB63008D48DF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				097D331823404BEC003AE421 /* LibPerson.m in Sources */,
-				09FC0608234228DD00B42F00 /* TestBundle.m in Sources */,
+				096C5100234D8A840027836C /* LibPerson.m in Sources */,
+				09C022F0234A1BA80067D56F /* TestBundle.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,6 +415,7 @@
 		};
 		09F824BC22A4FB63008D48DF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1DCB6952A3B0B3A2A0D08B5E /* Pods-testDMlib.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
@@ -359,6 +430,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MACH_O_TYPE = mh_dylib;
 				PRODUCT_BUNDLE_IDENTIFIER = cj.test.oi.testDMlib;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = NO;
@@ -368,6 +440,7 @@
 		};
 		09F824BD22A4FB63008D48DF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 12E7CBBE4A9C83FB2D237B33 /* Pods-testDMlib.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
@@ -382,6 +455,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MACH_O_TYPE = mh_dylib;
 				PRODUCT_BUNDLE_IDENTIFIER = cj.test.oi.testDMlib;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
