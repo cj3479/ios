@@ -12,13 +12,15 @@
 @protocol SampleProtocolDelegate <NSObject>
 @required
 - (void) processCompleted;
+@optional
+- (void) processCompletedssss;
 @end
 // 协议定义结束
 @interface SampleProtocol : NSObject
 
 {
-    // Delegate to respond back
-    id <SampleProtocolDelegate> _delegate;
+//    // Delegate to respond back
+//    id <SampleProtocolDelegate> _delegate;
     
 }
 @property (nonatomic,strong) id delegate;

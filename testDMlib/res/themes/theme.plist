@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>wallPaper</key>
+		<integer>0</integer>
+		<key>name</key>
+		<string>默认皮肤</string>
+		<key>skinid</key>
+		<integer>2</integer>
+		<key>version</key>
+		<integer>4</integer>
+		<key>channel</key>
+		<string>0</string>
+		<key>bid</key>
+		<integer>0</integer>
+		<key>md5</key>
+		<string></string>
+		<key>predefine</key>
+		<true/>
+		<key>bNightMode</key>
+		<false/>
+		<key>icon</key>
+		<string>/res/themes/lightroom/icon.png</string>
+		<key>configPath</key>
+		<string>/res/themes/lightroom/config.plist</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>夜间模式</string>
+		<key>wallPaper</key>
+		<integer>0</integer>
+		<key>skinid</key>
+		<integer>1</integer>
+		<key>version</key>
+		<integer>4</integer>
+		<key>channel</key>
+		<string>0</string>
+		<key>bid</key>
+		<integer>0</integer>
+		<key>md5</key>
+		<string></string>
+		<key>predefine</key>
+		<true/>
+		<key>bNightMode</key>
+		<true/>
+		<key>icon</key>
+		<string>/res/themes/night/icon.png</string>
+		<key>configPath</key>
+		<string>/res/themes/night/config.plist</string>
+	</dict>
+</array>
+</plist>

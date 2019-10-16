@@ -1,0 +1,1 @@
+../../../QBZipArchive/QBZipArchive/Classes/ZipArchive/ZipArchive/ArchiveAll/Library/gzip/GZipHandler.h

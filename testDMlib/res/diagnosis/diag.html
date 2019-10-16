@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta name=viewport content="width=device-width,user-scalable=no,initial-scale=1,minimum-scale=1,maximum-scale=1"/>
+<meta name=apple-mobile-web-app-capable content="yes"/>
+<meta name=apple-mobile-web-app-status-bar-style content="black"/>
+<meta name=format-detection content="telephone=no,address=no"/>
+<title>网络诊断</title>
+<link href=css/main.css rel=stylesheet type="text/css"/>
+<style>.hide{display:none}a,p{-webkit-tap-highlight-color:rgba(0,0,0,0;)}#page4::before{background:0}</style>
+</head>
+<body>
+<div class=page1 id=page1>
+<h1>无法打开网页</h1>
+<p>点击空白处刷新</p>
+<footer><span id=changeNet>切换网络</span><h> |</h>
+<span id=diagLink>诊断网络</span></footer>
+</div>
+<div class="page2 hide" id=page2>
+<p>正在诊断...</p>
+</div>
+<div class="page3 hide" id=page3>
+<h1>DNS解析出错</h1>
+<div class=short>
+<p class=first-line>您可尝试以下方法后刷新该网页:</p>
+<p>1.确认网络是否正常连接</p>
+<p>2.确认网址是否输入正确</p>
+<p>3.切换云加速状态（设置-省流加速）</p>
+<p>4.切换广告过滤状态（设置-省流加速）</p>
+<p>5.清理缓存（设置-清除数据）</p>
+</div>
+<p><a id=showErrorLink>展开错误详情</a></p>
+<div class="detail hide">
+<div class=detail-item>
+<h2>错误代码</h2>
+<p id=errInfoCode></p>
+</div>
+<div class=detail-item>
+<h2>原因</h2>
+<p id=errInfoReason></p>
+</div>
+<div class=detail-item>
+<h2>失败阶段</h2>
+<p id=errFail></p>
+</div>
+<div class=detail-item>
+<h2>网络状态</h2>
+<p>云加速：<span id=cloudSpeedUp></span></p>
+<p>网络类型：<span id=network></span></p>
+<p id=accessPointP>接入点名称：<span id=accessPoint></span></p>
+</div>
+<div class=detail-item>
+<h2>失败网址</h2>
+<p id=errUrl></p>
+</div>
+</div>
+<div class=btn-group>
+<p><a class=btn id=uploadBtn>上传错误</a></p>
+<p>上传错误，帮助我们持续优化您的浏览体验。</p>
+</div>
+</div>
+<div class="page1 hide" id=page4>
+<h1>网络正常</h1>
+<p>点击空白刷新</p>
+</div>
+<script src=js/x5_native.js></script>
+<script>var $=function(b,a){a=a||document;return a.querySelector(b)};var has=function(a,b){if("contains" in a){return a.contains(b)}else{return a.compareDocumentPosition(b)%16}};var page1=$("#page1");var page2=$("#page2");var page3=$("#page3");var page4=$("#page4");function finishWithErrorInfo(a){page2.style.display="none";a=a||{summaryError:"DNS解析出错111",errInfoCode:-130,errInfoReason:"net::ERR_PROXY_CONNECTION_FAILED",errFail:"发起请求",errUrl:"http://xxx.com",net:{cloudSpeedUp:"云加速",accessPoint:"接入点xxx",network:"222"}};$("#errInfoCode").innerHTML=a.errInfoCode;$("#errInfoReason").innerHTML=a.errInfoReason;$("#errFail").innerHTML=a.errFail;$("#errUrl").innerHTML=a.errUrl;$("#network").innerHTML=a.net.network;$("#cloudSpeedUp").innerHTML=a.net.cloudSpeedUp;$("#accessPoint").innerHTML=a.net.accessPoint;$("#accessPointP").style.display=/wi\-?fi/gi.test(a.net.network)?"block":"none";$("h1",page3).innerHTML=a.summaryError;page3.style.display="block"}function finishWithOtherInfo(){page2.style.display="none";document.addEventListener("touchend",reload);page4.style.display="block"}function finishUpload(){console.log("finishUpload");$("#uploadBtn").removeEventListener("touchstart",uploadStartFun);$("#uploadBtn").removeEventListener("touchend",uploadFun);$("#uploadBtn").innerHTML="上传成功"}function reload(d){if(moved){return}d=d||window.event;var f=$("h1",page1);var c=$("p",page1);var b=$("h1",page4);var a=$("p",page4);if(f!==d.target&&!has(f,d.target)&&c!==d.target&&!has(c,d.target)&&b!==d.target&&!has(b,d.target)&&a!==d.target&&!has(a,d.target)){console.log("reload...");x5.reload(function(){console.log("reload")},function(e){console.log(e)})}}function uploadStartFun(a){$("#uploadBtn").className+=" active"}function uploadFun(a){uploadBtn.className=uploadBtn.className.replace(/ active/gi,"");x5.uploadDiagnosisInfo(function(b){console.log("uploadDiagnosisInfo");finishUpload()},function(b){console.log(b)})}var moved=false;window.onload=function(){x5.errorCode(function(d){var c=d||{};var e=c.errorCode||0;var b={"0":{errInfo:"Wi-Fi和移动网络已断开",helpInfo:"点击空白处刷新"},"1":{errInfo:"无法打开网页",helpInfo:"点击空白处刷新"},"2":{errInfo:"该页面显示重复出现问题",helpInfo:"点击空白处刷新"}};$("h1",page1).innerHTML=b[e+""]["errInfo"];$("p",page1).innerHTML=b[e+""]["helpInfo"];if(e==0){$("footer",page1).style.display="none"}else{$("footer",page1).style.display="block"}},function(b){console.log(b)});document.addEventListener("touchstart",function(b){moved=false});document.addEventListener("touchmove",function(b){if(moved){return}moved=true});document.addEventListener("touchend",reload);$("#diagLink").addEventListener("touchend",function(b){b=b||window.event;page1.style.display="none";document.removeEventListener("touchend",reload);page2.style.display="block";x5.diagnosis(function(c){console.log("diagnosis");finishWithErrorInfo(c)},function(c){console.log(c)})});$("#changeNet").addEventListener("touchend",function(b){console.log("changeNetWork");x5.changeNetWork(function(){console.log("changeNetWork")},function(c){console.log(c)})});var a=$("#uploadBtn");a.addEventListener("touchstart",uploadStartFun);a.addEventListener("touchend",uploadFun);a.addEventListener("touchcancel",function(){a.className=a.className.replace(/ active/gi,"")});$("#showErrorLink").addEventListener("touchend",function(){var b=$(".detail").style.display=="block";$(".detail").style.display=b?"none":"block";this.innerHTML=b?"展开错误详情":"隐藏错误详情"})};</script>
+</body>
+</html>

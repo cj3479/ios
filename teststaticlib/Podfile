@@ -1,0 +1,25 @@
+# Uncomment this line to define a global platform for your project
+workspace "testBase.xcworkspace"
+platform :ios, "10.0"
+project 'teststaticlib.xcodeproj'
+source "http://git.code.oa.com/QQBrowser_iOS/QBPodSource.git"
+source "http://git.code.oa.com/hippy/hippy_pod_source.git"
+source "https://github.com/cj3479/testPods.git"
+source 'https://github.com/CocoaPods/Specs.git'
+$qbRQD_version = "1.0.3"
+$qbZipArchive_version = "1.0.4"
+def qbZipArchive_shared
+  pod "QBZipArchive", "#{$qbZipArchive_version}"
+end
+
+def qbRQD_shared
+#  if ENV["podsrc"] && $qbThirdpartyLibrary_use_local == 1
+#    pod "RQD", :path => "#{$qbRQD_local_path}"
+#  else
+    pod "RQD", "#{$qbRQD_version}"
+#  end
+end
+target 'teststaticlib' do
+  #pod 'AFNetworking', '~> 2.5'
+end
+

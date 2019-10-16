@@ -1,0 +1,378 @@
+2019/05/31-12:21:58.850 9903 Reusing MANIFEST /Users/chengjian/Library/Application Support/Google/Chrome/Default/Extension State/MANIFEST-000001
+2019/05/31-12:21:58.851 9903 Recovering log #464
+2019/05/31-12:21:58.856 9903 Reusing old log /Users/chengjian/Library/Application Support/Google/Chrome/Default/Extension State/000464.log 
+2019/05/31-12:25:49.906 f77b Level-0 table #468: started
+2019/05/31-12:25:49.928 f77b Level-0 table #468: 4135253 bytes OK
+2019/05/31-12:25:49.944 f77b Delete type=0 #464
+2019/05/31-12:52:43.990 f77b Level-0 table #470: started
+2019/05/31-12:52:44.012 f77b Level-0 table #470: 4117123 bytes OK
+2019/05/31-12:52:44.026 f77b Delete type=0 #467
+2019/05/31-12:52:44.034 f77b Compacting 4@0 + 1@1 files
+2019/05/31-12:52:44.053 f77b Generated table #471@0: 5 keys, 7239 bytes
+2019/05/31-12:52:44.058 f77b Compacted 4@0 + 1@1 files => 7239 bytes
+2019/05/31-12:52:44.069 f77b compacted to: files[ 0 1 1 0 0 0 0 ]
+2019/05/31-12:52:44.073 f77b Delete type=2 #465
+2019/05/31-12:52:44.073 f77b Delete type=2 #470
+2019/05/31-12:52:44.074 f77b Delete type=2 #461
+2019/05/31-12:52:44.074 f77b Delete type=2 #463
+2019/05/31-12:52:44.075 f77b Delete type=2 #468
+2019/05/31-13:17:39.891 f77b Level-0 table #473: started
+2019/05/31-13:17:39.911 f77b Level-0 table #473: 4125943 bytes OK
+2019/05/31-13:17:39.960 f77b Delete type=0 #469
+2019/05/31-13:42:49.547 f77b Level-0 table #475: started
+2019/05/31-13:42:49.603 f77b Level-0 table #475: 4142531 bytes OK
+2019/05/31-13:42:49.650 f77b Delete type=0 #472
+2019/05/31-14:07:49.894 f77b Level-0 table #477: started
+2019/05/31-14:07:49.921 f77b Level-0 table #477: 4147084 bytes OK
+2019/05/31-14:07:49.964 f77b Delete type=0 #474
+2019/05/31-14:32:39.884 f77b Level-0 table #479: started
+2019/05/31-14:32:39.913 f77b Level-0 table #479: 4104210 bytes OK
+2019/05/31-14:32:39.945 f77b Delete type=0 #476
+2019/05/31-14:32:39.947 f77b Compacting 4@0 + 1@1 files
+2019/05/31-14:32:39.972 f77b Generated table #480@0: 5 keys, 7247 bytes
+2019/05/31-14:32:39.972 f77b Compacted 4@0 + 1@1 files => 7247 bytes
+2019/05/31-14:32:40.004 f77b compacted to: files[ 0 1 1 0 0 0 0 ]
+2019/05/31-14:32:40.017 f77b Delete type=2 #473
+2019/05/31-14:32:40.018 f77b Delete type=2 #471
+2019/05/31-14:32:40.019 f77b Delete type=2 #475
+2019/05/31-14:32:40.020 f77b Delete type=2 #477
+2019/05/31-14:32:40.020 f77b Delete type=2 #479
+2019/05/31-14:57:39.536 f77b Level-0 table #482: started
+2019/05/31-14:57:39.560 f77b Level-0 table #482: 4108729 bytes OK
+2019/05/31-14:57:39.576 f77b Delete type=0 #478
+2019/05/31-15:22:29.865 f77b Level-0 table #484: started
+2019/05/31-15:22:29.890 f77b Level-0 table #484: 4117021 bytes OK
+2019/05/31-15:22:29.902 f77b Delete type=0 #481
+2019/05/31-15:47:29.891 f77b Level-0 table #486: started
+2019/05/31-15:47:29.928 f77b Level-0 table #486: 4125912 bytes OK
+2019/05/31-15:47:29.946 f77b Delete type=0 #483
+2019/05/31-16:13:00.017 f77b Level-0 table #488: started
+2019/05/31-16:13:00.051 f77b Level-0 table #488: 4125841 bytes OK
+2019/05/31-16:13:00.064 f77b Delete type=0 #485
+2019/05/31-16:13:00.073 f77b Compacting 4@0 + 1@1 files
+2019/05/31-16:13:00.096 f77b Generated table #489@0: 5 keys, 7247 bytes
+2019/05/31-16:13:00.101 f77b Compacted 4@0 + 1@1 files => 7247 bytes
+2019/05/31-16:13:00.110 f77b compacted to: files[ 0 1 1 0 0 0 0 ]
+2019/05/31-16:13:00.110 f77b Delete type=2 #488
+2019/05/31-16:13:00.120 f77b Delete type=2 #484
+2019/05/31-16:13:00.121 f77b Delete type=2 #486
+2019/05/31-16:13:00.121 f77b Delete type=2 #482
+2019/05/31-16:13:00.122 f77b Delete type=2 #480
+2019/05/31-16:38:00.085 f77b Level-0 table #491: started
+2019/05/31-16:38:00.111 f77b Level-0 table #491: 4134276 bytes OK
+2019/05/31-16:38:00.124 f77b Delete type=0 #487
+2019/05/31-17:03:00.004 f77b Level-0 table #493: started
+2019/05/31-17:03:00.035 f77b Level-0 table #493: 4135223 bytes OK
+2019/05/31-17:03:00.049 f77b Delete type=0 #490
+2019/05/31-17:28:00.020 f77b Level-0 table #495: started
+2019/05/31-17:28:00.062 f77b Level-0 table #495: 4143197 bytes OK
+2019/05/31-17:28:00.081 f77b Delete type=0 #492
+2019/05/31-17:52:59.923 f77b Level-0 table #497: started
+2019/05/31-17:52:59.995 f77b Level-0 table #497: 4130009 bytes OK
+2019/05/31-17:53:00.023 f77b Delete type=0 #494
+2019/05/31-17:53:00.027 f77b Compacting 4@0 + 1@1 files
+2019/05/31-17:53:00.053 f77b Generated table #498@0: 5 keys, 7250 bytes
+2019/05/31-17:53:00.053 f77b Compacted 4@0 + 1@1 files => 7250 bytes
+2019/05/31-17:53:00.070 f77b compacted to: files[ 0 1 1 0 0 0 0 ]
+2019/05/31-17:53:00.074 f77b Delete type=2 #489
+2019/05/31-17:53:00.074 f77b Delete type=2 #491
+2019/05/31-17:53:00.075 f77b Delete type=2 #493
+2019/05/31-17:53:00.075 f77b Delete type=2 #497
+2019/05/31-17:53:00.076 f77b Delete type=2 #495
+2019/05/31-18:18:09.494 f77b Level-0 table #500: started
+2019/05/31-18:18:09.520 f77b Level-0 table #500: 4147043 bytes OK
+2019/05/31-18:18:09.543 f77b Delete type=0 #496
+2019/05/31-18:44:29.184 f77b Level-0 table #502: started
+2019/05/31-18:44:29.232 f77b Level-0 table #502: 4013153 bytes OK
+2019/05/31-18:44:29.269 f77b Delete type=0 #499
+2019/05/31-19:39:29.148 f77b Level-0 table #504: started
+2019/05/31-19:39:29.329 f77b Level-0 table #504: 4020749 bytes OK
+2019/05/31-19:39:29.391 f77b Delete type=0 #501
+2019/05/31-20:36:59.102 f77b Level-0 table #506: started
+2019/05/31-20:36:59.124 f77b Level-0 table #506: 4060248 bytes OK
+2019/05/31-20:36:59.146 f77b Delete type=0 #503
+2019/05/31-20:36:59.153 f77b Compacting 4@0 + 1@1 files
+2019/05/31-20:36:59.180 f77b Generated table #507@0: 5 keys, 7585 bytes
+2019/05/31-20:36:59.180 f77b Compacted 4@0 + 1@1 files => 7585 bytes
+2019/05/31-20:36:59.195 f77b compacted to: files[ 0 1 1 0 0 0 0 ]
+2019/05/31-20:36:59.195 f77b Delete type=2 #506
+2019/05/31-20:36:59.203 f77b Delete type=2 #498
+2019/05/31-20:36:59.204 f77b Delete type=2 #504
+2019/05/31-20:36:59.205 f77b Delete type=2 #500
+2019/05/31-20:36:59.206 f77b Delete type=2 #502
+2019/05/31-21:34:29.187 f77b Level-0 table #509: started
+2019/05/31-21:34:29.207 f77b Level-0 table #509: 4077853 bytes OK
+2019/05/31-21:34:29.229 f77b Delete type=0 #505
+2019/05/31-22:31:59.061 f77b Level-0 table #511: started
+2019/05/31-22:31:59.082 f77b Level-0 table #511: 4077519 bytes OK
+2019/05/31-22:31:59.114 f77b Delete type=0 #508
+2019/05/31-23:29:29.139 f77b Level-0 table #513: started
+2019/05/31-23:29:29.161 f77b Level-0 table #513: 4077804 bytes OK
+2019/05/31-23:29:29.189 f77b Delete type=0 #510
+2019/06/01-00:26:59.493 f77b Level-0 table #515: started
+2019/06/01-00:26:59.513 f77b Level-0 table #515: 4077488 bytes OK
+2019/06/01-00:26:59.542 f77b Delete type=0 #512
+2019/06/01-00:26:59.545 f77b Compacting 4@0 + 1@1 files
+2019/06/01-00:26:59.572 f77b Generated table #516@0: 5 keys, 7588 bytes
+2019/06/01-00:26:59.575 f77b Compacted 4@0 + 1@1 files => 7588 bytes
+2019/06/01-00:26:59.584 f77b compacted to: files[ 0 1 1 0 0 0 0 ]
+2019/06/01-00:26:59.596 f77b Delete type=2 #507
+2019/06/01-00:26:59.596 f77b Delete type=2 #513
+2019/06/01-00:26:59.597 f77b Delete type=2 #511
+2019/06/01-00:26:59.597 f77b Delete type=2 #515
+2019/06/01-00:26:59.597 f77b Delete type=2 #509
+2019/06/01-01:24:29.102 f77b Level-0 table #518: started
+2019/06/01-01:24:29.125 f77b Level-0 table #518: 4077878 bytes OK
+2019/06/01-01:24:29.141 f77b Delete type=0 #514
+2019/06/01-02:21:59.664 f77b Level-0 table #520: started
+2019/06/01-02:21:59.690 f77b Level-0 table #520: 4077841 bytes OK
+2019/06/01-02:21:59.717 f77b Delete type=0 #517
+2019/06/01-03:19:59.056 f77b Level-0 table #522: started
+2019/06/01-03:19:59.078 f77b Level-0 table #522: 4077482 bytes OK
+2019/06/01-03:19:59.109 f77b Delete type=0 #519
+2019/06/01-04:16:59.816 f77b Level-0 table #524: started
+2019/06/01-04:16:59.840 f77b Level-0 table #524: 4077828 bytes OK
+2019/06/01-04:16:59.869 f77b Delete type=0 #521
+2019/06/01-04:16:59.874 f77b Compacting 4@0 + 1@1 files
+2019/06/01-04:16:59.901 f77b Generated table #525@0: 5 keys, 7584 bytes
+2019/06/01-04:16:59.904 f77b Compacted 4@0 + 1@1 files => 7584 bytes
+2019/06/01-04:16:59.921 f77b compacted to: files[ 0 1 1 0 0 0 0 ]
+2019/06/01-04:16:59.933 f77b Delete type=2 #516
+2019/06/01-04:16:59.934 f77b Delete type=2 #518
+2019/06/01-04:16:59.935 f77b Delete type=2 #524
+2019/06/01-04:16:59.935 f77b Delete type=2 #520
+2019/06/01-04:16:59.937 f77b Delete type=2 #522
+2019/06/01-05:14:59.022 f77b Level-0 table #527: started
+2019/06/01-05:14:59.042 f77b Level-0 table #527: 4077967 bytes OK
+2019/06/01-05:14:59.072 f77b Delete type=0 #523
+2019/06/01-06:12:29.003 f77b Level-0 table #529: started
+2019/06/01-06:12:29.022 f77b Level-0 table #529: 4077782 bytes OK
+2019/06/01-06:12:29.042 f77b Delete type=0 #526
+2019/06/01-07:09:59.101 f77b Level-0 table #531: started
+2019/06/01-07:09:59.124 f77b Level-0 table #531: 4077405 bytes OK
+2019/06/01-07:09:59.159 f77b Delete type=0 #528
+2019/06/01-08:07:29.067 f77b Level-0 table #533: started
+2019/06/01-08:07:29.090 f77b Level-0 table #533: 4077991 bytes OK
+2019/06/01-08:07:29.123 f77b Delete type=0 #530
+2019/06/01-08:07:29.135 f77b Compacting 4@0 + 1@1 files
+2019/06/01-08:07:29.163 f77b Generated table #534@0: 5 keys, 7582 bytes
+2019/06/01-08:07:29.163 f77b Compacted 4@0 + 1@1 files => 7582 bytes
+2019/06/01-08:07:29.193 f77b compacted to: files[ 0 1 1 0 0 0 0 ]
+2019/06/01-08:07:29.193 f77b Delete type=2 #529
+2019/06/01-08:07:29.201 f77b Delete type=2 #533
+2019/06/01-08:07:29.201 f77b Delete type=2 #527
+2019/06/01-08:07:29.202 f77b Delete type=2 #531
+2019/06/01-08:07:29.202 f77b Delete type=2 #525
+2019/06/01-09:04:59.040 f77b Level-0 table #536: started
+2019/06/01-09:04:59.061 f77b Level-0 table #536: 4077839 bytes OK
+2019/06/01-09:04:59.084 f77b Delete type=0 #532
+2019/06/01-10:02:28.929 f77b Level-0 table #538: started
+2019/06/01-10:02:28.947 f77b Level-0 table #538: 4077714 bytes OK
+2019/06/01-10:02:28.975 f77b Delete type=0 #535
+2019/06/01-11:00:00.319 f77b Level-0 table #540: started
+2019/06/01-11:00:00.341 f77b Level-0 table #540: 4077334 bytes OK
+2019/06/01-11:00:00.370 f77b Delete type=0 #537
+2019/06/01-11:57:28.953 f77b Level-0 table #542: started
+2019/06/01-11:57:28.971 f77b Level-0 table #542: 4077662 bytes OK
+2019/06/01-11:57:28.995 f77b Delete type=0 #539
+2019/06/01-11:57:29.002 f77b Compacting 4@0 + 1@1 files
+2019/06/01-11:57:29.033 f77b Generated table #543@0: 5 keys, 7576 bytes
+2019/06/01-11:57:29.035 f77b Compacted 4@0 + 1@1 files => 7576 bytes
+2019/06/01-11:57:29.055 f77b compacted to: files[ 0 1 1 0 0 0 0 ]
+2019/06/01-11:57:29.060 f77b Delete type=2 #538
+2019/06/01-11:57:29.061 f77b Delete type=2 #542
+2019/06/01-11:57:29.061 f77b Delete type=2 #540
+2019/06/01-11:57:29.061 f77b Delete type=2 #534
+2019/06/01-11:57:29.062 f77b Delete type=2 #536
+2019/06/01-12:55:00.482 f77b Level-0 table #545: started
+2019/06/01-12:55:00.506 f77b Level-0 table #545: 4078102 bytes OK
+2019/06/01-12:55:00.535 f77b Delete type=0 #541
+2019/06/01-13:52:58.926 f77b Level-0 table #547: started
+2019/06/01-13:52:58.949 f77b Level-0 table #547: 4077518 bytes OK
+2019/06/01-13:52:58.976 f77b Delete type=0 #544
+2019/06/01-14:50:00.626 f77b Level-0 table #549: started
+2019/06/01-14:50:00.647 f77b Level-0 table #549: 4077805 bytes OK
+2019/06/01-14:50:00.678 f77b Delete type=0 #546
+2019/06/01-15:47:58.990 f77b Level-0 table #551: started
+2019/06/01-15:47:59.012 f77b Level-0 table #551: 4077450 bytes OK
+2019/06/01-15:47:59.042 f77b Delete type=0 #548
+2019/06/01-15:47:59.055 f77b Compacting 4@0 + 1@1 files
+2019/06/01-15:47:59.089 f77b Generated table #552@0: 5 keys, 7584 bytes
+2019/06/01-15:47:59.101 f77b Compacted 4@0 + 1@1 files => 7584 bytes
+2019/06/01-15:47:59.121 f77b compacted to: files[ 0 1 1 0 0 0 0 ]
+2019/06/01-15:47:59.135 f77b Delete type=2 #549
+2019/06/01-15:47:59.135 f77b Delete type=2 #545
+2019/06/01-15:47:59.136 f77b Delete type=2 #551
+2019/06/01-15:47:59.137 f77b Delete type=2 #547
+2019/06/01-15:47:59.138 f77b Delete type=2 #543
+2019/06/01-16:45:28.967 f77b Level-0 table #554: started
+2019/06/01-16:45:28.990 f77b Level-0 table #554: 4077883 bytes OK
+2019/06/01-16:45:29.001 f77b Delete type=0 #550
+2019/06/01-17:42:58.868 f77b Level-0 table #556: started
+2019/06/01-17:42:58.892 f77b Level-0 table #556: 4077586 bytes OK
+2019/06/01-17:42:58.905 f77b Delete type=0 #553
+2019/06/01-18:40:28.917 f77b Level-0 table #558: started
+2019/06/01-18:40:28.939 f77b Level-0 table #558: 4077836 bytes OK
+2019/06/01-18:40:28.972 f77b Delete type=0 #555
+2019/06/01-19:37:58.900 f77b Level-0 table #560: started
+2019/06/01-19:37:58.924 f77b Level-0 table #560: 4077505 bytes OK
+2019/06/01-19:37:58.953 f77b Delete type=0 #557
+2019/06/01-19:37:58.966 f77b Compacting 4@0 + 1@1 files
+2019/06/01-19:37:58.993 f77b Generated table #561@0: 5 keys, 7586 bytes
+2019/06/01-19:37:58.997 f77b Compacted 4@0 + 1@1 files => 7586 bytes
+2019/06/01-19:37:59.022 f77b compacted to: files[ 0 1 1 0 0 0 0 ]
+2019/06/01-19:37:59.025 f77b Delete type=2 #558
+2019/06/01-19:37:59.025 f77b Delete type=2 #560
+2019/06/01-19:37:59.026 f77b Delete type=2 #552
+2019/06/01-19:37:59.027 f77b Delete type=2 #556
+2019/06/01-19:37:59.027 f77b Delete type=2 #554
+2019/06/01-20:35:28.882 f77b Level-0 table #563: started
+2019/06/01-20:35:28.902 f77b Level-0 table #563: 4077891 bytes OK
+2019/06/01-20:35:28.934 f77b Delete type=0 #559
+2019/06/01-21:33:01.163 f77b Level-0 table #565: started
+2019/06/01-21:33:01.186 f77b Level-0 table #565: 4077563 bytes OK
+2019/06/01-21:33:01.203 f77b Delete type=0 #562
+2019/06/01-22:30:28.935 f77b Level-0 table #567: started
+2019/06/01-22:30:28.959 f77b Level-0 table #567: 4077845 bytes OK
+2019/06/01-22:30:28.988 f77b Delete type=0 #564
+2019/06/01-23:28:01.290 f77b Level-0 table #569: started
+2019/06/01-23:28:01.312 f77b Level-0 table #569: 4077830 bytes OK
+2019/06/01-23:28:01.348 f77b Delete type=0 #566
+2019/06/01-23:28:01.351 f77b Compacting 4@0 + 1@1 files
+2019/06/01-23:28:01.376 f77b Generated table #570@0: 5 keys, 7587 bytes
+2019/06/01-23:28:01.379 f77b Compacted 4@0 + 1@1 files => 7587 bytes
+2019/06/01-23:28:01.389 f77b compacted to: files[ 0 1 1 0 0 0 0 ]
+2019/06/01-23:28:01.400 f77b Delete type=2 #565
+2019/06/01-23:28:01.402 f77b Delete type=2 #567
+2019/06/01-23:28:01.402 f77b Delete type=2 #563
+2019/06/01-23:28:01.403 f77b Delete type=2 #561
+2019/06/01-23:28:01.405 f77b Delete type=2 #569
+2019/06/02-00:25:58.810 f77b Level-0 table #572: started
+2019/06/02-00:25:58.831 f77b Level-0 table #572: 4077504 bytes OK
+2019/06/02-00:25:58.848 f77b Delete type=0 #568
+2019/06/02-01:23:01.455 f77b Level-0 table #574: started
+2019/06/02-01:23:01.478 f77b Level-0 table #574: 4077803 bytes OK
+2019/06/02-01:23:01.506 f77b Delete type=0 #571
+2019/06/02-02:20:59.167 f77b Level-0 table #576: started
+2019/06/02-02:20:59.192 f77b Level-0 table #576: 4077489 bytes OK
+2019/06/02-02:20:59.228 f77b Delete type=0 #573
+2019/06/02-03:18:28.942 f77b Level-0 table #578: started
+2019/06/02-03:18:28.964 f77b Level-0 table #578: 4077831 bytes OK
+2019/06/02-03:18:28.979 f77b Delete type=0 #575
+2019/06/02-03:18:28.982 f77b Compacting 4@0 + 1@1 files
+2019/06/02-03:18:29.007 f77b Generated table #579@0: 5 keys, 7588 bytes
+2019/06/02-03:18:29.018 f77b Compacted 4@0 + 1@1 files => 7588 bytes
+2019/06/02-03:18:29.036 f77b compacted to: files[ 0 1 1 0 0 0 0 ]
+2019/06/02-03:18:29.036 f77b Delete type=2 #570
+2019/06/02-03:18:29.048 f77b Delete type=2 #572
+2019/06/02-03:18:29.049 f77b Delete type=2 #576
+2019/06/02-03:18:29.049 f77b Delete type=2 #574
+2019/06/02-03:18:29.050 f77b Delete type=2 #578
+2019/06/02-04:15:58.816 f77b Level-0 table #581: started
+2019/06/02-04:15:58.839 f77b Level-0 table #581: 4077485 bytes OK
+2019/06/02-04:15:58.869 f77b Delete type=0 #577
+2019/06/02-05:13:28.781 f77b Level-0 table #583: started
+2019/06/02-05:13:28.798 f77b Level-0 table #583: 4077861 bytes OK
+2019/06/02-05:13:28.822 f77b Delete type=0 #580
+2019/06/02-06:10:58.777 f77b Level-0 table #585: started
+2019/06/02-06:10:58.799 f77b Level-0 table #585: 4077516 bytes OK
+2019/06/02-06:10:58.813 f77b Delete type=0 #582
+2019/06/02-07:08:28.776 f77b Level-0 table #587: started
+2019/06/02-07:08:28.797 f77b Level-0 table #587: 4077827 bytes OK
+2019/06/02-07:08:28.827 f77b Delete type=0 #584
+2019/06/02-07:08:28.832 f77b Compacting 4@0 + 1@1 files
+2019/06/02-07:08:28.860 f77b Generated table #588@0: 5 keys, 7587 bytes
+2019/06/02-07:08:28.863 f77b Compacted 4@0 + 1@1 files => 7587 bytes
+2019/06/02-07:08:28.881 f77b compacted to: files[ 0 1 1 0 0 0 0 ]
+2019/06/02-07:08:28.898 f77b Delete type=2 #587
+2019/06/02-07:08:28.899 f77b Delete type=2 #579
+2019/06/02-07:08:28.900 f77b Delete type=2 #585
+2019/06/02-07:08:28.901 f77b Delete type=2 #581
+2019/06/02-07:08:28.902 f77b Delete type=2 #583
+2019/06/02-08:06:01.995 f77b Level-0 table #590: started
+2019/06/02-08:06:02.021 f77b Level-0 table #590: 4077453 bytes OK
+2019/06/02-08:06:02.038 f77b Delete type=0 #586
+2019/06/02-09:03:28.725 f77b Level-0 table #592: started
+2019/06/02-09:03:28.750 f77b Level-0 table #592: 4077758 bytes OK
+2019/06/02-09:03:28.774 f77b Delete type=0 #589
+2019/06/02-10:01:02.153 f77b Level-0 table #594: started
+2019/06/02-10:01:02.180 f77b Level-0 table #594: 4077687 bytes OK
+2019/06/02-10:01:02.214 f77b Delete type=0 #591
+2019/06/02-10:58:58.711 f77b Level-0 table #596: started
+2019/06/02-10:58:58.738 f77b Level-0 table #596: 4077347 bytes OK
+2019/06/02-10:58:58.754 f77b Delete type=0 #593
+2019/06/02-10:58:58.767 f77b Compacting 4@0 + 1@1 files
+2019/06/02-10:58:58.796 f77b Generated table #597@0: 5 keys, 7578 bytes
+2019/06/02-10:58:58.799 f77b Compacted 4@0 + 1@1 files => 7578 bytes
+2019/06/02-10:58:58.817 f77b compacted to: files[ 0 1 1 0 0 0 0 ]
+2019/06/02-10:58:58.828 f77b Delete type=2 #588
+2019/06/02-10:58:58.829 f77b Delete type=2 #592
+2019/06/02-10:58:58.830 f77b Delete type=2 #590
+2019/06/02-10:58:58.831 f77b Delete type=2 #594
+2019/06/02-10:58:58.831 f77b Delete type=2 #596
+2019/06/02-11:56:02.215 f77b Level-0 table #599: started
+2019/06/02-11:56:02.241 f77b Level-0 table #599: 4077625 bytes OK
+2019/06/02-11:56:02.265 f77b Delete type=0 #595
+2019/06/02-12:53:58.728 f77b Level-0 table #601: started
+2019/06/02-12:53:58.750 f77b Level-0 table #601: 4077746 bytes OK
+2019/06/02-12:53:58.768 f77b Delete type=0 #598
+2019/06/02-13:51:28.708 f77b Level-0 table #603: started
+2019/06/02-13:51:28.730 f77b Level-0 table #603: 4077814 bytes OK
+2019/06/02-13:51:28.755 f77b Delete type=0 #600
+2019/06/02-14:48:58.681 f77b Level-0 table #605: started
+2019/06/02-14:48:58.706 f77b Level-0 table #605: 4077524 bytes OK
+2019/06/02-14:48:58.736 f77b Delete type=0 #602
+2019/06/02-14:48:58.750 f77b Compacting 4@0 + 1@1 files
+2019/06/02-14:48:58.779 f77b Generated table #606@0: 5 keys, 7586 bytes
+2019/06/02-14:48:58.791 f77b Compacted 4@0 + 1@1 files => 7586 bytes
+2019/06/02-14:48:58.809 f77b compacted to: files[ 0 1 1 0 0 0 0 ]
+2019/06/02-14:48:58.821 f77b Delete type=2 #599
+2019/06/02-14:48:58.822 f77b Delete type=2 #605
+2019/06/02-14:48:58.822 f77b Delete type=2 #601
+2019/06/02-14:48:58.823 f77b Delete type=2 #603
+2019/06/02-14:48:58.824 f77b Delete type=2 #597
+2019/06/02-15:46:28.764 f77b Level-0 table #608: started
+2019/06/02-15:46:28.787 f77b Level-0 table #608: 4077815 bytes OK
+2019/06/02-15:46:28.820 f77b Delete type=0 #604
+2019/06/02-16:43:58.741 f77b Level-0 table #610: started
+2019/06/02-16:43:58.764 f77b Level-0 table #610: 4077570 bytes OK
+2019/06/02-16:43:58.784 f77b Delete type=0 #607
+2019/06/02-17:41:28.716 f77b Level-0 table #612: started
+2019/06/02-17:41:28.738 f77b Level-0 table #612: 4077856 bytes OK
+2019/06/02-17:41:28.768 f77b Delete type=0 #609
+2019/06/02-18:39:02.579 f77b Level-0 table #614: started
+2019/06/02-18:39:02.599 f77b Level-0 table #614: 4077551 bytes OK
+2019/06/02-18:39:02.629 f77b Delete type=0 #611
+2019/06/02-18:39:02.644 f77b Compacting 4@0 + 1@1 files
+2019/06/02-18:39:02.671 f77b Generated table #615@0: 5 keys, 7587 bytes
+2019/06/02-18:39:02.682 f77b Compacted 4@0 + 1@1 files => 7587 bytes
+2019/06/02-18:39:02.704 f77b compacted to: files[ 0 1 1 0 0 0 0 ]
+2019/06/02-18:39:02.717 f77b Delete type=2 #612
+2019/06/02-18:39:02.717 f77b Delete type=2 #606
+2019/06/02-18:39:02.718 f77b Delete type=2 #610
+2019/06/02-18:39:02.719 f77b Delete type=2 #614
+2019/06/02-18:39:02.719 f77b Delete type=2 #608
+2019/06/02-19:36:28.683 f77b Level-0 table #617: started
+2019/06/02-19:36:28.706 f77b Level-0 table #617: 4077848 bytes OK
+2019/06/02-19:36:28.734 f77b Delete type=0 #613
+2019/06/02-20:34:02.727 f77b Level-0 table #619: started
+2019/06/02-20:34:02.750 f77b Level-0 table #619: 4077861 bytes OK
+2019/06/02-20:34:02.784 f77b Delete type=0 #616
+2019/06/02-21:31:58.634 f77b Level-0 table #621: started
+2019/06/02-21:31:58.657 f77b Level-0 table #621: 4077477 bytes OK
+2019/06/02-21:31:58.691 f77b Delete type=0 #618
+2019/06/02-22:29:02.900 f77b Level-0 table #623: started
+2019/06/02-22:29:02.926 f77b Level-0 table #623: 4077885 bytes OK
+2019/06/02-22:29:02.961 f77b Delete type=0 #620
+2019/06/02-22:29:02.977 f77b Compacting 4@0 + 1@1 files
+2019/06/02-22:29:03.006 f77b Generated table #624@0: 5 keys, 7585 bytes
+2019/06/02-22:29:03.022 f77b Compacted 4@0 + 1@1 files => 7585 bytes
+2019/06/02-22:29:03.043 f77b compacted to: files[ 0 1 1 0 0 0 0 ]
+2019/06/02-22:29:03.056 f77b Delete type=2 #615
+2019/06/02-22:29:03.057 f77b Delete type=2 #617
+2019/06/02-22:29:03.058 f77b Delete type=2 #619
+2019/06/02-22:29:03.060 f77b Delete type=2 #621
+2019/06/02-22:29:03.061 f77b Delete type=2 #623
+2019/06/02-23:26:58.688 f77b Level-0 table #626: started
+2019/06/02-23:26:58.713 f77b Level-0 table #626: 4077530 bytes OK
+2019/06/02-23:26:58.760 f77b Delete type=0 #622

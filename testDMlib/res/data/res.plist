@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>fileid</key>
+		<integer>998</integer>
+		<key>key</key>
+		<string>region.json</string>
+		<key>url</key>
+		<string>https://res.imtt.qq.com/iosRes/8_7/region.json</string>
+		<key>zipped</key>
+		<integer>0</integer>
+	</dict>
+	<dict>
+		<key>fileid</key>
+		<integer>999</integer>
+		<key>key</key>
+		<string>AiPai</string>
+		<key>url</key>
+		<string>https://res.imtt.qq.com/res_mtt/ipai/ios/9.2/AiPai.zip</string>
+		<key>zipped</key>
+		<integer>1</integer>
+	</dict>
+	<dict>
+		<key>fileid</key>
+		<integer>997</integer>
+		<key>key</key>
+		<string>template.band.zip</string>
+		<key>url</key>
+		<string>https://res.imtt.qq.com/res_mtt/wallpaper_ringtone/template.band.zip</string>
+		<key>zipped</key>
+		<integer>0</integer>
+	</dict>
+</array>
+</plist>

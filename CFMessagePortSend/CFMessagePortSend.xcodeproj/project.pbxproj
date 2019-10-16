@@ -1,0 +1,556 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		094895E2233A53FB00802E2D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 094895E1233A53FB00802E2D /* AppDelegate.m */; };
+		094895E8233A53FB00802E2D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 094895E7233A53FB00802E2D /* ViewController.m */; };
+		094895EB233A53FB00802E2D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 094895E9233A53FB00802E2D /* Main.storyboard */; };
+		094895ED233A53FD00802E2D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 094895EC233A53FD00802E2D /* Assets.xcassets */; };
+		094895F3233A53FD00802E2D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 094895F2233A53FD00802E2D /* main.m */; };
+		094896A9233B1EF300802E2D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 094896A7233B1EF300802E2D /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		094895F9233A53FD00802E2D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 094895D5233A53FB00802E2D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 094895DC233A53FB00802E2D;
+			remoteInfo = CFMessagePortSend;
+		};
+		09489604233A53FD00802E2D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 094895D5233A53FB00802E2D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 094895DC233A53FB00802E2D;
+			remoteInfo = CFMessagePortSend;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		094895DD233A53FB00802E2D /* CFMessagePortSend.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CFMessagePortSend.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		094895E0233A53FB00802E2D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		094895E1233A53FB00802E2D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		094895E6233A53FB00802E2D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		094895E7233A53FB00802E2D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		094895EA233A53FB00802E2D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		094895EC233A53FD00802E2D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		094895F1233A53FD00802E2D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		094895F2233A53FD00802E2D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		094895F8233A53FD00802E2D /* CFMessagePortSendTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CFMessagePortSendTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		09489603233A53FD00802E2D /* CFMessagePortSendUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CFMessagePortSendUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		094896A8233B1EF300802E2D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		094895DA233A53FB00802E2D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		094895F5233A53FD00802E2D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		09489600233A53FD00802E2D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		094895D4233A53FB00802E2D = {
+			isa = PBXGroup;
+			children = (
+				094895DF233A53FB00802E2D /* CFMessagePortSend */,
+				094895DE233A53FB00802E2D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		094895DE233A53FB00802E2D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				094895DD233A53FB00802E2D /* CFMessagePortSend.app */,
+				094895F8233A53FD00802E2D /* CFMessagePortSendTests.xctest */,
+				09489603233A53FD00802E2D /* CFMessagePortSendUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		094895DF233A53FB00802E2D /* CFMessagePortSend */ = {
+			isa = PBXGroup;
+			children = (
+				094896A7233B1EF300802E2D /* LaunchScreen.storyboard */,
+				094895E0233A53FB00802E2D /* AppDelegate.h */,
+				094895E1233A53FB00802E2D /* AppDelegate.m */,
+				094895E6233A53FB00802E2D /* ViewController.h */,
+				094895E7233A53FB00802E2D /* ViewController.m */,
+				094895E9233A53FB00802E2D /* Main.storyboard */,
+				094895EC233A53FD00802E2D /* Assets.xcassets */,
+				094895F1233A53FD00802E2D /* Info.plist */,
+				094895F2233A53FD00802E2D /* main.m */,
+			);
+			path = CFMessagePortSend;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		094895DC233A53FB00802E2D /* CFMessagePortSend */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0948960C233A53FD00802E2D /* Build configuration list for PBXNativeTarget "CFMessagePortSend" */;
+			buildPhases = (
+				094895D9233A53FB00802E2D /* Sources */,
+				094895DA233A53FB00802E2D /* Frameworks */,
+				094895DB233A53FB00802E2D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CFMessagePortSend;
+			productName = CFMessagePortSend;
+			productReference = 094895DD233A53FB00802E2D /* CFMessagePortSend.app */;
+			productType = "com.apple.product-type.application";
+		};
+		094895F7233A53FD00802E2D /* CFMessagePortSendTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0948960F233A53FD00802E2D /* Build configuration list for PBXNativeTarget "CFMessagePortSendTests" */;
+			buildPhases = (
+				094895F4233A53FD00802E2D /* Sources */,
+				094895F5233A53FD00802E2D /* Frameworks */,
+				094895F6233A53FD00802E2D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				094895FA233A53FD00802E2D /* PBXTargetDependency */,
+			);
+			name = CFMessagePortSendTests;
+			productName = CFMessagePortSendTests;
+			productReference = 094895F8233A53FD00802E2D /* CFMessagePortSendTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		09489602233A53FD00802E2D /* CFMessagePortSendUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 09489612233A53FD00802E2D /* Build configuration list for PBXNativeTarget "CFMessagePortSendUITests" */;
+			buildPhases = (
+				094895FF233A53FD00802E2D /* Sources */,
+				09489600233A53FD00802E2D /* Frameworks */,
+				09489601233A53FD00802E2D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				09489605233A53FD00802E2D /* PBXTargetDependency */,
+			);
+			name = CFMessagePortSendUITests;
+			productName = CFMessagePortSendUITests;
+			productReference = 09489603233A53FD00802E2D /* CFMessagePortSendUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		094895D5233A53FB00802E2D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1100;
+				ORGANIZATIONNAME = chengjian;
+				TargetAttributes = {
+					094895DC233A53FB00802E2D = {
+						CreatedOnToolsVersion = 11.0;
+					};
+					094895F7233A53FD00802E2D = {
+						CreatedOnToolsVersion = 11.0;
+						TestTargetID = 094895DC233A53FB00802E2D;
+					};
+					09489602233A53FD00802E2D = {
+						CreatedOnToolsVersion = 11.0;
+						TestTargetID = 094895DC233A53FB00802E2D;
+					};
+				};
+			};
+			buildConfigurationList = 094895D8233A53FB00802E2D /* Build configuration list for PBXProject "CFMessagePortSend" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 094895D4233A53FB00802E2D;
+			productRefGroup = 094895DE233A53FB00802E2D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				094895DC233A53FB00802E2D /* CFMessagePortSend */,
+				094895F7233A53FD00802E2D /* CFMessagePortSendTests */,
+				09489602233A53FD00802E2D /* CFMessagePortSendUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		094895DB233A53FB00802E2D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				094896A9233B1EF300802E2D /* LaunchScreen.storyboard in Resources */,
+				094895ED233A53FD00802E2D /* Assets.xcassets in Resources */,
+				094895EB233A53FB00802E2D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		094895F6233A53FD00802E2D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		09489601233A53FD00802E2D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		094895D9233A53FB00802E2D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				094895E8233A53FB00802E2D /* ViewController.m in Sources */,
+				094895E2233A53FB00802E2D /* AppDelegate.m in Sources */,
+				094895F3233A53FD00802E2D /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		094895F4233A53FD00802E2D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		094895FF233A53FD00802E2D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		094895FA233A53FD00802E2D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 094895DC233A53FB00802E2D /* CFMessagePortSend */;
+			targetProxy = 094895F9233A53FD00802E2D /* PBXContainerItemProxy */;
+		};
+		09489605233A53FD00802E2D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 094895DC233A53FB00802E2D /* CFMessagePortSend */;
+			targetProxy = 09489604233A53FD00802E2D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		094895E9233A53FB00802E2D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				094895EA233A53FB00802E2D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		094896A7233B1EF300802E2D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				094896A8233B1EF300802E2D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0948960A233A53FD00802E2D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		0948960B233A53FD00802E2D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0948960D233A53FD00802E2D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 65T72LT3SH;
+				INFOPLIST_FILE = CFMessagePortSend/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = qq.CFMessagePortSend;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		0948960E233A53FD00802E2D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 65T72LT3SH;
+				INFOPLIST_FILE = CFMessagePortSend/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = qq.CFMessagePortSend;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		09489610233A53FD00802E2D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 65T72LT3SH;
+				INFOPLIST_FILE = CFMessagePortSendTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = qq.CFMessagePortSendTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CFMessagePortSend.app/CFMessagePortSend";
+			};
+			name = Debug;
+		};
+		09489611233A53FD00802E2D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 65T72LT3SH;
+				INFOPLIST_FILE = CFMessagePortSendTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = qq.CFMessagePortSendTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CFMessagePortSend.app/CFMessagePortSend";
+			};
+			name = Release;
+		};
+		09489613233A53FD00802E2D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 65T72LT3SH;
+				INFOPLIST_FILE = CFMessagePortSendUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = qq.CFMessagePortSendUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CFMessagePortSend;
+			};
+			name = Debug;
+		};
+		09489614233A53FD00802E2D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 65T72LT3SH;
+				INFOPLIST_FILE = CFMessagePortSendUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = qq.CFMessagePortSendUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CFMessagePortSend;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		094895D8233A53FB00802E2D /* Build configuration list for PBXProject "CFMessagePortSend" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0948960A233A53FD00802E2D /* Debug */,
+				0948960B233A53FD00802E2D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0948960C233A53FD00802E2D /* Build configuration list for PBXNativeTarget "CFMessagePortSend" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0948960D233A53FD00802E2D /* Debug */,
+				0948960E233A53FD00802E2D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0948960F233A53FD00802E2D /* Build configuration list for PBXNativeTarget "CFMessagePortSendTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				09489610233A53FD00802E2D /* Debug */,
+				09489611233A53FD00802E2D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		09489612233A53FD00802E2D /* Build configuration list for PBXNativeTarget "CFMessagePortSendUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				09489613233A53FD00802E2D /* Debug */,
+				09489614233A53FD00802E2D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 094895D5233A53FB00802E2D /* Project object */;
+}

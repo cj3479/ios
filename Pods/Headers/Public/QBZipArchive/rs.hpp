@@ -1,0 +1,1 @@
+../../../QBZipArchive/QBZipArchive/Classes/unrar/rs.hpp

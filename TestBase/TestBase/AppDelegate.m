@@ -7,19 +7,40 @@
 //
 
 #import "AppDelegate.h"
-
+#import "ViewController.h"
+#import <Rqd/CrashReporter.h>
 @interface AppDelegate ()
 
 @end
 
 @implementation AppDelegate
 
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+//    [[NSBundle bundleWithPath:@"/Applications/InjectionIII.app/Contents/Resources/iOSInjection.bundle"] load];
+//    [[[NSBundle alloc] initWithPath:@"/Applications/InjectionIII.app/Contents/Resources/iOSInjection.bundle"] load];
     // Override point for customization after application launch.
+    NSLog(@"application initWithPath 当前栈信息1111：%@", [NSThread callStackSymbols]);
+//    [self redirectConsoleLog];
+//    ViewController *vc = [[ViewController alloc] init];
+//    UINavigationController *navgationController = [[UINavigationController alloc]initWithRootViewController:vc];
+//    //    self.navgationController = [[UINavigationController alloc]initWithRootViewController:vc];
+//    self.window.rootViewController = navgationController;
+//    UIWindow *window = [UIApplication sharedApplication].delegate.window;
+    [[CrashReporter sharedInstance] setUserId:@"2004"];
+//    [[CrashReporter sharedInstance] startBlockMonitor];//非后台启动了，自动再开启卡顿上报.
     return YES;
 }
 
+-(void)redirectConsoleLog{
+#ifdef DEBUG
+    NSString *documentDir = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
+    NSLog(@"documentPath : %@",documentDir);
+    
+    //重定向NSLog
+    NSString* logPath = [documentDir stringByAppendingPathComponent:@"console.log"];
+    freopen([logPath fileSystemRepresentation], "a+", stderr);
+#endif
+}
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
@@ -27,24 +48,27 @@
 }
 
 
-- (void)applicationDidEnterBackground:(UIApplication *)application {
-    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
-    // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+// 当应用程序入活动状态执行，这个刚好跟上面那个方法相反
+- (void)applicationDidBecomeActive:(UIApplication *)application{
+    NSLog(@"chengjian_socket_send applicationDidBecomeActive");
+    
+}
+//当程序被推送到后台的时候调用。所以要设置后台继续运行，则在这个函数里面设置即可
+- (void)applicationDidEnterBackground:(UIApplication *)application{
+     NSLog(@"chengjian_socket_send applicationDidEnterBackground");
 }
 
-
-- (void)applicationWillEnterForeground:(UIApplication *)application {
-    // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
+//当程序从后台将要重新回到前台时候调用，这个刚好跟上面的那个方法相反。
+- (void)applicationWillEnterForeground:(UIApplication *)application{
+    NSLog(@"chengjian_socket_send applicationWillEnterForeground");
 }
-
-
-- (void)applicationDidBecomeActive:(UIApplication *)application {
-    // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+//当程序将要退出是被调用，通常是用来保存数据和一些退出前的清理工作。这个需要要设置UIApplicationExitsOnSuspend的键值。
+- (void)applicationWillTerminate:(UIApplication *)application{
+    NSLog(@"chengjian_socket_send applicationWillTerminate");
 }
-
-
-- (void)applicationWillTerminate:(UIApplication *)application {
-    // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+//当程序载入后执行
+- (void)applicationDidFinishLaunching:(UIApplication*)application{
+    NSLog(@"chengjian_socket_send applicationDidFinishLaunching");
 }
 
 

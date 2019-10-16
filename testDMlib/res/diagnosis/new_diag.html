@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta name=viewport content="width=device-width,user-scalable=no,initial-scale=1,minimum-scale=1,maximum-scale=1"/>
+<meta name=apple-mobile-web-app-capable content="yes"/>
+<meta name=apple-mobile-web-app-status-bar-style content="black"/>
+<meta name=format-detection content="telephone=no,address=no"/>
+<title>网络诊断</title>
+<link href=css/main.css rel=stylesheet type="text/css"/>
+<style>.hide{display:none}a,p{-webkit-tap-highlight-color:rgba(0,0,0,0;)}#page4::before{background:0}.page1:before{bottom:40%}.page1{position:relative;text-align:center;font-size:1.2rem;height:50%}@media screen and (orientation:landscape){.page1{height:80%}}.page1 h1{top:60%}.refresh-btn{padding-left:10px;color:#49a2f0}.comic-like{width:100%;text-align:center;font-size:1rem;color:#4a4a4a;margin-top:1rem}.comic-short-line{display:inline-block;width:4.28rem;height:1px;transform:scale(1,0.5);background-color:rgba(216,216,216,1);margin:0 .52rem;vertical-align:middle}</style>
+</head>
+<body>
+<div class=page1 id=page1>
+<h1><span class=h1_tit>无法打开网页, </span><span class=refresh-btn id=page1p>点击刷新</span></h1>
+<p>点击空白处刷新</p>
+<footer><span id=changeNet>切换网络</span><h> |</h>
+<span id=diagLink>诊断网络</span></footer>
+</div>
+<div class=page5 id=page5>
+<div id=G-ln-app></div>
+</div>
+<div class="page2 hide" id=page2>
+<p>正在诊断...</p>
+</div>
+<div class="page3 hide" id=page3>
+<h1>DNS解析出错</h1>
+<div class=short>
+<p class=first-line>您可尝试以下方法后刷新该网页:</p>
+<p>1.确认网络是否正常连接</p>
+<p>2.确认网址是否输入正确</p>
+<p>3.切换云加速状态（设置-省流加速）</p>
+<p>4.切换广告过滤状态（设置-省流加速）</p>
+<p>5.清理缓存（设置-清除数据）</p>
+</div>
+<p><a id=showErrorLink>展开错误详情</a></p>
+<div class="detail hide">
+<div class=detail-item>
+<h2>错误代码</h2>
+<p id=errInfoCode></p>
+</div>
+<div class=detail-item>
+<h2>原因</h2>
+<p id=errInfoReason></p>
+</div>
+<div class=detail-item>
+<h2>失败阶段</h2>
+<p id=errFail></p>
+</div>
+<div class=detail-item>
+<h2>网络状态</h2>
+<p>云加速：<span id=cloudSpeedUp></span></p>
+<p>网络类型：<span id=network></span></p>
+<p id=accessPointP>接入点名称：<span id=accessPoint></span></p>
+</div>
+<div class=detail-item>
+<h2>失败网址</h2>
+<p id=errUrl></p>
+</div>
+</div>
+<div class=btn-group>
+<p><a class=btn id=uploadBtn>上传错误</a></p>
+<p>上传错误，帮助我们持续优化您的浏览体验。</p>
+</div>
+</div>
+<div class="page1 hide" id=page4>
+<h1>网络正常</h1>
+</div>
+<script src=js/x5_native.js></script>
+<script>var $=function(b,a){a=a||document;return a.querySelector(b)};var has=function(a,b){if(!a){return false}if("contains" in a){return a.contains(b)}else{return a.compareDocumentPosition(b)%16}};var page1=$("#page1");var page2=$("#page2");var page3=$("#page3");var page4=$("#page4");var page5=$("#page5");function finishWithErrorInfo(a){page2.style.display="none";a=a||{summaryError:"DNS解析出错111",errInfoCode:-130,errInfoReason:"net::ERR_PROXY_CONNECTION_FAILED",errFail:"发起请求",errUrl:"http://xxx.com",net:{cloudSpeedUp:"云加速",accessPoint:"接入点xxx",network:"222"}};$("#errInfoCode").innerHTML=a.errInfoCode;$("#errInfoReason").innerHTML=a.errInfoReason;$("#errFail").innerHTML=a.errFail;$("#errUrl").innerHTML=a.errUrl;$("#network").innerHTML=a.net.network;$("#cloudSpeedUp").innerHTML=a.net.cloudSpeedUp;$("#accessPoint").innerHTML=a.net.accessPoint;$("#accessPointP").style.display=/wi\-?fi/gi.test(a.net.network)?"block":"none";$("h1",page3).innerHTML=a.summaryError;page3.style.display="block";page5.style.display="none"}function finishWithOtherInfo(){page2.style.display="none";page1.addEventListener("touchend",reload);page4.style.display="block";page5.style.display="none"}function finishUpload(){console.log("finishUpload");$("#uploadBtn").removeEventListener("touchstart",uploadStartFun);$("#uploadBtn").removeEventListener("touchend",uploadFun);$("#uploadBtn").innerHTML="上传成功"}function reload(g){if(moved){return}g=g||window.event;var d=document.getElementById("page1p");var h=document.getElementById("changeNet");var a=document.getElementById("diagLink");var f=$("p",page1);var c=$("h1",page4);var b=$("p",page4);if(f!==g.target&&!has(f,g.target)&&h!==g.target&&a!==g.target&&c!==g.target&&!has(c,g.target)&&b!==g.target&&!has(b,g.target)){console.log("reload...");x5.reload(function(){console.log("reload");if(g.target!==d){sendLog("BSEH11")}else{sendLog("BSEH10")}},function(e){console.log(e)})}}function uploadStartFun(a){$("#uploadBtn").className+=" active"}function uploadFun(a){uploadBtn.className=uploadBtn.className.replace(/ active/gi,"");x5.uploadDiagnosisInfo(function(b){console.log("uploadDiagnosisInfo");finishUpload()},function(b){console.log(b)})}var moved=false;window.onload=function(){x5.errorCode(function(e){var d=e||{};var f=d.errorCode||0;var f=1;var c={"0":{errInfo:"Wi-Fi和移动网络已断开",helpInfo:""},"1":{errInfo:"无法打开网页,",helpInfo:""},"2":{errInfo:"该页面显示重复出现问题,",helpInfo:""}};$(".h1_tit",page1).innerHTML=c[f+""]["errInfo"];$("p",page1).innerHTML=c[f+""]["helpInfo"];if(f==1||f==2){loadScript("http://res.imtt.qq.com/res_mtt/qbmoney/notfound/notfound.js?ver="+ +new Date());sendLog("BSEH01")}if(f==0){$("footer",page1).style.display="none"}else{$("footer",page1).style.display="block"}},function(c){console.log(c)});page1.addEventListener("touchstart",function(c){moved=false});page1.addEventListener("touchmove",function(c){if(moved){return}moved=true});page1.addEventListener("touchend",reload);window.addEventListener("onorientationchange" in window?"orientationchange":"resize",function(){if(window.orientation===180||window.orientation===0){page1.style.height="70%"}if(window.orientation===90||window.orientation===-90){page1.style.height="100%"}},false);$("#diagLink").addEventListener("touchend",function(c){c=c||window.event;page1.style.display="none";page5.style.display="none";page1.removeEventListener("touchend",reload);page2.style.display="block";x5.diagnosis(function(d){console.log("diagnosis");finishWithErrorInfo(d)},function(d){console.log(d)})});$("#changeNet").addEventListener("touchend",function(c){console.log("changeNetWork");x5.changeNetWork(function(){console.log("changeNetWork")},function(d){console.log(d)})});var b=$("#uploadBtn");b.addEventListener("touchstart",uploadStartFun);b.addEventListener("touchend",uploadFun);b.addEventListener("touchcancel",function(){b.className=b.className.replace(/ active/gi,"")});var a=document.getElementById("errorNo");$("#showErrorLink").addEventListener("touchend",function(){var c=$(".detail").style.display=="block";$(".detail").style.display=c?"none":"block";this.innerHTML=c?"展开错误详情":"隐藏错误详情"})};function loadScript(d,a){var c=document.createElement("script");var b=document.getElementsByTagName("body")[0];c.src=d;b.appendChild(c);c.onload=c.onreadystatechange=function(){if(!this.readyState||this.readyState==="loaded"||this.readyState==="complete"){a&&a()}}}function sendLog(a){try{x5.exec(null,function(){},"app","reportQBIncreaseValue",[{increaseValue:a}])}catch(b){console.log(b)}};</script>
+</body>
+</html>

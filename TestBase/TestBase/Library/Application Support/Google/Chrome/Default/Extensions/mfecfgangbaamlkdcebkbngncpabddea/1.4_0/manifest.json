@@ -1,0 +1,44 @@
+{
+   "description": "A simple and beautiful Summer Theme To Enjoy !",
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAmjRsT6MRHQh9nHQldi7PSFeel3kvDqtmS9Tc4MUWSHukuyuRokugdNb4yZfKQOWG+Sd85QnwxWp12nBrZNyBvT7DvOe7/rw64Z1DQ28zFq8pF/BQp8Aj023AxJudxb7SopbQRrZ5MPfnn++ATv4fTMDMqXRavcio8QrI4GlCO4jwpbg8gjPg2RHlxXUVV7WtcSHayDwsXLZv2+bGHsMt6+HBaqPea+21+LNwRN1/Cp0zgxZkFpGqQSvmbavC4NygoFaqvyH+TRXsxS8w5y67FfHTnhuHVHLWwzY63aBgDUr8pF1h+/N0wztZYrKYjyJJvlRvG2g2wI6VIAgQVaMLTwIDAQAB",
+   "manifest_version": 2,
+   "name": "Summer Holidays",
+   "theme": {
+      "colors": {
+         "bookmark_text": [ 0, 0, 0 ],
+         "frame": [ 3, 157, 221 ],
+         "frame_inactive": [ 3, 162, 228 ],
+         "frame_incognito": [ 3, 157, 221 ],
+         "frame_incognito_inactive": [ 3, 162, 228 ],
+         "ntp_background": [ 0, 0, 0 ],
+         "ntp_header": [ 0, 0, 0 ],
+         "ntp_text": [ 0, 0, 0 ],
+         "tab_background_text": [ 0, 0, 0 ],
+         "tab_text": [ 0, 0, 0 ],
+         "toolbar": [ 142, 214, 229 ]
+      },
+      "images": {
+         "theme_frame": "images/frame.png",
+         "theme_frame_inactive": "images/frame_inactive.png",
+         "theme_frame_incognito": "images/frame_incognito.png",
+         "theme_frame_incognito_inactive": "images/frame_incognito_inactive.png",
+         "theme_ntp_background": "images/mytheme.png",
+         "theme_tab_background": "images/tab.png",
+         "theme_tab_background_incognito": "images/tab_background_incognito.png",
+         "theme_toolbar": "images/toolbar.png"
+      },
+      "properties": {
+         "ntp_background_alignment": "center",
+         "ntp_background_repeat": "no-repeat",
+         "ntp_logo_alternate": 1
+      },
+      "tints": {
+         "buttons": [ 0.5, 0.5, 0.5 ],
+         "frame_inactive": [ 3, 162, 228 ],
+         "frame_incognito": [ 198, 97, 44 ],
+         "frame_incognito_inactive": [ 198, 47, 45 ]
+      }
+   },
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.4"
+}

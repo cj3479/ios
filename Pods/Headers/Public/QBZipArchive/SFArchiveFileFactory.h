@@ -1,0 +1,1 @@
+../../../QBZipArchive/QBZipArchive/Classes/ZipArchive/ZipArchive/ArchiveAll/Interface/SFArchiveFileFactory.h

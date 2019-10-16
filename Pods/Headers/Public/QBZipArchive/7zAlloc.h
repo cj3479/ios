@@ -1,0 +1,1 @@
+../../../QBZipArchive/QBZipArchive/Classes/ZipArchive/ZipArchive/ArchiveAll/Library/lzma/7zAlloc.h
