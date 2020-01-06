@@ -8,6 +8,7 @@
 
 #import "Teststaticlib.h"
 #import "LibPerson.h"
+//#import "testFWStatic.h"
 @implementation Teststaticlib
 -(void)testslib11:(NSString *)name{
     [LibPerson eat22];

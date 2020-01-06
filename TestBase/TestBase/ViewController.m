@@ -306,6 +306,8 @@ typedef enum : NSUInteger {
 //const CGFloat scaleUItopImgViewW = 80;
 extern int bbb;
 extern int bb;
+//注册接口实现
+QBM_EXPORT_MODULE_PROTOCOL(SampleProtocolDelegate, ViewController);
 //extern NSDictionary* defaultTitlesGroup;
 @implementation ViewController{
     TestRunLoop *runloop;
@@ -445,6 +447,7 @@ extern int bb;
 //- (void)layoutSubviews {
 //}
 - (void)viewDidLoad {
+//    NSAssert(NO, @"建议看看是什么场景异常了");
 //    [testFWStatic getImage];
      // 获取info字典
     NSString *bundlePath = [[NSBundle mainBundle] pathForResource:@"Info" ofType:@"plist"];
@@ -728,11 +731,20 @@ extern int bb;
 
 
 - (void)runOnNewThread {
-//    TestRunLoop *runloop = [[TestRunLoop alloc]init];
-//    [runloop testBlock];
-    runloop = [[TestRunLoop alloc]init];
-    [runloop testPort];
+    TestRunLoop *runloop1 = [[TestRunLoop alloc]init];
+    runloop1.age = 10l;
+    [runloop1 testBlock];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//        [runloop testBlock];
+        NSLog(@"chengjian touchesBegan....");
+    });
+    NSLog(@"chengjian touchesBegan....%d",runloop1.age);
+    //crash test
+//    TestRunLoop *runloop1 = [[TestRunLoop alloc]init];
+//    [runloop1 testPort];
+    NSLog(@"chengjian touchesBegan....");
 }
+
 - (void)test {
 //    NSLog("@chengjian test....")
 }
@@ -853,9 +865,9 @@ extern int bb;
         }
     }
 }
-//- (void)viewWillAppear:(BOOL)animated{
-//    NSLog(@"chengjian viewWillAppear");
-//}
+- (void)viewWillAppear:(BOOL)animated{
+    NSLog(@"chengjian viewWillAppear");
+}
 - (void)consumerAction{
     
     //异常捕捉

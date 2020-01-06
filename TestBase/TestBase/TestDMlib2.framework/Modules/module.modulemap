@@ -1,0 +1,6 @@
+framework module TestDMlib2 {
+  umbrella header "TestDMlib2.h"
+
+  export *
+  module * { export * }
+}

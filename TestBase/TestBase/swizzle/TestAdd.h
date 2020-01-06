@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "Person.h"
 NS_ASSUME_NONNULL_BEGIN
-@interface TestAdd : Person
+@interface TestAdd : NSObject
 + (void)loadTest;
 @end
 

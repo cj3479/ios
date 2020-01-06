@@ -23,6 +23,12 @@
 #import "swizzle/Person+swizzle.h"
 #import "swizzle/TestAdd.h"
 #import "swizzle/ViewController+appear.h"
+//#import "LzmaSDKObjCReader.h"
+#include "compression.h"
+#include "testDMlib/TestStaticlib22.h"
+#include <string>
+using namespace std;
+//#import "Flutter/Flutter.h"
 //#import "TestViewController.h"
 typedef unsigned long long QUINT64;
 #define FBKVOKeyPath(KEYPATH) \
@@ -70,9 +76,179 @@ typedef NS_ENUM (QUINT64, BigCellType) {
     BigCellType_InterActive = 2, //随心互动类型广告
 };
 #define AA 1
+
+void showAllFileWithPath(NSString * path) {
+    NSFileManager * fileManger = [NSFileManager defaultManager];
+    BOOL isDir = NO;
+    BOOL isExist = [fileManger fileExistsAtPath:path isDirectory:&isDir];
+    if (isExist) {
+        if (isDir) {
+            NSArray * dirArray = [fileManger contentsOfDirectoryAtPath:path error:nil];
+            NSString * subPath = nil;
+            for (NSString * str in dirArray) {
+                subPath  = [path stringByAppendingPathComponent:str];
+                if([subPath hasSuffix:@"ios.jsbundle"]){
+                    NSLog(@"chengjian subPath=%@",subPath);
+                    NSString *zipFilePath = [subPath stringByAppendingString:@".7z"];
+                    NSData *fileData = [NSData dataWithContentsOfFile:subPath];
+                    uint8_t dstBuffer[fileData.length];
+                    memset(dstBuffer, 0, fileData.length);
+
+                    size_t compressResultLength = compression_encode_buffer(dstBuffer, fileData.length, [fileData bytes], fileData.length, NULL, COMPRESSION_LZMA);
+                    if(compressResultLength > 0) {
+                        NSData *dataAfterCompress = [NSData dataWithBytes:dstBuffer length:compressResultLength];
+                        NSLog(@"Compress successfully. After compress：%lu bytes", (unsigned long)dataAfterCompress.length);
+                        // Write compressed data into file.
+                        [dataAfterCompress writeToFile:zipFilePath atomically:YES];
+                    } else {
+                        NSLog(@"Compress FAILED!!!");
+                    }
+                }
+                BOOL issubDir = NO;
+                [fileManger fileExistsAtPath:subPath isDirectory:&issubDir];
+                showAllFileWithPath(subPath);
+            }
+        }else{
+            NSString *fileName = [[path componentsSeparatedByString:@"/"] lastObject];
+            if ([fileName hasSuffix:@".m"]) {
+                //do anything you want
+            }
+        }
+    }else{
+        NSLog(@"this path is not exist!");
+    }
+}
+
+//class MyTest
+//
+//{
+//
+//public:
+//
+//    MyTest();
+//
+//    void Print();
+//
+//};
+//
+//
+//
+//MyTest::MyTest()
+//
+//{
+//
+//}
+//
+//void MyTest::Print()
+//
+//{
+//    std("MyTest::Print!\n");
+//}
 //#define AAA 10
 int main(int argc, char *argv[])
 {
+    
+//    string str = "i love you ";
+//
+//       NSLog(@"%s",str.c_str());
+//
+//       MyTest* pTest = new MyTest;
+//
+//       pTest->Print();
+//    auto_ptr<Test> ptest(new Test("123"));
+//    ptest->setStr("hello ");
+//    ptest->print();
+//    ptest.get()->print();
+//    ptest->getStr() += "world !";
+//    (*ptest).print();
+//    ptest.reset(new Test("123"));
+//    ptest->print();
+    NSString *docDir11 = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject];
+    NSString *folderPath =[NSString stringWithFormat:@"%@/res/rn/" ,docDir11];
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    if(![fileManager fileExistsAtPath:folderPath]){
+        [fileManager createDirectoryAtPath:folderPath withIntermediateDirectories:YES attributes:nil error:nil];
+    }
+    // Data source file path.
+//    NSString *sourceFilePath = [NSString stringWithFormat:@"%@/rn/circle/index.ios.jsbundle",[[NSBundle mainBundle]bundlePath]];
+    NSString *sourceFilePath = [NSString stringWithFormat:@"%@/index.ios.jsbundle",[[NSBundle mainBundle]bundlePath]];
+    showAllFileWithPath([NSString stringWithFormat:@"%@/rn",[[NSBundle mainBundle]bundlePath]]);
+////    NSString*documentPath =NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask,YES).firstObject;
+////
+////    // Compressed file path.
+    NSString *zipFilePath = [sourceFilePath stringByAppendingString:@".7z"];
+////   NSString *zipFilePath = [NSString stringWithFormat:@"%@/index.ios.jsbundle.7z",[[NSBundle mainBundle]bundlePath]];
+////
+//    NSData *fileData = [NSData dataWithContentsOfFile:sourceFilePath];
+////    NSLog(@"Before compress: %ld bytes", fileData.length);
+//
+//    uint8_t dstBuffer[fileData.length];
+//    memset(dstBuffer, 0, fileData.length);
+//
+//    size_t compressResultLength = compression_encode_buffer(dstBuffer, fileData.length, [fileData bytes], fileData.length, NULL, COMPRESSION_LZMA);
+//    if(compressResultLength > 0) {
+//        NSData *dataAfterCompress = [NSData dataWithBytes:dstBuffer length:compressResultLength];
+//        NSLog(@"Compress successfully. After compress：%ld bytes", dataAfterCompress.length);
+//        // Write compressed data into file.
+//        [dataAfterCompress writeToFile:zipFilePath atomically:YES];
+//    } else {
+//        NSLog(@"Compress FAILED!!!");
+//    }
+//    free(dstBuffer);
+//    NSLog(@"compress end");
+//    sleep(3);
+//    NSLog(@"compress end11");
+    // Compressed file path.
+//     NSString *destFilePath = [[NSBundle mainBundle]bundlePath];
+//    NSLog(@"decompress start");
+//    NSString *destFilePath = [NSString stringWithFormat:@"%@_1111111",zipFilePath];
+    NSString *docDir = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject];
+    NSString *destFilePath = [NSString stringWithFormat:@"%@/111.index.ios.jsbundle",docDir];
+    NSString *destPath =[zipFilePath stringByDeletingLastPathComponent];
+    uint8_t *destBuffer = (uint8_t *)malloc(1024*1024*3);
+    NSData *sourceData = [NSData dataWithContentsOfFile:zipFilePath];
+    NSLog(@"Before decompress sourceData: %ld bytes", sourceData.length);
+//    uint8_t sourceBuffer[sourceData.length];
+//    memset(sourceBuffer, 0, sourceData.length);
+    memset(destBuffer, 0, sourceData.length);
+    size_t decompressLen =compression_decode_buffer(destBuffer,1024*1024*3,sourceData.bytes,sourceData.length,NULL, COMPRESSION_LZMA);
+    NSLog(@"Before decompress length: %ld bytes", decompressLen);
+    if (decompressLen > 0) {
+        NSData *newData = [NSData dataWithBytes:destBuffer length:decompressLen];
+        [newData writeToFile:destFilePath atomically:YES];
+        NSLog(@"decompress: %ld",decompressLen);
+
+    }else{
+        NSLog(@"decompressLen error!");
+    }
+    free(destBuffer);
+    BOOL result = [[NSFileManager defaultManager] fileExistsAtPath:destFilePath];
+     NSLog(@"这个文件已经存在：%@",result?@"是的":@"不存在");
+//    NSLog(@"decompress end");
+//    [NSThread currentThread] s
+    // Select full path to archive file with 7z extension.
+//    NSString * archivePath = @"index.ios.jsbundle.7z";
+
+//    // 1.1 Create and hold strongly reader object.
+//    LzmaSDKObjCReader *reader = [[LzmaSDKObjCReader alloc] initWithFileURL:[NSURL fileURLWithPath:archivePath]];
+    // 1.2 Or create with predefined archive type if path doesn't containes suitable extension
+//    LzmaSDKObjCReader *reader = [[LzmaSDKObjCReader alloc] initWithFileURL:[NSURL fileURLWithPath:archivePath]
+//                             andType:LzmaSDKObjCFileType7z];
+//    NSError * error = nil;
+//    if (![reader open:&error]) {
+//        NSLog(@"Open error: %@", error);
+//    }
+//    NSLog(@"Open error: %@", reader.lastError);
+    // Optionaly: assign weak delegate for tracking extract progress.
+//    reader.delegate = self;
+
+    // If achive encrypted - define password getter handler.
+    // NOTES:
+    // - Encrypted file needs password for extract process.
+    // - Encrypted file with encrypted header needs password for list(iterate) and extract archive items.
+//    _reader.passwordGetter = ^NSString*(void){
+//        return @"password to my achive";
+//    };
 //    TestViewController *vc = [[TestViewController alloc]init];
 //    NSLog(@"chengjian vc = %@",vc);
 //    int abc = AAA;
@@ -92,8 +268,8 @@ int main(int argc, char *argv[])
 //       NSLog(@"main22: %d", AAA);
 //       #endif
 
-    TestAFnetworking *af = [[TestAFnetworking alloc]init];
-    [af testAFDownload];
+//    TestAFnetworking *af = [[TestAFnetworking alloc]init];
+//    [af testAFDownload];
 //    [NSJSONSerialization swizzleClassMethod:@selector(dataWithJSONObject:options:error:) withClassMethod:@selector(qgw_dataWithJSONObject:options:error:)];
     NSMutableDictionary *funcExtInfo = [NSMutableDictionary new];
     [funcExtInfo setValue:@"abcd" forKey:@"source_id"];
@@ -109,7 +285,6 @@ int main(int argc, char *argv[])
     [funcExtInfo setValue:@(1) forKey:@"content_type"];     //图集0，视频1
     //根据后台要求删除口径曝光，后台默认值是1
     //    [funcExtInfo setValue:@(2) forKey:@"stat_type"]; //1--严口径曝光，2--宽口径曝光
-    NSDictionary *result = nil;
     NSData *jsonData = [NSJSONSerialization dataWithJSONObject:funcExtInfo options:NSJSONWritingPrettyPrinted error:nil];
     NSString *jsonStr = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
 
@@ -127,8 +302,8 @@ int main(int argc, char *argv[])
     NSMutableArray *testMA = [[NSMutableArray alloc] init];
     Person *Person11 = [[Person alloc]init];
 //    [Person11 sayHello11];
-    LibPerson *Person222222 = [[LibPerson alloc]init];
-    [Person222222 watch];
+//    LibPerson *Person222222 = [[LibPerson alloc]init];
+//    [Person222222 watch];
 //    [Person222222 eat];
 //    [Person222222 watch22];
 //    [Person222222 haha];
@@ -360,7 +535,7 @@ int main(int argc, char *argv[])
     Person *person33 = [Person alloc];
     person33.name = @"1239999";
     NSLog(@"222222 person33=%@,name=%@", person33, person33.name);
-    LibPerson *person11 = [[LibPerson alloc]init];
+//    LibPerson *person11 = [[LibPerson alloc]init];
 //    Teststaticlib *lib = [[Teststaticlib alloc]init];
 //    [lib testslib:@"ddddddd"];
 //    [person11 performSelectorOnMainThread:@selector(eat) withObject:nil waitUntilDone:NO];
@@ -435,12 +610,20 @@ int main(int argc, char *argv[])
 //        return a1>=a2?-1:1;
 //    }];
 //    NSLog(@"%@",array);
-    [Person loadTest];
+    [TestAdd loadTest];
+//     [ViewController loadTest];
+//     [Person loadTest];
     Person *testSWitchPerson = [[Person alloc]init];
     [testSWitchPerson sayHello];
-    [ViewController loadTest];
+    TestAdd *testAdd = [[TestAdd alloc]init];
+    [testAdd add_sayHello];
+//
+//    [testSWitchPerson sayHello];
+   
     @autoreleasepool {
         return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
+//        NSLog(@"11111111");
     }
+    NSLog(@"chengjian he 222222222");
 //    return 1;
 }

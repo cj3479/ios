@@ -11,6 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface TestRunLoop : NSObject<NSPortDelegate>
+@property (nonatomic, assign)int age;
 -(void)testBlock;
 -(void)testPort;
 @end

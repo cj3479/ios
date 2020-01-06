@@ -1,0 +1,6 @@
+framework module TestExternalStaticFW {
+  umbrella header "TestExternalStaticFW.h"
+
+  export *
+  module * { export * }
+}

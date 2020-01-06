@@ -1,0 +1,6 @@
+framework module TestExternalDMLib {
+  umbrella header "TestExternalDMLib.h"
+
+  export *
+  module * { export * }
+}

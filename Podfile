@@ -43,8 +43,9 @@ target 'TestBase' do
   source 'https://github.com/CocoaPods/Specs.git'
   pod 'AFNetworking', '~> 2.5'
 #  pod 'testCj123Pods', '~> 0.1.4'
-#  qbTBS_shared
+  qbTBS_shared
 #  qbLJ_shared
-  qbFeedsTBS_shared
+#  qbFeedsTBS_shared
+#  pod 'LzmaSDK-ObjC', :inhibit_warnings => true
 end
 

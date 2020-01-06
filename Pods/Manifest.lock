@@ -23,17 +23,12 @@ PODS:
   - SDWebImage (4.3.3):
     - SDWebImage/Core (= 4.3.3)
   - SDWebImage/Core (4.3.3)
-  - testCj123Pods (0.1.4):
-    - AFNetworking (~> 2.5)
 
 DEPENDENCIES:
   - AFNetworking (~> 2.5)
   - SDWebImage (~> 4.3.2)
-  - testCj123Pods (~> 0.1.4)
 
 SPEC REPOS:
-  https://github.com/cj3479/testPods.git:
-    - testCj123Pods
   https://github.com/CocoaPods/Specs.git:
     - AFNetworking
     - SDWebImage
@@ -41,8 +36,7 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   AFNetworking: 8dd5f9b9691e09186393069a12cc3b5ed7c8b511
   SDWebImage: de4d90b5bff3571eae7bd16202b1f43135409fa5
-  testCj123Pods: 8fec4070a0a761db42178255e1db7dea88adde07
 
-PODFILE CHECKSUM: bb91bd1b663b1e17a09bdbb87837bb189b02ce52
+PODFILE CHECKSUM: c5406ce68d82f7a2e59e359accbed31852ec9ac5
 
 COCOAPODS: 1.8.1
