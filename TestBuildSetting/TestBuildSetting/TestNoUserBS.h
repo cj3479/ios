@@ -9,9 +9,9 @@
 #import <Foundation/Foundation.h>
 
 NS_ASSUME_NONNULL_BEGIN
-
+static int vvs = 22;
 @interface TestNoUserBS : NSObject
-
+-(void)testNoUserBS_member;
 @end
 
 NS_ASSUME_NONNULL_END

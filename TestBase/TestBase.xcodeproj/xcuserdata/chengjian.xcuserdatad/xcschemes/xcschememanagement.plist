@@ -7,7 +7,7 @@
 		<key>Happy.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>1</integer>
+			<integer>2</integer>
 		</dict>
 		<key>TestBase copy 2.xcscheme_^#shared#^_</key>
 		<dict>
@@ -24,10 +24,25 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>TestBase_release.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+		<key>TestLibDependencies.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>15</integer>
+		</dict>
 		<key>Teststaticlib2.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>19</integer>
+		</dict>
+		<key>sdasd.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>18</integer>
 		</dict>
 		<key>sss.xcscheme_^#shared#^_</key>
 		<dict>

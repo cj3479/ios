@@ -41,7 +41,12 @@
  // Pass the selected object to the new view controller.
  }
  */
-
+- (void)viewDidAppear:(BOOL)animated{
+    NSLog(@"NextViewController viewDidAppear");
+}
+- (void)viewDidDisappear:(BOOL)animated{
+    NSLog(@"NextViewController viewDidDisappear");
+}
 //- (IBAction)twobutton:(id)sender {
 //    NSLog(@"clickdddddddddddd");
 //    self.labels.text=@"clicking";

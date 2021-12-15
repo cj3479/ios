@@ -9,5 +9,7 @@
 #import "TestDependceStatic.h"
 
 @implementation TestDependceStatic
-
+-(void)testDependce{
+    NSLog(@"chengjian testDependce");
+}
 @end

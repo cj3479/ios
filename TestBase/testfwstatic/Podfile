@@ -1,0 +1,9 @@
+# Uncomment this line to define a global platform for your project
+platform :ios, "10.0"
+#use_frameworks!
+project 'testfwstatic.xcodeproj'
+
+target 'testfwstatic' do
+  pod 'HandyJSON', '~> 5.0.2'
+end
+

@@ -19,17 +19,34 @@
 #import "LibPerson.h"
 #import "TestThread.h"
 #import "MonitorGCD.h"
-#import "TestAFnetworking.h"
+//#import "TestAFnetworking.h"
 #import "swizzle/Person+swizzle.h"
 #import "swizzle/TestAdd.h"
-#import "swizzle/ViewController+appear.h"
+#import "swizzle/TestViewController+appear.h"
 //#import "LzmaSDKObjCReader.h"
 #include "compression.h"
-#include "testDMlib/TestStaticlib22.h"
-#include <string>
-using namespace std;
+//#include "testDMlib/TestStaticlib2.h"
+//#include <string>
+//using namespace std;
 //#import "Flutter/Flutter.h"
-//#import "TestViewController.h"
+//#import "TestDMlib2/TestDMlib2.h"
+//#import "TestDMlib2/TestDMlib2.h"
+//#import "TestDependceStatic/TestDependceStatic.h"
+//#import "TestBase-Swift.h"
+#import  "TestSampleProtocolSub.h"
+#import <objc/runtime.h>
+//#import "TestExternalDMLib/TestExternalDMLib.h"
+//#import "TestStaticLib/TestExterStaticLib.h"
+//#import "TestStaticLib/TestExterStaticLib.h"
+//#import "testDMlib/TestDMLIb1.h"
+//#import "TestViewControllerAA.h"
+
+//#import "AFURLSessionManager.h"
+#import "TestPersonSubOne.h"
+#import "TestPersonSubTwo.h"
+#import "TestLock.h"
+#import "runtime/TestRuntime.h"
+#import <JavaScriptCore/JavaScriptCore.h>
 typedef unsigned long long QUINT64;
 #define FBKVOKeyPath(KEYPATH) \
     @(((void)(NO && ((void)KEYPATH, NO)), \
@@ -145,10 +162,133 @@ void showAllFileWithPath(NSString * path) {
 //    std("MyTest::Print!\n");
 //}
 //#define AAA 10
+#import "TestBase-Swift.h"
+//#import "MeemoSdk/MeemoSdk.h"
+void test(){
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//            NSLog(@"chengjian_dispatch_after");
+        test();
+    });
+}
+
 int main(int argc, char *argv[])
 {
+    TestLiveConfig *sc = [[TestLiveConfig alloc] init];
+    NSLog(@"chengjian_test sc=%@", sc);
+//    [sc sayWithName:@""];
+//    LiveConfig *config = [[LiveConfig alloc] init];
+//    unsigned int methodCount = 0;
+//    Method *methodList = class_copyMethodList([SwiftClass class], &methodCount);
+//    NSMutableArray *methodArray = [NSMutableArray arrayWithCapacity:methodCount];
+//    int iInt1 = (int)methodCount;
+//    for (int i = 0; i < iInt1; i++) {
+//        Method temp = methodList[i];
+//        SEL name_F = method_getName(temp);
+//        const char *name_s = sel_getName(name_F);
+////            int arguments = method_getNumberOfArguments(temp);
+//        const char *encoding = method_getTypeEncoding(temp);
+//        NSLog(@"chengjian_test flutterEgine dealloc  name_s=%s encoding=%s", name_s,encoding);
+//        //  NSLog(@"MethodName: %@,ArgumentCount: %d,EncodingStyle: %@",[NSString stringWithUTF8String:name_s],arguments,[NSString stringWithUTF8String:encoding]);
+//        [methodArray addObject:[NSString stringWithUTF8String:name_s]];
+//    }
+//    if ([sc respondsToSelector:@selector(sayWithName:)]) {
+//        NSLog(@"chengjian_test sayWithName");
+//    }
+//    if ([sc respondsToSelector:@selector(registerWithRegistrar:)]) {
+//        NSLog(@"chengjian_test registerWithRegistrar 111");
+//    }
+//    if ([sc respondsToSelector:@selector(registerWithARegistrar:)]) {
+//        NSLog(@"chengjian_test registerwithARegistrar 111");
+//    }
+//    SEL name_F = @selector(registerWithARegistrar:);
+//    NSLog(@"chengjian_test registerwithARegistrar 111 %@",name_F);
+//    [sc registerWithRegistrar:nil];
+       //系统已经把Swift方法转化为了OC方法
+//   NSString *strsadasd = [sc registerWithRegistrar:nil];
+//   NSLog(@"%@",strsadasd);
+    TestRuntime *runtime = [[TestRuntime alloc] init];
+    [runtime testAA];
+//    id *dd = [runtime testAAsss];
+//    NSLog(@"chengjian_test  %@",dd);
+    id result = [runtime compare:@"dddd"];
+    NSLog(@"chengjian_test  result=%d",result);
+//    [TestRuntime testStatic];
+//    [TestRuntime testStaticAA];
+//  JSContext *jsContext  = [[JSContext alloc] init];
+//    [jsContext evaluateScript:@"var console = {}"];
+//    jsContext[@"console"][@"log"] = ^(NSString *message) {
+//        NSLog(@"Javascript log: %@",message);
+//    };
+    JSContext *jsContext = [[JSContext alloc] init];
+        NSString *path = [[NSBundle mainBundle] pathForResource:@"11" ofType: @"js"];
+        NSString *layoutJS = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil];
+        [jsContext evaluateScript:layoutJS];
+//
+        JSValue *subtractFunc = jsContext[@"subtractFunc"];
+        JSValue *subtractResult = [subtractFunc callWithArguments:@[@20, @10]];
+        NSLog(@"Javascript %d", subtractResult.toInt32);
+    JSContext *context = [JSContext new];
+    JSValue *value1 = [context evaluateScript:@"2+2"];
+    NSLog(@"chengjian %@",value1);
+    TestLock *lock = [TestLock new];
+    [lock testSemaphore];
+    NSMutableDictionary *mpExtParams = [[NSMutableDictionary alloc]init];
+    [mpExtParams setValue:@"QBFeeds_videoFeeds_UI205" forKey:@"style_ID"];
+    NSMutableDictionary *firstVideo = [[NSMutableDictionary alloc]init];
+    [firstVideo addEntriesFromDictionary:mpExtParams];
+    [firstVideo setValue:@"QBFeeds_videoFeeds_UI208" forKey:@"style_ID"];
+    int abc1 = [(NSString *)mpExtParams[@"dsf"] intValue];
     
-//    string str = "i love you ";
+    NSURL *url = [NSURL URLWithString:@"http://cdn.read.html5.qq.com/image?src=video_hot&q=5&h=352&w=704&r=0&imageUrl=http%3A%2F%2Fpuui.qpic.cn%2Fqqvideo_ori%2F0%2Fy3048tn0ohq_1280_720%2F0"];
+    NSURLComponents *urlComponents = [NSURLComponents componentsWithURL:url resolvingAgainstBaseURL:NO];
+
+    // url中参数的key value
+    NSMutableDictionary *parameter = [NSMutableDictionary dictionary];
+    NSURLComponents *urlComponents1 = [NSURLComponents componentsWithURL:url resolvingAgainstBaseURL:YES];
+    for (NSURLQueryItem *item in urlComponents.queryItems) {
+        [parameter setValue:item.value forKey:item.name];
+    }
+    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+        sleep(1);
+        NSLog(@"chengjian 111111111");
+    });
+    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+         NSLog(@"chengjian 222222");
+     });
+    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+        sleep(1);
+         NSLog(@"chengjian 333333");
+     });
+    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+         NSLog(@"chengjian 4444444");
+     });
+    NSMutableArray *result0 = [NSMutableArray arrayWithCapacity:10];
+    [result0 addObject:@"One"];
+    [result0 addObject:@"Two"];
+    NSMutableArray* result1 =[result0 copy];
+    [result0 removeObjectAtIndex:0];
+    TestPersonSubOne *one = [[TestPersonSubOne alloc]init];
+    [one testPersonCatogoryOne];
+    TestPersonSubTwo *two = [[TestPersonSubTwo alloc]init];
+    [two testPersonCatogoryOne];
+    TestSampleProtocolSub *sub = [[TestSampleProtocolSub alloc]init];
+    bool hahha = [sub conformsToProtocol:@protocol(SampleProtocolDelegate)];
+    bool hahha2 = [sub conformsToProtocol:@protocol(SampleProtocolDelegate2)];
+    char * ds2="12345";
+    
+//    TestDependceStatic *ff = [[TestDependceStatic alloc]init];
+////    TestExternalDMLib *lib = [[TestExternalDMLib alloc]init];
+////    NSLog(@"chengjian lib=%@",lib);
+//    NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
+//    AFURLSessionManager *manager = [[AFURLSessionManager alloc] initWithSessionConfiguration:configuration];
+//    NSLog(@"chengjian manager=%@",manager);
+//    
+////    TestExterStaticLib *testStaticLib = [[TestExterStaticLib alloc]init];
+////    [lib testDependce];
+//    TestDMlib2 *dmlib2 = [[TestDMlib2 alloc]init];
+//    TestDMLIb1 *testDMLIb1 = [[TestDMLIb1 alloc]init];
+//    NSLog(@"chengjian testDMLIb1=%@",testDMLIb1);
+//    string str = "i test ";
 //
 //       NSLog(@"%s",str.c_str());
 //
@@ -163,20 +303,20 @@ int main(int argc, char *argv[])
 //    (*ptest).print();
 //    ptest.reset(new Test("123"));
 //    ptest->print();
-    NSString *docDir11 = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject];
-    NSString *folderPath =[NSString stringWithFormat:@"%@/res/rn/" ,docDir11];
-    NSFileManager *fileManager = [NSFileManager defaultManager];
-    if(![fileManager fileExistsAtPath:folderPath]){
-        [fileManager createDirectoryAtPath:folderPath withIntermediateDirectories:YES attributes:nil error:nil];
-    }
+//    NSString *docDir11 = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject];
+//    NSString *folderPath =[NSString stringWithFormat:@"%@/res/rn/" ,docDir11];
+//    NSFileManager *fileManager = [NSFileManager defaultManager];
+//    if(![fileManager fileExistsAtPath:folderPath]){
+//        [fileManager createDirectoryAtPath:folderPath withIntermediateDirectories:YES attributes:nil error:nil];
+//    }
     // Data source file path.
 //    NSString *sourceFilePath = [NSString stringWithFormat:@"%@/rn/circle/index.ios.jsbundle",[[NSBundle mainBundle]bundlePath]];
-    NSString *sourceFilePath = [NSString stringWithFormat:@"%@/index.ios.jsbundle",[[NSBundle mainBundle]bundlePath]];
-    showAllFileWithPath([NSString stringWithFormat:@"%@/rn",[[NSBundle mainBundle]bundlePath]]);
+//    NSString *sourceFilePath = [NSString stringWithFormat:@"%@/index.ios.jsbundle",[[NSBundle mainBundle]bundlePath]];
+//    showAllFileWithPath([NSString stringWithFormat:@"%@/rn",[[NSBundle mainBundle]bundlePath]]);
 ////    NSString*documentPath =NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask,YES).firstObject;
 ////
 ////    // Compressed file path.
-    NSString *zipFilePath = [sourceFilePath stringByAppendingString:@".7z"];
+//    NSString *zipFilePath = [sourceFilePath stringByAppendingString:@".7z"];
 ////   NSString *zipFilePath = [NSString stringWithFormat:@"%@/index.ios.jsbundle.7z",[[NSBundle mainBundle]bundlePath]];
 ////
 //    NSData *fileData = [NSData dataWithContentsOfFile:sourceFilePath];
@@ -202,28 +342,28 @@ int main(int argc, char *argv[])
 //     NSString *destFilePath = [[NSBundle mainBundle]bundlePath];
 //    NSLog(@"decompress start");
 //    NSString *destFilePath = [NSString stringWithFormat:@"%@_1111111",zipFilePath];
-    NSString *docDir = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject];
-    NSString *destFilePath = [NSString stringWithFormat:@"%@/111.index.ios.jsbundle",docDir];
-    NSString *destPath =[zipFilePath stringByDeletingLastPathComponent];
-    uint8_t *destBuffer = (uint8_t *)malloc(1024*1024*3);
-    NSData *sourceData = [NSData dataWithContentsOfFile:zipFilePath];
-    NSLog(@"Before decompress sourceData: %ld bytes", sourceData.length);
-//    uint8_t sourceBuffer[sourceData.length];
-//    memset(sourceBuffer, 0, sourceData.length);
-    memset(destBuffer, 0, sourceData.length);
-    size_t decompressLen =compression_decode_buffer(destBuffer,1024*1024*3,sourceData.bytes,sourceData.length,NULL, COMPRESSION_LZMA);
-    NSLog(@"Before decompress length: %ld bytes", decompressLen);
-    if (decompressLen > 0) {
-        NSData *newData = [NSData dataWithBytes:destBuffer length:decompressLen];
-        [newData writeToFile:destFilePath atomically:YES];
-        NSLog(@"decompress: %ld",decompressLen);
-
-    }else{
-        NSLog(@"decompressLen error!");
-    }
-    free(destBuffer);
-    BOOL result = [[NSFileManager defaultManager] fileExistsAtPath:destFilePath];
-     NSLog(@"这个文件已经存在：%@",result?@"是的":@"不存在");
+//    NSString *docDir = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject];
+//    NSString *destFilePath = [NSString stringWithFormat:@"%@/111.index.ios.jsbundle",docDir];
+//    NSString *destPath =[zipFilePath stringByDeletingLastPathComponent];
+//    uint8_t *destBuffer = (uint8_t *)malloc(1024*1024*3);
+//    NSData *sourceData = [NSData dataWithContentsOfFile:zipFilePath];
+//    NSLog(@"Before decompress sourceData: %ld bytes", sourceData.length);
+////    uint8_t sourceBuffer[sourceData.length];
+////    memset(sourceBuffer, 0, sourceData.length);
+//    memset(destBuffer, 0, sourceData.length);
+//    size_t decompressLen =compression_decode_buffer(destBuffer,1024*1024*3,sourceData.bytes,sourceData.length,NULL, COMPRESSION_LZMA);
+//    NSLog(@"Before decompress length: %ld bytes", decompressLen);
+//    if (decompressLen > 0) {
+//        NSData *newData = [NSData dataWithBytes:destBuffer length:decompressLen];
+//        [newData writeToFile:destFilePath atomically:YES];
+//        NSLog(@"decompress: %ld",decompressLen);
+//
+//    }else{
+//        NSLog(@"decompressLen error!");
+//    }
+//    free(destBuffer);
+//    BOOL result = [[NSFileManager defaultManager] fileExistsAtPath:destFilePath];
+//     NSLog(@"这个文件已经存在：%@",result?@"是的":@"不存在");
 //    NSLog(@"decompress end");
 //    [NSThread currentThread] s
     // Select full path to archive file with 7z extension.
@@ -249,7 +389,7 @@ int main(int argc, char *argv[])
 //    _reader.passwordGetter = ^NSString*(void){
 //        return @"password to my achive";
 //    };
-//    TestViewController *vc = [[TestViewController alloc]init];
+//    TestViewControllerAA *vc = [[TestViewControllerAA alloc]init];
 //    NSLog(@"chengjian vc = %@",vc);
 //    int abc = AAA;
 //        #ifdef DDD
@@ -294,7 +434,7 @@ int main(int argc, char *argv[])
     NSDictionary *result22 = nil;
     result22 = @{ @"click_info_report": jsonStr };
     NSLog(@"result22: %@", result22);
-    NSString *jsonData11 = [ViewController jsonStringForNSJsonData:result22 options:0];
+    NSString *jsonData11 = [TestViewController jsonStringForNSJsonData:result22 options:0];
     NSLog(@"jsonData11: %@,jsonData11=%s", jsonData11, jsonData11.UTF8String);
     QUINT32 testNum = 2;
     Person *dic = [[NSMutableDictionary alloc] initWithCapacity:10];
@@ -610,13 +750,17 @@ int main(int argc, char *argv[])
 //        return a1>=a2?-1:1;
 //    }];
 //    NSLog(@"%@",array);
-    [TestAdd loadTest];
+//    [TestAdd loadTest];
 //     [ViewController loadTest];
-//     [Person loadTest];
+     [Person loadTest];
     Person *testSWitchPerson = [[Person alloc]init];
+    NSMutableDictionary *dic11 = [NSMutableDictionary dictionaryWithCapacity:2];
+    [dic11 setValue:@"dd" forKey:@"dd"];
+    testSWitchPerson.copyDic = dic11;
     [testSWitchPerson sayHello];
-    TestAdd *testAdd = [[TestAdd alloc]init];
-    [testAdd add_sayHello];
+    test();
+//    TestAdd *testAdd = [[TestAdd alloc]init];
+//    [testAdd add_sayHello];
 //
 //    [testSWitchPerson sayHello];
    
@@ -627,3 +771,4 @@ int main(int argc, char *argv[])
     NSLog(@"chengjian he 222222222");
 //    return 1;
 }
+

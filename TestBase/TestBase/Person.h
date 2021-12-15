@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "ViewController.h"
+#import "TestViewController.h"
 //#define AdLargeImgClick @"cmd_large_img_click"
 static NSString* const ProteusEventCmdAdLargeImgClick = @"cmd_large_img_click";
 //static NSString* const ProteusEventCmdAdTripleImgClick = @"cmd_triple_img_click";
@@ -46,6 +46,7 @@ typedef void(^myBlock)(NSString * name,int age);
 //@property (nonatomic, readonly, unsafe_unretained)int age;
 @property (nonatomic, assign)int age;
 @property (nonatomic, assign)CGFloat height;
+@property (nonatomic, copy)NSMutableDictionary *copyDic;
 - (void)sayHello;
 - (void)sayHello11;
 @end

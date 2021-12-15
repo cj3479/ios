@@ -7,12 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		092A2AC1234B6DBA008CB605 /* TestStaticlib22.h in Headers */ = {isa = PBXBuildFile; fileRef = 092A2AC0234B6DB9008CB605 /* TestStaticlib22.h */; };
+		092A2AC1234B6DBA008CB605 /* TestStaticlib22.h in Headers */ = {isa = PBXBuildFile; fileRef = 092A2AC0234B6DB9008CB605 /* TestStaticlib22.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		092A2AC3234B6DD7008CB605 /* libTestStaticLib2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 092A2AC2234B6DD7008CB605 /* libTestStaticLib2.a */; };
-		096C5042234B6FA60027836C /* TestStatic2222.h in Headers */ = {isa = PBXBuildFile; fileRef = 096C5041234B6FA60027836C /* TestStatic2222.h */; };
+		096C5042234B6FA60027836C /* TestStatic2222.h in Headers */ = {isa = PBXBuildFile; fileRef = 096C5041234B6FA60027836C /* TestStatic2222.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		096C5100234D8A840027836C /* LibPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 09F824C222A4FBEB008D48DF /* LibPerson.m */; };
 		097D3400234087C4003AE421 /* WeiboSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 097D33FF234087C4003AE421 /* WeiboSDK.bundle */; };
 		097D3402234087F6003AE421 /* res in Resources */ = {isa = PBXBuildFile; fileRef = 097D3401234087F6003AE421 /* res */; };
+		09B1C57823A8FBDE00DDF72D /* TestDMLIb1.h in Headers */ = {isa = PBXBuildFile; fileRef = 09B1C57623A8FBDE00DDF72D /* TestDMLIb1.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		09B1C57923A8FBDE00DDF72D /* TestDMLIb1.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B1C57723A8FBDE00DDF72D /* TestDMLIb1.m */; };
 		09C022EF234A1ACC0067D56F /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 09C022EE234A1ACC0067D56F /* Podfile */; };
 		09C022F0234A1BA80067D56F /* TestBundle.m in Sources */ = {isa = PBXBuildFile; fileRef = 09FC0606234228DD00B42F00 /* TestBundle.m */; };
 		09E92DB2234783ED0087F8B1 /* AFURLSessionManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 09E92DB1234783ED0087F8B1 /* AFURLSessionManager.h */; };
@@ -37,6 +39,8 @@
 		096C5041234B6FA60027836C /* TestStatic2222.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TestStatic2222.h; path = ../../TestStaticLib2/TestStaticLib2/TestStatic2222.h; sourceTree = "<group>"; };
 		097D33FF234087C4003AE421 /* WeiboSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = WeiboSDK.bundle; sourceTree = "<group>"; };
 		097D3401234087F6003AE421 /* res */ = {isa = PBXFileReference; lastKnownFileType = folder; path = res; sourceTree = "<group>"; };
+		09B1C57623A8FBDE00DDF72D /* TestDMLIb1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestDMLIb1.h; sourceTree = "<group>"; };
+		09B1C57723A8FBDE00DDF72D /* TestDMLIb1.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestDMLIb1.m; sourceTree = "<group>"; };
 		09C022EE234A1ACC0067D56F /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 		09E92DB1234783ED0087F8B1 /* AFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AFURLSessionManager.h; path = ../../../../Downloads/PesonalLive/Source/thirdparty/AFNetworking/AFURLSessionManager.h; sourceTree = "<group>"; };
 		09F824A722A4FB63008D48DF /* testDMlib.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = testDMlib.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -106,6 +110,8 @@
 				09F824C222A4FBEB008D48DF /* LibPerson.m */,
 				09FC0605234228DD00B42F00 /* TestBundle.h */,
 				09FC0606234228DD00B42F00 /* TestBundle.m */,
+				09B1C57623A8FBDE00DDF72D /* TestDMLIb1.h */,
+				09B1C57723A8FBDE00DDF72D /* TestDMLIb1.m */,
 			);
 			path = testDMlib;
 			sourceTree = "<group>";
@@ -136,10 +142,11 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				096C5042234B6FA60027836C /* TestStatic2222.h in Headers */,
 				09E92DB2234783ED0087F8B1 /* AFURLSessionManager.h in Headers */,
+				096C5042234B6FA60027836C /* TestStatic2222.h in Headers */,
 				09FC0607234228DD00B42F00 /* TestBundle.h in Headers */,
 				092A2AC1234B6DBA008CB605 /* TestStaticlib22.h in Headers */,
+				09B1C57823A8FBDE00DDF72D /* TestDMLIb1.h in Headers */,
 				09F824C322A4FBEB008D48DF /* LibPerson.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -270,6 +277,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09B1C57923A8FBDE00DDF72D /* TestDMLIb1.m in Sources */,
 				096C5100234D8A840027836C /* LibPerson.m in Sources */,
 				09C022F0234A1BA80067D56F /* TestBundle.m in Sources */,
 			);
@@ -425,6 +433,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				INFOPLIST_FILE = testDMlib/Info.plist;
 				INSTALL_PATH = 3333;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -450,6 +459,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				INFOPLIST_FILE = testDMlib/Info.plist;
 				INSTALL_PATH = 2222;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

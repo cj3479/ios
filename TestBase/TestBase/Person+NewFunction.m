@@ -20,4 +20,7 @@ static NSString * const TestStattic = @"__static__";
 -(void)eataaa{
     NSLog(@"the person is eating!");
 }
+-(void)testCjCa{
+    NSLog(@"parent testCjCa!");
+}
 @end

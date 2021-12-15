@@ -18,7 +18,7 @@
         // We want to make sure this is only done once!
     dispatch_once(&onceToken, ^{
         NSLog(@"TestAdd dispatch_once");
-        Class class1 = [self class];
+        Class class1 = [TestAdd class];
         Class personClass = [Person class];
         // Get the representation of the method names to swizzle.
         SEL originalSelector = @selector(sayHello);

@@ -19,7 +19,20 @@
 - (void) processCompletedssss;
 @end
 // 协议定义结束
-@interface SampleProtocol : NSObject
+
+
+// 协议定义
+@protocol SampleProtocolDelegate2 <NSObject>
+//@required
+//- (void) processCompleted2;
+- (void) processCompleted3;
+@optional
+- (void) processCompletedssss2;
+- (void) processCompleted2;
+@end
+// 协议定义结束
+
+@interface SampleProtocol : NSObject<SampleProtocolDelegate2>
 
 {
 //    // Delegate to respond back

@@ -6,13 +6,13 @@
 //  Copyright © 2019 chengjian. All rights reserved.
 //
 
-#import "TestDMlib33333.h"
+#import "TestDMlib2.h"
 
-@interface TestDMlib33333 ()
+@interface TestDMlib2 ()
 
 @end
 
-@implementation TestDMlib33333
+@implementation TestDMlib2
 
 - (void)viewDidLoad {
     [super viewDidLoad];

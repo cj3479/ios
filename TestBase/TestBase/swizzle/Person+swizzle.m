@@ -40,7 +40,7 @@
 }
 
 - (void)p_sayHello {
-//    [self p_sayHello];
+    [self p_sayHello];
     
     NSLog(@"Person + swizzle say hello");
 }

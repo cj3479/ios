@@ -15,7 +15,30 @@
 		096D510B23B0F7EC009DF918 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 096D510A23B0F7EC009DF918 /* Assets.xcassets */; };
 		096D510E23B0F7EC009DF918 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 096D510C23B0F7EC009DF918 /* LaunchScreen.storyboard */; };
 		096D511123B0F7EC009DF918 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 096D511023B0F7EC009DF918 /* main.m */; };
+		096D512E23B0FFC0009DF918 /* TestMockHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 096D512D23B0FFC0009DF918 /* TestMockHeader.m */; };
+		096D51A323B23787009DF918 /* TestNoUserBS.m in Sources */ = {isa = PBXBuildFile; fileRef = 096D51A223B23787009DF918 /* TestNoUserBS.m */; };
+		0975107923B5E3C80090774F /* TestExternalDMLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0975107823B5E3C80090774F /* TestExternalDMLib.framework */; };
+		0975107A23B5E3FE0090774F /* TestExternalDMLib.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0975107823B5E3C80090774F /* TestExternalDMLib.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0975109823B64B240090774F /* libTestDummy.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0975109723B64B240090774F /* libTestDummy.a */; };
+		097513D923B8E7240090774F /* FooDebug.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 097513D823B8E7240090774F /* FooDebug.podspec */; };
+		097513DB23B8E85B0090774F /* FooRelease.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 097513DA23B8E85B0090774F /* FooRelease.podspec */; };
+		097513E423B9D1EC0090774F /* Flutter.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 097513E323B9D1EC0090774F /* Flutter.podspec */; };
+		097513E723B9D2EF0090774F /* TestFakeCode.m in Sources */ = {isa = PBXBuildFile; fileRef = 097513E623B9D2EF0090774F /* TestFakeCode.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		096D516F23B1B0DA009DF918 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				0975107A23B5E3FE0090774F /* TestExternalDMLib.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		096D50F823B0F7EC009DF918 /* TestBuildSetting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestBuildSetting.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -31,6 +54,22 @@
 		096D510D23B0F7EC009DF918 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		096D510F23B0F7EC009DF918 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		096D511023B0F7EC009DF918 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		096D512C23B0FFBF009DF918 /* TestMockHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestMockHeader.h; sourceTree = "<group>"; };
+		096D512D23B0FFC0009DF918 /* TestMockHeader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestMockHeader.m; sourceTree = "<group>"; };
+		096D516123B1B0B6009DF918 /* TestBuildSetting copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "TestBuildSetting copy-Info.plist"; path = "/Users/chengjian/work/ios_git_git/TestBuildSetting/TestBuildSetting copy-Info.plist"; sourceTree = "<absolute>"; };
+		096D516923B1B0DA009DF918 /* ss.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ss.h; sourceTree = "<group>"; };
+		096D516A23B1B0DA009DF918 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		096D517F23B1BA29009DF918 /* libTestExternalStaticLib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTestExternalStaticLib.a; sourceTree = "<group>"; };
+		096D519023B1C504009DF918 /* libTestCC.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libTestCC.a; path = ../../../Documents/libTestCC.a; sourceTree = "<group>"; };
+		096D51A123B23787009DF918 /* TestNoUserBS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestNoUserBS.h; sourceTree = "<group>"; };
+		096D51A223B23787009DF918 /* TestNoUserBS.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestNoUserBS.m; sourceTree = "<group>"; };
+		096D51A923B24850009DF918 /* TestExternalStaticFW.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TestExternalStaticFW.framework; sourceTree = "<group>"; };
+		0975107823B5E3C80090774F /* TestExternalDMLib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TestExternalDMLib.framework; sourceTree = "<group>"; };
+		0975109723B64B240090774F /* libTestDummy.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTestDummy.a; sourceTree = "<group>"; };
+		097513D823B8E7240090774F /* FooDebug.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = FooDebug.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		097513DA23B8E85B0090774F /* FooRelease.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FooRelease.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		097513E323B9D1EC0090774F /* Flutter.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Flutter.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		097513E623B9D2EF0090774F /* TestFakeCode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestFakeCode.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +77,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0975109823B64B240090774F /* libTestDummy.a in Frameworks */,
+				0975107923B5E3C80090774F /* TestExternalDMLib.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -47,8 +88,18 @@
 		096D50EF23B0F7EC009DF918 = {
 			isa = PBXGroup;
 			children = (
+				097513E523B9D2BB0090774F /* fake */,
+				097513E323B9D1EC0090774F /* Flutter.podspec */,
+				097513DA23B8E85B0090774F /* FooRelease.podspec */,
+				097513D823B8E7240090774F /* FooDebug.podspec */,
+				0975109723B64B240090774F /* libTestDummy.a */,
+				096D517F23B1BA29009DF918 /* libTestExternalStaticLib.a */,
+				096D513D23B11258009DF918 /* testexter */,
 				096D50FA23B0F7EC009DF918 /* TestBuildSetting */,
+				096D516823B1B0DA009DF918 /* ss */,
 				096D50F923B0F7EC009DF918 /* Products */,
+				096D511923B0FA1D009DF918 /* Frameworks */,
+				096D516123B1B0B6009DF918 /* TestBuildSetting copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -75,8 +126,46 @@
 				096D510F23B0F7EC009DF918 /* Info.plist */,
 				096D511023B0F7EC009DF918 /* main.m */,
 				096D510723B0F7EC009DF918 /* TestBuildSetting.xcdatamodeld */,
+				096D512C23B0FFBF009DF918 /* TestMockHeader.h */,
+				096D512D23B0FFC0009DF918 /* TestMockHeader.m */,
+				096D51A123B23787009DF918 /* TestNoUserBS.h */,
+				096D51A223B23787009DF918 /* TestNoUserBS.m */,
 			);
 			path = TestBuildSetting;
+			sourceTree = "<group>";
+		};
+		096D511923B0FA1D009DF918 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				096D519023B1C504009DF918 /* libTestCC.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		096D513D23B11258009DF918 /* testexter */ = {
+			isa = PBXGroup;
+			children = (
+				0975107823B5E3C80090774F /* TestExternalDMLib.framework */,
+				096D51A923B24850009DF918 /* TestExternalStaticFW.framework */,
+			);
+			path = testexter;
+			sourceTree = "<group>";
+		};
+		096D516823B1B0DA009DF918 /* ss */ = {
+			isa = PBXGroup;
+			children = (
+				096D516923B1B0DA009DF918 /* ss.h */,
+				096D516A23B1B0DA009DF918 /* Info.plist */,
+			);
+			path = ss;
+			sourceTree = "<group>";
+		};
+		097513E523B9D2BB0090774F /* fake */ = {
+			isa = PBXGroup;
+			children = (
+				097513E623B9D2EF0090774F /* TestFakeCode.m */,
+			);
+			path = fake;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -89,6 +178,8 @@
 				096D50F423B0F7EC009DF918 /* Sources */,
 				096D50F523B0F7EC009DF918 /* Frameworks */,
 				096D50F623B0F7EC009DF918 /* Resources */,
+				096D516F23B1B0DA009DF918 /* Embed Frameworks */,
+				096D51AB23B257C4009DF918 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -138,11 +229,34 @@
 			files = (
 				096D510E23B0F7EC009DF918 /* LaunchScreen.storyboard in Resources */,
 				096D510B23B0F7EC009DF918 /* Assets.xcassets in Resources */,
+				097513D923B8E7240090774F /* FooDebug.podspec in Resources */,
+				097513E423B9D1EC0090774F /* Flutter.podspec in Resources */,
 				096D510623B0F7EC009DF918 /* Main.storyboard in Resources */,
+				097513DB23B8E85B0090774F /* FooRelease.podspec in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		096D51AB23B257C4009DF918 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "echo \"hahahh $SDKROOT\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		096D50F423B0F7EC009DF918 /* Sources */ = {
@@ -151,9 +265,12 @@
 			files = (
 				096D511123B0F7EC009DF918 /* main.m in Sources */,
 				096D510323B0F7EC009DF918 /* ViewController.m in Sources */,
+				096D512E23B0FFC0009DF918 /* TestMockHeader.m in Sources */,
+				097513E723B9D2EF0090774F /* TestFakeCode.m in Sources */,
 				096D50FD23B0F7EC009DF918 /* AppDelegate.m in Sources */,
 				096D510023B0F7EC009DF918 /* SceneDelegate.m in Sources */,
 				096D510923B0F7EC009DF918 /* TestBuildSetting.xcdatamodeld in Sources */,
+				096D51A323B23787009DF918 /* TestNoUserBS.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -212,7 +329,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -293,15 +410,46 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				DEPLOYMENT_POSTPROCESSING = YES;
+				DEVELOPMENT_TEAM = 65T72LT3SH;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/testexter",
+				);
+				HEADER_SEARCH_PATHS = (
+					"\"$(SRCROOT)/../testfwstatic/testfwstatic\"",
+					"\"$(SRCROOT)/TestBuildSetting\"",
+					"\"$(SRCROOT)/../../project/TestDummy/TestDummy\"",
+				);
 				INFOPLIST_FILE = TestBuildSetting/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_GENERATE_MAP_FILE = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.tencent.superfeeds.TestBuildSetting;
+				LIBRARY_SEARCH_PATHS = (
+					"\"$(SRCROOT)/../../../Library/Developer/Xcode/DerivedData/TestBase-bhnupfuqhrrdlodaigjeavintpjb/Build/Products/Debug-iphoneos/SDWebImage\"",
+					"$(SRCROOT)",
+					"$(PROJECT_DIR)",
+				);
+				OTHER_LDFLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = cj.test.oi.Happy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				STRIP_INSTALLED_PRODUCT = YES;
+				STRIP_STYLE = "non-global";
+				SYSTEM_HEADER_SEARCH_PATHS = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = (
+					"\"$(SRCROOT)/../../project/TestStaticLib\"",
+					"\"$(SRCROOT)/../../project/TestExternalDMLib/TestExternalDMLib\"",
+					"\"$(SRCROOT)/../teststaticlib/teststaticlib\"",
+				);
+				USE_HEADERMAP = NO;
 			};
 			name = Debug;
 		};
@@ -309,15 +457,36 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				DEPLOYMENT_POSTPROCESSING = YES;
+				DEVELOPMENT_TEAM = 65T72LT3SH;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/testexter",
+				);
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../testfwstatic/testfwstatic\"";
 				INFOPLIST_FILE = TestBuildSetting/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_GENERATE_MAP_FILE = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.tencent.superfeeds.TestBuildSetting;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = cj.test.oi.Happy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				STRIP_INSTALLED_PRODUCT = YES;
+				STRIP_STYLE = "non-global";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../../project/TestStaticLib\"";
+				USE_HEADERMAP = NO;
 			};
 			name = Release;
 		};

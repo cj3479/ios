@@ -9,5 +9,5 @@
 #import <Foundation/Foundation.h>
 
 @interface TestDependceStatic : NSObject
-
+-(void)testDependce;
 @end

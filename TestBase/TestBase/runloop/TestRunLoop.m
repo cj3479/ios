@@ -7,7 +7,7 @@
 //
 
 #import "TestRunLoop.h"
-#import "ViewController.h"
+#import "TestViewController.h"
 #import "MyWorker.h"
 #import <UIKit/UIApplication.h>
 /// <#Description#>
@@ -24,9 +24,9 @@
     static NSPort *port;
     dispatch_once(&oncePredicate, ^{
         NSLog(@"runloop dispatch_once …");
-//        _networkRequestThread = [[NSThread alloc] initWithTarget:self selector:@selector(networkRequestThreadEntryPoint:) object:nil];
-//        [_networkRequestThread start];
-        _networkRequestThread = [NSThread currentThread];
+        _networkRequestThread = [[NSThread alloc] initWithTarget:self selector:@selector(networkRequestThreadEntryPoint:) object:nil];
+        [_networkRequestThread start];
+//        _networkRequestThread = [NSThread currentThread];
 //        [_networkRequestThread start];
     });
 //    dispatch_queue_t queue = dispatch_queue_create("testss", DISPATCH_QUEUE_CONCURRENT);
@@ -116,8 +116,8 @@
         [NSThread detachNewThreadSelector:@selector(LaunchThreadWithPort:)
         toTarget:[MyWorker class] withObject:myPort];
     }
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-//        [self handlePortMessage:nil];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self handlePortMessage:nil];
     });
 }
 
@@ -212,23 +212,23 @@
 //    [[NSRunLoop currentRunLoop] runMode:UITrackingRunLoopMode beforeDate: [NSDate dateWithTimeIntervalSinceNow:6]];
 //    [[NSRunLoop currentRunLoop] runMode:UIInitializationRunLoopMode beforeDate: [NSDate dateWithTimeIntervalSinceNow:10]];
     // 新建NSTimer对象
-//    NSTimer *timer = [NSTimer timerWithTimeInterval:5.0 target:self selector:@selector(show) userInfo:nil repeats:YES];
-////     将NSTimer添加到RunLoop中,并且告诉系统,当前Tiemr只有在RunLoop的默认模式下才有效
-//    [[NSRunLoop currentRunLoop] addTimer:timer forMode:NSDefaultRunLoopMode];
+    NSTimer *timer = [NSTimer timerWithTimeInterval:5.0 target:self selector:@selector(show) userInfo:nil repeats:YES];
+//     将NSTimer添加到RunLoop中,并且告诉系统,当前Tiemr只有在RunLoop的默认模式下才有效
+    [[NSRunLoop currentRunLoop] addTimer:timer forMode:NSDefaultRunLoopMode];
 //    [self performSelector:@selector(setEnd) withObject:nil afterDelay:1];
 //    [self performSelector:@selector(setEnd) onThread:[self.class networkRequestThread] withObject:nil waitUntilDone:NO];
 //    [self performSelector:@selector(setEnd) onThread:[self.class networkRequestThread] withObject:nil waitUntilDone:NO];
-//    [self performSelector:@selector(setEnd) onThread:[self.class networkRequestThread] withObject:nil waitUntilDone:NO];
+    [self performSelector:@selector(setEnd) onThread:[self.class networkRequestThread] withObject:nil waitUntilDone:NO];
 //    NSThread *thread = [[NSThread alloc]init];
 //    [thread start];
 ////    NSThread *thread = nil;
-    [self performSelector:@selector(setEnd) onThread:[NSThread currentThread] withObject:nil waitUntilDone:NO];
+//    [self performSelector:@selector(setEnd) onThread:[NSThread currentThread] withObject:nil waitUntilDone:NO];
 //    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
 //         [self performSelector:@selector(setEnd) onThread:thread withObject:nil waitUntilDone:NO];
 //    });
 //    [self performSelector:@selector(actionTest) withObject:nil afterDelay:3 inModes:@[UITrackingRunLoopMode]];
 //    [self performSelector:@selector(actionTest) withObject:nil afterDelay:1 inModes:@[NSDefaultRunLoopMode]];
-//    [[NSRunLoop currentRunLoop] runMode:UITrackingRunLoopMode beforeDate: [NSDate dateWithTimeIntervalSinceNow:100]];
+    [[NSRunLoop currentRunLoop] runMode:NSRunLoopCommonModes beforeDate: [NSDate dateWithTimeIntervalSinceNow:100]];
     // 所以在UITrackingRunLoopMode模式下，定时器的方法不会执行，但定时器仍计时
 //    while (true) {
 ////        sleep(1);
@@ -238,6 +238,7 @@
 ////        NSLog(@"runloop end. %@", result ? @"YES" : @"NO");
 //    }
     NSLog(@"runloop ok.");
+    [[NSRunLoop mainRunLoop] run];//主线程永远等待，但让出主线程时间片
 }
 
 //[[NSRunLoop mainRunLoop] run];//主线程永远等待，但让出主线程时间片
@@ -279,9 +280,14 @@
 ////          [self setEnd];
 //      });
 //    [self setEnd];
+ 
     NSLog(@"runloop setEnd. mode %@",[NSRunLoop mainRunLoop].currentMode);
-//    [self performSelectorOnMainThread:@selector(actionTest) withObject:nil waitUntilDone:NO modes:@[UITrackingRunLoopMode]];
-//    NSLog(@"runloop setEnd1. mode %@",[NSRunLoop mainRunLoop].currentMode);
+    [self performSelector:@selector(actionTest) withObject:nil afterDelay:2];
+//    [self performSelector:@selector(show) withObject:nil afterDelay:2 inModes:@[UITrackingRunLoopMode]];
+//    [self performSelector:@selector(show11) withObject:nil afterDelay:2 inModes:@[NSRunLoopCommonModes]];
+   [self performSelectorOnMainThread:@selector(actionTest) withObject:nil waitUntilDone:NO];
+    [self performSelectorOnMainThread:@selector(actionTest) withObject:nil waitUntilDone:NO modes:@[UITrackingRunLoopMode]];
+    NSLog(@"runloop setEnd1. mode %@",[NSRunLoop mainRunLoop].currentMode);
 //    sleep(1);
 //    NSLog(@"runloop setEnd2. mode %@",[NSRunLoop mainRunLoop].currentMode);
 //    [self performSelectorOnMainThread:@selector(actionTest) withObject:nil waitUntilDone:NO modes:@[NSDefaultRunLoopMode]];
@@ -292,9 +298,9 @@
 //    sleep(5);
 //    ViewController *object = [[ViewController alloc]init];
 //    [self performSelector:@selector(setEnd:) withObject:nil afterDelay:3];
-    [self performSelector:@selector(actionTest) onThread:[self.class networkRequestThread] withObject:nil waitUntilDone:NO];
-    [self performSelector:@selector(setEnd:) onThread:[self.class networkRequestThread] withObject:nil waitUntilDone:NO];
-    CFRunLoopStop(CFRunLoopGetCurrent());
+//    [self performSelector:@selector(actionTest) onThread:[self.class networkRequestThread] withObject:nil waitUntilDone:NO modes:@[UITrackingRunLoopMode]];
+//    [self performSelector:@selector(setEnd:) onThread:[self.class networkRequestThread] withObject:nil waitUntilDone:NO];
+//    CFRunLoopStop(CFRunLoopGetCurrent());
 //    [self performSelector:@selector(actionTest) withObject:nil];
 //    NSLog(@"runloop setEnd. mode %@",[NSRunLoop currentRunLoop].currentMode);
     end = YES;
@@ -302,13 +308,12 @@
 //    CFRunLoopStop(CFRunLoopGetCurrent());
 //    [self performSelector:@selector(setEnd) onThread:[self.class networkRequestThread] withObject:nil waitUntilDone:YES];
 }
-
 - (void)actionTest{
     NSLog(@"runloop actionTest. mode %@",[NSRunLoop currentRunLoop].currentMode);
 //    sleep(1);
 }
 
-- (void)setEnd:(ViewController *)object {
+- (void)setEnd:(TestViewController *)object {
     NSLog(@"runloop setEnd.object end mode %@",[NSRunLoop currentRunLoop].currentMode);
 //    [self performSelector:@selector(setEnd) withObject:nil afterDelay:1];
 //    ViewController *object1 = [[ViewController alloc]init];

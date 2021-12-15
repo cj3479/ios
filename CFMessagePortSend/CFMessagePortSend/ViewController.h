@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  TestViewControllerAA.h
 //  CFMessagePortSend
 //
 //  Created by chengjian on 2019/9/24.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface TestViewControllerAA : UIViewController
 
 
 @end

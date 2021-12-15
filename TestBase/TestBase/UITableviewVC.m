@@ -7,20 +7,24 @@
 //
 
 #import "UITableviewVC.h"
+#import "TestTableViewCell.h"
 static int m=1;
 @implementation UITableviewVC
 - (void)viewDidLoad{
     _datas = [NSMutableArray array];
-    for(int i=0;i<30;i++)
+    for(int i=0;i<20;i++)
     {
         [_datas addObject:[NSString stringWithFormat:@"这是第%d个cell",i]];
     }
     // 创建UItableView，style选择Grouped或Plain，这里我们以Grouped为例
-    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height) style:UITableViewStyleGrouped];
+//    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height) style:UITableViewCellStyleDefault];
+    self.tableView = [[UITableView alloc] initWithFrame:self.view.bounds
+                                              style:UITableViewStylePlain];
     // 声明 tableView 的代理和数据源
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
-    self.tableView.prefetchDataSource = self;
+//    self.tableView.prefetchDataSource = self;
+    _tableView.estimatedRowHeight = 0;
     [self.view addSubview:self.tableView];
     NSLog(@" UITableviewVC viewDidLoad");
     
@@ -39,23 +43,28 @@ static int m=1;
     //当界面要消失的时候,移除kvo
     //    [object removeObserver:self forKeyPath:@"name"];
 }
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath{
+    NSLog(@"chengjian_test willDisplayCell");
+}
 
 // 设置每个 Cell
 - (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
     // 创建一个cellID，用于cell的重用
     NSString *cellID = @"cellID";
+//    NSString *cellID = [@"cellID" stringByAppendingFormat:@"%ld",indexPath.row];
     // 从tableview的重用池里通过cellID取一个cell
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
+    TestTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
+    NSLog(@"chengjian_test getview ,cell=%@,row=%ld",cell,indexPath.row);
     if (cell == nil) {
         // 如果tableview的重用池中没有取到，就创建一个新的cell，style为Value2，并用cellID对其进行标记。
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue2 reuseIdentifier:cellID];
+        cell = [[TestTableViewCell alloc] initWithStyle:UITableViewCellStyleValue2 reuseIdentifier:cellID];
     }
     // 设置 cell 的标题
 //    cell.textLabel.text = [NSString stringWithFormat:@"这是第%li个cell", (long)indexPath.row];
     cell.textLabel.text = _datas[indexPath.row];
     // 设置 cell 的副标题
 //    cell.detailTextLabel.text = @"副标题";
-    NSLog(@"getview selection=%d,row=%d，,cell=%@", indexPath.section,indexPath.row,cell);
+    NSLog(@"chengjian_test getview selection=%ld,row=%d，,cell=%@", (long)indexPath.section,indexPath.row,cell);
     return cell;
 }
 // tableView 中 Section 的个数
@@ -72,25 +81,25 @@ static int m=1;
 
 #pragma mark - UITableViewDelegate
 // 设置 section 的 header 文字
--(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-    return [NSString stringWithFormat:@"header-%li", (long)section];
-}
+//-(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+//    return [NSString stringWithFormat:@"header-%li", (long)section];
+//}
 // 设置 section 的 footer 文字
--(NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section {
-    return [NSString stringWithFormat:@"footer-%li", (long)section];
-}
+//-(NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section {
+//    return [NSString stringWithFormat:@"footer-%li", (long)section];
+//}
 
-// 设置 section 的 header 高度
--(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
-    return 30;
-}
-// 设置 section 的 footer 高度
--(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
-    return 0;
-}
+//// 设置 section 的 header 高度
+//-(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+//    return 30;
+//}
+//// 设置 section 的 footer 高度
+//-(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
+//    return 0;
+//}
 // 设置 cell 的高度
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-//    NSLog(@"heightForRowAtIndexPath %ld", indexPath.row);
+    NSLog(@"chengjian_test heightForRowAtIndexPath %ld", indexPath.row);
     return 80;
 }
 //// 自定义 section 的 header
@@ -108,21 +117,36 @@ static int m=1;
 // 选中了 cell 时触发
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     NSLog(@"选中了第%li个cell,size=%lu", (long)indexPath.row,(unsigned long)_datas.count);
-    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-    [cell addObserver:self forKeyPath:@"frame" options:NSKeyValueObservingOptionOld context:nil];
-    NSMutableArray *oldDataSource = [NSMutableArray arrayWithArray:_datas];
-    [oldDataSource removeObjectAtIndex:indexPath.row];
-    NSLog(@"after,old.size=%lu,data.size=%d,old=%p,data=%p", (unsigned long)oldDataSource.count,_datas.count,oldDataSource,_datas);
-    _datas = [NSMutableArray arrayWithArray:oldDataSource];
-    NSLog(@"after,old.size=%lu,data.size=%d,old=%p,data=%p", (unsigned long)oldDataSource.count,_datas.count,oldDataSource,_datas);
-    [self.tableView indexPathsForVisibleRows];
+//    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+//    [cell addObserver:self forKeyPath:@"frame" options:NSKeyValueObservingOptionOld context:nil];
+//    [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
+//    NSMutableArray *oldDataSource = [NSMutableArray arrayWithArray:_datas];
+//    [_datas removeObjectAtIndex:indexPath.row];
+//    [_datas addObject:[NSString stringWithFormat:@"这是第%d个cell",100]];
+//    [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
+//    [_datas removeObjectAtIndex:1];
+//    [oldDataSource removeObjectAtIndex:2];
+//    NSLog(@"after,old.size=%lu,data.size=%d,old=%p,data=%p", (unsigned long)oldDataSource.count,_datas.count,oldDataSource,_datas);
+//    _datas = [NSMutableArray arrayWithArray:oldDataSource];
+//    NSLog(@"after,old.size=%lu,data.size=%d,old=%p,data=%p", (unsigned long)oldDataSource.count,_datas.count,oldDataSource,_datas);
+//    [self.tableView indexPathsForVisibleRows];
     //操作1 删除
 //    [_datas removeObjectAtIndex:indexPath.row];
 //    [self.tableView reloadData];
-    [self.tableView beginUpdates];
-    [self.tableView deleteRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:indexPath.row inSection:indexPath.section]] withRowAnimation:UITableViewRowAnimationAutomatic];
+//    [self.tableView beginUpdates];
+//    [self.tableView deleteRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:indexPath.row inSection:indexPath.section]] withRowAnimation:UITableViewRowAnimationAutomatic];
+    [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
+//    dispatch_async(dispatch_get_main_queue(), ^{
+//        NSLog(@"11111111");
+//        [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
+//    });
+//    [UIView performWithoutAnimation:^{
+//        NSLog(@"11111111");
+//        [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
+//    }];
+    NSLog(@"22222");
 //     [self.tableView reloadData];
-    [self.tableView endUpdates];
+//    [self.tableView endUpdates];
 
 //    //操作2 删除
 //    [_datas removeObjectAtIndex:3];
@@ -215,10 +239,10 @@ static int m=1;
 //        }
 }
 
-// 设置 cell 是否允许左滑
--(BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    return true;
-}
+//// 设置 cell 是否允许左滑
+//-(BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
+//    return true;
+//}
 // 设置默认的左滑按钮的title
 -(NSString *)tableView:(UITableView *)tableView titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath *)indexPath {
     return @"按钮钮钮";
@@ -258,15 +282,15 @@ static int m=1;
 //    int b = [self.tableView numberOfRowsInSection:0];
     NSLog(@"scrollViewDidEndDecelerating");
 }
-- (void)scrollViewDidScroll:(UIScrollView *)scrollView{
-//    NSLog(@"scrollViewDidScroll scrollView");
-    NSLog(@"runloop scrollView. mode %@",[NSRunLoop currentRunLoop].currentMode);
-    [self performSelector:@selector(actionTest) withObject:nil afterDelay:1 inModes:@[NSDefaultRunLoopMode]];
-}
-- (void)actionTest{
-    NSLog(@"runloop actionTest. mode %@",[NSRunLoop currentRunLoop].currentMode);
-    sleep(1);
-}
+//- (void)scrollViewDidScroll:(UIScrollView *)scrollView{
+////    NSLog(@"scrollViewDidScroll scrollView");
+//    NSLog(@"runloop scrollView. mode %@",[NSRunLoop currentRunLoop].currentMode);
+//    [self performSelector:@selector(actionTest) withObject:nil afterDelay:1 inModes:@[NSDefaultRunLoopMode]];
+//}
+//- (void)actionTest{
+//    NSLog(@"runloop actionTest. mode %@",[NSRunLoop currentRunLoop].currentMode);
+//    sleep(1);
+//}
 - (void)scrollViewDidScrollToTop:(UIScrollView *)scrollView{
     NSLog(@"%s",__FUNCTION__);
 }
@@ -280,10 +304,10 @@ static int m=1;
     NSLog(@"%s,%d,%d",__FUNCTION__,targetContentOffset->x,targetContentOffset->y);
     //targetContentOffset->y = 100;
 }
-- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath{
-    NSLog(@"%s,%@",__FUNCTION__,indexPath);
-//    NSLog(@"%@:%@",[self class],NSStringFromSelector(_cmd));
-}
+//- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath{
+//    NSLog(@"%s,%@",__FUNCTION__,indexPath);
+////    NSLog(@"%@:%@",[self class],NSStringFromSelector(_cmd));
+//}
 
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event

@@ -1,7 +1,7 @@
 # Uncomment this line to define a global platform for your project
 platform :ios, "10.0"
 #use_frameworks!
-project 'TestBase/TestBase.xcodeproj'
+project 'TestBase.xcodeproj'
 source "http://git.code.oa.com/QQBrowser_iOS/QBPodSource.git"
 source "http://git.code.oa.com/hippy/hippy_pod_source.git"
 source "https://github.com/cj3479/testPods.git"
@@ -42,10 +42,19 @@ target 'TestBase' do
   pod 'SDWebImage', '~> 4.3.2'
   source 'https://github.com/CocoaPods/Specs.git'
   pod 'AFNetworking', '~> 2.5'
-#  pod 'testCj123Pods', '~> 0.1.4'
-  qbTBS_shared
+#  flutter_application_path = '../my_flutter_testbase'
+#  load File.join(flutter_application_path, '.ios', 'Flutter', 'podhelper.rb')
+#  install_all_flutter_pods(flutter_application_path)
+  pod 'testCj123Pods', '~> 0.1.4'
+  pod 'Flutter'
+#  qbTBS_shared
 #  qbLJ_shared
 #  qbFeedsTBS_shared
+#  pod 'PonyDebugger', :configurations => ['Debug', 'Beta']
+#  pod 'Flutter',:path => "./TestBuildSetting/"
+#  pod 'FooDebug',:path => "./TestBuildSetting/", :configurations => ['Debug']
+#  pod 'FooRelease',:path => "./TestBuildSetting/", :configurations => ['Release']
+#  pod 'FooRelease', :git => 'https://xxx/xxx/foo.git', :path => "./QBCocoapodsWorkspace/QBUtils",:configurations => ['Release']
 #  pod 'LzmaSDK-ObjC', :inhibit_warnings => true
 end
 

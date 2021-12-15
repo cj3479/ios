@@ -2,7 +2,19 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:TestBase.xcodeproj">
+      location = "group:teststaticlib/../TestBase.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:TestDependceStatic/TestDependceStatic.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:TestStaticLib2/TestStaticLib2.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:testfwstatic/testfwstatic.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:teststaticlib/teststaticlib.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">

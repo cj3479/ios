@@ -10,6 +10,7 @@
 #import "Person.h"
 NS_ASSUME_NONNULL_BEGIN
 @interface TestAdd : NSObject
+@property(nonatomic,copy) NSString *nameTest;
 + (void)loadTest;
 @end
 

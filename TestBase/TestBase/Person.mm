@@ -96,19 +96,19 @@ int bbb=10;
 +(void)displayClass{
     NSLog(@"类扩展中声明的类方法");
 }
-- (void)dealloc
-{
-   NSLog(@"dealloc222222 %@",self);
-}
-+ (instancetype)alloc{
-    NSLog(@"alloc1111111");
-    return [super alloc];
-}
+//- (void)dealloc
+//{
+//   NSLog(@"dealloc222222 %@",self);
+//}
+//+ (instancetype)alloc{
+//    NSLog(@"alloc1111111");
+//    return [super alloc];
+//}
 
 - (void)sayHello{
 //    [self sayHello];
 //    NSAssert(NO, @"dsfdsfdsf");
-//    NSLog(@"person say hello %d",self.age);
+    NSLog(@"person say hello %d",self.age);
 }
 //-(int)age{
 //    return _age;

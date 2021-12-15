@@ -1,0 +1,79 @@
+ENV['SWIFT_VERSION'] = '5.2'
+# Uncomment this line to define a global platform for your project
+platform :ios, "10.0"
+use_frameworks!
+#use_frameworks!
+project 'TestBase.xcworkspace'
+#source "http://git.code.oa.com/QQBrowser_iOS/QBPodSource.git"
+#source "http://git.code.oa.com/hippy/hippy_pod_source.git"
+#source "https://github.com/cj3479/testPods.git"
+#source 'https://github.com/CocoaPods/Specs.git'
+#source 'http://git.code.oa.com/KanDianBasic_Dev2/CocoaPodSpecs.git'
+#source 'https://github.com/CocoaPods/Specs.git'
+#source 'http://git.code.oa.com/KanDianBasic_Dev2/CocoaPodSpecs.git'
+#source 'https://github.com/CocoaPods/Specs.git'
+##source "http://git.code.oa.com/QBFeedS_SDK_iOS/TBS.git"
+#$qbRQD_version = "1.0.3"
+#$qbZipArchive_version = "1.0.4"
+#def qbZipArchive_shared
+#  pod "QBZipArchive", "#{$qbZipArchive_version}"
+#end
+#
+#def qbRQD_shared
+##  if ENV["podsrc"] && $qbThirdpartyLibrary_use_local == 1
+##    pod "RQD", :path => "#{$qbRQD_local_path}"
+##  else
+#    pod "RQD", "#{$qbRQD_version}"
+##  end
+#end
+
+#def qbTBS_shared
+#    pod "TBS11", :git => 'http://git.code.oa.com/QQBrowser_iOS/iOS_TBS_SDK_Src.git', :branch => 'mtt/feature/9.8_optimized_launch'
+#end
+#def qbFeedsTBS_shared
+#    pod "Feeds_TBS", :git => 'http://git.code.oa.com/QBFeedS_SDK_iOS/TBS.git', :branch => 'master'
+#end
+#def qbFeedsTBS_shared
+#    pod "Feeds_TBS",'~> 1.0.0'
+#end
+#def qbLJ_shared
+#    pod "testlj", :git => 'https://github.com/cj3479/testPods.git', :branch => 'develop'
+#end
+#def qbLJ_shared
+#    pod "testlj", :git => 'https://github.com/cj3479/testPods.git', :branch => 'develop'
+#end
+#
+#project 'TestBase', {
+#  'Debug' => :debug,
+#  'Release' => :release,
+#}
+
+target 'TestBase' do
+#  qbRQD_shared
+#  qbZipArchive_shared
+#  pod 'SDWebImage', '~> 4.3.2'
+#  source 'https://github.com/CocoaPods/Specs.git'
+  pod 'AFNetworking', '~> 4.0.1'
+  pod 'MLeaksFinder'
+#  pod 'HandyJSON', '~> 5.0.2'
+#  flutter_application_path = '../my_flutter_testbase'
+#  load File.join(flutter_application_path, '.ios', 'Flutter', 'podhelper.rb')
+#  install_all_flutter_pods(flutter_application_path)
+# pod 'testCj123Pods', '~> 0.1.4'
+#  pod 'Flutter'
+#  qbTBS_shared
+#  qbLJ_shared
+#  qbFeedsTBS_shared
+#  pod 'PonyDebugger', :configurations => ['Debug', 'Beta']
+#  pod 'Flutter',:path => "./TestBuildSetting/"
+#  pod 'FooDebug',:path => "./TestBuildSetting/", :configurations => ['Debug']
+#  pod 'FooRelease',:path => "./TestBuildSetting/", :configurations => ['Release']
+#  pod 'FooRelease', :git => 'https://xxx/xxx/foo.git', :path => "./QBCocoapodsWorkspace/QBUtils",:configurations => ['Release']
+#  pod 'LzmaSDK-ObjC', :inhibit_warnings => true
+end
+
+
+#target 'testfwstatic' do
+#  pod 'HandyJSON', '~> 5.0.2'
+#end
+

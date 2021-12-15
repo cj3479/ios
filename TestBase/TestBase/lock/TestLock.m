@@ -43,27 +43,60 @@
 //● dispatch_semaphore_wait(signal, overTime)：可以理解为 lock,会使得 signal 值 -1
 //● dispatch_semaphore_signal(signal)：可以理解为 unlock,会使得 signal 值 +1
 -(void)testSemaphore{
-    dispatch_semaphore_t signal = dispatch_semaphore_create(1); //传入值必须 >=0, 若传入为0则阻塞线程并等待timeout,时间到后会执行其后的语句
-    dispatch_time_t overTime = dispatch_time(DISPATCH_TIME_NOW, 3.0f * NSEC_PER_SEC);
+    dispatch_semaphore_t signal = dispatch_semaphore_create(0); //传入值必须 >=0, 若传入为0则阻塞线程并等待timeout,时间到后会执行其后的语句
+    dispatch_time_t overTime = dispatch_time(DISPATCH_TIME_NOW, 30.0f * NSEC_PER_SEC);
 
     //线程1
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         NSLog(@"线程1 等待ing");
-        dispatch_semaphore_wait(signal, overTime); //signal 值 -1
-        NSLog(@"线程1");
+        long result = dispatch_semaphore_wait(signal, overTime);
+        NSLog(@"线程1 result=%ld", result);
+        sleep(2);
+        NSLog(@"线程1 结束休眠");
         dispatch_semaphore_signal(signal); //signal 值 +1
         NSLog(@"线程1 发送信号");
         NSLog(@"-------------------------");
     });
-
-    //线程2
+//
+//    //线程2
+//    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+//        NSLog(@"线程2 等待ing");
+//        long result = dispatch_semaphore_wait(signal, overTime);
+//        NSLog(@"线程2 result=%ld",result);
+//        sleep(2);
+//        NSLog(@"线程2 结束休眠");
+//        dispatch_semaphore_signal(signal);
+//        NSLog(@"线程2 发送信号");
+//    });
+//    //线程3
+//     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+//         NSLog(@"线程3 等待ing");
+//         long result = dispatch_semaphore_wait(signal, overTime);
+//         NSLog(@"线程3 result=%ld",result);
+//         sleep(2);
+//         NSLog(@"线程3 结束休眠");
+//         dispatch_semaphore_signal(signal);
+//         NSLog(@"线程3 发送信号");
+//     });
+//    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+//        NSLog(@"线程4 等待ing");
+//        long result = dispatch_semaphore_wait(signal, overTime);
+//        NSLog(@"线程4 result=%ld",result);
+//        sleep(2);
+//        NSLog(@"线程4 结束休眠");
+//        dispatch_semaphore_signal(signal);
+//        NSLog(@"线程4 发送信号");
+//    });
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        NSLog(@"线程2 等待ing");
-        dispatch_semaphore_wait(signal, overTime);
-        NSLog(@"线程2");
-        dispatch_semaphore_signal(signal);
-        NSLog(@"线程2 发送信号");
-    });
+         NSLog(@"线程5 等待ing");
+         sleep(2);
+         NSLog(@"线程5 结束休眠");
+         long result = dispatch_semaphore_signal(signal);
+         NSLog(@"线程5 result=%ld",result);
+         long result1 = dispatch_semaphore_signal(signal);
+         NSLog(@"线程5 result1=%ld",result1);
+         NSLog(@"线程5 发送信号");
+     });
 }
 
 // pthread_mutex 中也有个pthread_mutex_trylock(&pLock)，和上面提到的 OSSpinLockTry(&oslock)区别在于，前者可以加锁时返回的是 0，否则返回一个错误提示码；后者返回的 YES和NO

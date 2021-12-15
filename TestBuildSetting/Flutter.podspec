@@ -35,5 +35,8 @@ Flutter provides an easy and productive way to build and deploy high-performance
   s.homepage         = 'https://flutter.io'
   s.license          = { :type => 'MIT' }
   s.author           = { 'Flutter Dev Team' => 'flutter-dev@googlegroups.com' }
-  #s.public_header_files = './Classes/**/*.h'
+  s.source_files =  "fake/*.{m}"
+  s.source           = { :path => '.' }
+  s.static_framework = true
+  s.dependency 'MXLemon'
 end

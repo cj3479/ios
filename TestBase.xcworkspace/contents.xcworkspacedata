@@ -2,7 +2,16 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:TestBuildSetting/TestBuildSetting.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:TestDependceStatic/TestDependceStatic.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:TestBase/TestBase.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:TestC++/TestC++.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:TestStaticLib2/TestStaticLib2.xcodeproj">

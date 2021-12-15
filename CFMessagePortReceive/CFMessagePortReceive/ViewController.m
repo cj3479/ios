@@ -1,16 +1,16 @@
 //
-//  ViewController.m
+//  TestViewControllerAA.m
 //  CFMessagePortReceive
 //
 //  Created by chengjian on 2019/9/25.
 //  Copyright © 2019 chengjian. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "TestViewControllerAA.h"
 #import <AVFoundation/AVAudioSession.h>
 #import <AVFoundation/AVAudioPlayer.h>
 #define LOCAL_MACH_PORT_NAME "com.wangzz.demo"
-@interface ViewController ()
+@interface TestViewControllerAA ()
 {
     CFMessagePortRef mMsgPortListenner;
      NSPort *myPort;
@@ -18,7 +18,7 @@
 
 @end
 
-@implementation ViewController
+@implementation TestViewControllerAA
 
 - (void)viewDidLoad {
     [super viewDidLoad];

@@ -1,18 +1,18 @@
 //
-//  ViewController.m
+//  TestViewControllerAA.m
 //  CFMessagePortSend
 //
 //  Created by chengjian on 2019/9/24.
 //  Copyright © 2019 chengjian. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "TestViewControllerAA.h"
 #define MACH_PORT_REMOTE    "com.wangzz.demo"
-@interface ViewController ()
+@interface TestViewControllerAA ()
 
 @end
 
-@implementation ViewController
+@implementation TestViewControllerAA
 
 - (void)viewDidLoad {
     [super viewDidLoad];

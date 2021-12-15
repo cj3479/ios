@@ -7,11 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0949BA4C238CFDD000AEBA0E /* TestDMlib2.h in Headers */ = {isa = PBXBuildFile; fileRef = 0949BA4A238CFDD000AEBA0E /* TestDMlib2.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0949BA4D238CFDD000AEBA0E /* TestDMlib2.m in Sources */ = {isa = PBXBuildFile; fileRef = 0949BA4B238CFDD000AEBA0E /* TestDMlib2.m */; };
+		095DF5252450247A00C35C20 /* TestDMlib2.framework in Sources */ = {isa = PBXBuildFile; fileRef = 097D335123404DF5003AE421 /* TestDMlib2.framework */; };
 		097D33752340507D003AE421 /* LibPerson.h in Headers */ = {isa = PBXBuildFile; fileRef = 097D33732340507D003AE421 /* LibPerson.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		097D33762340507D003AE421 /* LibPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 097D33742340507D003AE421 /* LibPerson.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0949BA4A238CFDD000AEBA0E /* TestDMlib2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestDMlib2.h; sourceTree = "<group>"; };
+		0949BA4B238CFDD000AEBA0E /* TestDMlib2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestDMlib2.m; sourceTree = "<group>"; };
 		097D335123404DF5003AE421 /* TestDMlib2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TestDMlib2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		097D335523404DF5003AE421 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		097D33732340507D003AE421 /* LibPerson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LibPerson.h; sourceTree = "<group>"; };
@@ -51,6 +56,8 @@
 				097D33732340507D003AE421 /* LibPerson.h */,
 				097D33742340507D003AE421 /* LibPerson.m */,
 				097D335523404DF5003AE421 /* Info.plist */,
+				0949BA4A238CFDD000AEBA0E /* TestDMlib2.h */,
+				0949BA4B238CFDD000AEBA0E /* TestDMlib2.m */,
 			);
 			path = TestDMlib2;
 			sourceTree = "<group>";
@@ -63,6 +70,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				097D33752340507D003AE421 /* LibPerson.h in Headers */,
+				0949BA4C238CFDD000AEBA0E /* TestDMlib2.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -134,7 +142,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0949BA4D238CFDD000AEBA0E /* TestDMlib2.m in Sources */,
 				097D33762340507D003AE421 /* LibPerson.m in Sources */,
+				095DF5252450247A00C35C20 /* TestDMlib2.framework in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -195,7 +205,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
-				ONLY_ACTIVE_ARCH = YES;
+				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -250,6 +260,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -266,13 +277,16 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = YES;
 				INFOPLIST_FILE = TestDMlib2/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = cj.test.oi.testDMlib.TestDMlib2;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -289,13 +303,16 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = YES;
 				INFOPLIST_FILE = TestDMlib2/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = cj.test.oi.testDMlib.TestDMlib2;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;

@@ -9,7 +9,7 @@
 #import "Person.h"
 
 NS_ASSUME_NONNULL_BEGIN
-
+static int aa = 10;
 @interface Student : Person
 
 @end

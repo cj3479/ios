@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface TestDMlib33333 : UIViewController
+@interface TestDMlib2 : UIViewController
 
 @end
 

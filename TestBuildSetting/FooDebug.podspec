@@ -1,5 +1,5 @@
 Pod::Spec.new do |s|
-  s.name             = 'QBThirdparty'
+  s.name             = 'FooDebug'
   s.version          = '1.0.9'
   s.summary          = 'QB用到的第三方库'
 
@@ -22,5 +22,10 @@ TODO: Add long description of the pod here.
 
   s.ios.deployment_target = '8.0'
   s.libraries = 'xml2', 'c++', 'bz2'
-  s.vendored_libraries = 'Lib/libQBThirdparty.a'
+  s.vendored_libraries = 'libTestDummy.a'
+  s.vendored_frameworks = 'testexter/TestExternalDMLib.framework'
+#  s.dependency 'Flutter'
+#  s.dependency 'path_provider'
+#  s.dependency 'sqflite'
+  s.dependency 'Flutter'
 end

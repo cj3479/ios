@@ -7,7 +7,7 @@
 //
 
 #import "MyObject.h"
-
+QBM_EXPORT_MODULE_PROTOCOL(MttWelfareCenterProtocol, MttWelfareCenterProtocolImpl);
 @implementation MyObject
 -(id)init{
     if (self==[super init]) {
@@ -20,6 +20,5 @@
     a = 
     a++;
     NSLog(@"chengjian_test_static %d",a);
-    NSLog(@"chengjian_test_static %f",scaleUItopImgViewW);
 }
 @end

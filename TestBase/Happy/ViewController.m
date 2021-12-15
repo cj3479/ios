@@ -1,18 +1,18 @@
 //
-//  ViewController.m
+//  TestViewControllerAA.m
 //  Happy
 //
 //  Created by chengjian on 2019/5/31.
 //  Copyright © 2019 chengjian. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "TestViewController.h"
 
-@interface ViewController ()
+@interface TestViewControllerAA ()
 
 @end
 
-@implementation ViewController
+@implementation TestViewControllerAA
 
 - (void)viewDidLoad {
     [super viewDidLoad];

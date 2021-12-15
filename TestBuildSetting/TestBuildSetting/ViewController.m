@@ -6,16 +6,19 @@
 //  Copyright © 2019 tencent. All rights reserved.
 //
 
-#import "ViewController.h"
-
-@interface ViewController ()
+#import "TestViewControllerAA.h"
+#import "TestStaticLib/TestExterStaticLib.h"
+@interface TestViewControllerAA ()
 
 @end
 
-@implementation ViewController
+@implementation TestViewControllerAA
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+//    NSMutableDictionary *dic = [[NSMutableDictionary alloc]init];
+//    [[dic class] setValue:nil forKeyPath:@"dd"];
+//      [dic setObject:nil forKey:@"dd"];
     // Do any additional setup after loading the view.
 }
 

@@ -6,7 +6,7 @@
 //  Copyright © 2019 chengjian. All rights reserved.
 //
 
-#import "Person.h"
+#import "../Person.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
