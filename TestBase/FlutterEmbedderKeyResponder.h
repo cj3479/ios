@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#define RC(obj) CFGetRetainCount((__bridge CFTypeRef)(obj))
 NS_ASSUME_NONNULL_BEGIN
 typedef void(^FlutterSendKeyEvent)(void);
 

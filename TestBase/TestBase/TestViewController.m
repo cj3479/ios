@@ -8,6 +8,7 @@
 
 #import "TestViewController.h"
 #import "Person.h"
+#import "MyMrcView.h"
 #import <pthread.h>
 #import "TestArcTwo.h"
 //#import "TestPersonSub.h"1
@@ -24,6 +25,7 @@
 #import <CoreText/CTFont.h>
 #import "TestUIImageView.h"
 #import "TestMRC.h"
+#import "TestMemory.h"
 //#import "TestStaticFramework/TestStaticFramework.h"
 #import "MeemoDanmuWindowManager.h"
 #import "MeemoFloatEntryWindowManager.h"
@@ -939,15 +941,12 @@ QBM_EXPORT_MODULE_PROTOCOL(SampleProtocolDelegate, ViewController);
     //    [label setText:@"Process Completed"];
 }
 
-- (void)viewDidDisappear:(BOOL)animated
-{
-    [super viewDidDisappear:animated];
-}
 
 - (void)pushVC:(UIButton *)buttona {
 //    [label removeFromSuperview];
     TestWebviewVCViewController *vc = [[TestWebviewVCViewController alloc]init];
-    vc.testViewController = self;
+//    self.testWebviewVCViewController = vc;
+//    vc.testViewController = self;
 //    [self presentViewController:vc animated:false completion:nil];
     [self.navigationController pushViewController:vc animated:true];
 //    NSLog(@"%@",buttona);
@@ -1081,20 +1080,27 @@ QBM_EXPORT_MODULE_PROTOCOL(SampleProtocolDelegate, ViewController);
 }
 
 - (void)testThreadButton:(UIButton *)button {
+    MyMrcView *view = [[MyMrcView alloc] init];
+    NSDictionary *dic = @{ @"dd": @"abcd", @"self": self, @"num": @1 };
+    NSNumber *fileSize = [dic objectForKey:@"dd"];
+    
 //    [@"dd" stringByAppendingString:@"dd"];
-//    NSLog(@"chengjian_test testThreadButton thread=%@", [NSThread currentThread]);
+    NSLog(@"chengjian_test testThreadButton thread=%@  fileSize=%d", fileSize,[fileSize intValue]);
 //    for (int i = 0; i < 1; ++i) {
 //        [self startThread];
 //    }
-    testLeakArray =[[NSMutableArray alloc] init];
-    TestWebviewVCViewController *vc2 =[[TestWebviewVCViewController alloc] init];
-    [vc2 testBlock];
-    [testLeakArray addObject:vc2];
-    NSLog(@"chengjian_test before size=%lu,array=%@ ", (unsigned long)[testLeakArray count],testLeakArray);
-    [testLeakArray removeObject:vc2];
-    NSLog(@"chengjian_test delete size=%lu,rray=%@",  [testLeakArray count], testLeakArray);
-//    TestMRC *mrc = [[TestMRC alloc ] init];
-//    [mrc testPtr];
+//    testLeakArray =[[NSMutableArray alloc] init];
+//    TestWebviewVCViewController *vc2 =[[TestWebviewVCViewController alloc] init];
+//    [vc2 testBlock];
+//    [testLeakArray addObject:vc2];
+//    NSLog(@"chengjian_test before size=%lu,array=%@ ", (unsigned long)[testLeakArray count],testLeakArray);
+//    [testLeakArray removeObject:vc2];
+//    NSLog(@"chengjian_test delete size=%lu,rray=%@",  [testLeakArray count], testLeakArray);
+//    [TestMRC testMrc];
+//    TestMRC *mrc = [TestMRC testMrc];
+//    [mrc testMrc];
+//    TestMemory *testMemory = [[TestMemory alloc] init];
+//    [testMemory testSanitizer];
 //    TestMRC *mrc1 = mrc;
 //    [TestMRC testMrc];
 //    [[[TestArcTwo alloc ] init] testMockArc];
@@ -1263,9 +1269,15 @@ void * runtest(void *param)    // 新线程调用方法，里边为需要执行�
 }
 
 - (void)viewWillAppear:(BOOL)animated {
-    NSLog(@"chengjian viewWillAppear");
+    NSLog(@"chengjian TestViewController viewWillAppear");
 }
-
+- (void)viewDidDisappear:(BOOL)animated{
+    [super viewDidDisappear:animated];
+    NSLog(@"chengjian TestViewController viewDidDisappear");
+}
+- (void)viewWillDisappear:(BOOL)animated{
+    NSLog(@"chengjian TestViewController viewWillDisappear");
+}
 - (void)consumerAction {
     //异常捕捉
     while (true) {

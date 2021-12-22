@@ -19,9 +19,10 @@
 		09242F252758634B00341C48 /* HandyJSON.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0929F5A927466A1000D711D1 /* HandyJSON.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0929EA9A274652D300D711D1 /* LiveConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0929EA99274652D300D711D1 /* LiveConfig.swift */; };
 		092B9DC725F1F78200F7D454 /* TestSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092B9DC625F1F78200F7D454 /* TestSwift.swift */; };
+		093817A42770BAB700EACCA0 /* libSystem_asan.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 093817A32770BAAB00EACCA0 /* libSystem_asan.tbd */; };
 		0943DF80245D7925007D83A5 /* TestLibDependencies.m in Sources */ = {isa = PBXBuildFile; fileRef = 0943DF7F245D7925007D83A5 /* TestLibDependencies.m */; };
 		0943DF81245D7925007D83A5 /* TestLibDependencies.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0943DF7E245D7925007D83A5 /* TestLibDependencies.h */; };
-		09477BB1229824F9009A47AF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 09477BB0229824F9009A47AF /* AppDelegate.m */; };
+		09477BB1229824F9009A47AF /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 09477BB0229824F9009A47AF /* AppDelegate.mm */; };
 		09477BB4229824F9009A47AF /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09477BB3229824F9009A47AF /* TestViewController.m */; };
 		09477BB7229824F9009A47AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09477BB5229824F9009A47AF /* Main.storyboard */; };
 		09477BB9229824FA009A47AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09477BB8229824FA009A47AF /* Assets.xcassets */; };
@@ -64,7 +65,7 @@
 		09A814D822A11226000D9C17 /* HappyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 09A814D722A11226000D9C17 /* HappyTests.m */; };
 		09A968B7233B522500C3DFAC /* MyWorker.m in Sources */ = {isa = PBXBuildFile; fileRef = 09A968B6233B522500C3DFAC /* MyWorker.m */; };
 		09A9739C240E017300D1E9AD /* TestWebviewVCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09A9739B240E017300D1E9AD /* TestWebviewVCViewController.m */; };
-		09B39F142769E369006EF7D1 /* FlutterEmbedderKeyResponder.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B39F002769DC10006EF7D1 /* FlutterEmbedderKeyResponder.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		09B39F142769E369006EF7D1 /* FlutterEmbedderKeyResponder.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B39F002769DC10006EF7D1 /* FlutterEmbedderKeyResponder.m */; };
 		09B39F152769E369006EF7D1 /* FlutterKeyboardManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B39EFB2769DB09006EF7D1 /* FlutterKeyboardManager.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		09B54219274399ED0094DF72 /* MeemoDanmuWindowManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B54218274399ED0094DF72 /* MeemoDanmuWindowManager.m */; };
 		09B542202743A4130094DF72 /* MeemoFloatView.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B5421F2743A4130094DF72 /* MeemoFloatView.m */; };
@@ -80,11 +81,16 @@
 		09C6C44322DC6BC600E0A448 /* d.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 09C6C44222DC6BC600E0A448 /* d.jpg */; };
 		09D399D923818366003F01AD /* TestChildViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09D399D823818365003F01AD /* TestChildViewController.m */; };
 		09D399DC23818587003F01AD /* ChildViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09D399DB23818587003F01AD /* ChildViewController.m */; };
+		09DDD9DF277058BD008C2B44 /* DSSafeFree.m in Sources */ = {isa = PBXBuildFile; fileRef = 09DDD9DE277058BD008C2B44 /* DSSafeFree.m */; };
+		09DDD9EA277058F3008C2B44 /* TYLQueue.c in Sources */ = {isa = PBXBuildFile; fileRef = 09DDD9E6277058F2008C2B44 /* TYLQueue.c */; };
+		09DDD9EC277058F3008C2B44 /* MyMrcView.m in Sources */ = {isa = PBXBuildFile; fileRef = 09DDD9E8277058F3008C2B44 /* MyMrcView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		09DDD9ED277058F3008C2B44 /* fishhook.c in Sources */ = {isa = PBXBuildFile; fileRef = 09DDD9E9277058F3008C2B44 /* fishhook.c */; };
 		09E1523E22C26F110081C136 /* TestPersonSub.m in Sources */ = {isa = PBXBuildFile; fileRef = 09E1523D22C26F110081C136 /* TestPersonSub.m */; };
 		09E573FE23742862006510FA /* index.ios.jsbundle in Resources */ = {isa = PBXBuildFile; fileRef = 09E573FD23742862006510FA /* index.ios.jsbundle */; };
 		09E5740323743E2D006510FA /* index.ios.jsbundle.7z in Resources */ = {isa = PBXBuildFile; fileRef = 09E5740223743E10006510FA /* index.ios.jsbundle.7z */; };
 		09E5745C23745698006510FA /* rn in Resources */ = {isa = PBXBuildFile; fileRef = 09E5745B23745698006510FA /* rn */; };
 		09E6C1A722D832440058176C /* TestARC.m in Sources */ = {isa = PBXBuildFile; fileRef = 09E6C1A622D832440058176C /* TestARC.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		09E7A6E3276C898C00C5F982 /* TestMemory.mm in Sources */ = {isa = PBXBuildFile; fileRef = 09E7A6E2276C898C00C5F982 /* TestMemory.mm */; };
 		09E8EF40238B74AE0049C794 /* FFFFFF.m in Sources */ = {isa = PBXBuildFile; fileRef = 09E8EF3F238B74AE0049C794 /* FFFFFF.m */; };
 		09E8EF43238B74D30049C794 /* QQQQQ.m in Sources */ = {isa = PBXBuildFile; fileRef = 09E8EF42238B74D30049C794 /* QQQQQ.m */; };
 		09F1F0112753CD2C003AF259 /* TestMrcTwo.m in Sources */ = {isa = PBXBuildFile; fileRef = 09F1F0102753CD2C003AF259 /* TestMrcTwo.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -93,6 +99,7 @@
 		09F7868C2318BC04006E603A /* TestRunLoop.m in Sources */ = {isa = PBXBuildFile; fileRef = 09F7868B2318BC04006E603A /* TestRunLoop.m */; };
 		09F824F522A502C6008D48DF /* NextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09F824F322A502C6008D48DF /* NextViewController.m */; };
 		09F824F622A502C6008D48DF /* NextViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09F824F422A502C6008D48DF /* NextViewController.xib */; };
+		C2EB05511AE1E371010C395B /* Pods_TestBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B0A286AF4BAC283B5FCD23F /* Pods_TestBase.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -115,6 +122,15 @@
 				09242F252758634B00341C48 /* HandyJSON.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		093817C02770BCD200EACCA0 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		0943DF7A245D7925007D83A5 /* CopyFiles */ = {
@@ -172,6 +188,9 @@
 		092E107D24501FFE001E6EC0 /* TestDMlib2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = TestDMlib2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		092E107F2450216A001E6EC0 /* testDMlib.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = testDMlib.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		093439512727DC6D00BE7F5A /* TestBase copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "TestBase copy-Info.plist"; path = "/Users/chengjian/work/ios_git_git/TestBase/TestBase copy-Info.plist"; sourceTree = "<absolute>"; };
+		093817A32770BAAB00EACCA0 /* libSystem_asan.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libSystem_asan.tbd; path = usr/lib/libSystem_asan.tbd; sourceTree = SDKROOT; };
+		093817A82770BB1800EACCA0 /* libclang_rt.asan_ios_dynamic.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libclang_rt.asan_ios_dynamic.dylib; path = ../../../../../Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/lib/darwin/libclang_rt.asan_ios_dynamic.dylib; sourceTree = "<group>"; };
+		093817C12770BCE500EACCA0 /* libclang_rt.asan_ios_dynamic.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libclang_rt.asan_ios_dynamic.dylib; sourceTree = "<group>"; };
 		093BFC6623336142000FA39D /* testfwstatic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = testfwstatic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		093BFC692333621B000FA39D /* testDMlib.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = testDMlib.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		094098052747A73B00AA58E7 /* TestBaseDebug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TestBaseDebug.entitlements; sourceTree = "<group>"; };
@@ -181,7 +200,7 @@
 		0943DF7F245D7925007D83A5 /* TestLibDependencies.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestLibDependencies.m; sourceTree = "<group>"; };
 		0943DF89245D799F007D83A5 /* libTestDependceStatic.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libTestDependceStatic.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		09477BAF229824F9009A47AF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		09477BB0229824F9009A47AF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		09477BB0229824F9009A47AF /* AppDelegate.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = AppDelegate.mm; sourceTree = "<group>"; };
 		09477BB2229824F9009A47AF /* TestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
 		09477BB3229824F9009A47AF /* TestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
 		09477BB6229824F9009A47AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -357,6 +376,14 @@
 		09D399D823818365003F01AD /* TestChildViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestChildViewController.m; sourceTree = "<group>"; };
 		09D399DA23818587003F01AD /* ChildViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChildViewController.h; sourceTree = "<group>"; };
 		09D399DB23818587003F01AD /* ChildViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChildViewController.m; sourceTree = "<group>"; };
+		09DDD9DE277058BD008C2B44 /* DSSafeFree.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DSSafeFree.m; sourceTree = "<group>"; };
+		09DDD9E6277058F2008C2B44 /* TYLQueue.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = TYLQueue.c; sourceTree = "<group>"; };
+		09DDD9E8277058F3008C2B44 /* MyMrcView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyMrcView.m; sourceTree = "<group>"; };
+		09DDD9E9277058F3008C2B44 /* fishhook.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = fishhook.c; sourceTree = "<group>"; };
+		09DDD9F12770590E008C2B44 /* MyMrcView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyMrcView.h; sourceTree = "<group>"; };
+		09DDD9F22770590E008C2B44 /* DSSafeFree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSSafeFree.h; sourceTree = "<group>"; };
+		09DDD9F32770590E008C2B44 /* fishhook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fishhook.h; sourceTree = "<group>"; };
+		09DDD9F42770590E008C2B44 /* TYLQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYLQueue.h; sourceTree = "<group>"; };
 		09E0C5C422A4D67500519955 /* libteststaticlib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libteststaticlib.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		09E1523C22C26F110081C136 /* TestPersonSub.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestPersonSub.h; sourceTree = "<group>"; };
 		09E1523D22C26F110081C136 /* TestPersonSub.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestPersonSub.m; sourceTree = "<group>"; };
@@ -365,6 +392,8 @@
 		09E5745B23745698006510FA /* rn */ = {isa = PBXFileReference; lastKnownFileType = folder; path = rn; sourceTree = "<group>"; };
 		09E6C1A522D832440058176C /* TestARC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestARC.h; sourceTree = "<group>"; };
 		09E6C1A622D832440058176C /* TestARC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestARC.m; sourceTree = "<group>"; };
+		09E7A6E1276C898C00C5F982 /* TestMemory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestMemory.h; sourceTree = "<group>"; };
+		09E7A6E2276C898C00C5F982 /* TestMemory.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = TestMemory.mm; sourceTree = "<group>"; };
 		09E8EF3E238B74AE0049C794 /* FFFFFF.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FFFFFF.h; sourceTree = "<group>"; };
 		09E8EF3F238B74AE0049C794 /* FFFFFF.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FFFFFF.m; sourceTree = "<group>"; };
 		09E8EF41238B74D30049C794 /* QQQQQ.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QQQQQ.h; sourceTree = "<group>"; };
@@ -412,7 +441,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				093817A42770BAB700EACCA0 /* libSystem_asan.tbd in Frameworks */,
 				09242F242758634B00341C48 /* HandyJSON.xcframework in Frameworks */,
+				C2EB05511AE1E371010C395B /* Pods_TestBase.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -454,6 +485,15 @@
 		09477BA3229824F9009A47AF = {
 			isa = PBXGroup;
 			children = (
+				093817C12770BCE500EACCA0 /* libclang_rt.asan_ios_dynamic.dylib */,
+				09DDD9F42770590E008C2B44 /* TYLQueue.h */,
+				09DDD9F22770590E008C2B44 /* DSSafeFree.h */,
+				09DDD9DE277058BD008C2B44 /* DSSafeFree.m */,
+				09DDD9F32770590E008C2B44 /* fishhook.h */,
+				09DDD9E9277058F3008C2B44 /* fishhook.c */,
+				09DDD9F12770590E008C2B44 /* MyMrcView.h */,
+				09DDD9E8277058F3008C2B44 /* MyMrcView.m */,
+				09DDD9E6277058F2008C2B44 /* TYLQueue.c */,
 				09B39EFF2769DC10006EF7D1 /* FlutterEmbedderKeyResponder.h */,
 				09B39F002769DC10006EF7D1 /* FlutterEmbedderKeyResponder.m */,
 				09B39EFA2769DB09006EF7D1 /* FlutterKeyboardManager.h */,
@@ -538,7 +578,7 @@
 				09C3BF9425BAFAF300D6F14A /* testfwstatic.h */,
 				0918B55523C8206B008F08D4 /* TestSampleProtocolSub.m */,
 				09477BAF229824F9009A47AF /* AppDelegate.h */,
-				09477BB0229824F9009A47AF /* AppDelegate.m */,
+				09477BB0229824F9009A47AF /* AppDelegate.mm */,
 				09477BB2229824F9009A47AF /* TestViewController.h */,
 				09477BB3229824F9009A47AF /* TestViewController.m */,
 				09477BB5229824F9009A47AF /* Main.storyboard */,
@@ -598,6 +638,8 @@
 				0994CA2F272ADFDB00263CAB /* TestMRC.mm */,
 				09F1F00F2753CD2C003AF259 /* TestMrcTwo.h */,
 				09F1F0102753CD2C003AF259 /* TestMrcTwo.m */,
+				09E7A6E1276C898C00C5F982 /* TestMemory.h */,
+				09E7A6E2276C898C00C5F982 /* TestMemory.mm */,
 			);
 			path = TestBase;
 			sourceTree = "<group>";
@@ -648,6 +690,8 @@
 		094D7CC722A126F500AF2345 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				093817A82770BB1800EACCA0 /* libclang_rt.asan_ios_dynamic.dylib */,
+				093817A32770BAAB00EACCA0 /* libSystem_asan.tbd */,
 				0992EF7B274FD479009B79C2 /* FBSDKCoreKit.framework */,
 				0992EF7C274FD479009B79C2 /* FBSDKLoginKit.framework */,
 				0992EFA7274FD575009B79C2 /* FBSDKCoreKit.framework */,
@@ -974,6 +1018,7 @@
 				097513E223B995BA0090774F /* Run Script_4 */,
 				55EC8F83C6E0F8EB80CE6897 /* [CP] Embed Pods Frameworks */,
 				09242F262758634B00341C48 /* Embed Frameworks */,
+				093817C02770BCD200EACCA0 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -1249,10 +1294,12 @@
 				09B56FE12345CEA000AA0DBB /* Student.m in Sources */,
 				0918B55623C8206B008F08D4 /* TestSampleProtocolSub.m in Sources */,
 				0995780D229832AB00A68CE9 /* SampleProtocol.m in Sources */,
+				09E7A6E3276C898C00C5F982 /* TestMemory.mm in Sources */,
 				09BFC3742734F1EE0045BC7B /* LeakObjectOne.m in Sources */,
 				0972B3912330AE5D003600CF /* NSJSONSerialization+QGW.m in Sources */,
 				094895632334B5C400802E2D /* TestLock.m in Sources */,
 				09B542202743A4130094DF72 /* MeemoFloatView.m in Sources */,
+				09DDD9ED277058F3008C2B44 /* fishhook.c in Sources */,
 				095160D92746AAA50062BB2F /* TestLiveConfig.swift in Sources */,
 				09E1523E22C26F110081C136 /* TestPersonSub.m in Sources */,
 				092B9DC725F1F78200F7D454 /* TestSwift.swift in Sources */,
@@ -1287,12 +1334,15 @@
 				0929EA9A274652D300D711D1 /* LiveConfig.swift in Sources */,
 				095FCFC822BA24CE00B778E7 /* TestThread.m in Sources */,
 				09C3C0E025BEBCDD00D6F14A /* CustomObject.m in Sources */,
+				09DDD9EA277058F3008C2B44 /* TYLQueue.c in Sources */,
 				09D399DC23818587003F01AD /* ChildViewController.m in Sources */,
 				09B56FE22345CEA000AA0DBB /* Person+swizzle.m in Sources */,
+				09DDD9EC277058F3008C2B44 /* MyMrcView.m in Sources */,
 				096910EA2301510800BBAE04 /* RIJIEAdUIHandlerFactory.m in Sources */,
-				09477BB1229824F9009A47AF /* AppDelegate.m in Sources */,
+				09477BB1229824F9009A47AF /* AppDelegate.mm in Sources */,
 				0918B6F223CC69EF008F08D4 /* TestPersonSubOne.m in Sources */,
 				09D399D923818366003F01AD /* TestChildViewController.m in Sources */,
+				09DDD9DF277058BD008C2B44 /* DSSafeFree.m in Sources */,
 				0971A2C62744A09800D6127E /* MeemoFloatEntryWindowManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1528,12 +1578,13 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				BUILD_LIBRARY_FOR_DISTRIBUTION = NO;
 				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_MODULE_DEBUGGING = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_OBJC_REPEATED_USE_OF_WEAK = YES;
 				CODE_SIGN_ENTITLEMENTS = TestBase/TestBaseDebug.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
 				DEPLOYMENT_POSTPROCESSING = NO;
 				DEVELOPMENT_TEAM = 65T72LT3SH;
@@ -1568,7 +1619,12 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-framework",
@@ -1608,6 +1664,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				BUILD_LIBRARY_FOR_DISTRIBUTION = NO;
 				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_MODULE_DEBUGGING = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_OBJC_REPEATED_USE_OF_WEAK = YES;
 				CODE_SIGN_ENTITLEMENTS = TestBase/TestBaseDebug.entitlements;
@@ -1637,7 +1694,12 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",

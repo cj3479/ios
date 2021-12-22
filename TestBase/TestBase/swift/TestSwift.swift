@@ -9,7 +9,7 @@ import UIKit
 class SwiftClass: NSObject {
     @objc let legNumber = 4
     var temper = "temper-good"
-    @objc func say(name: String) -> String {
+    func say(name: String) -> String {
         print("The dog is eating")
         return "sdsdsd"
     }

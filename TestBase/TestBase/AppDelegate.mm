@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "TestViewController.h"
 #import "UITableviewVC.h"
+#import "DSSafeFree.h"
 //#import <Rqd/CrashReporter.h>
 @interface AppDelegate ()
 
@@ -17,6 +18,7 @@
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    init_safe_free();
 //    [[NSBundle bundleWithPath:@"/Applications/InjectionIII.app/Contents/Resources/iOSInjection.bundle"] load];
 //    [[[NSBundle alloc] initWithPath:@"/Applications/InjectionIII.app/Contents/Resources/iOSInjection.bundle"] load];
     // Override point for customization after application launch.

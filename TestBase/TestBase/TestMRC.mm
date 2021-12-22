@@ -53,7 +53,9 @@ NSNotificationName const FlutterViewControllerWillDealloc = @"FlutterViewControl
     NSLog(@"chengjian_test applicationDidEnterBackground notification=%@",notification);
 }
 - (void)testPtr {
-//    TestArcTwo *testArc = [[TestArcTwo alloc] init];;
+    TestArcTwo *testArc = [[TestArcTwo alloc] init];
+//    [testArc release];
+//    [testArc release];
 //    self.testArcP = testArc;
 //    NSLog(@"testPtr testArc.rc = %ld",RC(testArc));
 //    IOSContextMetal *ff = new IOSContextMetal();
@@ -85,12 +87,18 @@ NSNotificationName const FlutterViewControllerWillDealloc = @"FlutterViewControl
     TestMRC *mrc = [[TestMRC alloc ] init];
     mrc = [mrc autorelease];
 //    [mrc release];
+//    [mrc release];
     return mrc;
 }
 + (void)testMrc {
-    NSLog(@"chengjian_test click testMrc ");
+    IOSContextMetal *metal = new IOSContextMetal();
+    metal=NULL;
+    NSLog(@"chengjian_test metal=%p",metal);
+//    TestMRC *mrc = [TestMRC testGetAutoReleseMrc];
+//    [mrc release];
+//    NSLog(@"chengjian_test click testMrc ");
 //    IOSContextMetal *temp = new IOSContextMetal();
-    IOSContextMetal ff;
+//    IOSContextMetal ff;
 //    TestMRC *testRc = [[TestMRC alloc] init];
 ////    testRc = nil;
 //    TestMRC *testRc1 = testRc;
@@ -130,6 +138,9 @@ NSNotificationName const FlutterViewControllerWillDealloc = @"FlutterViewControl
 -(void)testEmpty{
     [self release];
 }
+//- (instancetype)retain{
+//    return [super retain];
+//}
 - (void)dealloc
 {
     NSLog(@"chengjian_test TestMRC 销毁");

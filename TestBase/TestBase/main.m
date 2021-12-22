@@ -173,9 +173,12 @@ void test(){
 
 int main(int argc, char *argv[])
 {
-    TestLiveConfig *sc = [[TestLiveConfig alloc] init];
-    NSLog(@"chengjian_test sc=%@", sc);
+//    TestLiveConfig *sc = [[TestLiveConfig alloc] init];
+//    NSLog(@"chengjian_test sc=%@", sc);
 //    [sc sayWithName:@""];
+    SwiftClass *scaa = [[SwiftClass alloc] init];
+    NSLog(@"chengjian_test scaa=%@", scaa);
+//    [scaa sayWithName:@""];
 //    LiveConfig *config = [[LiveConfig alloc] init];
 //    unsigned int methodCount = 0;
 //    Method *methodList = class_copyMethodList([SwiftClass class], &methodCount);
@@ -551,9 +554,9 @@ int main(int argc, char *argv[])
     NSLog(@"oneNodeIndexPath: %@", oneNodeIndexPath);
     NSLog(@"currentThread---%@", [NSThread currentThread]);
     // 定义并初始化一个C数组：1个元素
-    NSUInteger indexs[] = { 1 };
-    NSIndexPath *oneNodeIndexPath2 = [NSIndexPath indexPathWithIndexes:indexs length:3];
-    NSLog(@"oneNodeIndexPath: %@", oneNodeIndexPath2);
+//    NSUInteger indexs[] = { 1 };
+//    NSIndexPath *oneNodeIndexPath2 = [NSIndexPath indexPathWithIndexes:indexs length:3];
+//    NSLog(@"oneNodeIndexPath: %@", oneNodeIndexPath2);
 
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:9];
     NSLog(@"indexPath: %@", indexPath);
