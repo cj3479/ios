@@ -28,34 +28,57 @@ typedef NS_ENUM (NSInteger, KBSubscribeObjectType) {
 //    NSMutableSet *objs;
     NSObject *objc;
 }
+- (IBAction)testBtnClick:(id)sender {
+    NSLog(@"chengjian_test testBtnClick");
+}
+
+- (UIView *)splashScreenFromXib:(NSString *)name {
+    NSArray *objects = nil;
+    @try {
+        objects = [[NSBundle mainBundle] loadNibNamed:name owner:self options:nil];
+    } @catch (NSException *exception) {
+        NSLog(@"MeemoSdk splashScreenFromXib exception=%@", exception);
+        return nil;
+    }
+    if ([objects count] != 0) {
+        UIView *view = [objects objectAtIndex:0];
+        return view;
+    }
+    NSLog(@"MeemoSdk splashScreenFromXib objects=%@", objects);
+    return nil;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.name = @"fff";
-    self.keyboardManager = [[FlutterKeyboardManager alloc] init];
-    FlutterSendKeyEvent sendEvent =
-        ^{
-        NSLog(@"chenjgian_test viewDidLoad self=%@", self);
-    };
-    FlutterEmbedderKeyResponder *responder = [[FlutterEmbedderKeyResponder alloc] initWithSendEvent:sendEvent];
+//    self.keyboardManager = [[FlutterKeyboardManager alloc] init];
+//    FlutterSendKeyEvent sendEvent =
+//        ^{
+//        NSLog(@"chenjgian_test viewDidLoad self=%@", self);
+//    };
+//    FlutterEmbedderKeyResponder *responder = [[FlutterEmbedderKeyResponder alloc] initWithSendEvent:sendEvent];
+//    UIView *uiView = [self splashScreenFromXib:@"testwebviewaaaaa"];
+//    self.view = uiView;
+//    NSLog(@"chenjgian_test viewDidLoad uiView=%@", uiView);
 //    [self.keyboardManager addPrimaryResponder:responder];
 //    __weak typeof(self) weakSelf = self;
 //    self.blk = ^{
 //        NSLog(@"chenjgian_test self=%@", self->objc);
-//        NSLog(@"chenjgian_test name=%@,weakSelf=%@", self.name,weakSelf);
-//        NSLog(@"chenjgian_test name=%@,weakSelf=%@", weakSelf.name,weakSelf);
-//        __strong typeof(self) strongSelf = weakSelf;
-//        NSLog(@"chenjgian_test block name=%@,weakSelf=%@", weakSelf.name, weakSelf);
-//        NSLog(@"chenjgian_test name=%@,weakSelf=%@", weakSelf.name,weakSelf);
-//        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-////            NSLog(@"chenjgian_test name=%@,weakSelf=%@", strongSelf.name,weakSelf);
-//            NSLog(@"chenjgian_test name=%@,weakSelf=%@", weakSelf.name,weakSelf);
-//        });
+////        NSLog(@"chenjgian_test name=%@,weakSelf=%@", self.name,weakSelf);
+////        NSLog(@"chenjgian_test name=%@,weakSelf=%@", weakSelf.name,weakSelf);
+////        __strong typeof(self) strongSelf = weakSelf;
+////        NSLog(@"chenjgian_test block name=%@,weakSelf=%@", weakSelf.name, weakSelf);
+////        NSLog(@"chenjgian_test name=%@,weakSelf=%@", weakSelf.name,weakSelf);
+////        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//////            NSLog(@"chenjgian_test name=%@,weakSelf=%@", strongSelf.name,weakSelf);
+////            NSLog(@"chenjgian_test name=%@,weakSelf=%@", weakSelf.name,weakSelf);
+////        });
 //    };
 
-    //    self.blk = ^{
-    //        NSLog(@"chengjian_test %p", self); //因为实例变量的访问等价于self->_myAnimal,也等价于(*self)._myAnimal;所以这里会导致block强引用self.
-    //    };
-    //    self.blk();
+//        self.blk = ^{
+//            NSLog(@"chengjian_test %p", self); //因为实例变量的访问等价于self->_myAnimal,也等价于(*self)._myAnimal;所以这里会导致block强引用self.
+//        };
+//        self.blk();
 //    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
 //        NSLog(@"chenjgian_test dispatch_after name=%@,weakSelf=%@", weakSelf.name, weakSelf);
 //        if (nil != weakSelf) {
@@ -87,7 +110,7 @@ typedef NS_ENUM (NSInteger, KBSubscribeObjectType) {
 //    NSURL *url = [NSURL URLWithString:@"https://www.jianshu.com/p/196dda3a01d3"];
 //    https:
 //    NSURL *url = [NSURL URLWithString:@"https://meemo.pro/dev_test/auth.html"];
-//    NSURL *url = [NSURL URLWithString:@"https://www.baidu.com"];
+    NSURL *url = [NSURL URLWithString:@"https://www.baidu.com"];
 //    NSString *path = [[NSBundle mainBundle] bundlePath];
 //    NSURL *baseURL = [NSURL fileURLWithPath:path];
 //    NSString *path = [[NSBundle mainBundle] pathForResource:@"js" ofType:@"html"];
@@ -104,10 +127,10 @@ typedef NS_ENUM (NSInteger, KBSubscribeObjectType) {
 //    [self.webview loadHTMLString:htmlCont baseURL:baseURL];
 //    NSURLRequest* request = [NSURLRequest requestWithURL:url];//创建NSURLRequest
 ////    [webView loadRequest:request];//加载
-//    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
 //    // 加载网页
-//    [self.webview loadRequest:request];
-//    [self.view addSubview:self.webview];
+    [self.webview loadRequest:request];
+    [self.view addSubview:self.webview];
     // Do any additional setup after loading the view.
 //    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
 //        [self dismissViewControllerAnimated:false completion:nil]
@@ -118,7 +141,7 @@ typedef NS_ENUM (NSInteger, KBSubscribeObjectType) {
 ////        JSContext *context=[self.webview valueForKeyPath:@"documentView.webView.mainFrame.javaScriptContext"];
 ////        [context evaluateScript:@"callJS()"];
 //    });
-    self.view.backgroundColor = UIColor.redColor;
+//    self.view.backgroundColor = UIColor.redColor;
 }
 
 - (void)testBlock {
@@ -212,4 +235,7 @@ typedef NS_ENUM (NSInteger, KBSubscribeObjectType) {
     NSLog(@"chenjgian_test TestWebviewVCViewController dealloc");
 }
 
+//- (instancetype)retain{
+//    return [super retain];
+//}
 @end

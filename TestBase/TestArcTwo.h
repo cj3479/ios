@@ -8,8 +8,10 @@
 
 #import <Foundation/Foundation.h>
 #import "TestMRC.h"
+@class TestARCOne;
 NS_ASSUME_NONNULL_BEGIN
 @interface TestArcTwo : NSObject
+- (instancetype)initWithARCOne:(nullable TestARCOne*)testARC;
 - (void)testMockArc;
 @property(strong,atomic) TestMRC *testMrcP;
 @end

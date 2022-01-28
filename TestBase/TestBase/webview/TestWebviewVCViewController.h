@@ -17,6 +17,7 @@ typedef void(^MyBlk)(void);
 @property (nonatomic, weak) TestViewController *testViewController;
 @property (nonatomic, strong) WKWebView *webview;
 @property(nonatomic, strong) FlutterKeyboardManager* keyboardManager;
+@property (strong, nonatomic) IBOutlet UIButton *testBtn;
 -(void)testBlock;
 @end
 

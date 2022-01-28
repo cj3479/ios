@@ -10,4 +10,6 @@
 
 @interface MyMrcView : UIView
 //@property(nonatomic,weak) NSObject *obj11;
+- (void)testMemoryCover;
+- (void)testException;
 @end

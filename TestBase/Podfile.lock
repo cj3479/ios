@@ -14,17 +14,25 @@ PODS:
   - AFNetworking/Serialization (4.0.1)
   - AFNetworking/UIKit (4.0.1):
     - AFNetworking/NSURLSession
+  - FBRetainCycleDetector (0.1.4)
+  - MLeaksFinder (1.0.0):
+    - FBRetainCycleDetector
 
 DEPENDENCIES:
   - AFNetworking (~> 4.0.1)
+  - MLeaksFinder
 
 SPEC REPOS:
   trunk:
     - AFNetworking
+    - FBRetainCycleDetector
+    - MLeaksFinder
 
 SPEC CHECKSUMS:
   AFNetworking: 7864c38297c79aaca1500c33288e429c3451fdce
+  FBRetainCycleDetector: 46f8179bbb1c587deee3ea838a1a3ee02acf5015
+  MLeaksFinder: 8c435bd2f6d070af18cff082b503b21adc130fc0
 
-PODFILE CHECKSUM: 0f010a9f61c5fed531aa43c3350b11b009f3fff6
+PODFILE CHECKSUM: a3d924071ea85b223b335beecec121e78e29ed09
 
 COCOAPODS: 1.11.0

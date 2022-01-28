@@ -8,11 +8,21 @@
 
 #import "TestArcTwo.h"
 #import "TestMRC.h"
-@implementation TestArcTwo{
+@implementation TestArcTwo
+{
     TestMRC *testMRCMember;
 }
 
-- (void)testMockArc{
+- (instancetype)initWithARCOne:(TestARCOne *)testArc {
+    self = [super init];
+    NSLog(@"testException testArc.rc=%d", RC(testArc));
+    NSLog(@"chengjian_test initWithARCThree testArc=%@", testArc);
+    NSException *e = [NSException exceptionWithName:@"NSException" reason:@"test NSException" userInfo:nil];
+    @throw e;
+    return self;
+}
+
+- (void)testMockArc {
 //    TestMRC *testMRC = [[TestMRC alloc ] init];
     TestMRC *testMRC = [TestMRC testGetAutoReleseMrc];
 //    [testMRC testNotification:self];
@@ -31,7 +41,7 @@
 //        __strong typeof(testMRCSelf) strongtestMRCSelf = testMRCSelf;
 //        NSLog(@"chengjian_test dispatch_async testMRC=%@",testMRC);
     });
-    
+
 //    TestMRC *testMRCT = testMRC;
 //    TestMRC *testMRCT1 = testMRCT;
 //    TestMRC *testMRCT2 = testMRCT;
@@ -44,7 +54,6 @@
 //    NSLog(@"chengjian_test rc=%ld,rc1=%ld",rc,rc1);
 }
 
-
 - (void)dealloc
 {
     NSLog(@"chengjian_test TestArcTwo dealloc");
@@ -56,4 +65,5 @@
 //    [testMRCMember testEmpty];
 //    [self.testMrcP testEmpty];
 }
+
 @end

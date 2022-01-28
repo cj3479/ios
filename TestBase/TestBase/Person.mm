@@ -6,7 +6,7 @@
 //  Copyright © 2019年 chengjian. All rights reserved.
 //
 #import "Person.h"
-#import "TestARC.h"
+#import "TestARCOne.h"
 #import <objc/runtime.h>
 #import "TestAdd.h"
 //const NSArray*  defaultTitlesGroup = @[ProteusEventCmdAdTripleImgClick,ProteusEventCmdAdLargeImgClick];

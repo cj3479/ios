@@ -19,6 +19,9 @@
 		09242F252758634B00341C48 /* HandyJSON.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0929F5A927466A1000D711D1 /* HandyJSON.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0929EA9A274652D300D711D1 /* LiveConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0929EA99274652D300D711D1 /* LiveConfig.swift */; };
 		092B9DC725F1F78200F7D454 /* TestSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092B9DC625F1F78200F7D454 /* TestSwift.swift */; };
+		093345B62774C9BA0060BEEC /* TestARCThree.m in Sources */ = {isa = PBXBuildFile; fileRef = 093345B52774C9BA0060BEEC /* TestARCThree.m */; };
+		093345F32774D9660060BEEC /* testwebview.xib in Resources */ = {isa = PBXBuildFile; fileRef = 093345F22774D9660060BEEC /* testwebview.xib */; };
+		0936A81B2778A54D0043F73C /* libMTLCapture.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 0936A81A2778A54C0043F73C /* libMTLCapture.tbd */; settings = {ATTRIBUTES = (Weak, ); }; };
 		093817A42770BAB700EACCA0 /* libSystem_asan.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 093817A32770BAAB00EACCA0 /* libSystem_asan.tbd */; };
 		0943DF80245D7925007D83A5 /* TestLibDependencies.m in Sources */ = {isa = PBXBuildFile; fileRef = 0943DF7F245D7925007D83A5 /* TestLibDependencies.m */; };
 		0943DF81245D7925007D83A5 /* TestLibDependencies.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0943DF7E245D7925007D83A5 /* TestLibDependencies.h */; };
@@ -74,6 +77,7 @@
 		09B56FE22345CEA000AA0DBB /* Person+swizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B56FDD2345CEA000AA0DBB /* Person+swizzle.m */; };
 		09B56FE32345CEA000AA0DBB /* TestViewController+appear.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B56FDE2345CEA000AA0DBB /* TestViewController+appear.m */; };
 		09B56FE42345CEA000AA0DBB /* TestAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B56FE02345CEA000AA0DBB /* TestAdd.m */; };
+		09B7338A2786DE210085FC12 /* TestCpp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 09B733882786DE210085FC12 /* TestCpp.cpp */; };
 		09BFC3742734F1EE0045BC7B /* LeakObjectOne.m in Sources */ = {isa = PBXBuildFile; fileRef = 09BFC3732734F1EE0045BC7B /* LeakObjectOne.m */; };
 		09C3279525ECDD4D005F2261 /* TestRuntime.m in Sources */ = {isa = PBXBuildFile; fileRef = 09C3279425ECDD4D005F2261 /* TestRuntime.m */; };
 		09C3C0E025BEBCDD00D6F14A /* CustomObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 09C3C0DF25BEBCDC00D6F14A /* CustomObject.m */; };
@@ -89,7 +93,7 @@
 		09E573FE23742862006510FA /* index.ios.jsbundle in Resources */ = {isa = PBXBuildFile; fileRef = 09E573FD23742862006510FA /* index.ios.jsbundle */; };
 		09E5740323743E2D006510FA /* index.ios.jsbundle.7z in Resources */ = {isa = PBXBuildFile; fileRef = 09E5740223743E10006510FA /* index.ios.jsbundle.7z */; };
 		09E5745C23745698006510FA /* rn in Resources */ = {isa = PBXBuildFile; fileRef = 09E5745B23745698006510FA /* rn */; };
-		09E6C1A722D832440058176C /* TestARC.m in Sources */ = {isa = PBXBuildFile; fileRef = 09E6C1A622D832440058176C /* TestARC.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		09E6C1A722D832440058176C /* TestARCOne.m in Sources */ = {isa = PBXBuildFile; fileRef = 09E6C1A622D832440058176C /* TestARCOne.m */; };
 		09E7A6E3276C898C00C5F982 /* TestMemory.mm in Sources */ = {isa = PBXBuildFile; fileRef = 09E7A6E2276C898C00C5F982 /* TestMemory.mm */; };
 		09E8EF40238B74AE0049C794 /* FFFFFF.m in Sources */ = {isa = PBXBuildFile; fileRef = 09E8EF3F238B74AE0049C794 /* FFFFFF.m */; };
 		09E8EF43238B74D30049C794 /* QQQQQ.m in Sources */ = {isa = PBXBuildFile; fileRef = 09E8EF42238B74D30049C794 /* QQQQQ.m */; };
@@ -187,7 +191,11 @@
 		092B9DFB25F209D300F7D454 /* TestAA-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TestAA-Bridging-Header.h"; sourceTree = "<group>"; };
 		092E107D24501FFE001E6EC0 /* TestDMlib2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = TestDMlib2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		092E107F2450216A001E6EC0 /* testDMlib.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = testDMlib.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		093345B42774C9BA0060BEEC /* TestARCThree.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestARCThree.h; sourceTree = "<group>"; };
+		093345B52774C9BA0060BEEC /* TestARCThree.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestARCThree.m; sourceTree = "<group>"; };
+		093345F22774D9660060BEEC /* testwebview.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = testwebview.xib; sourceTree = "<group>"; };
 		093439512727DC6D00BE7F5A /* TestBase copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "TestBase copy-Info.plist"; path = "/Users/chengjian/work/ios_git_git/TestBase/TestBase copy-Info.plist"; sourceTree = "<absolute>"; };
+		0936A81A2778A54C0043F73C /* libMTLCapture.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libMTLCapture.tbd; path = usr/lib/libMTLCapture.tbd; sourceTree = SDKROOT; };
 		093817A32770BAAB00EACCA0 /* libSystem_asan.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libSystem_asan.tbd; path = usr/lib/libSystem_asan.tbd; sourceTree = SDKROOT; };
 		093817A82770BB1800EACCA0 /* libclang_rt.asan_ios_dynamic.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libclang_rt.asan_ios_dynamic.dylib; path = ../../../../../Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/lib/darwin/libclang_rt.asan_ios_dynamic.dylib; sourceTree = "<group>"; };
 		093817C12770BCE500EACCA0 /* libclang_rt.asan_ios_dynamic.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libclang_rt.asan_ios_dynamic.dylib; sourceTree = "<group>"; };
@@ -352,6 +360,8 @@
 		09B56FDE2345CEA000AA0DBB /* TestViewController+appear.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "TestViewController+appear.m"; sourceTree = "<group>"; };
 		09B56FDF2345CEA000AA0DBB /* TestViewController+appear.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TestViewController+appear.h"; sourceTree = "<group>"; };
 		09B56FE02345CEA000AA0DBB /* TestAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestAdd.m; sourceTree = "<group>"; };
+		09B733882786DE210085FC12 /* TestCpp.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = TestCpp.cpp; sourceTree = "<group>"; };
+		09B733892786DE210085FC12 /* TestCpp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestCpp.h; sourceTree = "<group>"; };
 		09BCB4B423541A7300F7CEFD /* RCTBridgeModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCTBridgeModule.h; sourceTree = "<group>"; };
 		09BFC3732734F1EE0045BC7B /* LeakObjectOne.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LeakObjectOne.m; sourceTree = "<group>"; };
 		09BFC3792734F22C0045BC7B /* LeakOneObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LeakOneObject.h; sourceTree = "<group>"; };
@@ -390,8 +400,8 @@
 		09E573FD23742862006510FA /* index.ios.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = index.ios.jsbundle; sourceTree = "<group>"; };
 		09E5740223743E10006510FA /* index.ios.jsbundle.7z */ = {isa = PBXFileReference; lastKnownFileType = file; path = index.ios.jsbundle.7z; sourceTree = "<group>"; };
 		09E5745B23745698006510FA /* rn */ = {isa = PBXFileReference; lastKnownFileType = folder; path = rn; sourceTree = "<group>"; };
-		09E6C1A522D832440058176C /* TestARC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestARC.h; sourceTree = "<group>"; };
-		09E6C1A622D832440058176C /* TestARC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestARC.m; sourceTree = "<group>"; };
+		09E6C1A522D832440058176C /* TestARCOne.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestARCOne.h; sourceTree = "<group>"; };
+		09E6C1A622D832440058176C /* TestARCOne.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestARCOne.m; sourceTree = "<group>"; };
 		09E7A6E1276C898C00C5F982 /* TestMemory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestMemory.h; sourceTree = "<group>"; };
 		09E7A6E2276C898C00C5F982 /* TestMemory.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = TestMemory.mm; sourceTree = "<group>"; };
 		09E8EF3E238B74AE0049C794 /* FFFFFF.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FFFFFF.h; sourceTree = "<group>"; };
@@ -441,6 +451,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0936A81B2778A54D0043F73C /* libMTLCapture.tbd in Frameworks */,
 				093817A42770BAB700EACCA0 /* libSystem_asan.tbd in Frameworks */,
 				09242F242758634B00341C48 /* HandyJSON.xcframework in Frameworks */,
 				C2EB05511AE1E371010C395B /* Pods_TestBase.framework in Frameworks */,
@@ -485,6 +496,7 @@
 		09477BA3229824F9009A47AF = {
 			isa = PBXGroup;
 			children = (
+				093345F22774D9660060BEEC /* testwebview.xib */,
 				093817C12770BCE500EACCA0 /* libclang_rt.asan_ios_dynamic.dylib */,
 				09DDD9F42770590E008C2B44 /* TYLQueue.h */,
 				09DDD9F22770590E008C2B44 /* DSSafeFree.h */,
@@ -603,8 +615,6 @@
 				090F4F5022AB5962007FCDB7 /* Person+TestCategpryPerson_CF.m */,
 				09E1523C22C26F110081C136 /* TestPersonSub.h */,
 				09E1523D22C26F110081C136 /* TestPersonSub.m */,
-				09E6C1A522D832440058176C /* TestARC.h */,
-				09E6C1A622D832440058176C /* TestARC.m */,
 				0952703622D8E023008BDF4F /* A.h */,
 				0952703722D8E042008BDF4F /* B.h */,
 				096910E82301510800BBAE04 /* RIJIEAdUIHandlerFactory.h */,
@@ -632,6 +642,8 @@
 				0994CA05272ACAA900263CAB /* ViewControllerST.swift */,
 				09A1D688274F658D00FE36E6 /* unzip.h */,
 				0929EA99274652D300D711D1 /* LiveConfig.swift */,
+				09E6C1A522D832440058176C /* TestARCOne.h */,
+				09E6C1A622D832440058176C /* TestARCOne.m */,
 				09F1F01B2753CD7A003AF259 /* TestArcTwo.h */,
 				09F1F01C2753CD7A003AF259 /* TestArcTwo.m */,
 				0994CA2E272ADFDB00263CAB /* TestMRC.h */,
@@ -640,6 +652,10 @@
 				09F1F0102753CD2C003AF259 /* TestMrcTwo.m */,
 				09E7A6E1276C898C00C5F982 /* TestMemory.h */,
 				09E7A6E2276C898C00C5F982 /* TestMemory.mm */,
+				093345B42774C9BA0060BEEC /* TestARCThree.h */,
+				093345B52774C9BA0060BEEC /* TestARCThree.m */,
+				09B733882786DE210085FC12 /* TestCpp.cpp */,
+				09B733892786DE210085FC12 /* TestCpp.h */,
 			);
 			path = TestBase;
 			sourceTree = "<group>";
@@ -690,6 +706,7 @@
 		094D7CC722A126F500AF2345 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0936A81A2778A54C0043F73C /* libMTLCapture.tbd */,
 				093817A82770BB1800EACCA0 /* libclang_rt.asan_ios_dynamic.dylib */,
 				093817A32770BAAB00EACCA0 /* libSystem_asan.tbd */,
 				0992EF7B274FD479009B79C2 /* FBSDKCoreKit.framework */,
@@ -1128,6 +1145,7 @@
 				099F98C8273B8D390051E5EB /* big_one.jpg in Resources */,
 				0995BD832305363D0024D300 /* car_h.png in Resources */,
 				0966B5A12462937200CD990E /* 11.js in Resources */,
+				093345F32774D9660060BEEC /* testwebview.xib in Resources */,
 				09F824F622A502C6008D48DF /* NextViewController.xib in Resources */,
 				09C6C44322DC6BC600E0A448 /* d.jpg in Resources */,
 				09477BB9229824FA009A47AF /* Assets.xcassets in Resources */,
@@ -1292,8 +1310,10 @@
 				0971A2CF2744A2D800D6127E /* MeemoSettingEntryView.m in Sources */,
 				09C4C4F027255E3D00A28058 /* LeakObject.m in Sources */,
 				09B56FE12345CEA000AA0DBB /* Student.m in Sources */,
+				09B7338A2786DE210085FC12 /* TestCpp.cpp in Sources */,
 				0918B55623C8206B008F08D4 /* TestSampleProtocolSub.m in Sources */,
 				0995780D229832AB00A68CE9 /* SampleProtocol.m in Sources */,
+				093345B62774C9BA0060BEEC /* TestARCThree.m in Sources */,
 				09E7A6E3276C898C00C5F982 /* TestMemory.mm in Sources */,
 				09BFC3742734F1EE0045BC7B /* LeakObjectOne.m in Sources */,
 				0972B3912330AE5D003600CF /* NSJSONSerialization+QGW.m in Sources */,
@@ -1323,7 +1343,7 @@
 				0995780C229832AB00A68CE9 /* Person+NewFunction.m in Sources */,
 				09A968B7233B522500C3DFAC /* MyWorker.m in Sources */,
 				09F824F522A502C6008D48DF /* NextViewController.m in Sources */,
-				09E6C1A722D832440058176C /* TestARC.m in Sources */,
+				09E6C1A722D832440058176C /* TestARCOne.m in Sources */,
 				098B2E4122BF443D00DEBD73 /* MonitorGCD.m in Sources */,
 				0918B6EE23CC6973008F08D4 /* Person+Parent.m in Sources */,
 				09F4F9E12446E9C40002AEBC /* TestTableViewCell.m in Sources */,
@@ -1587,7 +1607,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
 				DEPLOYMENT_POSTPROCESSING = NO;
-				DEVELOPMENT_TEAM = 65T72LT3SH;
+				DEVELOPMENT_TEAM = 6Y7MCZ2QNJ;
 				ENABLE_BITCODE = NO;
 				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "arm64 armv7";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1673,7 +1693,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
 				DEPLOYMENT_POSTPROCESSING = YES;
-				DEVELOPMENT_TEAM = 65T72LT3SH;
+				DEVELOPMENT_TEAM = 6Y7MCZ2QNJ;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",

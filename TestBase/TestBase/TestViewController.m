@@ -9,6 +9,7 @@
 #import "TestViewController.h"
 #import "Person.h"
 #import "MyMrcView.h"
+#import "TestARCOne.h"
 #import <pthread.h>
 #import "TestArcTwo.h"
 //#import "TestPersonSub.h"1
@@ -321,6 +322,7 @@ typedef enum : NSUInteger {
 //const CGFloat scaleUItopImgViewW = 80;
 extern int bbb;
 extern int bb;
+int testTasan;
 //注册接口实现
 QBM_EXPORT_MODULE_PROTOCOL(SampleProtocolDelegate, ViewController);
 //extern NSDictionary* defaultTitlesGroup;
@@ -335,7 +337,7 @@ QBM_EXPORT_MODULE_PROTOCOL(SampleProtocolDelegate, ViewController);
     NSData *imageData;
     NSData *date;
     NSData *encodedFont;
-    NSMutableArray * testLeakArray;
+    NSMutableArray *testLeakArray;
 }
 //- (IBAction)clickon:(id)sender {
 ////      const NSDictionary*   g_DomainIpDic = @{@"1":@"imgcache.qq.com",
@@ -478,6 +480,8 @@ QBM_EXPORT_MODULE_PROTOCOL(SampleProtocolDelegate, ViewController);
 }
 
 - (void)viewDidLoad {
+    UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height - 40)];
+    scrollView.contentSize = CGSizeMake(self.view.frame.size.width, self.view.frame.size.height + 100);
 //    TestStaticFramework *dd = [[TestStaticFramework alloc] init];
 //    [dd testMethodOne];
     self->_person1 = nil;
@@ -668,7 +672,7 @@ QBM_EXPORT_MODULE_PROTOCOL(SampleProtocolDelegate, ViewController);
     //   [button setBackgroundImage:[UIImage imageNamed:@"power_bg_img_normal.png"] forState:UIControlStateHighlighted];
     //    [button setBackgroundImage:[UIImage imageNamed:@"power_bg_img_pressed.png"] forState:UIControlStateHighlighted];
     //    添加到ViewController中去
-    [self.view addSubview:button];
+    [scrollView addSubview:button];
     //
     UIButton *memoryButton = [UIButton buttonWithType:UIButtonTypeCustom];
     memoryButton.frame = CGRectMake(x, button.frame.origin.y + height + yDiff, width, height);
@@ -676,70 +680,119 @@ QBM_EXPORT_MODULE_PROTOCOL(SampleProtocolDelegate, ViewController);
     memoryButton.backgroundColor = [UIColor redColor];
     [memoryButton addTarget:self action:@selector(testPhysicalMemory:) forControlEvents:UIControlEventTouchUpInside];
     self.view.backgroundColor = [UIColor colorWithPatternImage:image];
-    [self.view addSubview:memoryButton];
+    [scrollView addSubview:memoryButton];
 
     UIButton *virtualMemoryButton = [UIButton buttonWithType:UIButtonTypeCustom];
     virtualMemoryButton.frame = CGRectMake(x, memoryButton.frame.origin.y + height + yDiff, width, height);
     [virtualMemoryButton setTitle:@"testVirtualMemory" forState:UIControlStateNormal];
     virtualMemoryButton.backgroundColor = [UIColor redColor];
     [virtualMemoryButton addTarget:self action:@selector(testVirtualMemory:) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:virtualMemoryButton];
+    [scrollView addSubview:virtualMemoryButton];
 
     UIButton *residentMemoryButton = [UIButton buttonWithType:UIButtonTypeCustom];
     residentMemoryButton.frame = CGRectMake(x, virtualMemoryButton.frame.origin.y + height + yDiff, width, height);
     [residentMemoryButton setTitle:@"testResidentMemory" forState:UIControlStateNormal];
     residentMemoryButton.backgroundColor = [UIColor redColor];
     [residentMemoryButton addTarget:self action:@selector(testResidentMemory:) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:residentMemoryButton];
+    [scrollView addSubview:residentMemoryButton];
 
     UIButton *residentVitualMemoryButton = [UIButton buttonWithType:UIButtonTypeCustom];
     residentVitualMemoryButton.frame = CGRectMake(x, residentMemoryButton.frame.origin.y + height + yDiff, width, height);
     [residentVitualMemoryButton setTitle:@"testResidentVitualMemory" forState:UIControlStateNormal];
     residentVitualMemoryButton.backgroundColor = [UIColor redColor];
     [residentVitualMemoryButton addTarget:self action:@selector(testResidentVitualMemory:) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:residentVitualMemoryButton];
+    [scrollView addSubview:residentVitualMemoryButton];
 
     UIButton *testImgageMemoryButton = [UIButton buttonWithType:UIButtonTypeCustom];
     testImgageMemoryButton.frame = CGRectMake(x, residentVitualMemoryButton.frame.origin.y + height + yDiff, width, height);
     [testImgageMemoryButton setTitle:@"testImageMemory" forState:UIControlStateNormal];
     testImgageMemoryButton.backgroundColor = [UIColor redColor];
     [testImgageMemoryButton addTarget:self action:@selector(testImageMemory:) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:testImgageMemoryButton];
+    [scrollView addSubview:testImgageMemoryButton];
 
     UIButton *testVMAllocateButton = [UIButton buttonWithType:UIButtonTypeCustom];
     testVMAllocateButton.frame = CGRectMake(x, testImgageMemoryButton.frame.origin.y + height + yDiff, width, height);
     [testVMAllocateButton setTitle:@"testVMAllocate" forState:UIControlStateNormal];
     testVMAllocateButton.backgroundColor = [UIColor redColor];
     [testVMAllocateButton addTarget:self action:@selector(testVMLAollcate:) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:testVMAllocateButton];
+    [scrollView addSubview:testVMAllocateButton];
 
     UIButton *testVMAllocateWithDirtyButton = [UIButton buttonWithType:UIButtonTypeCustom];
     testVMAllocateWithDirtyButton.frame = CGRectMake(x, testVMAllocateButton.frame.origin.y + height + yDiff, width, height);
     [testVMAllocateWithDirtyButton setTitle:@"testVMAllocateWithDirty" forState:UIControlStateNormal];
     testVMAllocateWithDirtyButton.backgroundColor = [UIColor redColor];
     [testVMAllocateWithDirtyButton addTarget:self action:@selector(testVMLAollcateWithDirty:) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:testVMAllocateWithDirtyButton];
+    [scrollView addSubview:testVMAllocateWithDirtyButton];
 
     UIButton *testThreadButton = [UIButton buttonWithType:UIButtonTypeCustom];
     testThreadButton.frame = CGRectMake(x, testVMAllocateWithDirtyButton.frame.origin.y + height + yDiff, width, height);
     [testThreadButton setTitle:@"testThreadButton" forState:UIControlStateNormal];
     testThreadButton.backgroundColor = [UIColor redColor];
     [testThreadButton addTarget:self action:@selector(testThreadButton:) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:testThreadButton];
+    [scrollView addSubview:testThreadButton];
 
     UIButton *testMemoryButton = [UIButton buttonWithType:UIButtonTypeCustom];
     testMemoryButton.frame = CGRectMake(x, testThreadButton.frame.origin.y + height + yDiff, width, height);
     [testMemoryButton setTitle:@"testMemoryLeak" forState:UIControlStateNormal];
     testMemoryButton.backgroundColor = [UIColor redColor];
     [testMemoryButton addTarget:self action:@selector(testMemoryLeak:) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:testMemoryButton];
+    [scrollView addSubview:testMemoryButton];
 
     UIButton *testFontButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    testFontButton.frame = CGRectMake(x, testThreadButton.frame.origin.y + height + yDiff, width, height);
+    testFontButton.frame = CGRectMake(x, testMemoryButton.frame.origin.y + height + yDiff, width, height);
     [testFontButton setTitle:@"testFont" forState:UIControlStateNormal];
     testFontButton.backgroundColor = [UIColor redColor];
     [testFontButton addTarget:self action:@selector(testFont:) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:testFontButton];
+    [scrollView addSubview:testFontButton];
+
+    UIButton *testMemoryCover = [UIButton buttonWithType:UIButtonTypeCustom];
+    testMemoryCover.frame = CGRectMake(x, testFontButton.frame.origin.y + height + yDiff, width, height);
+    [testMemoryCover setTitle:@"testMemoryCover" forState:UIControlStateNormal];
+    testMemoryCover.backgroundColor = [UIColor redColor];
+    [testMemoryCover addTarget:self action:@selector(testMemoryCover:) forControlEvents:UIControlEventTouchUpInside];
+    [scrollView addSubview:testMemoryCover];
+
+    UIButton *testBufferOverflow = [UIButton buttonWithType:UIButtonTypeCustom];
+    testBufferOverflow.frame = CGRectMake(x, testMemoryCover.frame.origin.y + height + yDiff, width, height);
+    [testBufferOverflow setTitle:@"test BufferOverflow" forState:UIControlStateNormal];
+    testBufferOverflow.backgroundColor = [UIColor redColor];
+    [testBufferOverflow addTarget:self action:@selector(globalBufferOverflow:) forControlEvents:UIControlEventTouchUpInside];
+    [scrollView addSubview:testBufferOverflow];
+
+    UIButton *testHeapLeak = [UIButton buttonWithType:UIButtonTypeCustom];
+    testHeapLeak.frame = CGRectMake(x, testBufferOverflow.frame.origin.y + height + yDiff, width, height);
+    [testHeapLeak setTitle:@"test heapLeak" forState:UIControlStateNormal];
+    testHeapLeak.backgroundColor = [UIColor redColor];
+    [testHeapLeak addTarget:self action:@selector(heapLeak:) forControlEvents:UIControlEventTouchUpInside];
+    [scrollView addSubview:testHeapLeak];
+
+    UIButton *testHeapUseAfterFree = [UIButton buttonWithType:UIButtonTypeCustom];
+    testHeapUseAfterFree.frame = CGRectMake(x, testHeapLeak.frame.origin.y + height + yDiff, width, height);
+    [testHeapUseAfterFree setTitle:@"test heapUseAfterFree" forState:UIControlStateNormal];
+    testHeapUseAfterFree.backgroundColor = [UIColor redColor];
+    [testHeapUseAfterFree addTarget:self action:@selector(heapUseAfterFree:) forControlEvents:UIControlEventTouchUpInside];
+    [scrollView addSubview:testHeapUseAfterFree];
+
+    UIButton *testHeapBufferOverflow = [UIButton buttonWithType:UIButtonTypeCustom];
+    testHeapBufferOverflow.frame = CGRectMake(x, testHeapUseAfterFree.frame.origin.y + height + yDiff, width, height);
+    [testHeapBufferOverflow setTitle:@"test heapBufferOverflow" forState:UIControlStateNormal];
+    testHeapBufferOverflow.backgroundColor = [UIColor redColor];
+    [testHeapBufferOverflow addTarget:self action:@selector(heapBufferOverflow:) forControlEvents:UIControlEventTouchUpInside];
+    [scrollView addSubview:testHeapBufferOverflow];
+
+    UIButton *testStackBufferOverflow = [UIButton buttonWithType:UIButtonTypeCustom];
+    testStackBufferOverflow.frame = CGRectMake(x, testHeapBufferOverflow.frame.origin.y + height + yDiff, width, height);
+    [testStackBufferOverflow setTitle:@"test StackBufferOverflow" forState:UIControlStateNormal];
+    testStackBufferOverflow.backgroundColor = [UIColor redColor];
+    [testStackBufferOverflow addTarget:self action:@selector(stackBufferOverflow:) forControlEvents:UIControlEventTouchUpInside];
+    [scrollView addSubview:testStackBufferOverflow];
+    
+    UIButton *testTSanBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    testTSanBtn.frame = CGRectMake(x, testStackBufferOverflow.frame.origin.y + height + yDiff, width, height);
+    [testTSanBtn setTitle:@"test testTSan" forState:UIControlStateNormal];
+    testTSanBtn.backgroundColor = [UIColor redColor];
+    [testTSanBtn addTarget:self action:@selector(testTSan:) forControlEvents:UIControlEventTouchUpInside];
+    [scrollView addSubview:testTSanBtn];
 
     TestUIImageView *uiImageView = [[TestUIImageView alloc] init];
     uiImageView.frame = CGRectMake(0, 0, 10, 10);
@@ -747,6 +800,8 @@ QBM_EXPORT_MODULE_PROTOCOL(SampleProtocolDelegate, ViewController);
     [self.view addSubview:uiImageView];
     self.view.backgroundColor = [UIColor blackColor];
     NSLog(@"chengjian TestUIImageView  layer=%@", uiImageView.layer);
+
+    [self.view addSubview:scrollView];
 //    self.view.backgroundColor = [UIColor colorWithPatternImage:image];
 //    [self.view addSubview:uiview];
 //    [uiview addSubview:uiIamgeView];
@@ -941,11 +996,10 @@ QBM_EXPORT_MODULE_PROTOCOL(SampleProtocolDelegate, ViewController);
     //    [label setText:@"Process Completed"];
 }
 
-
 - (void)pushVC:(UIButton *)buttona {
 //    [label removeFromSuperview];
     TestWebviewVCViewController *vc = [[TestWebviewVCViewController alloc]init];
-//    self.testWebviewVCViewController = vc;
+    self.testWebviewVCViewController = vc;
 //    vc.testViewController = self;
 //    [self presentViewController:vc animated:false completion:nil];
     [self.navigationController pushViewController:vc animated:true];
@@ -957,9 +1011,11 @@ QBM_EXPORT_MODULE_PROTOCOL(SampleProtocolDelegate, ViewController);
 }
 
 - (void)testPhysicalMemory:(UIButton *)button {
+    UIButton *btn = [UIButton alloc];
+    NSLog(@"chengjian_test testPhysicalMemory btn=%@",btn);
     int length = 80000000;
     int *array = malloc(length * sizeof(int));
-    for (int i = 0; i < length; i++) {
+    for (int i = 0; i < length-10; i++) {
         array[i] = 32;
     }
     NSLog(@"chengjian_test testPhysicalMemory");
@@ -1063,13 +1119,16 @@ QBM_EXPORT_MODULE_PROTOCOL(SampleProtocolDelegate, ViewController);
 - (void)testVMLAollcate:(UIButton *)button {
     vm_address_t address;
     vm_size_t size = 1024 * 1024 * 100;
-    vm_allocate((vm_map_t)mach_task_self(), &address, size, VM_MEMORY_MALLOC_SMALL | VM_FLAGS_ANYWHERE);
+    vm_allocate((vm_map_t)mach_task_self(), &address, size, VM_MAKE_TAG(VM_MEMORY_MALLOC_LARGE) | VM_FLAGS_ANYWHERE);
+    for (int i = 0; i < 1024 * 1024 * 100; ++i) {
+        *((char *)address + i) = 0xab;
+    }
 }
 
 - (void)testVMLAollcateWithDirty:(UIButton *)button {
     vm_address_t address;
     vm_size_t size = 1024 * 1024 * 100;
-    vm_allocate((vm_map_t)mach_task_self(), &address, size, VM_MEMORY_MALLOC_LARGE | VM_FLAGS_ANYWHERE);
+    vm_allocate((vm_map_t)mach_task_self(), &address, size, VM_MAKE_TAG(222) | VM_FLAGS_ANYWHERE);
     for (int i = 0; i < 1024 * 1024 * 100; ++i) {
         *((char *)address + i) = 0xab;
     }
@@ -1080,12 +1139,14 @@ QBM_EXPORT_MODULE_PROTOCOL(SampleProtocolDelegate, ViewController);
 }
 
 - (void)testThreadButton:(UIButton *)button {
-    MyMrcView *view = [[MyMrcView alloc] init];
-    NSDictionary *dic = @{ @"dd": @"abcd", @"self": self, @"num": @1 };
-    NSNumber *fileSize = [dic objectForKey:@"dd"];
-    
+    TestARCOne *arc = [[TestARCOne alloc] init];
+    [arc testException];
+//    MyMrcView *view = [[MyMrcView alloc] init];
+//    [view testException];
+//    NSNumber *fileSize = [dic objectForKey:@"dd"];
+
 //    [@"dd" stringByAppendingString:@"dd"];
-    NSLog(@"chengjian_test testThreadButton thread=%@  fileSize=%d", fileSize,[fileSize intValue]);
+//    NSLog(@"chengjian_test testThreadButton thread=%@  fileSize=%d", fileSize,[fileSize intValue]);
 //    for (int i = 0; i < 1; ++i) {
 //        [self startThread];
 //    }
@@ -1099,8 +1160,8 @@ QBM_EXPORT_MODULE_PROTOCOL(SampleProtocolDelegate, ViewController);
 //    [TestMRC testMrc];
 //    TestMRC *mrc = [TestMRC testMrc];
 //    [mrc testMrc];
-//    TestMemory *testMemory = [[TestMemory alloc] init];
-//    [testMemory testSanitizer];
+    TestMemory *testMemory = [[TestMemory alloc] init];
+    [testMemory testSanitizer];
 //    TestMRC *mrc1 = mrc;
 //    [TestMRC testMrc];
 //    [[[TestArcTwo alloc ] init] testMockArc];
@@ -1121,6 +1182,8 @@ QBM_EXPORT_MODULE_PROTOCOL(SampleProtocolDelegate, ViewController);
 
 #define FONT_CLASS UIFont
 - (void)testMemoryLeak:(UIButton *)button {
+    TestMRC *mrc = [[TestMRC alloc] init];
+    [mrc testPtr];
     NSLog(@"chengjian_test testMemoryLeak familyName=%@", [UIFont systemFontOfSize:14].familyName);
 //    // 构造循环引用
     LeakObject *leakObj = [[LeakObject alloc] init];
@@ -1141,14 +1204,17 @@ QBM_EXPORT_MODULE_PROTOCOL(SampleProtocolDelegate, ViewController);
 
 typedef FourCharCode CTFontTableTag;
 - (void)testFont:(UIButton *)button {
+    NSDictionary *dic = @{ @"dd": @"abcd", @"self": self, @"num": @1 };
     NSLog(@"chengjian_test testFont familyName=%@", [UIFont systemFontOfSize:14].familyName);
 //    UIFont *originalFont = [UIFont fontWithName:@".AppleSystemUIFont11" size:48];
 //    UIFont *originalFont1 = [UIFont fontNamesForFamilyName:@".AppleSystemUIFont11"];
     NSString *emoji = @"Apple Color Emoji";
-    CTFontRef fontRef = CTFontCreateWithName((__bridge CFStringRef)emoji, 30, NULL);
+    CTFontRef fontRef = CTFontCreateWithName((__bridge CFStringRef)emoji, 50, NULL);
 //    CFDataRef dataRef = CTFontCopyTable(fontRef, (CTFontTableTag)1935829368, kCTFontTableOptionNoOptions);
     CFDataRef dataRef = CTFontCopyTable(fontRef, kCTFontTableSbix, kCTFontTableOptionNoOptions);
+    CFDataRef dataRef11 = CTFontCopyTable(fontRef, 'sbix', kCTFontTableOptionNoOptions);
     size_t srcSize = CFDataGetLength(dataRef);
+    size_t srcSize11 = CFDataGetLength(dataRef11);
     encodedFont = (__bridge_transfer NSData *)dataRef;
     char *buffer = malloc(encodedFont.length);
     NSUInteger length = encodedFont.length;
@@ -1164,10 +1230,10 @@ typedef FourCharCode CTFontTableTag;
 //    free(bufferPo);
     UIButton *testMemoryButton = [UIButton buttonWithType:UIButtonTypeCustom];
     testMemoryButton.frame = CGRectMake(1, 200, 100, 100);
-    [testMemoryButton setTitle:@"😀dsdsdds" forState:UIControlStateNormal];
+    [testMemoryButton setTitle:@"😀" forState:UIControlStateNormal];
     [self.view addSubview:testMemoryButton];
-    [[MeemoDanmuWindowManager sharedInstance] show];
-    [[MeemoFloatEntryWindowManager sharedInstance] show];
+//    [[MeemoDanmuWindowManager sharedInstance] show];
+//    [[MeemoFloatEntryWindowManager sharedInstance] show];
 
 //    for (NSString *fontfamilyname in [UIFont familyNames]) {
 //        NSLog(@"chengjian_test family:'%@'", fontfamilyname);
@@ -1182,8 +1248,86 @@ typedef FourCharCode CTFontTableTag;
 //    [dd testMethodCrash];
 }
 
+//testMemory
+- (void)testMemoryCover:(UIButton *)button {
+    MyMrcView *myMrcView = [[MyMrcView alloc] init];
+    [myMrcView testMemoryCover];
+}
+
+- (void)globalBufferOverflow:(UIButton *)button {
+    int ga[10] = { 1 };
+    NSLog(@"chengjian_test globalBufferOverflow ga[10]=%d", ga[10]);
+}
+
+- (void)heapLeak:(UIButton *)button {
+    int *k = (int *)malloc(10 * sizeof(int));
+    k = 0;
+    NSLog(@"chengjian_test heapLeak ");
+}
+
+- (void)heapUseAfterFree:(UIButton *)button {
+    int *u = (int *)malloc(10 * sizeof(int));
+    u[9] = 10;
+    free(u);
+    NSLog(@"chengjian_test heapUseAfterFree u[9]=%d", u[9]);
+}
+
+- (void)heapBufferOverflow:(UIButton *)button {
+    int *h = (int *)malloc(10 * sizeof(int));
+    h[0] = 10;
+    NSLog(@"chengjian_test heapBufferOverflow h[10]=%d", h[10]);
+}
+
+- (void)stackBufferOverflow:(UIButton *)button {
+    int s[10];
+    s[0] = 10;
+    NSLog(@"chengjian_test stackBufferOverflow s[10]=%d", s[10]);
+}
+
+- (void)testTSan:(UIButton *)button {
+    for (int i = 0; i < 1000; ++i) {
+        pthread_t thread;
+//        NSThread *thread1 = [[NSThread alloc]initWithBlock:^{
+//            sleep(5);
+//            self.testTsanNumber += 1;
+//            NSLog(@"self.testTsanNumber =%d tid=%@",self.testTsanNumber,thread1);
+//        }];
+//        [thread1 start];
+        int id = pthread_create(&thread, NULL, runTestTSan, (void *)@"this is thread");
+    }
+}
+
+void * runTestTSan(void *param)    // 新线程调用方法，里边为需要执行的任务
+{
+    NSLog(@"before self.testTsanNumber=%d tid=%@",testTasan,[NSThread currentThread]);
+    sleep(1);
+//    NSLog(@"after self.testTsanNumber=%d tid=%@",testTasan,[NSThread currentThread]);
+    testTasan += 1;
+    NSLog(@"self.testTsanNumber=%d tid=%@",testTasan,[NSThread currentThread]);
+    return NULL;
+}
+
+//int *gp;
+
+//void stack_use_after_return() {
+//    int r[10];
+//    r[0] = 10;
+//    gp = &r[0];
+//    return;
+//}
+//
+//void stack_use_after_scope() {
+//    {
+//        int c = 0;
+//        gp = &c;
+//    }
+//    *gp = 10;
+//    return;
+//}
+
 - (void)startThread {
-//    TestMRC *mrc = [[TestMRC alloc] init];
+    TestMRC *mrc = [[TestMRC alloc] init];
+    [mrc testPtr];
     pthread_t thread;
     NSLog(@"dddd =%f",  [UIApplication sharedApplication].windows.firstObject.safeAreaInsets.bottom);
 //    [[MeemoFloatEntryWindowManager sharedInstance] show];
@@ -1271,13 +1415,16 @@ void * runtest(void *param)    // 新线程调用方法，里边为需要执行�
 - (void)viewWillAppear:(BOOL)animated {
     NSLog(@"chengjian TestViewController viewWillAppear");
 }
-- (void)viewDidDisappear:(BOOL)animated{
+
+- (void)viewDidDisappear:(BOOL)animated {
     [super viewDidDisappear:animated];
     NSLog(@"chengjian TestViewController viewDidDisappear");
 }
-- (void)viewWillDisappear:(BOOL)animated{
+
+- (void)viewWillDisappear:(BOOL)animated {
     NSLog(@"chengjian TestViewController viewWillDisappear");
 }
+
 - (void)consumerAction {
     //异常捕捉
     while (true) {
@@ -1304,10 +1451,12 @@ void * runtest(void *param)    // 新线程调用方法，里边为需要执行�
         }
     }
 }
+
 - (void)dealloc
 {
 //    [super dealloc];
 }
+
 //- (void)didReceiveMemoryWarning {
 //    [super didReceiveMemoryWarning];
 //    // Dispose of any resources that can be recreated.

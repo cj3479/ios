@@ -177,6 +177,7 @@ int main(int argc, char *argv[])
 //    NSLog(@"chengjian_test sc=%@", sc);
 //    [sc sayWithName:@""];
     SwiftClass *scaa = [[SwiftClass alloc] init];
+    [scaa registerWithRegistrarB:@""];
     NSLog(@"chengjian_test scaa=%@", scaa);
 //    [scaa sayWithName:@""];
 //    LiveConfig *config = [[LiveConfig alloc] init];

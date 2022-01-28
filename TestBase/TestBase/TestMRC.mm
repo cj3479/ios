@@ -53,12 +53,12 @@ NSNotificationName const FlutterViewControllerWillDealloc = @"FlutterViewControl
     NSLog(@"chengjian_test applicationDidEnterBackground notification=%@",notification);
 }
 - (void)testPtr {
-    TestArcTwo *testArc = [[TestArcTwo alloc] init];
+//    TestArcTwo *testArc = [[TestArcTwo alloc] init];
 //    [testArc release];
 //    [testArc release];
 //    self.testArcP = testArc;
 //    NSLog(@"testPtr testArc.rc = %ld",RC(testArc));
-//    IOSContextMetal *ff = new IOSContextMetal();
+    IOSContextMetal *ff = new IOSContextMetal();
 //    IOSContextMetal temp;
 //    NSLog(@"chengjian_test TestMRC testPtr  temp.IOSContextMetal=%p", &temp);
 //    [self testPtrCopy:temp];

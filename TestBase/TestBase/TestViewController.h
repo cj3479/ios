@@ -35,6 +35,7 @@ typedef NS_ENUM(NSUInteger, AdStatSrc) {
 }
 //@property (nonatomic, copy) MyBlk blk;
 @property (nonatomic, assign) BOOL tempRDVTabBarHeight;
+@property (nonatomic, assign) int testTsanNumber;
 @property (nonatomic, strong) Person *person1;
 @property (nonatomic, strong) UIImageView *uiImageView;
 @property (nonatomic, strong) TestWebviewVCViewController *testWebviewVCViewController;

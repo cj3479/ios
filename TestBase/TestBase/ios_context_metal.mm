@@ -11,6 +11,9 @@ IOSContextMetal::IOSContextMetal()
 //    TestMRC *testMRc =[[TestMRC alloc] init];
 //    TestMRC *testMRc1 =testMRc;
 //    TestMRC *testMRc2 =testMRc1;
+    int aa =100;
+    int bb =100;
+    NSLog(@"chengjian_test aa=%d",aa);
     scoped_nsobject<TestMRC>([[TestMRC alloc] init]);
 //    darwin_context_metal_ = scoped_nsobject<TestMRC>(testMRc);
 //    scoped_nsobject<TestMRC>(testMRc);
